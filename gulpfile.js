@@ -7,6 +7,7 @@ var gulp          = require('gulp'),
     sass          = require('gulp-sass'),
     autoprefixer  = require('gulp-autoprefixer'),
     uglify        = require('gulp-uglify'),
+    imagemin   = require('gulp-imagemin'),
     browserSync   = require('browser-sync');
 
 
@@ -41,6 +42,15 @@ gulp.task('scripts', function () {
     .pipe(jshint.reporter('jshint-stylish'));
 });
 
+gulp.task('images', function () {
+  return gulp.src('client/assets/images/**/*')
+    .pipe(imagemin({
+      optimizationLevel: 3,
+      progressive: true,
+      interlaced: true
+    }))
+    .pipe(gulp.dest('client/assets/images'));
+});
 
 gulp.task('styles', function() {
   return gulp.src('client/**/*.scss')
