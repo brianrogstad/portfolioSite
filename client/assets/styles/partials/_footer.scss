@@ -1,0 +1,118 @@
+/*////////////////////////////////////////////Footer///////////////////////////////////////////*/
+
+
+.footer {
+	clear:both;
+	font-family: $times;
+	margin: 0 auto;
+	padding: 65px 0 100px;
+	background: $dark-grey;
+	color: $white;
+}
+
+.about-title{
+	color: $white;
+}
+
+.about-content {
+	width: 40%;
+	margin: 0 auto 50px;
+	padding: 0;
+	@include breakpoint(max-width 978px) {
+		width: 60%;
+	}
+	@include breakpoint(max-width 768px) {
+		width: 90%;
+	}
+	p{
+		padding: 0;
+		@include font-size(18);
+		margin: 50px 0;
+		line-height: 2em;
+		@include breakpoint(max-width 768px) {
+			@include font-size(16);
+		}
+	}
+	.profile-image{
+		width: 100%;
+		max-width: 500px;
+		margin: 0 auto 50px;
+		display: block;
+	}
+}
+
+
+/*////////////////////////////////////////////Social///////////////////////////////////////////*/
+
+
+.social-nav {
+	@include clearfix();
+	width: 45%;
+	margin: 0 auto;
+	@include breakpoint(max-width 1500px) {
+		width: 65%;
+	}
+	@include breakpoint(max-width 978px) {
+		width: 75%;
+	}
+	@include breakpoint(max-width 450px) {
+		width: 100%;
+	}
+	ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li{
+			display: inline;
+			a{
+				display: block;
+				float: left;
+				padding: 0 0 34px;
+				width: 20%;
+				margin: 0 auto;
+				text-indent: -9999px;
+			}
+		}
+	}
+}
+
+.twitter {
+	background: url('../images/Social/twitter_icons.png') no-repeat top center;
+	&:hover{
+		background-position: bottom center;
+	}
+}
+
+.linkedin {
+	background: url('../images/Social/linkedin_icons.png') no-repeat top center;
+	&:hover{
+		background-position: bottom center;
+	}
+}
+
+.facebook {
+	background: url('../images/Social/facebook_icons.png') no-repeat top center;
+	&:hover{
+		background-position: bottom center;
+	}
+}
+
+.behance {
+	background: url('../images/Social/behance_icons.png') no-repeat top center;
+	&:hover{
+		background-position: bottom center;
+	}
+}
+
+.github {
+	background: url('../images/Social/github_icons.png') no-repeat top center;
+	&:hover{
+		background-position: bottom center;
+	}
+}
+
+.disclaimer{
+	margin: 0 5%;
+	display: block;
+	clear: both;
+}

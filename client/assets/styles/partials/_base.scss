@@ -1,0 +1,113 @@
+/*/////////////////////////////////////////////////global////////////////////////////////////////*/
+
+* {
+	box-sizing: border-box;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+body {
+	margin:0;
+	padding:0;
+	font-family: $arial;
+	@include font-size(14);
+	color: $black;
+	line-height: 1.5em;
+	background: $dark-grey;
+}
+
+a, img, button{
+	outline:none;
+	text-decoration:none;
+	border:none;
+}
+
+a{
+	color: blue;
+	text-decoration: underline;
+	&:hover{
+		color: $light-blue;
+	}
+	&:active{
+		color: $light-blue;
+	}
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $open-sans;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	color: $dark-grey;
+}
+
+h1 {
+	float: left;
+}
+
+h2 {
+	text-align: left;
+	@include font-size(24);
+	padding: 0 0 20px;
+	margin: 20px 5% 70px;
+	border-bottom: 1px solid $light-grey;
+	clear: both;
+	@include breakpoint(max-width 768px) {
+		margin: 20px 5%;
+	}
+}
+
+h3 {
+	padding: 0 0 10px;
+	font-size: 20px;
+	@include font-size(22);
+}
+
+h4{
+	@include font-size(20);
+}
+
+h5{
+	@include font-size(18);
+}
+
+h6{
+	@include font-size(16);
+}
+
+strong {
+	color: $light-grey;
+	font-style:italic;
+}
+
+::-webkit-scrollbar {
+	width: 15px;
+	background: $dark-grey;
+}
+
+::-webkit-scrollbar-track {
+	background: $dark-grey;
+	-webkit-box-shadow: inset 0 0 6px $black;
+	padding: 0 1px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: $light-blue;
+}
+
+.page-wrap {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	transition: left 0.3s ease;
+	overflow: hidden;
+}
+
+.menu-open .page-wrap {
+	left: -60%;
+	@include breakpoint(min-width 1024px) {
+		left: 0;
+	}
+}

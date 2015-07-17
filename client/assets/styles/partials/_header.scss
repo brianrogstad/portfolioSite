@@ -1,0 +1,60 @@
+/*//////////////////////////////////////Header///////////////////////////////////*/
+
+
+.header {
+	width:100%;
+	margin: 0;
+	padding: 13px 5%;
+	background: $dark-grey;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	transition: left 0.3s ease;
+	z-index: 999;
+	@include breakpoint(max-width 667px) {
+		position: absolute;
+	}
+	@include breakpoint(max-width 375px) {
+		position: fixed;
+	}
+}
+
+.menu-open .header{
+	left: -60%;
+	@include breakpoint(min-width 1024px) {
+		left: 0;
+	}
+	@include breakpoint(max-width 667px) {
+		left: 0;
+	}
+	@include breakpoint(max-width 375px) {
+		left: -60%;
+	}
+}
+
+.logo{
+	width: 100%;
+	display: block;
+	float: none;
+	@include breakpoint(max-width 978px) {
+		width: 75%;
+	}
+}
+
+.logo img{
+	max-width: 100%;
+	float: left;
+}
+
+.tagline {
+	font-family: $open-sans;
+	@include font-size(28);
+	margin: 15px 0 0 15px;
+	color: $white;
+	display: block;
+	float: right;
+	@include breakpoint(max-width 978px) {
+		display: none;
+	}
+}

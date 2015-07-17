@@ -1,0 +1,27 @@
+/*/////////////////////////404 Page///////////////////////////*/
+
+
+.lost {
+	width: 100%;
+	margin: 0 0 160px;
+	padding: 0;
+	h3 {
+		padding: 0;
+		margin: 0 5% 50px;
+		text-align: center;
+	}
+	a{
+		margin: 0 auto;
+		display: block;
+		width: 20%;
+		text-decoration: none;
+		padding: 15px 0;
+		@include breakpoint(max-width 978px) {
+			width: 30%;
+		}
+		@include breakpoint(max-width 768px) {
+			width: 70%;
+		}
+	}
+}
+
