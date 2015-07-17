@@ -1,0 +1,772 @@
+/* ---------------------------------------------------------------------
+ Main Navigation
+--------------------------------------------------------------------- */
+.open-menu{
+    display: none;
+    width: 100%;
+    background: $dark-grey;
+    color: $white;
+    cursor: pointer;
+    &:after{
+        content:"\2261";
+        float: right;
+        display: block;
+        color: $white;
+        font-size: 40px;
+        line-height: .5em;
+    }
+    @include breakpoint(max-width 768px) {
+        display: block;
+        width: auto;
+        float: right;
+        text-transform: uppercase;
+        margin: 8px 0 0;
+        text-align: right;
+    }
+}
+
+.mobile-menu{
+    display: none;
+    @include breakpoint(max-width 768px) {
+        display: block;
+        overflow-y: scroll;
+        height: 100%;
+        position: fixed;
+        width: 64%;
+    }
+}
+
+.desktop-menu{
+    @include breakpoint(max-width 768px) {
+        display: none;
+    }
+}
+
+.mobile-anchor{
+    padding: 40px;
+    display: none;
+    @include breakpoint(max-width 768px) {
+        display: block;
+    }
+}
+
+.changed .main-nav{
+    top: 10px;
+}
+
+.main-nav {
+    position: fixed;
+    width: auto;
+    top: 27px;
+    right: 5%;
+    z-index: 9999;
+    transition: top 0.3s ease;
+    @include breakpoint(max-width 768px) {
+        top: 0;
+        width: 0;
+        margin: 0;
+        left: 100%;
+        height: 100%;
+        padding: 0 2%;
+        transition: all 0.3s ease;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline;
+            @include breakpoint(max-width 768px) {
+                display: block;
+            }
+            a{
+                display: block;
+                float: left;
+                color: $white;
+                font-family: $open-sans;
+                @include font-size(18);
+                text-decoration: none;
+                padding: 10px;
+                margin: 0 10px;
+                text-align: center;
+                @include breakpoint(max-width 768px) {
+                    margin: 0;
+                    border-top: 1px solid #484848;
+                    border-bottom: 1px solid #2E2E2E;
+                    float: none;
+                    text-align: center;
+                    @include font-size(16);
+                }
+                &:hover{
+                    color:$light-blue;
+                }
+            }
+        }
+    }
+    &:after {
+        @include breakpoint(max-width 768px) {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 25px;
+            background: linear-gradient(to right, rgba(black, 0), rgba(black, 0.4));
+        }
+    }
+}
+
+.menu-open .main-nav{
+    @include breakpoint(max-width 768px) {
+        left: 40%;
+        width: 60%;
+        display: block;
+        padding: 0;
+        transition: all 0.3s ease;
+    }
+}
+
+
+
+/* ---------------------------------------------------------------------
+Header
+--------------------------------------------------------------------- */
+.header {
+    width:100%;
+    margin: 0;
+    padding: 13px 5%;
+    background: $dark-grey;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    transition: left 0.3s ease,padding 0.3s ease,opacity 0.3s ease;
+    z-index: 999;
+    @include breakpoint(max-width 667px) {
+        position: absolute;
+    }
+    @include breakpoint(max-width 375px) {
+        position: fixed;
+    }
+}
+
+.changed .header{
+    padding: 10px 5%;
+    opacity: .7;
+}
+
+.menu-open .header{
+    left: -60%;
+    @include breakpoint(min-width 1024px) {
+        left: 0;
+    }
+    @include breakpoint(max-width 667px) {
+        left: 0;
+    }
+    @include breakpoint(max-width 375px) {
+        left: -60%;
+    }
+}
+
+.changed .logo{
+    width: 2.5%;
+}
+
+.logo{
+    width: 4%;
+    transition: width 0.3s ease;
+    display: block;
+    float: left;
+}
+
+.logo img{
+    max-width: 100%;
+}
+
+.changed .tagline {
+    display: none;
+}
+
+.tagline {
+    font-family: $open-sans;
+    @include font-size(18);
+    font-style: italic;
+    margin: 0;
+    color: $white;
+    display: block;
+    @include breakpoint(max-width 978px) {
+        display: none;
+    }
+}
+
+
+/* ---------------------------------------------------------------------
+Header
+--------------------------------------------------------------------- */
+.main-column {
+    @include clearfix();
+    clear: both;
+    background: $off-white;
+    padding: 160px 0;
+    position: static;
+    @include breakpoint(max-width 768px) {
+        padding: 100px 0 50px;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+.project {
+    width: 100%;
+    max-width: 42.5%;
+    margin: 0 0 85px 5%;
+    position: relative;
+    display: inline-block;
+    transition: background 350ms ease-out;
+    &:hover .description {
+        background: rgba(0, 0, 0, 0.6);
+        transition: background 350ms ease-out;
+    }
+    &:hover .description .inner {
+        opacity: 1;
+        @include breakpoint(max-width 768px) {
+            opacity: 0;
+        }
+    }
+    @include breakpoint(max-width 768px) {
+        display: block;
+        margin: 0 auto 35px;
+        max-width: 90%;
+    }
+}
+
+%zoom {
+    background-position: 50% top;
+    background-repeat: no-repeat;
+    background-size: 102%;
+    height: 0;
+    padding-bottom: 28%;
+    &:hover {
+        background-size: 100%;
+    }
+    @include breakpoint(max-width 768px) {
+        padding-bottom: 58%;
+    }
+}
+
+.iphoneApp {
+    background-image: url(../images/Display_Img/iphoneApp.jpg);
+    @extend %zoom;
+}
+
+.reflow {
+    background-image: url(../images/Display_Img/reflow.jpg);
+    @extend %zoom;
+}
+
+.hope-rocks {
+    background-image: url(../images/Display_Img/hoperocks.jpg);
+    @extend %zoom;
+}
+
+.emails {
+    background-image: url(../images/Display_Img/email_display.jpg);
+    @extend %zoom;
+}
+
+.walts {
+    background-image: url(../images/Display_Img/walts.jpg);
+    @extend %zoom;
+}
+
+.protire {
+    background-image: url(../images/Display_Img/protireandservice.jpg);
+    @extend %zoom;
+}
+
+.kinetic {
+    background-image: url(../images/Display_Img/aftereffects_kinetic_type.jpg);
+    @extend %zoom;
+}
+
+.chess {
+    background-image: url(../images/Display_Img/3D_chess_set.jpg);
+    @extend %zoom;
+}
+
+.bracelet {
+    background-image: url(../images/Display_Img/3D_bracelet.jpg);
+    @extend %zoom;
+}
+
+.keypad {
+    background-image: url(../images/Display_Img/keypad_resized.jpg);
+    @extend %zoom;
+}
+
+.text-design {
+    background-image: url(../images/Display_Img/design_resized.jpg);
+    @extend %zoom;
+}
+
+.winter {
+    background-image: url(../images/Display_Img/winter.jpg);
+    @extend %zoom;
+}
+
+.mailers {
+    background-image: url(../images/Display_Img/travel_mailer.jpg);
+    @extend %zoom;
+}
+
+.earth {
+    background-image: url(../images/Display_Img/earth_fest.jpg);
+    @extend %zoom;
+}
+
+.napa {
+    background-image: url(../images/Display_Img/napa.jpg);
+    @extend %zoom;
+}
+
+.logo-process {
+    background-image: url(../images/Display_Img/design_process.jpg);
+    @extend %zoom;
+}
+
+.live {
+    background-image: url(../images/Display_Img/life_drawings.jpg);
+    @extend %zoom;
+}
+
+.sketches {
+    background-image: url(../images/Display_Img/more_drawings.jpg);
+    @extend %zoom;
+}
+
+.project-title {
+    color: $light-blue;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    text-decoration: underline;
+    @include font-size(18);
+    &:hover {
+        color: $white;
+    }
+}
+
+.project-link {
+    display: block;
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 950;
+}
+
+.description {
+    position: absolute;
+    margin: 0;
+    color: $white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+
+.inner {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: $dark-grey;
+    width: 100%;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 350ms ease-out;
+}
+
+.copy {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    a {
+        color: inherit;
+        font-style: italic;
+        text-decoration: underline;
+        color: $light-blue;
+        &:hover {
+            color: $white;
+        }
+    }
+}
+
+.skills-container{
+    ul{
+        margin: 0 auto;
+        width: 70%;
+        padding: 0;
+        list-style: none;
+        li{
+            display: block;
+            div{
+                color: $white;
+                margin: 0 0 30px;
+                padding: 25px 2%;
+                text-transform: uppercase;
+                transition: width 0.8s ease;
+                width: 10%;
+                background: $light-blue;
+            }
+        }
+    }
+}
+
+
+/* ---------------------------------------------------------------------
+Slide-In Styles
+--------------------------------------------------------------------- */
+.come-in-right {
+    transform: translateX(100px);
+    animation: come-in-right 0.8s ease forwards;
+}
+
+.come-in-left {
+  transform: translateX(-100px);
+  animation: come-in-left 0.8s ease forwards;
+}
+
+.already-visible {
+  transform: translateY(0);
+  animation: none;
+}
+
+@keyframes come-in-left {
+  to { transform: translateX(0); }
+}
+
+@keyframes come-in-right {
+  to { transform: translateX(0); }
+}
+
+
+
+/* ---------------------------------------------------------------------
+Skills Styles
+--------------------------------------------------------------------- */
+.skill-lvl-1-active {
+    animation: skill-lvl-1-active 1.5s ease forwards;
+}
+
+.skill-lvl-2-active {
+    animation: skill-lvl-2-active 1.5s ease forwards;
+}
+
+.skill-lvl-3-active {
+    animation: skill-lvl-3-active 1.5s ease forwards;
+}
+
+@keyframes skill-lvl-1-active {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 33.33%;
+  }
+}
+
+@keyframes skill-lvl-2-active {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 66.66%;
+  }
+}
+
+@keyframes skill-lvl-3-active {
+  from {
+    width: 10%;
+  }
+  to {
+    width: 99.99%;
+  }
+}
+
+
+
+/* ---------------------------------------------------------------------
+Carousel Styles
+--------------------------------------------------------------------- */
+.carousel-inner>.item {
+    transition: transform .6s ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
+.carousel-inner>.item.active,
+.carousel-inner>.item.left,
+.carousel-inner>.item.right {
+    transition: transform .6s ease-in-out;
+    transform: translate3d(0, 0, 0);
+    margin: 0 auto;
+}
+
+.carousel-control.right,
+.carousel-control.left {
+    background-image: none;
+}
+
+.carousel-indicators li {
+    background-color: $light-blue;
+    border-color: $light-blue;
+}
+
+.carousel-control {
+    color: $light-blue;
+}
+
+
+
+/* ---------------------------------------------------------------------
+Modal Styles
+--------------------------------------------------------------------- */
+.modal-dialog {
+    margin: 100px auto 0;
+    z-index: 9999;
+    width: 40%;
+    @include breakpoint(max-width 1200px) {
+        width: 50%;
+    }
+    @include breakpoint(max-width 768px) {
+        width: 90%;
+        margin: 100px auto;
+    }
+    @include breakpoint(max-width 667px) {
+        width: 65%;
+        margin: 15px auto;
+    }
+    @include breakpoint(max-width 375px) {
+        width: 90%;
+        margin: 100px auto;
+    }
+}
+
+.modal-backdrop{
+    z-index: 9000;
+}
+
+.menu-open .modal.in .modal-dialog {
+    transform: translate(-66%, 0);
+}
+
+.modal {
+    overflow-y: auto;
+    padding-right: 0 !important;
+}
+
+.modal-open {
+    overflow: auto;
+}
+
+.modal-content {
+    border: 0 none;
+    border-radius: 10px 10px 0 0;
+    box-shadow: none;
+}
+
+.modal-image {
+    margin: 0 auto;
+    width: 100%;    
+}
+
+.large-modal-image{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+    padding: 25px 0;
+}
+
+.modal-body {
+    padding: 0;
+    border-radius: 0;
+    background: $dark-grey;
+}
+
+.modal-footer {
+    background: $dark-grey;
+    color: $white; 
+    border-radius: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    p{
+        float: left;
+        padding: 5px 0 0;
+        margin: 0;
+        a{
+            color: $white;
+        }
+        @include breakpoint(max-width 768px) {
+            float: none;
+            @include font-size(11);
+            margin: 0 0 10px;
+        }
+    }
+    button{
+        float: right;
+        @include breakpoint(max-width 768px) {
+            float: none;
+            margin: 0 auto;
+            text-align: center;
+            display: block;
+        }
+    }
+    @include breakpoint(max-width 768px) {
+        text-align: center;
+    }
+    @include breakpoint(max-width 667px) {
+        display: none;
+    }
+    @include breakpoint(max-width 375px) {
+        display: block;
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 72%;
+    padding-top: 25px;
+    height: 0;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0 none;
+    }
+}
+
+#kineticModal .video-wrapper {
+    @extend .video-wrapper;
+    padding-bottom: 79%;
+}
+
+.carousel-indicators{
+    bottom: 0;
+}
+
+
+
+/* ---------------------------------------------------------------------
+ Footer
+--------------------------------------------------------------------- */
+.footer {
+    clear:both;
+    font-family: $times;
+    margin: 0 auto;
+    padding: 65px 0 0;
+    background: $dark-grey;
+    color: $white;
+    @include font-size(18);
+}
+
+.footer-content {
+    @include clearfix();
+    width: 90%;
+    margin: 0 auto 50px;
+    padding: 0;
+    p{
+        text-align: center;
+        @include font-size(18);
+    }
+    @include breakpoint(max-width 978px) {
+        width: 60%;
+    }
+    @include breakpoint(max-width 768px) {
+        width: 90%;
+    }
+}
+
+.disclaimer{
+    margin: 85px 0;
+    display: block;
+    float: left;
+}
+
+
+/* ---------------------------------------------------------------------
+ Social Nav
+--------------------------------------------------------------------- */
+.social-nav {
+    @include clearfix();
+    width: 20%;
+    margin: 70px auto;
+    float: right;
+    @include breakpoint(max-width 1500px) {
+        width: 65%;
+    }
+    @include breakpoint(max-width 978px) {
+        width: 75%;
+    }
+    @include breakpoint(max-width 450px) {
+        width: 100%;
+    }
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li{
+            display: inline;
+            a{
+                display: block;
+                float: left;
+                padding: 0 0 34px;
+                width: 20%;
+                margin: 0 auto;
+                text-indent: -9999px;
+            }
+        }
+    }
+}
+
+.twitter {
+    background: url('../images/Social/twitter_icons.png') no-repeat top center;
+    &:hover{
+        background-position: bottom center;
+    }
+}
+
+.linkedin {
+    background: url('../images/Social/linkedin_icons.png') no-repeat top center;
+    &:hover{
+        background-position: bottom center;
+    }
+}
+
+.facebook {
+    background: url('../images/Social/facebook_icons.png') no-repeat top center;
+    &:hover{
+        background-position: bottom center;
+    }
+}
+
+.behance {
+    background: url('../images/Social/behance_icons.png') no-repeat top center;
+    &:hover{
+        background-position: bottom center;
+    }
+}
+
+.github {
+    background: url('../images/Social/github_icons.png') no-repeat top center;
+    &:hover{
+        background-position: bottom center;
+    }
+}
+
+
+
+

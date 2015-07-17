@@ -1,36 +1,17 @@
-/*/////////////////////////////////////////////mixins//////////////////////////////////////////////*/
-
-
-@mixin font-size($sizeValue: 1.6) {
-	font-size: $sizeValue + px;
-	font-size: ($sizeValue / 10) + rem;
-}
-
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
-
-
-/*/////////////////////////////////////////////variables//////////////////////////////////////////////*/
-
+/* ---------------------------------------------------------------------
+Variables
+--------------------------------------------------------------------- */
 
 //colors
-
 $white: #FFFFFF;
 $black: #000000;
 $off-white: #ECECEC;
-
 $light-grey: #CCCCCC;
 $medium-grey: #666666;
 $dark-grey: #333333;
 $light-blue: #6699CC;
 
 //fonts
-
 $arial: Arial, "Helvetica Neue", Helvetica, sans-serif;
 $times: "Times New Roman", Times, Baskerville, Georgia, serif;
 $open-sans: 'Open Sans Condensed', sans-serif;
