@@ -1,14 +1,15 @@
 /* ---------------------------------------------------------------------
  Main Navigation
 --------------------------------------------------------------------- */
-.open-menu{
+
+.open-menu {
     display: none;
     width: 100%;
     background: $dark-grey;
     color: $white;
     cursor: pointer;
-    &:after{
-        content:"\2261";
+    &:after {
+        content: "\2261";
         float: right;
         display: block;
         color: $white;
@@ -25,7 +26,7 @@
     }
 }
 
-.mobile-menu{
+.mobile-menu {
     display: none;
     @include breakpoint(max-width 768px) {
         display: block;
@@ -36,13 +37,13 @@
     }
 }
 
-.desktop-menu{
+.desktop-menu {
     @include breakpoint(max-width 768px) {
         display: none;
     }
 }
 
-.mobile-anchor{
+.mobile-anchor {
     padding: 40px;
     display: none;
     @include breakpoint(max-width 768px) {
@@ -50,7 +51,7 @@
     }
 }
 
-.changed .main-nav{
+.changed .main-nav {
     top: 10px;
 }
 
@@ -70,16 +71,16 @@
         padding: 0 2%;
         transition: all 0.3s ease;
     }
-    ul{
+    ul {
         margin: 0;
         padding: 0;
         list-style: none;
-        li{
+        li {
             display: inline;
             @include breakpoint(max-width 768px) {
                 display: block;
             }
-            a{
+            a {
                 display: block;
                 float: left;
                 color: $white;
@@ -97,8 +98,8 @@
                     text-align: center;
                     @include font-size(16);
                 }
-                &:hover{
-                    color:$light-blue;
+                &:hover {
+                    color: $light-blue;
                 }
             }
         }
@@ -116,7 +117,7 @@
     }
 }
 
-.menu-open .main-nav{
+.menu-open .main-nav {
     @include breakpoint(max-width 768px) {
         left: 40%;
         width: 60%;
@@ -127,12 +128,12 @@
 }
 
 
-
 /* ---------------------------------------------------------------------
 Header
 --------------------------------------------------------------------- */
+
 .header {
-    width:100%;
+    width: 100%;
     margin: 0;
     padding: 13px 5%;
     background: $dark-grey;
@@ -141,7 +142,7 @@ Header
     left: 0;
     top: 0;
     opacity: 1;
-    transition: left 0.3s ease,padding 0.3s ease,opacity 0.3s ease;
+    transition: left 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
     z-index: 999;
     @include breakpoint(max-width 667px) {
         position: absolute;
@@ -151,12 +152,12 @@ Header
     }
 }
 
-.changed .header{
+.changed .header {
     padding: 10px 5%;
     opacity: .7;
 }
 
-.menu-open .header{
+.menu-open .header {
     left: -60%;
     @include breakpoint(min-width 1024px) {
         left: 0;
@@ -169,18 +170,18 @@ Header
     }
 }
 
-.changed .logo{
+.changed .logo {
     width: 2.5%;
 }
 
-.logo{
+.logo {
     width: 4%;
     transition: width 0.3s ease;
     display: block;
     float: left;
 }
 
-.logo img{
+.logo img {
     max-width: 100%;
 }
 
@@ -204,6 +205,7 @@ Header
 /* ---------------------------------------------------------------------
 Header
 --------------------------------------------------------------------- */
+
 .main-column {
     @include clearfix();
     clear: both;
@@ -405,15 +407,15 @@ Header
     }
 }
 
-.skills-container{
-    ul{
+.skills-container {
+    ul {
         margin: 0 auto;
         width: 70%;
         padding: 0;
         list-style: none;
-        li{
+        li {
             display: block;
-            div{
+            div {
                 color: $white;
                 margin: 0 0 30px;
                 padding: 25px 2%;
@@ -430,34 +432,39 @@ Header
 /* ---------------------------------------------------------------------
 Slide-In Styles
 --------------------------------------------------------------------- */
+
 .come-in-right {
     transform: translateX(100px);
     animation: come-in-right 0.8s ease forwards;
 }
 
 .come-in-left {
-  transform: translateX(-100px);
-  animation: come-in-left 0.8s ease forwards;
+    transform: translateX(-100px);
+    animation: come-in-left 0.8s ease forwards;
 }
 
 .already-visible {
-  transform: translateY(0);
-  animation: none;
+    transform: translateY(0);
+    animation: none;
 }
 
 @keyframes come-in-left {
-  to { transform: translateX(0); }
+    to {
+        transform: translateX(0);
+    }
 }
 
 @keyframes come-in-right {
-  to { transform: translateX(0); }
+    to {
+        transform: translateX(0);
+    }
 }
-
 
 
 /* ---------------------------------------------------------------------
 Skills Styles
 --------------------------------------------------------------------- */
+
 .skill-lvl-1-active {
     animation: skill-lvl-1-active 1.5s ease forwards;
 }
@@ -471,37 +478,37 @@ Skills Styles
 }
 
 @keyframes skill-lvl-1-active {
-  from {
-    width: 10%;
-  }
-  to {
-    width: 33.33%;
-  }
+    from {
+        width: 10%;
+    }
+    to {
+        width: 33.33%;
+    }
 }
 
 @keyframes skill-lvl-2-active {
-  from {
-    width: 10%;
-  }
-  to {
-    width: 66.66%;
-  }
+    from {
+        width: 10%;
+    }
+    to {
+        width: 66.66%;
+    }
 }
 
 @keyframes skill-lvl-3-active {
-  from {
-    width: 10%;
-  }
-  to {
-    width: 99.99%;
-  }
+    from {
+        width: 10%;
+    }
+    to {
+        width: 99.99%;
+    }
 }
-
 
 
 /* ---------------------------------------------------------------------
 Carousel Styles
 --------------------------------------------------------------------- */
+
 .carousel-inner>.item {
     transition: transform .6s ease-in-out;
     transform: translate3d(0, 0, 0);
@@ -530,10 +537,10 @@ Carousel Styles
 }
 
 
-
 /* ---------------------------------------------------------------------
 Modal Styles
 --------------------------------------------------------------------- */
+
 .modal-dialog {
     margin: 100px auto 0;
     z-index: 9999;
@@ -555,7 +562,7 @@ Modal Styles
     }
 }
 
-.modal-backdrop{
+.modal-backdrop {
     z-index: 9000;
 }
 
@@ -580,10 +587,10 @@ Modal Styles
 
 .modal-image {
     margin: 0 auto;
-    width: 100%;    
+    width: 100%;
 }
 
-.large-modal-image{
+.large-modal-image {
     width: 70%;
     margin: 0 auto;
     display: block;
@@ -598,14 +605,14 @@ Modal Styles
 
 .modal-footer {
     background: $dark-grey;
-    color: $white; 
+    color: $white;
     border-radius: 0;
-    box-shadow: 0 5px 15px rgba(0,0,0,.5);
-    p{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5);
+    p {
         float: left;
         padding: 5px 0 0;
         margin: 0;
-        a{
+        a {
             color: $white;
         }
         @include breakpoint(max-width 768px) {
@@ -614,7 +621,7 @@ Modal Styles
             margin: 0 0 10px;
         }
     }
-    button{
+    button {
         float: right;
         @include breakpoint(max-width 768px) {
             float: none;
@@ -654,17 +661,17 @@ Modal Styles
     padding-bottom: 79%;
 }
 
-.carousel-indicators{
+.carousel-indicators {
     bottom: 0;
 }
-
 
 
 /* ---------------------------------------------------------------------
  Footer
 --------------------------------------------------------------------- */
+
 .footer {
-    clear:both;
+    clear: both;
     font-family: $times;
     margin: 0 auto;
     padding: 65px 0 0;
@@ -678,7 +685,7 @@ Modal Styles
     width: 90%;
     margin: 0 auto 50px;
     padding: 0;
-    p{
+    p {
         text-align: center;
         @include font-size(18);
     }
@@ -690,7 +697,7 @@ Modal Styles
     }
 }
 
-.disclaimer{
+.disclaimer {
     margin: 85px 0;
     display: block;
     float: left;
@@ -700,6 +707,7 @@ Modal Styles
 /* ---------------------------------------------------------------------
  Social Nav
 --------------------------------------------------------------------- */
+
 .social-nav {
     @include clearfix();
     width: 20%;
@@ -714,13 +722,13 @@ Modal Styles
     @include breakpoint(max-width 450px) {
         width: 100%;
     }
-    ul{
+    ul {
         margin: 0;
         padding: 0;
         list-style: none;
-        li{
+        li {
             display: inline;
-            a{
+            a {
                 display: block;
                 float: left;
                 padding: 0 0 34px;
@@ -734,39 +742,35 @@ Modal Styles
 
 .twitter {
     background: url('../images/Social/twitter_icons.png') no-repeat top center;
-    &:hover{
+    &:hover {
         background-position: bottom center;
     }
 }
 
 .linkedin {
     background: url('../images/Social/linkedin_icons.png') no-repeat top center;
-    &:hover{
+    &:hover {
         background-position: bottom center;
     }
 }
 
 .facebook {
     background: url('../images/Social/facebook_icons.png') no-repeat top center;
-    &:hover{
+    &:hover {
         background-position: bottom center;
     }
 }
 
 .behance {
     background: url('../images/Social/behance_icons.png') no-repeat top center;
-    &:hover{
+    &:hover {
         background-position: bottom center;
     }
 }
 
 .github {
     background: url('../images/Social/github_icons.png') no-repeat top center;
-    &:hover{
+    &:hover {
         background-position: bottom center;
     }
 }
-
-
-
-
