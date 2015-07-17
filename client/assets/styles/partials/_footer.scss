@@ -5,39 +5,30 @@
 	clear:both;
 	font-family: $times;
 	margin: 0 auto;
-	padding: 65px 0 100px;
+	padding: 65px 0 0;
 	background: $dark-grey;
 	color: $white;
+	@include font-size(18);
 }
 
 .inverse-title{
 	color: $white;
 }
 
-.about-content {
-	width: 40%;
+.footer-content {
+	@include clearfix();
+	width: 90%;
 	margin: 0 auto 50px;
 	padding: 0;
+	p{
+		text-align: center;
+		@include font-size(18);
+	}
 	@include breakpoint(max-width 978px) {
 		width: 60%;
 	}
 	@include breakpoint(max-width 768px) {
 		width: 90%;
-	}
-	p{
-		padding: 0;
-		@include font-size(18);
-		margin: 50px 0;
-		line-height: 2em;
-		@include breakpoint(max-width 768px) {
-			@include font-size(16);
-		}
-	}
-	.profile-image{
-		width: 100%;
-		max-width: 500px;
-		margin: 0 auto 50px;
-		display: block;
 	}
 }
 
@@ -47,9 +38,9 @@
 
 .social-nav {
 	@include clearfix();
-	width: 50%;
-	clear: both;
-	margin: 30px auto;
+	width: 20%;
+	margin: 70px auto;
+	float: right;
 	@include breakpoint(max-width 1500px) {
 		width: 65%;
 	}
@@ -113,7 +104,7 @@
 }
 
 .disclaimer{
-	margin: 0 5%;
+	margin: 85px 0;
 	display: block;
-	clear: both;
+	float: left;
 }
