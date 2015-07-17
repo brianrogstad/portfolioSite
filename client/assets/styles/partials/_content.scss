@@ -202,13 +202,42 @@
     }
 }
 
+.skills-container{
+    ul{
+        margin: 0 auto;
+        width: 70%;
+        padding: 0;
+        list-style: none;
+        li{
+            display: block;
+            div{
+                color: $white;
+                margin: 0 0 30px;
+                padding: 25px 2%;
+                text-transform: uppercase;
+                transition: width 0.8s ease;
+                width: 10%;
+                background: $light-blue;
+            }
+        }
+    }
+}
+
+.avatar{
+    border-radius: 50px;
+    border: 3px solid $white;
+    padding: 3px;
+    float: left;
+    margin: 15px 15px 10px 0;
+}
 
 
 /*/////////////////////////////////////// Slide-In Styles //////////////////////////////////////*/
 
+
 .come-in-right {
-  transform: translateX(100px);
-  animation: come-in-right 0.8s ease forwards;
+    transform: translateX(100px);
+    animation: come-in-right 0.8s ease forwards;
 }
 
 .come-in-left {
@@ -228,6 +257,54 @@
 @keyframes come-in-right {
   to { transform: translateX(0); }
 }
+
+
+
+/*/////////////////////////////////////// Skills Styles //////////////////////////////////////*/
+
+
+.skill-lvl-1-active {
+    animation: skill-lvl-1-active 1.5s ease forwards;
+}
+
+.skill-lvl-2-active {
+    animation: skill-lvl-2-active 1.5s ease forwards;
+}
+
+.skill-lvl-3-active {
+    animation: skill-lvl-3-active 1.5s ease forwards;
+}
+
+@keyframes skill-lvl-1-active {
+  from {
+    width: 10%;
+  }
+
+  to {
+    width: 33.33%;
+  }
+}
+
+@keyframes skill-lvl-2-active {
+  from {
+    width: 10%;
+  }
+
+  to {
+    width: 66.66%;
+  }
+}
+
+@keyframes skill-lvl-3-active {
+  from {
+    width: 10%;
+  }
+
+  to {
+    width: 99.99%;
+  }
+}
+
 
 
 /*/////////////////////////////////////// Carousel Styles //////////////////////////////////////*/
@@ -382,4 +459,11 @@
 
 .carousel-indicators{
     bottom: 0;
+}
+
+
+.form-control{
+    padding: 15px;
+    height: auto;
+    margin: 0 0 10px;
 }

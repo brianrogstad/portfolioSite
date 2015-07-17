@@ -43,15 +43,26 @@ h1,h2,h3,h4,h5,h6{
 	color: $dark-grey;
 }
 
+.changed h1{
+	display: none;
+}
+
 h1 {
+	font-family: $open-sans;
+	@include font-size(30);
+	margin: 5px 0 0 15px;
+	color: $white;
 	float: left;
+	@include breakpoint(max-width 978px) {
+		display: none;
+	}
 }
 
 h2 {
-	text-align: left;
-	@include font-size(24);
-	padding: 0 0 20px;
-	margin: 20px 5% 70px;
+	text-align: center;
+	@include font-size(28);
+	padding: 60px 0;
+	margin: 0 5% 70px;
 	border-bottom: 1px solid $light-grey;
 	clear: both;
 	@include breakpoint(max-width 768px) {

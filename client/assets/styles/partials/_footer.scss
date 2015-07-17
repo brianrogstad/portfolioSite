@@ -10,7 +10,7 @@
 	color: $white;
 }
 
-.about-title{
+.inverse-title{
 	color: $white;
 }
 
@@ -47,8 +47,9 @@
 
 .social-nav {
 	@include clearfix();
-	width: 45%;
-	margin: 0 auto;
+	width: 50%;
+	clear: both;
+	margin: 30px auto;
 	@include breakpoint(max-width 1500px) {
 		width: 65%;
 	}
