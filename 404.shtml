@@ -1,77 +1,81 @@
 <!DOCTYPE html>
 <html class="no-js">
-<head>
-	<meta name="Description" content="Portfolio of Brian Rogstad" />
-	<meta name="Author" content="Brian Rogstad" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-	<title>Interactive Portfolio | Brian Rogstad</title>
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	<link type="text/css" rel="stylesheet" href="portfolio_css/stylesheets/normalize.css" />
-	<link type="text/css" rel="stylesheet" href="portfolio_css/stylesheets/global.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<nav class="main-nav" id="main-nav" role="navigation">
-		<ul>
-			<li><a href="#top" title="My Work">My Work</a></li>
-			<li><a href="#bottom" title="About">About Me</a></li>
-		</ul>
-	</nav>
-	<div class="page-wrap">
-<!-- header -->
-		<header class="header">
-			<h1><a href="index.html" class="logo" title="Home"><img src="images/brianrogstad-logo.png" alt="BrianRogstad.com" /><span class="tagline">Brian Rogstad</span></a></h1>
-			<button class="open-menu"></button>
-		</header>
-		<a id="top"></a>
-		<div class="main-column" role="main">
-			<div class="lost">
-				<h2>404 - Page Not Found</h2>
-				<h3>The Page you were looking for does not exsist, try the homepage.</h3>
-				<a href="index.html" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span> Take Me Home </a>
-			</div>
-		</div>
-<!-- footer -->
-	<a id="bottom"></a>
-	<footer class="footer">
-		<h2 class="about-title">About Me</h2>
-		<div class="about-content">
-			<img src="images/profile_pic_2.png" class="profile-image" title="Brian Rogstad" alt="Picture of Brian Rogstad"/>
-			<p>I am a <strong>designer</strong>, and <strong>developer</strong> with the talent to work on various applications. <strong>Design Layout</strong>, <strong>HTML</strong> and <strong>CSS</strong> are a few of the many things I excel in. I have a distinct ability to visually communicate ideas and I also like the challenge of problem solving. I am organized, detail oriented, and always maintain a focus for what needs to be accomplished.</p>
-			<nav class="social-nav clearfix">
-				<ul>
-					<li><a href="http://twitter.com/B_Rogstad" class="twitter" title="Follow Brian Rogstad on Twitter" target="_blank">Follow Me on Twitter</a></li>
-					<li><a href="http://www.facebook.com/people/Brian-Rogstad/100000363829679" class="facebook" title="Find Me on Facebook" target="_blank">Find Me on Facebook</a></li>
-					<li><a href="http://www.linkedin.com/pub/brian-rogstad/24/30b/61" class="linkedin" title="Connect with me on LinkedIn" target="_blank">Connect with me on LinkedIn</a></li>
-					<li><a href="http://www.behance.net/brianrogstad" class="behance" title="Find Brian Rogstad on Behance" target="_blank">My Behance Profile</a></li>
-				</ul>
-			</nav>
-		</div>
-		<p class="disclaimer"> &#169; Brian Rogstad  2009-<script>document.write(new Date().getFullYear())</script>. All rights reserved.</p>
-	</footer>
-</div>
-<script src="js/init.js"></script>
-<script>
-var _gaq = _gaq || [];
-_gaq.push(['_setAccount', 'UA-19844455-1']);
-_gaq.push(['_trackPageview']);
 
-(function() {
-	var ga = document.createElement('script');
-	ga.type = 'text/javascript';
-	ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0];
-	s.parentNode.insertBefore(ga, s);
-})();
-$(document).ready(function() {
-	if ($("a[name='contact']").attr("data-error") == "true") {
-		document.location.hash = "contact";
-	}
-});
-</script>
+<head>
+    <meta name="Description" content="Page Not Found on Interactive Portfolio of Brian Rogstad" />
+    <meta name="Author" content="Brian Rogstad" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Page Not Found | Interactive Portfolio | Brian Rogstad</title>
+    <link rel="icon" type="image/x-icon" href="icon.png" />
+    <link type="text/css" rel="stylesheet" href="client/assets/styles/styles.css" />
+</head>
+
+<body>
+    <nav class="main-nav" id="main-nav" role="navigation">
+        <ul class="desktop-menu">
+            <li><a href="#top" title="My Work">Work</a></li>
+            <li><a href="#skills" title="Skills">Skills</a></li>
+        </ul>
+    </nav>
+    <div class="page-wrap">
+        <!-- header -->
+        <header class="header">
+            <a href="index.html" class="logo" title="Home"><img src="client/assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
+            <h1>Brian Rogstad <span class="tagline">UI Developer</span></h1>
+            <button class="open-menu"></button>
+            <!--[if lt IE 8 ]><div>I no longer support this version of your browser. Check <a href="http://browsehappy.com/" target="_blank">here</a> for upgrade options.</div><![endif]-->
+        </header>
+        <a id="top"></a>
+        <div class="main-column" role="main">
+            <div class="lost">
+                <h2>404 - Page Not Found</h2>
+                <h3>The Page you were looking for does not exist, try the homepage.</h3>
+                <a href="index.html" class="btn btn-primary btn-lg">Take Me Home </a>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <a id="connect"></a>
+            <div class="footer-content">
+                <p class="disclaimer"> &#169; Brian Rogstad 2009-
+                    <script>
+                    document.write(new Date().getFullYear())
+                    </script>. All rights reserved.</p>
+                <nav class="social-nav">
+                    <ul>
+                        <li><a href="https://github.com/brianrogstad" class="github" title="See my work on GitHub" target="_blank">See my work on GitHub</a></li>
+                        <li><a href="https://twitter.com/B_Rogstad" class="twitter" title="Follow me on Twitter" target="_blank">Follow me on Twitter</a></li>
+                        <li><a href="http://www.facebook.com/people/Brian-Rogstad/100000363829679" class="facebook" title="Find me on Facebook" target="_blank">Find me on Facebook</a></li>
+                        <li><a href="http://www.linkedin.com/pub/brian-rogstad/24/30b/61" class="linkedin" title="Connect with me on LinkedIn" target="_blank">Connect with me on LinkedIn</a></li>
+                        <li><a href="http://www.behance.net/brianrogstad" class="behance" title="View my work on Behance" target="_blank">My Behance profile</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="client/assets/js/init.js"></script>
+    <script type="text/javascript" src="client/assets/js/slideIn.js"></script>
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-19844455-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+    $(document).ready(function() {
+        if ($("a[name='contact']").attr("data-error") == "true") {
+            document.location.hash = "contact";
+        }
+    });
+    </script>
 </body>
+
 </html>
