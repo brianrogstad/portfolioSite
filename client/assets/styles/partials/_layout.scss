@@ -62,6 +62,12 @@
     right: 5%;
     z-index: 9999;
     transition: top 0.3s ease;
+    @include breakpoint(max-width 1024px) {
+        top: 10px;
+    }
+    @include breakpoint(max-width 978px) {
+        top: 12px;
+    }
     @include breakpoint(max-width 768px) {
         top: 0;
         width: 0;
@@ -112,7 +118,7 @@
             left: 0;
             height: 100%;
             width: 25px;
-            background: linear-gradient(to right, rgba(black, 0), rgba(black, 0.4));
+            background: linear-gradient(to left, rgba(black, 0), rgba(black, 0.4));
         }
     }
 }
@@ -171,7 +177,13 @@ Header
 }
 
 .changed .logo {
-    width: 2.5%;
+    width: 3.5%;
+    @include breakpoint(max-width 978px) {
+        width: 5%;
+    }
+    @include breakpoint(max-width 568px) {
+        width: 9%;
+    }
 }
 
 .logo {
@@ -179,6 +191,12 @@ Header
     transition: width 0.3s ease;
     display: block;
     float: left;
+    @include breakpoint(max-width 978px) {
+        width: 5%;
+    }
+    @include breakpoint(max-width 568px) {
+        width: 9%;
+    }
 }
 
 .logo img {
@@ -196,6 +214,9 @@ Header
     margin: 0;
     color: $white;
     display: block;
+    @include breakpoint(max-width 1024px) {
+        @include font-size(14);
+    }
     @include breakpoint(max-width 978px) {
         display: none;
     }
@@ -203,7 +224,7 @@ Header
 
 
 /* ---------------------------------------------------------------------
-Header
+Content
 --------------------------------------------------------------------- */
 
 .main-column {
@@ -224,6 +245,7 @@ Header
     margin: 0 0 85px 5%;
     position: relative;
     display: inline-block;
+    visibility: hidden;
     transition: background 350ms ease-out;
     &:hover .description {
         background: rgba(0, 0, 0, 0.6);
@@ -407,26 +429,6 @@ Header
     }
 }
 
-.skills-container {
-    ul {
-        margin: 0 auto;
-        width: 70%;
-        padding: 0;
-        list-style: none;
-        li {
-            display: block;
-            div {
-                color: $white;
-                margin: 0 0 30px;
-                padding: 25px 2%;
-                text-transform: uppercase;
-                transition: width 0.8s ease;
-                width: 10%;
-                background: $light-blue;
-            }
-        }
-    }
-}
 
 
 /* ---------------------------------------------------------------------
@@ -434,13 +436,15 @@ Slide-In Styles
 --------------------------------------------------------------------- */
 
 .come-in-right {
-    transform: translateX(100px);
-    animation: come-in-right 0.8s ease forwards;
+    transform: translateX(200px);
+    animation: come-in-right 0.6s ease forwards;
+    visibility: visible;
 }
 
 .come-in-left {
-    transform: translateX(-100px);
-    animation: come-in-left 0.8s ease forwards;
+    transform: translateX(-200px);
+    animation: come-in-left 0.6s ease forwards;
+    visibility: visible;
 }
 
 .already-visible {
@@ -465,21 +469,46 @@ Slide-In Styles
 Skills Styles
 --------------------------------------------------------------------- */
 
+.skills-container {
+    ul {
+        margin: 0 auto;
+        width: 90%;
+        padding: 0;
+        list-style: none;
+        li {
+            display: block;
+            div {
+                color: $white;
+                margin: 0 0 30px;
+                padding: 25px 2%;
+                text-transform: uppercase;
+                transition: width 0.8s ease;
+                width: 10%;
+                background: $light-blue;
+                @include breakpoint(max-width 768px) {
+                    @include font-size(12);
+                    padding: 10px 2%;
+                }
+            }
+        }
+    }
+}
+
 .skill-lvl-1-active {
-    animation: skill-lvl-1-active 1.5s ease forwards;
+    animation: skill-lvl-1-active 0.6s ease forwards;
 }
 
 .skill-lvl-2-active {
-    animation: skill-lvl-2-active 1.5s ease forwards;
+    animation: skill-lvl-2-active 0.6s ease forwards;
 }
 
 .skill-lvl-3-active {
-    animation: skill-lvl-3-active 1.5s ease forwards;
+    animation: skill-lvl-3-active 0.6s ease forwards;
 }
 
 @keyframes skill-lvl-1-active {
     from {
-        width: 10%;
+        width: 0%;
     }
     to {
         width: 33.33%;
@@ -488,7 +517,7 @@ Skills Styles
 
 @keyframes skill-lvl-2-active {
     from {
-        width: 10%;
+        width: 0%;
     }
     to {
         width: 66.66%;
@@ -497,7 +526,7 @@ Skills Styles
 
 @keyframes skill-lvl-3-active {
     from {
-        width: 10%;
+        width: 0%;
     }
     to {
         width: 99.99%;
@@ -612,6 +641,7 @@ Modal Styles
         float: left;
         padding: 5px 0 0;
         margin: 0;
+        text-align: left;
         a {
             color: $white;
         }
@@ -713,14 +743,14 @@ Modal Styles
     width: 20%;
     margin: 70px auto;
     float: right;
-    @include breakpoint(max-width 1500px) {
-        width: 65%;
+    @include breakpoint(max-width 1024px) {
+        width: 30%;
     }
     @include breakpoint(max-width 978px) {
-        width: 75%;
+        width: 50%;
     }
     @include breakpoint(max-width 450px) {
-        width: 100%;
+        width: 40%;
     }
     ul {
         margin: 0;

@@ -58,7 +58,7 @@ h6 {
 
 h1 {
     font-family: $open-sans;
-    @include font-size(30);
+    font-size: 1.75vw;
     margin: 5px 0 0 15px;
     color: $white;
     float: left;
@@ -119,6 +119,10 @@ strong {
 
 ::-webkit-scrollbar-thumb {
     background: $light-blue;
+}
+
+.visible{
+	visibility: visible !important;
 }
 
 .page-wrap {
