@@ -712,10 +712,6 @@ Modal Styles
     width: 90%;
     margin: 0 auto;
     padding: 0;
-    p {
-        text-align: center;
-        @include font-size(18);
-    }
     @include breakpoint(max-width 978px) {
         width: 60%;
     }
@@ -728,6 +724,12 @@ Modal Styles
     margin: 85px 0;
     display: block;
     float: left;
+    width: 50%;
+    text-align: left;
+    @include breakpoint(max-width 978px) {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 
