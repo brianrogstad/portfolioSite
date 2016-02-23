@@ -1,7 +1,9 @@
+/* jshint -W117 */
+
 $(document).ready(function() {
 
-	// set page at top upon refresh
-	$(this).scrollTop(0);
+    // set page at top upon refresh
+    $(this).scrollTop(0);
 
     // toggle class to control open/close of off-canvas
     $('.open-menu').click(function() {
@@ -28,5 +30,4 @@ $(document).ready(function() {
             $('body').removeClass('changed');
         }
     });
-
 });
