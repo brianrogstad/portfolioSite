@@ -16,7 +16,7 @@ gulp.task('default', ['serve']);
 gulp.task('serve', ['scripts', 'styles'], function () {
     log('starting server and watching with gulp-nodemon');
     $.nodemon({
-        script: './src/server/server.js',
+        script: './server.js',
         ext: 'js html'
     })
     .on('restart', ['scripts'], function () {
@@ -42,9 +42,9 @@ gulp.task('serve', ['scripts', 'styles'], function () {
 gulp.task('scripts', function () {
     log('analyzing source with JSHint and JSCS');
     return gulp.src([
-            './src/**/*.js',
+            './assets/**/*.js',
             './*.js',
-            '!./src/client/js/vendor/**/*.js',
+            '!./assets/js/vendor/**/*.js',
         ])
       .pipe($.if(args.verbose, $.print()))
       .pipe($.jshint())
@@ -58,7 +58,7 @@ gulp.task('scripts', function () {
 gulp.task('styles', function() {
     log('analyzing, converting and compressing sass');
     return gulp.src([
-            './src/client/styles/**/*.scss'
+            './assets/styles/**/*.scss'
         ])
         .pipe($.scssLint({
             'config': './lint.yml',
@@ -67,8 +67,8 @@ gulp.task('styles', function() {
         .on('error', handleError)
         .pipe($.sourcemaps.init())  // Process the original sources
         .pipe($.sourcemaps.write()) // Add the map to modified source.
-        .pipe($.autoprefixer({browsers: ['last 4 versions', '> 5%']}))
-        .pipe(gulp.dest('./src/client/styles'));
+        .pipe($.autoprefixer({browsers: ['last 2 versions', '> 5%']}))
+        .pipe(gulp.dest('./assets/styles'));
 });
 
 /////////////////////// start up browser-sync ///////////////////////
@@ -109,7 +109,7 @@ function changeEvent(event) {
 function startBrowserSync() {
 
     log('Starting BrowserSync on port 8000');
-    gulp.watch(['./src/client/styles/**/*.scss'], ['styles']).on('change', changeEvent);
+    gulp.watch(['assets/styles/**/*.scss'], ['styles']).on('change', changeEvent);
 
     var options = {
         proxy: 'http://localhost:8000',

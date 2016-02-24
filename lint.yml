@@ -1,10 +1,10 @@
 # Custom scss-lint configuration.
 
 exclude: [
-  'src/client/styles/partials/_print.scss',
-  'src/client/styles/partials/_normalize.scss',
-  'src/client/styles/partials/_mixins.scss',
-  'src/client/styles/styles.css',
+  'assets/styles/partials/_print.scss',
+  'assets/styles/partials/_normalize.scss',
+  'assets/styles/partials/_mixins.scss',
+  'assets/styles/styles.css',
 ]
 
 scss_files: "**/*.scss"

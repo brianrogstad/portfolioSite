@@ -13,7 +13,6 @@ app.use(bodyParser.json()); // parse application/json
 app.use(bodyParser.json()); // parse as json
 app.use(bodyParser.urlencoded({extended: true})); // parse application/x-www-form-urlencoded
 
-app.use(express.static('./src/client/'));
 app.use(express.static('./'));
 
 //////////////////////// start app ///////////////////////////////

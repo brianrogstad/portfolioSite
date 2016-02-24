@@ -2,45 +2,64 @@
 // Specific Styles
 // =============================================================
 
-// Main Navigation - Mobile
+// Project Navigation
 // =============================================================
-.open-menu {
-    background: $mine-shaft;
-    color: $white;
-    cursor: pointer;
-    display: none;
-    width: 100%;
 
-    @include breakpoint(max-width 768px) {
-        display: block;
-        float: right;
-        margin: 8px 0 0;
-        text-align: right;
-        text-transform: uppercase;
-        width: auto;
+
+.project-nav {
+    box-shadow: inset 10px 0px 15px -5px $black;
+    display: block;
+    height: 100%;
+    left: 100%;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0 2%;
+    position: fixed;
+    top: 0;
+    transition: all .3s ease;
+    width: 21%;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
 
-    &::after {
+    li {
+        display: block;
+    }
+
+    a {
+        @include font-size(16);
+        border-bottom: 1px solid $mine-shaft;
+        border-top: 1px solid $tundora;
         color: $white;
-        content: '\2261';
         display: block;
-        float: right;
-        font-size: 40px;
-        line-height: .5em;
+        font-family: $open-sans;
+        float: none;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            color: $danube;
+        }
     }
 }
 
-.mobile-menu {
-    display: none;
+.menu-open .project-nav {
+    display: block;
+    left: 80%;
+    padding: 0;
+    transition: left .3s ease;
 
     @include breakpoint(max-width 768px) {
-        display: block;
-        height: 100%;
-        overflow-y: scroll;
-        position: fixed;
-        width: 64%;
+        left: 40%;
+        width: 63%;
     }
 }
+
 
 .mobile-anchor {
     display: none;
@@ -53,40 +72,16 @@
 
 // Main Navigation - Desktop
 // =============================================================
-.desktop-menu {
-    @include breakpoint(max-width 768px) {
-        display: none;
-    }
-}
-
-.changed .main-nav {
-    top: 10px;
-}
-
 .main-nav {
     position: fixed;
     right: 5%;
-    top: 27px;
-    transition: top .3s ease;
+    top: 16px;
+    transition: right .3s ease;
     width: auto;
     z-index: 9999;
 
-    @include breakpoint(max-width 1024px) {
+    @include breakpoint(max-width 1366px) {
         top: 10px;
-    }
-
-    @include breakpoint(max-width 978px) {
-        top: 12px;
-    }
-
-    @include breakpoint(max-width 768px) {
-        height: 100%;
-        left: 100%;
-        margin: 0;
-        padding: 0 2%;
-        top: 0;
-        transition: all .3s ease;
-        width: 0;
     }
 
     ul {
@@ -97,10 +92,6 @@
 
     li {
         display: inline;
-
-        @include breakpoint(max-width 768px) {
-            display: block;
-        }
     }
 
     a {
@@ -114,41 +105,23 @@
         text-align: center;
         text-decoration: none;
 
-        @include breakpoint(max-width 768px) {
-            @include font-size(16);
-            border-bottom: 1px solid $mine-shaft;
-            border-top: 1px solid $tundora;
-            float: none;
-            margin: 0;
-            text-align: center;
-        }
-
         &:hover {
             color: $danube;
         }
     }
+}
 
-    &::after {
-        @include breakpoint(max-width 768px) {
-            background: linear-gradient(to left, $black, rgba($black, .4));
-            content: '';
-            height: 100%;
-            left: 0;
-            position: absolute;
-            top: 0;
-            width: 25px;
-        }
-    }
+.changed .main-nav {
+    opacity: 1;
+    top: 8px;
 }
 
 .menu-open .main-nav {
+    right: 25%;
+    transition: right .3s ease;
 
     @include breakpoint(max-width 768px) {
-        display: block;
-        left: 40%;
-        padding: 0;
-        transition: all .3s ease;
-        width: 60%;
+        right: 63%;
     }
 }
 
@@ -181,23 +154,15 @@
 }
 
 .menu-open .header {
-    left: -60%;
+    left: -20%;
 
-    @include breakpoint(min-width 1024px) {
+    @include breakpoint(max-width 768px) {
         left: 0;
-    }
-
-    @include breakpoint(max-width 667px) {
-        left: 0;
-    }
-
-    @include breakpoint(max-width 375px) {
-        left: -60%;
     }
 }
 
 .changed .logo {
-    width: 3.5%;
+    width: 2%;
 
     @include breakpoint(max-width 978px) {
         width: 5%;
@@ -211,8 +176,10 @@
 .logo {
     display: block;
     float: left;
+    line-height: 1em;
+    margin: 0 10px;
     transition: width .3s ease;
-    width: 4%;
+    width: 3%;
 
     @include breakpoint(max-width 978px) {
         width: 5%;
@@ -234,12 +201,12 @@
 .tagline {
     @include font-size(18);
     color: $white;
-    display: block;
+
     font-family: $open-sans;
     font-style: italic;
     margin: 0;
 
-    @include breakpoint(max-width 1024px) {
+    @include breakpoint(max-width 1366px) {
         @include font-size(14);
     }
 
@@ -254,11 +221,11 @@
     @include clearfix();
     background: $gallery;
     clear: both;
-    padding: 160px 0;
-    position: static;
+    padding: 92px 0;
+    position: relative;
 
     @include breakpoint(max-width 768px) {
-        -webkit-overflow-scrolling: touch;
+        // -webkit-overflow-scrolling: touch;
         padding: 100px 0 50px;
     }
 }
@@ -266,10 +233,14 @@
 .project {
     display: inline-block;
     margin: 0 0 85px 5%;
-    max-width: 42.5%;
+    max-width: 27%;
     position: relative;
     transition: background 350ms ease-out;
     width: 100%;
+
+    @include breakpoint(max-width 1366px) {
+        max-width: 42.5%;
+    }
 
     @include breakpoint(max-width 768px) {
         display: block;
@@ -354,6 +325,44 @@
     }
 }
 
+.copy-subsection {
+    margin: 0 0 50px;
+    text-align: center;
+}
+
+.subsection-title {
+    margin: 0 5%;
+}
+
+.subsection-image {
+    display: block;
+    margin: 0 auto 100px;
+    width: 40%;
+}
+
+.form-container {
+    background: $gallery;
+}
+
+.form {
+    margin: 0 auto;
+    padding: 25px;
+    width: 50%;
+}
+
+.subsection-container {
+    clear: both;
+    padding: 100px 0 150px;
+    width: 100%;
+}
+
+.parallax-container {
+    background: url('../images/Display_Img/3D_chess_set.jpg') $gallery center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 200px 0;
+}
+
 // Display Images
 // =============================================================
 %zoom {
@@ -361,7 +370,11 @@
     background-repeat: no-repeat;
     background-size: 102%;
     height: 0;
-    padding-bottom: 28%;
+    padding-bottom: 18%;
+
+    @include breakpoint(max-width 1366px) {
+        padding-bottom: 28%;
+    }
 
     @include breakpoint(max-width 768px) {
         padding-bottom: 58%;
@@ -718,7 +731,7 @@
     color: $white;
     font-family: $times;
     margin: 0 auto;
-    padding: 65px 0 0;
+    padding: 100px 0;
 }
 
 .footer-content {
@@ -739,7 +752,7 @@
 .disclaimer {
     display: block;
     float: left;
-    margin: 85px 0;
+    margin: 0;
     text-align: left;
     width: 50%;
 
@@ -753,8 +766,7 @@
 // =============================================================
 .social-nav {
     @include clearfix();
-    float: right;
-    margin: 70px auto;
+    margin: 50px auto;
     width: 25%;
 
     @include breakpoint(max-width 1300px) {

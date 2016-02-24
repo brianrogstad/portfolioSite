@@ -107,7 +107,7 @@ strong {
 }
 
 .inverse-title {
-    color: $white;
+    color: $gallery;
 }
 
 ::-webkit-scrollbar {
@@ -138,9 +138,9 @@ strong {
 }
 
 .menu-open .page-wrap {
-    left: -60%;
+    left: -20%;
 
-    @include breakpoint(min-width 1024px) {
-        left: 0;
+    @include breakpoint(max-width 768px) {
+        left: -60%;
     }
 }
