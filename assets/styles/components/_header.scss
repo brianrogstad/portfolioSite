@@ -1,0 +1,56 @@
+// Header
+// =============================================================
+.header {
+    background: $mine-shaft;
+    left: 0;
+    margin: 0;
+    opacity: 1;
+    padding: 13px 5%;
+    position: fixed;
+    top: 0;
+    transition: left .3s ease, padding .3s ease, opacity .3s ease;
+    width: 100%;
+    z-index: 999;
+
+    @include breakpoint(phone) {
+        position: absolute;
+    }
+}
+
+.logo {
+    display: block;
+    float: left;
+    line-height: 1em;
+    margin: 0 10px;
+    transition: width .3s ease;
+    width: 3%;
+
+    @include breakpoint(laptop) {
+        width: 5%;
+    }
+
+    @include breakpoint(phone) {
+        width: 9%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.tagline {
+    @include font-size(18);
+    color: $white;
+
+    font-family: $open-sans;
+    font-style: italic;
+    margin: 0;
+
+    @include breakpoint(desktop) {
+        @include font-size(14);
+    }
+
+    @include breakpoint(laptop) {
+        display: none;
+    }
+}

@@ -1,0 +1,169 @@
+// Projects - Main Page
+// =============================================================
+.project {
+    display: inline-block;
+    margin: 0 0 85px 5%;
+    max-width: 26.667%;
+    position: relative;
+    transition: background 350ms ease-out;
+    width: 100%;
+
+    @include breakpoint(desktop) {
+        max-width: 42.5%;
+    }
+
+    @include breakpoint(tablet) {
+        display: block;
+        margin: 0 auto 35px;
+        max-width: 90%;
+    }
+
+    &:hover .description {
+        background: rgba($black, .6);
+        transition: background 350ms ease-out;
+    }
+
+    &:hover .description .inner {
+        opacity: 1;
+
+        @include breakpoint(tablet) {
+            opacity: 0;
+        }
+    }
+}
+
+.project-title {
+    @include font-size(18);
+    color: $danube;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+    &:hover {
+        color: $white;
+        text-decoration: none;
+    }
+}
+
+.project-link {
+    display: block;
+    left: 0;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 950;
+}
+
+// Display Images
+// =============================================================
+%zoom {
+    background-position: 50% top;
+    background-repeat: no-repeat;
+    background-size: 102%;
+    height: 0;
+    padding-bottom: 18%;
+
+    @include breakpoint(desktop) {
+        padding-bottom: 28%;
+    }
+
+    @include breakpoint(tablet) {
+        padding-bottom: 58%;
+    }
+
+    &:hover {
+        background-size: 100%;
+    }
+}
+
+.iphone-app {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/iphoneApp.jpg');
+}
+
+.reflow {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/reflow.jpg');
+}
+
+.hope-rocks {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/hoperocks.jpg');
+}
+
+.emails {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/email_display.jpg');
+}
+
+.walts {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/walts.jpg');
+}
+
+.protire {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/protireandservice.jpg');
+}
+
+.kinetic {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/aftereffects_kinetic_type.jpg');
+}
+
+.chess {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/3D_chess_set.jpg');
+}
+
+.bracelet {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/3D_bracelet.jpg');
+}
+
+.keypad {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/keypad_resized.jpg');
+}
+
+.text-design {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/design_resized.jpg');
+}
+
+.winter {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/winter.jpg');
+}
+
+.mailers {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/travel_mailer.jpg');
+}
+
+.earth {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/earth_fest.jpg');
+}
+
+.napa {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/napa.jpg');
+}
+
+.logo-process {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/design_process.jpg');
+}
+
+.live {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/life_drawings.jpg');
+}
+
+.sketches {
+    @extend %zoom;
+    background-image: url('../images/Display_Img/more_drawings.jpg');
+}

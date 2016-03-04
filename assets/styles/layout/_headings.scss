@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $mine-shaft;
+    font-family: $open-sans;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.changed h1 {
+    display: none;
+}
+
+h1 {
+    color: $white;
+    float: left;
+    font-family: $open-sans;
+    font-size: 1.75vw;
+    margin: 5px 0 0 15px;
+
+    @include breakpoint(laptop) {
+        display: none;
+    }
+}
+
+h2 {
+    @include font-size(28);
+    border-bottom: 1px solid $silver;
+    clear: both;
+    margin: 0 4.667% 70px;
+    padding: 60px 0;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        margin: 20px 5%;
+    }
+}
+
+h3 {
+    @include font-size(22);
+    font-size: 20px;
+    padding: 0 0 10px;
+}
+
+h4 {
+    @include font-size(20);
+}
+
+h5 {
+    @include font-size(18);
+}
+
+h6 {
+    @include font-size(16);
+}

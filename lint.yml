@@ -1,13 +1,12 @@
 # Custom scss-lint configuration.
 
 exclude: [
-  'assets/styles/partials/_print.scss',
-  'assets/styles/partials/_normalize.scss',
-  'assets/styles/partials/_mixins.scss',
-  'assets/styles/styles.css',
+  'assets/styles/vendor/*',
+  'assets/styles/utils/*',
+  'assets/styles/styles.css'
 ]
 
-scss_files: "**/*.scss"
+scss_files: "assets/styles/**/*.scss"
 plugin_directories: ['.scss-linters']
 
 # List of gem names to load custom linters from (make sure they are already

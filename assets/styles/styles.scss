@@ -1,11 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
 
-@import 'node_modules/singularitygs/stylesheets/singularitygs';
-@import 'node_modules/breakpoint-sass/stylesheets/breakpoint';
-
-@import 'partials/variables';
-@import 'partials/mixins';
-@import 'partials/normalize';
-@import 'partials/global';
-@import 'partials/custom';
-@import 'partials/404';
+@import 'base/glob';
+@import 'utils/glob';
+@import 'vendor/glob';
+@import 'layout/glob';
+@import 'components/glob';
+@import 'pages/glob';

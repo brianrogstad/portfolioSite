@@ -1,0 +1,40 @@
+// Main Navigation - Desktop
+// =============================================================
+.main-nav {
+    position: fixed;
+    right: 5%;
+    top: 16px;
+    transition: right .3s ease;
+    width: auto;
+    z-index: 9999;
+
+    @include breakpoint(desktop) {
+        top: 10px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        @include font-size(18);
+        color: $white;
+        display: block;
+        float: left;
+        font-family: $open-sans;
+        margin: 0 10px;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+
+        &:hover {
+            color: $danube;
+        }
+    }
+}

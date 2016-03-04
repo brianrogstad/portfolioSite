@@ -1,0 +1,27 @@
+// Changes when the site is scrolled down from top
+// =============================================================
+.changed .header {
+    opacity: .7;
+    padding: 10px 5%;
+}
+
+.changed .logo {
+    width: 2%;
+
+    @include breakpoint(laptop) {
+        width: 5%;
+    }
+
+    @include breakpoint(phone) {
+        width: 9%;
+    }
+}
+
+.changed .tagline {
+    display: none;
+}
+
+.changed .main-nav {
+    opacity: 1;
+    top: 8px;
+}

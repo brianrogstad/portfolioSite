@@ -1,0 +1,67 @@
+// Global Styles
+// =============================================================
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    @include font-size(14);
+    background: $mine-shaft;
+    color: $black;
+    font-family: $arial;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+img,
+button {
+    border: 0 none;
+    outline: none;
+    text-decoration: none;
+}
+
+a {
+    color: $danube;
+    text-decoration: underline;
+
+    &:hover {
+        color: $danube;
+    }
+
+    &:active {
+        color: $danube;
+    }
+}
+
+strong {
+    font-weight: normal;
+}
+
+.inverse-title {
+    color: $gallery;
+}
+
+::-webkit-scrollbar {
+    background: $mine-shaft;
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: $mine-shaft;
+    box-shadow: inset 0 0 6px $black;
+    padding: 0 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $danube;
+}
+
+.visible {
+    visibility: visible;
+}

@@ -1,0 +1,38 @@
+// Changes when the off canvas menu is open
+// =============================================================
+.menu-open .page-wrap {
+    left: -20%;
+
+    @include breakpoint(tablet) {
+        left: -60%;
+    }
+}
+
+.menu-open .main-nav {
+    right: 25%;
+    transition: right .3s ease;
+
+    @include breakpoint(tablet) {
+        right: 63%;
+    }
+}
+
+.menu-open .project-nav {
+    display: block;
+    left: 80%;
+    padding: 0;
+    transition: left .3s ease;
+
+    @include breakpoint(tablet) {
+        left: 40%;
+        width: 63%;
+    }
+}
+
+.menu-open .header {
+    left: -20%;
+
+    @include breakpoint(tablet) {
+        left: 0;
+    }
+}
