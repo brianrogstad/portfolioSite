@@ -56,6 +56,12 @@
     z-index: 950;
 }
 
+.email-container {
+    @include clearfix;
+    padding: 90px 15%;
+}
+
+
 // Display Images
 // =============================================================
 %zoom {

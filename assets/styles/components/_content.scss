@@ -89,6 +89,12 @@
     width: 40%;
 }
 
+.subsection-display-email {
+    float: left;
+    margin: 0 1.667% 100px;
+    width: auto;
+}
+
 .subsection-display-video {
     width: 34%;
 }
@@ -97,12 +103,16 @@
     background: $gallery;
 }
 
-
 .subsection-container {
     clear: both;
     padding: 100px 0 150px;
     width: 100%;
 }
+
+.content-footer {
+    clear: both;
+}
+
 
 // Social Nav
 // =============================================================
@@ -217,11 +227,4 @@
         }
     }
 }
-
-
-
-
-
-
-
 
