@@ -1,80 +1,103 @@
 <!DOCTYPE html>
 <html class="no-js">
-
 <head>
-    <meta name="Description" content="Page Not Found on Interactive Portfolio of Brian Rogstad" />
+    <meta name="Description" content="Interactive Portfolio of Brian Rogstad" />
     <meta name="Author" content="Brian Rogstad" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>Page Not Found | Interactive Portfolio | Brian Rogstad</title>
+    <meta charset="UTF-8">
+    <title>Interactive Portfolio | Brian Rogstad | Page Not Found</title>
     <link rel="icon" type="image/x-icon" href="icon.png" />
-    <link type="text/css" rel="stylesheet" href="client/assets/styles/styles.css" />
+    <link type="text/css" rel="stylesheet" href="assets/styles/styles.css" />
 </head>
-
 <body>
-    <nav class="main-nav" id="main-nav" role="navigation">
-        <ul class="desktop-menu">
-            <li><a href="#top" title="My Work">Work</a></li>
-            <li><a href="#skills" title="Skills">Skills</a></li>
-        </ul>
-    </nav>
+    <!--[if lt IE 8 ]><div>I no longer support this version of your browser. Check <a href="http://browsehappy.com/" target="_blank">here</a> for upgrade options.</div><![endif]-->
+    <header class="header">
+        <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
+        <h1>Brian Rogstad &bull; UI Developer</h1>
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="#" title="Navigation" class="open-menu"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#top" title="Return To Top" class="to-top"><i class="fa fa-arrow-up"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
     <div class="page-wrap">
-        <!-- header -->
-        <header class="header">
-            <a href="index.html" class="logo" title="Home"><img src="client/assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
-            <h1>Brian Rogstad <span class="tagline">UI Developer</span></h1>
-            <button class="open-menu"></button>
-            <!--[if lt IE 8 ]><div>I no longer support this version of your browser. Check <a href="http://browsehappy.com/" target="_blank">here</a> for upgrade options.</div><![endif]-->
-        </header>
         <a id="top"></a>
         <div class="main-column" role="main">
+            <h2>404 - Page Not Found</h2>
             <div class="lost">
-                <h2>404 - Page Not Found</h2>
                 <h3>The Page you were looking for does not exist, try the homepage.</h3>
                 <a href="index.html" class="btn btn-primary btn-lg">Take Me Home </a>
             </div>
         </div>
-        <!-- footer -->
-        <footer class="footer">
+
+        <div class="subsection-container social-container">
+            <header class="content-header">
+                <h2 class="subsection-title inverse-title">Connect</h2>
+            </header>
+            <nav class="social-nav">
+                <ul>
+                    <li><a href="https://github.com/brianrogstad" class="github" title="See my work on GitHub" target="_blank">See my work on GitHub</a></li>
+                    <li><a href="https://twitter.com/B_Rogstad" class="twitter" title="Follow me on Twitter" target="_blank">Follow me on Twitter</a></li>
+
+                    <li><a href="http://www.linkedin.com/pub/brian-rogstad/24/30b/61" class="linkedin" title="Connect with me on LinkedIn" target="_blank">Connect with me on LinkedIn</a></li>
+                    <li><a href="http://codepen.io/brogstad/pens/public/" class="codepen" title="View my work on Codepen" target="_blank">My Codepen profile</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="subsection-container parallax-container"></div>
+
+        <div class="subsection-container brands-container">
+            <header class="content-header">
+                <h2 class="subsection-title">Clients and Companies</h2>
+            </header>
+            <div class="clients">
+                <ul>
+                    <li><a href="https://olson.com/" title="Olson" target="_blank"><img src="../assets/images/brands/olson-logo.png" alt="Olson Logo"></a></li>
+                    <li><a href="https://online.citi.com/US/Welcome.c" title="Citi Bank" target="_blank"><img src="../assets/images/brands/citi-logo.png" alt="Citi Bank Logo"></a></li>
+                    <li><a href="https://www.amtrak.com/home" title="Amtrack" target="_blank"><img src="../assets/images/brands/amtrack-logo.png" alt="Amtrack Logo"></a></li>
+                    <li><a href="https://www.suncountry.com/" title="Sun Country" target="_blank"><img src="../assets/images/brands/sun-logo.png" alt="Sun Country Logo"></a></li>
+                    <li><a href="http://www.thelimited.com/" title="Limited" target="_blank"><img src="../assets/images/brands/limited-logo.png" alt="The Limited Logo"></a></li>
+                    <li><a href="http://thomsonreuters.com/en.html" title="Thomson Reuters" target="_blank"><img src="../assets/images/brands/thomson-logo.png" alt="Thomson Reuters Logo"></a></li>
+                    <li><a href="http://www.pfizer.com/" title="Pfizer" target="_blank"><img src="../assets/images/brands/pfizer-logo.png" alt="Pfizer Logo"></a></li>
+                    <li><a href="http://www.luxottica.com/en" title="Luxottica" target="_blank"><img src="../assets/images/brands/lux-logo.png" alt="Luxxotica Logo"></a></li>
+                    <li><a href="http://www.napaonline.com/" title="Napa Auto Parts" target="_blank"><img src="../assets/images/brands/napa-logo.png" alt="Napa Auto Parts Logo"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="site-footer">
             <a id="connect"></a>
             <div class="footer-content">
-                <p class="disclaimer"> &#169; Brian Rogstad 2009-
-                    <script>
-                    document.write(new Date().getFullYear())
-                    </script>. All rights reserved.</p>
-                <nav class="social-nav">
-                    <ul>
-                        <li><a href="https://github.com/brianrogstad" class="github" title="See my work on GitHub" target="_blank">See my work on GitHub</a></li>
-                        <li><a href="https://twitter.com/B_Rogstad" class="twitter" title="Follow me on Twitter" target="_blank">Follow me on Twitter</a></li>
-                        <li><a href="http://www.facebook.com/people/Brian-Rogstad/100000363829679" class="facebook" title="Find me on Facebook" target="_blank">Find me on Facebook</a></li>
-                        <li><a href="http://www.linkedin.com/pub/brian-rogstad/24/30b/61" class="linkedin" title="Connect with me on LinkedIn" target="_blank">Connect with me on LinkedIn</a></li>
-                        <li><a href="http://www.behance.net/brianrogstad" class="behance" title="View my work on Behance" target="_blank">My Behance profile</a></li>
-                    </ul>
-                </nav>
+                <p class="disclaimer"> &#169; Brian Rogstad  2009-<script>document.write(new Date().getFullYear())</script>. All rights reserved.</p>
             </div>
         </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="client/assets/js/init.js"></script>
-    <script type="text/javascript" src="client/assets/js/slideIn.js"></script>
-    <script>
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-19844455-1']);
-    _gaq.push(['_trackPageview']);
 
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-    $(document).ready(function() {
-        if ($("a[name='contact']").attr("data-error") == "true") {
-            document.location.hash = "contact";
-        }
-    });
+    <script type="text/javascript" src="assets/js/vendor/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/init.js"></script>
+
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-19844455-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+        $(document).ready(function() {
+            if ($("a[name='contact']").attr("data-error") == "true") {
+                document.location.hash = "contact";
+            }
+        });
     </script>
 </body>
 
