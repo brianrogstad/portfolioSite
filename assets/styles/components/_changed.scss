@@ -6,7 +6,6 @@
 }
 
 .changed .logo {
-    width: 2%;
 
     @include breakpoint(laptop) {
         width: 5%;
@@ -23,5 +22,5 @@
 
 .changed .main-nav {
     opacity: 1;
-    top: 8px;
+    top: 5px;
 }

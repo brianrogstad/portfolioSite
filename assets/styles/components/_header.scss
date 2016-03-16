@@ -12,9 +12,7 @@
     width: 100%;
     z-index: 999;
 
-    @include breakpoint(phone) {
-        position: absolute;
-    }
+
 }
 
 .logo {
@@ -42,7 +40,7 @@
     @include font-size(18);
     color: $white;
 
-    font-family: $open-sans;
+    font-family: $secondary-font;
     font-style: italic;
     margin: 0;
 

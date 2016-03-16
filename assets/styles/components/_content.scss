@@ -20,45 +20,6 @@
     }
 }
 
-.description {
-    bottom: 0;
-    color: $white;
-    left: 0;
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-}
-
-.inner {
-    background: $mine-shaft;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    padding: 20px;
-    position: absolute;
-    transition: opacity 350ms ease-out;
-    width: 100%;
-    z-index: 1000;
-}
-
-.copy {
-    @include font-size(14);
-    line-height: 1.75em;
-    margin: 0;
-    padding: 0;
-
-    a {
-        color: $danube;
-        text-decoration: none;
-
-        &:hover {
-            color: $white;
-            text-decoration: none;
-        }
-    }
-}
 
 // Subsection Content
 // =============================================================
@@ -66,7 +27,15 @@
     @include font-size(16);
     margin: 0 auto 50px;
     text-align: left;
-    width: 40%;
+    width: 50%;
+
+    @include breakpoint(desktop) {
+        width: 70%;
+    }
+
+    @include breakpoint(laptop) {
+        width: 90%;
+    }
 
     a {
         color: $danube;
@@ -79,6 +48,33 @@
     }
 }
 
+.image-container {
+    margin: 0 auto;
+    width: 50%;
+
+    @include breakpoint(desktop) {
+        width: 70%;
+    }
+
+    @include breakpoint(laptop) {
+        width: 90%;
+    }
+
+    img {
+        border: 1px solid $silver;
+        max-width: 100%;
+    }
+}
+
+.image-container-video {
+    margin: 0 auto 100px;
+    width: 640px;
+
+    @include breakpoint(tablet) {
+        width: 90%;
+    }
+}
+
 .subsection-title {
     margin: 0 5%;
 }
@@ -86,17 +82,6 @@
 .subsection-display {
     display: block;
     margin: 0 auto 100px;
-    width: 40%;
-}
-
-.subsection-display-email {
-    float: left;
-    margin: 0 1.667% 100px;
-    width: auto;
-}
-
-.subsection-display-video {
-    width: 34%;
 }
 
 .brands-container {
@@ -119,14 +104,18 @@
 .social-nav {
     @include clearfix();
     margin: 70px auto;
-    width: 40%;
+    width: 50%;
 
     @include breakpoint(desktop) {
-        width: 30%;
+        width: 60%;
     }
 
     @include breakpoint(laptop) {
-        width: 100%;
+        width: 70%;
+    }
+
+    @include breakpoint(tablet) {
+        width: 90%;
     }
 
     ul {
@@ -203,7 +192,15 @@
 .clients {
     @include clearfix();
     margin: 40px auto;
-    width: 40%;
+    width: 50%;
+
+    @include breakpoint(desktop) {
+        width: 70%;
+    }
+
+    @include breakpoint(tablet) {
+        width: 90%;
+    }
 
     ul {
         list-style: none;

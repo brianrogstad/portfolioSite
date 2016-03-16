@@ -1,6 +1,7 @@
 // Projects - Main Page
 // =============================================================
 .project {
+    border: 1px solid $silver;
     display: inline-block;
     margin: 0 0 85px 5%;
     max-width: 26.667%;
@@ -56,9 +57,44 @@
     z-index: 950;
 }
 
-.email-container {
-    @include clearfix;
-    padding: 90px 15%;
+.description {
+    bottom: 0;
+    color: $white;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+
+.inner {
+    background: $mine-shaft;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    padding: 20px;
+    position: absolute;
+    transition: opacity 350ms ease-out;
+    width: 100%;
+    z-index: 1000;
+}
+
+.copy {
+    @include font-size(14);
+    line-height: 1.75em;
+    margin: 0;
+    padding: 0;
+
+    a {
+        color: $danube;
+        text-decoration: none;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
 }
 
 
@@ -162,4 +198,44 @@
 .sketches {
     @extend %zoom;
     background-image: url('../images/display-images/sketches.jpg');
+}
+
+.knockout {
+    @extend %zoom;
+    background-image: url('../images/display-images/knockout.jpg');
+}
+
+.limited {
+    @extend %zoom;
+    background-image: url('../images/display-images/limited.jpg');
+}
+
+.legal {
+    @extend %zoom;
+    background-image: url('../images/display-images/legal.jpg');
+}
+
+.dynamic {
+    @extend %zoom;
+    background-image: url('../images/display-images/dynamic.jpg');
+}
+
+.getdata {
+    @extend %zoom;
+    background-image: url('../images/display-images/getdata.jpg');
+}
+
+.local {
+    @extend %zoom;
+    background-image: url('../images/display-images/local.jpg');
+}
+
+.prototype {
+    @extend %zoom;
+    background-image: url('../images/display-images/prototype.jpg');
+}
+
+.contact {
+    @extend %zoom;
+    background-image: url('../images/display-images/contact.jpg');
 }

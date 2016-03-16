@@ -5,7 +5,7 @@ h4,
 h5,
 h6 {
     color: $mine-shaft;
-    font-family: $open-sans;
+    font-family: $secondary-font;
     font-weight: normal;
     margin: 0;
     padding: 0;
@@ -18,9 +18,9 @@ h6 {
 h1 {
     color: $white;
     float: left;
-    font-family: $open-sans;
+    font-family: $secondary-font;
     font-size: 1.75vw;
-    margin: 5px 0 0 15px;
+    margin: 5px 0 5px 15px;
 
     @include breakpoint(laptop) {
         display: none;

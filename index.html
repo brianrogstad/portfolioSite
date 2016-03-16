@@ -11,25 +11,38 @@
 </head>
 <body>
     <!--[if lt IE 8 ]><div>I no longer support this version of your browser. Check <a href="http://browsehappy.com/" target="_blank">here</a> for upgrade options.</div><![endif]-->
-    <nav class="main-nav" id="main-nav">
-        <ul>
-            <li><a href="#" title="Navigation" class="open-menu"><i class="fa fa-bars"></i></a></li>
-            <li><a href="#top" title="Return To Top" class="to-top"><i class="fa fa-arrow-up"></i></a></li>
-        </ul>
-    </nav>
+    <header class="header">
+        <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
+        <h1>Brian Rogstad &bull; UI Developer</h1>
+        <nav class="main-nav" id="main-nav">
+            <ul>
+                <li><a href="#" title="Navigation" class="open-menu"><i class="fa fa-bars"></i></a></li>
+                <li><a href="#top" title="Return To Top" class="to-top"><i class="fa fa-arrow-up"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
     <nav class="project-nav">
         <ul>
             <li><a href="../" title="Home" class="active">Home</a></li>
+            <li><a href="pages/contact.html" title="Contacts App">Contacts App</a></li>
+            <li><a href="pages/prototype.html" title="Prototype Example">Prototype Example</a></li>
+            <li><a href="pages/knockout.html" title="Knockout Example">Knockout Example</a></li>
+            <li><a href="pages/dynamic.html" title="Dynamic Data">Dynamic Data</a></li>
+            <li><a href="pages/local.html" title="Local Storage">Local Storage</a></li>
+            <li><a href="pages/getdata.html" title="Get Data">Get Data</a></li>
             <li><a href="pages/iphone.html" title="iPhone App">iPhone App</a></li>
             <li><a href="pages/reflow.html" title="Reflow">Reflow</a></li>
-            <li><a href="http://faithslodge.org/hoperocks/" target="_blank" title="Hope Rocks">Hope Rocks</a></li>
+            <li><a href="pages/legal.html" title="Attorney Websites">Attorney Websites</a></li>
+            <li><a href="http://www.thelimited.com/" target="_blank "title="The Limited">The Limited <small>(external)</small></a></li>
+            <li><a href="http://faithslodge.org/hoperocks/" target="_blank" title="Hope Rocks">Hope Rocks <small>(external)</small></a></li>
             <li><a href="pages/emails.html" title="HTML Emails">HTML Emails</a></li>
             <li><a href="pages/kinetic.html" title="Kinetic Type">Kinetic Type</a></li>
             <li><a href="pages/chess.html" title="3D Chess">3D Chess</a></li>
             <li><a href="pages/braclet.html" title="3D Braclet">3D Bracelet</a></li>
             <li><a href="pages/keypad.html" title="Phone Pad PSD">Phone Pad PSD</a></li>
-            <li><a href="pages/design.html" title="Design PSD">Design PSD</a></li>
-            <li><a href="pages/winter.html" title="Winter PSD">Winter PSD</a></li>
+            <li><a href="pages/design.html" title="Design Text">Design Text</a></li>
+            <li><a href="pages/winter.html" title="Winter Text">Winter Text</a></li>
             <li><a href="pages/mailer.html" title="Marketing Mailer">Marketing Mailer</a></li>
             <li><a href="pages/earth.html" title="Earth Fest Poster">Earth Fest Poster</a></li>
             <li><a href="pages/napa.html" title="NAPA Ads">NAPA Ads</a></li>
@@ -40,14 +53,78 @@
     </nav>
 
     <div class="page-wrap">
-        <header class="header">
-            <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
-            <h1>Brian Rogstad &bull; UI Developer</h1>
-        </header>
+        
 
         <a id="top"></a>
         <div class="main-column" role="main">
             <h2>My Work</h2>
+
+            <!-- contacts app -->
+            <div class="contact project visible">
+                <a href="pages/contact.html" title="Contact App" class="project-link"></a>
+                <div class="description">
+                    <div class="inner">
+                        <a href="pages/contact.html" class="project-title">Contacts App</a>
+                        <p class="copy">A MEAN stack app found on <a href="https://github.com/brianrogstad" target="_blank">my GitHub</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- prototype example -->
+            <div class="prototype project visible">
+                <a href="pages/prototype.html" title="Prototype Example" class="project-link"></a>
+                <div class="description">
+                    <div class="inner">
+                        <a href="pages/prototype.html" class="project-title">Basic Protoype</a>
+                        <p class="copy">A Javascript sample project found on <a href="http://codepen.io/brogstad/pens/public/" target="_blank">my CodePen</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- knockout example -->
+            <div class="knockout project visible">
+                <a href="pages/knockout.html" title="Knockout JS Sample" class="project-link"></a>
+                <div class="description">
+                    <div class="inner">
+                        <a href="pages/iphone.html" class="project-title">Knockout JS Smaple</a>
+                        <p class="copy">A sample knockout JS from <a href="http://codepen.io/brogstad/pens/public/" target="_blank">my CodePen</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- dynamic data example -->
+            <div class="dynamic project visible">
+                <a href="pages/dynamic.html" title="Dynamic Data" class="project-link"></a>
+                <div class="description">
+                    <div class="inner">
+                        <a href="pages/dynamic.html" class="project-title">Dynamic Data</a>
+                        <p class="copy">A Javascript sample project found on <a href="https://github.com/brianrogstad" target="_blank">my GitHub</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- local storage example -->
+            <div class="local project visible">
+                <a href="pages/local.html" title="Local Storage" class="project-link"></a>
+                <div class="description">
+                    <div class="inner">
+                        <a href="pages/local.html" class="project-title">Local Storage</a>
+                        <p class="copy">A Javascript sample project found on <a href="https://github.com/brianrogstad" target="_blank">my GitHub</a>.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- getdata example -->
+            <div class="getdata project visible">
+                <a href="pages/getdata.html" title="Get Data" class="project-link"></a>
+                <div class="description">
+                    <div class="inner">
+                        <a href="pages/getdata.html" class="project-title">Get Data</a>
+                        <p class="copy">A Javascript sample project found on <a href="https://github.com/brianrogstad" target="_blank">my GitHub</a>.</p>
+                    </div>
+                </div>
+            </div>
 
             <!-- iphone app -->
             <div class="iphone-app project visible">
@@ -55,7 +132,7 @@
                 <div class="description">
                     <div class="inner">
                         <a href="pages/iphone.html" class="project-title">iPhone App</a>
-                        <p class="copy">A simple iPhone app I built with a tutorial from <a href="https://teamtreehouse.com/">Treehouse</a>.</p>
+                        <p class="copy">A simple iPhone app I built with a tutorial from <a href="https://teamtreehouse.com/" target="_blank">Treehouse</a>.</p>
                     </div>
                 </div>
             </div>
@@ -71,12 +148,34 @@
                 </div>
             </div>
 
+            <!-- legal sites -->
+            <div class="legal project">
+                <a href="pages/legal.html" title="Attorney Sites" class="project-link"></a>
+                <div class="description">
+                    <div class="inner">
+                        <a href="pages/legal.html" target="_blank" class="project-title">Attorney Sites</a>
+                        <p class="copy">A few of the sites I built with during my time at <a href="http://www.findlaw.com/" target="_blank">Findlaw</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- limited -->
+            <div class="limited project">
+                <a href="http://www.thelimited.com/" title="The Limited" target="_blank" class="project-link"></a>
+                <div class="description">
+                    <div class="inner">
+                        <a href="http://www.thelimited.com/" target="_blank" class="project-title">The Limited</a>
+                        <p class="copy">A website I helped with during my time at <a href="http://olson.com/" target="_blank">Olson</a></p>
+                    </div>
+                </div>
+            </div>
+
             <!-- hope rocks -->
             <div class="hope-rocks project">
                 <a href="http://faithslodge.org/hoperocks/" title="Hope Rocks" target="_blank" class="project-link"></a>
                 <div class="description">
                     <div class="inner">
-                        <a href="http://faithslodge.org/hoperocks/" target="_blank" class="project-title">Faithslodge.org/hoperocks</a>
+                        <a href="http://faithslodge.org/hoperocks/" target="_blank" class="project-title">Faithslodge Hoperocks</a>
                         <p class="copy">A website I helped with during my time at <a href="http://olson.com/" target="_blank">Olson</a></p>
                     </div>
                 </div>

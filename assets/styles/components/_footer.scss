@@ -1,11 +1,11 @@
 // Footer
 // =============================================================
 .site-footer {
-    @include font-size(18);
+    @include font-size(16);
     background: $mine-shaft;
     clear: both;
     color: $white;
-    font-family: $times;
+    font-family: $tertiary-font;
     margin: 0 auto;
     padding: 100px 0;
 }
