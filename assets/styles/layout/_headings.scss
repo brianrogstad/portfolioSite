@@ -1,26 +1,17 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: $mine-shaft;
-    font-family: $secondary-font;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
-}
 
 .changed h1 {
     display: none;
 }
 
 h1 {
+    @include font-size(28);
     color: $white;
     float: left;
     font-family: $secondary-font;
-    font-size: 1.75vw;
-    margin: 5px 0 5px 15px;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 5px 0 0 0;
+    padding: 0;
 
     @include breakpoint(laptop) {
         display: none;
@@ -30,7 +21,11 @@ h1 {
 h2 {
     @include font-size(28);
     border-bottom: 1px solid $silver;
+    color: $mine-shaft;
     clear: both;
+    font-family: $secondary-font;
+    font-weight: normal;
+    line-height: 1.2em;
     margin: 0 4.667% 70px;
     padding: 60px 0;
     text-align: center;
@@ -41,19 +36,40 @@ h2 {
 }
 
 h3 {
-    @include font-size(22);
-    font-size: 20px;
-    padding: 0 0 10px;
+    @include font-size(24);
+    color: $mine-shaft;
+    font-family: $secondary-font;
+    font-weight: 700;
+    line-height: 1.2em;
+    margin: 0 0 5px;
+    padding: 0;
 }
 
 h4 {
     @include font-size(20);
+    color: $mine-shaft;
+    font-family: $secondary-font;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 0 0 20px;
+    padding: 0;
 }
 
 h5 {
     @include font-size(18);
+    color: $mine-shaft;
+    font-family: $secondary-font;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
 }
 
 h6 {
     @include font-size(16);
+    color: $mine-shaft;
+    font-family: $secondary-font;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
 }

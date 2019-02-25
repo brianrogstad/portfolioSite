@@ -1,44 +1,35 @@
 // Projects - Main Page
 // =============================================================
-.project {
-    border: 1px solid $silver;
-    display: inline-block;
-    margin: 0 0 85px 5%;
-    max-width: 26.667%;
-    position: relative;
-    transition: background 350ms ease-out;
-    width: 100%;
+.grid-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: grid;
+    grid-gap: 85px 2.5%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
     @include breakpoint(desktop) {
-        max-width: 42.5%;
+        grid-template-columns: 1fr 1fr;
     }
 
     @include breakpoint(tablet) {
-        display: block;
-        margin: 0 auto 35px;
-        max-width: 90%;
-    }
-
-    &:hover .description {
-        background: rgba($black, .6);
-        transition: background 350ms ease-out;
-    }
-
-    &:hover .description .inner {
-        opacity: 1;
-
-        @include breakpoint(tablet) {
-            opacity: 0;
-        }
+        grid-template-columns: 1fr;
     }
 }
 
-.project-title {
-    @include font-size(18);
-    color: $danube;
+.project {
+    background: $gallery;
+    box-shadow: 0px 0px 10px -2px $silver;
+}
+
+.project-link {
+    @include font-size(14);
+    background: $danube;
+    border: 0 none;
+    color: $white;
     font-weight: bold;
-    margin: 0;
-    padding: 0;
+    margin-top: auto;
+    margin-left: auto;
+    padding: 10px 15px;
     text-decoration: none;
 
     &:hover {
@@ -47,195 +38,13 @@
     }
 }
 
-.project-link {
-    display: block;
-    left: 0;
-    min-height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 950;
-}
-
 .description {
-    bottom: 0;
-    color: $white;
-    left: 0;
-    margin: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 100%;
-}
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    min-height: 350px;
 
-.inner {
-    background: $mine-shaft;
-    bottom: 0;
-    left: 0;
-    opacity: 0;
-    padding: 20px;
-    position: absolute;
-    transition: opacity 350ms ease-out;
-    width: 100%;
-    z-index: 1000;
-}
-
-.copy {
-    @include font-size(14);
-    line-height: 1.75em;
-    margin: 0;
-    padding: 0;
-
-    a {
-        color: $danube;
-        text-decoration: none;
-
-        &:hover {
-            color: $white;
-            text-decoration: none;
-        }
+    p {
+        margin-bottom: 25px;
     }
-}
-
-
-// Display Images
-// =============================================================
-%zoom {
-    background-position: 50% top;
-    background-repeat: no-repeat;
-    background-size: 102%;
-    height: 0;
-    padding-bottom: 18%;
-
-    @include breakpoint(desktop) {
-        padding-bottom: 28%;
-    }
-
-    @include breakpoint(tablet) {
-        padding-bottom: 58%;
-    }
-
-    &:hover {
-        background-size: 100%;
-    }
-}
-
-.iphone-app {
-    @extend %zoom;
-    background-image: url('../images/display-images/iphone-app.jpg');
-}
-
-.reflow {
-    @extend %zoom;
-    background-image: url('../images/display-images/reflow.jpg');
-}
-
-.hope-rocks {
-    @extend %zoom;
-    background-image: url('../images/display-images/hoperocks.jpg');
-}
-
-.emails {
-    @extend %zoom;
-    background-image: url('../images/display-images/emails.jpg');
-}
-
-.kinetic {
-    @extend %zoom;
-    background-image: url('../images/display-images/kinetic-type.jpg');
-}
-
-.chess {
-    @extend %zoom;
-    background-image: url('../images/display-images/chess-set.jpg');
-}
-
-.bracelet {
-    @extend %zoom;
-    background-image: url('../images/display-images/bracelet.jpg');
-}
-
-.keypad {
-    @extend %zoom;
-    background-image: url('../images/display-images/keypad.jpg');
-}
-
-.text-design {
-    @extend %zoom;
-    background-image: url('../images/display-images/design-text.jpg');
-}
-
-.winter {
-    @extend %zoom;
-    background-image: url('../images/display-images/winter.jpg');
-}
-
-.mailers {
-    @extend %zoom;
-    background-image: url('../images/display-images/travel-mailer.jpg');
-}
-
-.earth {
-    @extend %zoom;
-    background-image: url('../images/display-images/earth-fest.jpg');
-}
-
-.napa {
-    @extend %zoom;
-    background-image: url('../images/display-images/napa.jpg');
-}
-
-.logo-process {
-    @extend %zoom;
-    background-image: url('../images/display-images/logo-process.jpg');
-}
-
-.live {
-    @extend %zoom;
-    background-image: url('../images/display-images/life-drawings.jpg');
-}
-
-.sketches {
-    @extend %zoom;
-    background-image: url('../images/display-images/sketches.jpg');
-}
-
-.knockout {
-    @extend %zoom;
-    background-image: url('../images/display-images/knockout.jpg');
-}
-
-.limited {
-    @extend %zoom;
-    background-image: url('../images/display-images/limited.jpg');
-}
-
-.legal {
-    @extend %zoom;
-    background-image: url('../images/display-images/legal.jpg');
-}
-
-.dynamic {
-    @extend %zoom;
-    background-image: url('../images/display-images/dynamic.jpg');
-}
-
-.getdata {
-    @extend %zoom;
-    background-image: url('../images/display-images/getdata.jpg');
-}
-
-.local {
-    @extend %zoom;
-    background-image: url('../images/display-images/local.jpg');
-}
-
-.prototype {
-    @extend %zoom;
-    background-image: url('../images/display-images/prototype.jpg');
-}
-
-.contact {
-    @extend %zoom;
-    background-image: url('../images/display-images/contact.jpg');
 }

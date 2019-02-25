@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html class="no-js">
 <head>
-    <meta name="Description" content="Interactive Portfolio of Brian Rogstad" />
+    <meta name="Description" content="Portfolio of Brian Rogstad" />
     <meta name="Author" content="Brian Rogstad" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta charset="UTF-8">
-    <title>Interactive Portfolio | Brian Rogstad</title>
+    <title>Brian Rogstad - Portfolio - Home</title>
     <link rel="icon" type="image/x-icon" href="icon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="assets/styles/styles.css" />
 </head>
 <body>
     <!--[if lt IE 8 ]><div>I no longer support this version of your browser. Check <a href="http://browsehappy.com/" target="_blank">here</a> for upgrade options.</div><![endif]-->
     <header class="header">
         <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
-        <h1>Brian Rogstad &bull; UI Developer</h1>
+        <div class="id-container">
+            <h1>Brian Rogstad</h1>
+            <h5>UI Developer &bull; UI Designer</h5>
+        </div>
+
         <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="#" title="Navigation" class="open-menu"><i class="fa fa-bars"></i></a></li>
@@ -25,30 +30,22 @@
     <nav class="project-nav">
         <ul>
             <li><a href="../" title="Home" class="active">Home</a></li>
-            <li><a href="pages/contact.html" title="Contacts App">Contacts App</a></li>
-            <li><a href="pages/prototype.html" title="Prototype Example">Prototype Example</a></li>
-            <li><a href="pages/knockout.html" title="Knockout Example">Knockout Example</a></li>
-            <li><a href="pages/dynamic.html" title="Dynamic Data">Dynamic Data</a></li>
-            <li><a href="pages/local.html" title="Local Storage">Local Storage</a></li>
-            <li><a href="pages/getdata.html" title="Get Data">Get Data</a></li>
-            <li><a href="pages/iphone.html" title="iPhone App">iPhone App</a></li>
-            <li><a href="pages/reflow.html" title="Reflow">Reflow</a></li>
+            <li><a href="http://codepen.io/brogstad/pens/public/" target="_blank" title="Codepen Projects">Codepen Projects <small>(external)</small></a></li>
+            <li><a href="pages/contact.html" title="Angular Contacts Application">Angular Contacts Application</a></li>
+            <li><a href="pages/bpm.html" title="Process Managment Application">Process Managment Application</a></li>
+            <li><a href="pages/admin.html" title="Admin Tool Application">Admin Tool Application</a></li>
+            <li><a href="pages/reporting.html" title="Reporting Application">Reporting Application</a></li>
+            <li><a href="pages/reflow.html" title="Adobe Reflow">Adobe Reflow</a></li>
+            <li><a href="pages/iphone.html" title="iPhone Application">iPhone Application</a></li>
             <li><a href="pages/legal.html" title="Attorney Websites">Attorney Websites</a></li>
-            <li><a href="http://www.thelimited.com/" target="_blank "title="The Limited">The Limited <small>(external)</small></a></li>
-            <li><a href="http://faithslodge.org/hoperocks/" target="_blank" title="Hope Rocks">Hope Rocks <small>(external)</small></a></li>
+            <li><a href="http://www.thelimited.com/" target="_blank "title="The Limited">The Limited Website <small>(external)</small></a></li>
+            <li><a href="http://faithslodge.org/hoperocks/" target="_blank" title="Hope Rocks">Hope Rocks Website <small>(external)</small></a></li>
             <li><a href="pages/emails.html" title="HTML Emails">HTML Emails</a></li>
-            <li><a href="pages/kinetic.html" title="Kinetic Type">Kinetic Type</a></li>
-            <li><a href="pages/chess.html" title="3D Chess">3D Chess</a></li>
-            <li><a href="pages/braclet.html" title="3D Braclet">3D Bracelet</a></li>
-            <li><a href="pages/keypad.html" title="Phone Pad PSD">Phone Pad PSD</a></li>
-            <li><a href="pages/design.html" title="Design Text">Design Text</a></li>
-            <li><a href="pages/winter.html" title="Winter Text">Winter Text</a></li>
-            <li><a href="pages/mailer.html" title="Marketing Mailer">Marketing Mailer</a></li>
+            <li><a href="pages/kinetic.html" title="After Effects Kinetic Type">After Effects Kinetic Type</a></li>
+            <li><a href="pages/chess.html" title="3D Chess Set">3D Chess Set</a></li>
+            <li><a href="pages/mailer.html" title="Marketing Mailer">Marketing Mailers</a></li>
             <li><a href="pages/earth.html" title="Earth Fest Poster">Earth Fest Poster</a></li>
-            <li><a href="pages/napa.html" title="NAPA Ads">NAPA Ads</a></li>
-            <li><a href="pages/logo.html" title="Logo Process">Logo Process</a></li>
-            <li><a href="pages/life.html" title="Life Drawings">Life Drawings</a></li>
-            <li><a href="pages/sketches.html" title="Sketches">Sketches</a></li>
+            <li><a href="pages/napa.html" title="NAPA Auto Parts Ads">NAPA Auto Parts Ads</a></li>
         </ul>
     </nav>
 
@@ -56,270 +53,192 @@
         <a id="top"></a>
         <div class="main-column" role="main">
             <h2>My Work</h2>
-
-            <!-- contacts app -->
-            <div class="contact project visible">
-                <a href="pages/contact.html" title="Contact App" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/contact.html" class="project-title">Contacts App</a>
-                        <p class="copy">A MEAN stack app found on <a href="https://github.com/brianrogstad" target="_blank">my GitHub</a>.</p>
+            <div class="grid-container">
+                <!-- begin first row of four projects -->
+                <!-- CodePen -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/codepen.jpg"/>
+                    <div class="card-body description">
+                        <h3>Codepen projects</a></h3>
+                        <h4>UI Development</a></h4>
+                        <p class="card-text">Using Codepen as a way to help problem solve and help further my understanding of JavaScript. I’ve created some various small projects that highlight some basic JavaScript concepts. I’ve used it as a learning tool and a way to explore new CSS specs. It’s also a great way to be inspired as there are plenty of eye catching projects to view. </p>
+                        <a href="http://codepen.io/brogstad/pens/public/" title="View my work on Codepen" target="_blank" class="btn btn-secondary project-link">View Codepen Profile <i class="fa fa-arrow-right"></i></a>
+                        
                     </div>
                 </div>
-            </div>
 
-            <!-- prototype example -->
-            <div class="prototype project visible">
-                <a href="pages/prototype.html" title="Prototype Example" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/prototype.html" class="project-title">Basic Protoype</a>
-                        <p class="copy">A Javascript sample project found on <a href="http://codepen.io/brogstad/pens/public/" target="_blank">my CodePen</a>.</p>
+                <!-- contacts app -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/contact.jpg"/>
+                    <div class="card-body description">
+                        <h3>Angular Contacts Application</a></h3>
+                        <h4>UI Design, UI Development</a></h4>
+                        <p class="card-text">Single page MEAN stack application I designed and built with help from <a href="http://pluralsight.com">pluralsight</a> tutorials. I learned about gulp automation, proper directory structure, middleware with ExpressJS, and backend data stores with MongoDB.</p>
+                        <a href="pages/contact.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- knockout example -->
-            <div class="knockout project visible">
-                <a href="pages/knockout.html" title="Knockout JS Sample" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/iphone.html" class="project-title">Knockout JS Smaple</a>
-                        <p class="copy">A sample knockout JS from <a href="http://codepen.io/brogstad/pens/public/" target="_blank">my CodePen</a>.</p>
+                <!-- process managment app -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/bpm.jpg"/>
+                    <div class="card-body description">
+                        <h3>Process Managment Application</a></h3>
+                        <h4>UI and UX Design, UI Development</a></h4>
+                        <p class="card-text">This was a redesign of an enterprise product with a budget of over one million dollars. I was the UX architect for this application as I conducted usability tests, evaluations, and analysis on and presented findings to the product owners, managers, and development team. I took responsibility for the interface design by presenting concepts, wireframes, app flows, and prototypes as needed. I also performed the UI development of this application within angular. </p>
+                        <a href="pages/bpm.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- dynamic data example -->
-            <div class="dynamic project visible">
-                <a href="pages/dynamic.html" title="Dynamic Data" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/dynamic.html" class="project-title">Dynamic Data</a>
-                        <p class="copy">A Javascript sample project found on <a href="https://github.com/brianrogstad" target="_blank">my GitHub</a>.</p>
+                <!-- admin tool app -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/admin.jpg"/>
+                    <div class="card-body description">
+                        <h3>Admin Tool Application</a></h3>
+                        <h4>UI and UX Design, UI Development</a></h4>
+                        <p class="card-text">An admin application that I helped to design and build at FindLaw. This application was used to set values and rules for other applications. I took responsibility for the interface design. I also performed the UI development of this application within angular with the help of a couple others on this project team. We created this application in a short time frame while learning how to customize and integrate angular materials.</p>
+                        <a href="pages/admin.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
+                <!-- end first row of four projects -->
 
-            <!-- local storage example -->
-            <div class="local project visible">
-                <a href="pages/local.html" title="Local Storage" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/local.html" class="project-title">Local Storage</a>
-                        <p class="copy">A Javascript sample project found on <a href="https://github.com/brianrogstad" target="_blank">my GitHub</a>.</p>
+                <!-- begin second row of four projects -->
+                <!-- reporting app -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/reporting.jpg"/>
+                    <div class="card-body description">
+                        <h3>Reporting Application</a></h3>
+                        <h4>UI and UX Design, UI Development</a></h4>
+                        <p class="card-text">A reporting application that I helped to design and build at FindLaw. Conducted usability tests, evaluations, and analysis on and presented findings to the product owners, managers, and development team. I took responsibility for the interface design by presenting concepts, wireframes, app flows, and prototypes as needed. I also performed the UI development of this application within angular.</p>
+                        <a href="pages/reporting.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-
-            <!-- getdata example -->
-            <div class="getdata project visible">
-                <a href="pages/getdata.html" title="Get Data" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/getdata.html" class="project-title">Get Data</a>
-                        <p class="copy">A Javascript sample project found on <a href="https://github.com/brianrogstad" target="_blank">my GitHub</a>.</p>
+                <!-- reflow -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/reflow.jpg"/>
+                    <div class="card-body description">
+                        <h3>Adobe Reflow</a></h3>
+                        <h4>UI Design</a></h4>
+                        <p class="card-text">As responsive websites have become the standard in web design and development companies are trying to make tools that simplify the process of creating them. Applications like <a href="http://macaw.co/" target="_blank">Macaw</a> and <a href="https://www.adobe.com/products/edge-reflow.html" target="_blank">Adobe Reflow</a> to help the process. There were a host of other ealry web design tools such from <a href="https://divshot.com/" target="_blank">DivShot</a> to JetStrap. I went ahead and created a mock layout to see how the program worked and see how efficient the tool was.</p>
+                        <a href="pages/reflow.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- iphone app -->
-            <div class="iphone-app project visible">
-                <a href="pages/iphone.html" title="Simple iPhone App" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/iphone.html" class="project-title">iPhone App</a>
-                        <p class="copy">A simple iPhone app I built with a tutorial from <a href="https://teamtreehouse.com/" target="_blank">Treehouse</a>.</p>
+                <!-- iphone app -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/iphone-app.jpg"/>
+                    <div class="card-body description">
+                        <h3>iPhone Application</a></h3>
+                        <h4>UI Design, UI Development</a></h4>
+                        <p class="card-text">A simple iPhone application I built with the help of a tutorial from <a href="https://teamtreehouse.com/">Treehouse</a> to learn about mobile application development. Everything was built in the XCode IDE with Objective C. The tutorial covered the basics of C, and then went into specifics of Objective C as the build progressed.</p>
+                        <a href="pages/iphone.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- reflow -->
-            <div class="reflow project visible">
-                <a href="pages/reflow.html" title="Design Layout in Adobe Reflow" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/reflow.html" class="project-title">Adobe Reflow</a>
-                        <p class="copy">An experimental site design to learn about Adobe Reflow</p>
+                <!-- legal sites -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/legal.jpg"/>
+                    <div class="card-body description">
+                        <h3>Attorney Websties</a></h3>
+                        <h4>UI Design, UI Development</a></h4>
+                        <p class="card-text">When I worked with <a href="http://www.findlaw.com/" target="_blank">Findlaw</a> we built a lot of attorney websites. During my time as a web developer for them I built 75+ websites, completing between 1-3 websites per week. We used a proprietary CMS that housed all the websites and allowed the both developers and clients to update and maintain their websites. These websites shown are a small sample of websites I worked on.</p>
+                        <a href="pages/legal.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
+                <!-- end second row of four projects -->
 
-            <!-- legal sites -->
-            <div class="legal project">
-                <a href="pages/legal.html" title="Attorney Sites" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/legal.html" target="_blank" class="project-title">Attorney Sites</a>
-                        <p class="copy">A few of the sites I built with during my time at <a href="http://www.findlaw.com/" target="_blank">Findlaw</a></p>
+                <!-- begin third row of four projects -->
+                <!-- limited -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/limited.jpg"/>
+                    <div class="card-body description">
+                        <h3>The Limited Website</a></h3>
+                        <h4>UI Development</a></h4>
+                        <p class="card-text">One of the various projects that was underway during my time at <a href="http://olson.com/" target="_blank">Olson</a>. I helped with some of the development of the sight. I was a great project to learn about the standards of version control as there were several developers working on this project simultaneously. Debugging and CSS updates were a couple things I also helped with.</p>
+                        <a href="http://www.thelimited.com/" target="_blank" class="btn btn-secondary project-link">View Website <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- limited -->
-            <div class="limited project">
-                <a href="http://www.thelimited.com/" title="The Limited" target="_blank" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="http://www.thelimited.com/" target="_blank" class="project-title">The Limited</a>
-                        <p class="copy">A website I helped with during my time at <a href="http://olson.com/" target="_blank">Olson</a></p>
+                <!-- hope rocks -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/hoperocks.jpg"/>
+                    <div class="card-body description">
+                        <h3>Hope Rocks Website</a></h3>
+                        <h4>UI Design, UI Development</a></h4>
+                        <p class="card-text">I helped with the design collaboration and development of this website during my time at <a href="http://olson.com/" target="_blank">Olson</a>. The website is completely overhauled and updated annually as the event evolves and change and or moves locations. It’s still an ongoing project today but has changed several times since I’ve worked on it.</p>
+                        <a href="http://faithslodge.org/hoperocks/" target="_blank" class="btn btn-secondary project-link">View Website <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- hope rocks -->
-            <div class="hope-rocks project">
-                <a href="http://faithslodge.org/hoperocks/" title="Hope Rocks" target="_blank" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="http://faithslodge.org/hoperocks/" target="_blank" class="project-title">Faithslodge Hoperocks</a>
-                        <p class="copy">A website I helped with during my time at <a href="http://olson.com/" target="_blank">Olson</a></p>
+                <!-- emails project -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/emails.jpg"/>
+                    <div class="card-body description">
+                        <h3>HTML Emails</a></h3>
+                        <h4>UI Development</a></h4>
+                        <p class="card-text"">During my time at <a href="http://olson.com/" target="_blank">Olson</a> I helped to create plenty of emails. Some of the clients included Amtrak, Luxottica and Sun Country. <strong>Exact Target</strong> was used as a final step in the process when creating most emails. Other emails were created by hand then given to the client to finalize and distribute on thier own. The design of these emails was taken on by the design team. My contribution in creating these projects was development. I had to code these in HTML working off of an <strong>Adobe Photoshop</strong> file. In the end making sure they passed QA for all email clients.</p>
+                        <a href="pages/emails.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- emails project -->
-            <div class="emails project">
-                <a href="pages/emails.html" title="Various HTML Emails" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/emails.html" class="project-title">HTML Emails</a>
-                        <p class="copy">Some of the emails created during my time with <a href="http://olson.com/" target="_blank">Olson</a></p>
+                <!-- kinetic type project -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/kinetic-type.jpg"/>
+                    <div class="card-body description">
+                        <h3>After Effects Kinetic Type</a></h3>
+                        <h4>Animation, Visual Effects, Design Layout, Video</a></h4>
+                        <p class="card-text">A piece I created with a focus on improving my <strong>Adobe After Effects</strong> skills. Taking about four weeks to plan and create, The audio clip I used is taken from the movie Rounders. Laying the text out on different layers, I implemented the 3D layer feature to achieve a nice visual dynamic. A large percent of the motion created in this piece was done through applying animation to the camera. In other cases the layers themselves we created as well as animating 90 different masks to create reveals.</p>
+                        <a href="pages/kinetic.html" class="btn btn-secondary project-link">View Project Video <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
+                <!-- end third row of four projects -->
 
-            <!-- kinetic type project -->
-            <div class="kinetic project">
-                <a href="pages/kinetic.html" title="Kinetic Type Created With Aftereffects" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/kinetic.html" class="project-title">After Effects Kinetic Type</a>
-                        <p class="copy">Moving text animated to an audio clip; created using After Effects</p>
+                <!-- begin fourth row of four projects -->
+                <!-- chess set project -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/chess-set.jpg"/>
+                    <div class="card-body description">
+                        <h3>3D Chess Set</a></h3>
+                        <h4>3D Modeling, Lighting, Rendering</a></h4>
+                        <p class="card-text">Using Autodesk Maya I created this project focused on materials and lighting. Referenced from actual photographs I modeled these pieces in <strong>Autodesk Maya</strong> and later added textures, lighting, cameras and materials. Another aspect of the project was to create a high-resolution image. To do this I rendered separate passes and complied them into <strong>Adobe Photoshop</strong>. The breakdown included the lambert pass, shadow pass, reflections and refractions pass.</p>
+                        <a href="pages/chess.html" class="btn btn-secondary project-link">View Project Video <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- chess set project -->
-            <div class="chess project">
-                <a href="pages/chess.html" title="Chess Set Created in Autodesk Maya" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/chess.html" class="project-title">3D Chess Set</a>
-                        <p class="copy">Chess set that I modeled, lit, materialed all within Autodesk Maya</p>
+                <!-- travel mailers project -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/travel-mailer.jpg"/>
+                    <div class="card-body description">
+                        <h3>Marketing Mailers</a></h3>
+                        <h4>Print, Marketing, Design Layout</a></h4>
+                        <p class="card-text">I created this series of direct mailers as part of project for marketing. The idea was to sell the state of Texas to would be travelers. The estimated time that I took in creating my designs was one to two weeks. In the end I created three different pieces to be a part of a series in a campaign.</p>
+                        <a href="pages/mailer.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- bracelet project -->
-            <div class="bracelet project">
-                <a href="pages/braclet.html" title="3D Bracelet Created in Autodesk Maya" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/braclet.html" class="project-title">3D Bracelet</a>
-                        <p class="copy">Conceptual pendant created using Autodesk Maya</p>
+                <!-- earthday project -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/earth-fest.jpg"/>
+                    <div class="card-body description">
+                        <h3>Earth Fest Poster</a></h3>
+                        <h4>Print, Design Layout</a></h4>
+                        <p class="card-text">A project that I created based on an Earth Day event. The project was mostly created in <strong>Adobe Illustrator</strong>, but some of the final touches such as the texture layer was done using <strong>Adobe Photoshop</strong>.</p>
+
+                        <a href="pages/earth.html" class="btn btn-secondary project-link">View Project Image <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
 
-            <!-- keypad project -->
-            <div class="keypad project">
-                <a href="pages/keypad.html" title="Realistic Phone Keypad" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/keypad.html" class="project-title">Realistic Phone Keypad</a>
-                        <p class="copy">Phone keypad created in Photoshop using layer effects</p>
+                <!-- napa project -->
+                <div class="project card">
+                    <img class="card-img-top" src="assets/images/display-images/napa.jpg"/>
+                    <div class="card-body description">
+                        <h3>NAPA Auto Parts Ads</a></h3>
+                        <h4>Print, Design Layout</a></h4>
+                        <p class="card-text">Created to promote <strong>Napa Auto Parts</strong> as being more than just an auto parts store, they handle a lot of marine requests. Design and production was all handled by myself. Throughout this process I did have to work with a regional manager for approvals and some direction as far as company standards. I completed this using <strong>Adobe Photoshop</strong> and <strong>Adobe Illustrator</strong>. Prints were produced using <a href="http://www.overnightprints.com/" target="_blank">overnightprints.com</a></p>
+                        <a href="pages/napa.html" class="btn btn-secondary project-link">View Project Images <i class="fa fa-arrow-right"></i></a>
                     </div>
                 </div>
-            </div>
-
-            <!-- text design project -->
-            <div class="text-design project">
-                <a href="pages/design.html" title="Text effect created using Photoshop" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/design.html" class="project-title">Photoshop Text Effect</a>
-                        <p class="copy">Text effect achieved in Photoshop using multiple filter and layers</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- winter project -->
-            <div class="winter project">
-                <a href="pages/winter.html" title="Text With Lighting Effects" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/winter.html" class="project-title">Winter</a>
-                        <p class="copy">3D text with added lighting effects and textures</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- travel mailers project -->
-            <div class="mailers project">
-                <a href="pages/mailer.html" title="Direct Mailer Designs" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/mailer.html" class="project-title">Travel Mailers</a>
-                        <p class="copy">A marketing project to design direct mailers</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- earthday project -->
-            <div class="earth project">
-                <a href="pages/earth.html" title="Earth Fest Poster" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/earth.html" class="project-title">Earth Fest Poster</a>
-                        <p class="copy">This is a personal project I created based on an Earth Day event</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- napa project -->
-            <div class="napa project">
-                <a href="pages/napa.html" title="Napa Auto Parts Sales Pieces" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/napa.html" class="project-title">Napa Auto Parts</a>
-                        <p class="copy">Two small projects produced to advertise a Napa Auto Parts store</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- logo design project -->
-            <div class="logo-process project">
-                <a href="pages/logo.html" title="Logo Design Process" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/logo.html" class="project-title">Logo Design Process</a>
-                        <p class="copy">Process to create my logo; from the drawing board to final stages</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- life drawings project -->
-            <div class="live project">
-                <a href="pages/life.html" title="Drawings Based on Live Subjects" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/life.html" class="project-title">Life Drawings</a>
-                        <p class="copy">Examples of live model drawings and life drawings</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- sketches project -->
-            <div class="sketches project">
-                <a href="pages/sketches.html" title="Still Life and Research Sketches" class="project-link"></a>
-                <div class="description">
-                    <div class="inner">
-                        <a href="pages/sketches.html" class="project-title">Sketches</a>
-                        <p class="copy">Some sketches I created with research</p>
-                    </div>
-                </div>
+                <!-- end fourth row of four projects -->
             </div>
         </div>
 
@@ -368,8 +287,8 @@
     </div>
 
     <script type="text/javascript" src="assets/js/vendor/jquery-2.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/js/init.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script>
         var _gaq = _gaq || [];

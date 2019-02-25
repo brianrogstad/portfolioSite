@@ -10,21 +10,6 @@
     padding: 100px 0;
 }
 
-.footer-content {
-    @include clearfix();
-    margin: 0 auto;
-    padding: 0;
-    width: 90%;
-
-    @include breakpoint(laptop) {
-        width: 60%;
-    }
-
-    @include breakpoint(tablet) {
-        width: 90%;
-    }
-}
-
 .disclaimer {
     display: block;
     float: left;

@@ -5,15 +5,20 @@
     <meta name="Author" content="Brian Rogstad" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta charset="UTF-8">
-    <title>Interactive Portfolio | Brian Rogstad | Page Not Found</title>
+    <title>Brian Rogstad - Portfolio - Page Not Found</title>
     <link rel="icon" type="image/x-icon" href="icon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="assets/styles/styles.css" />
 </head>
 <body>
     <!--[if lt IE 8 ]><div>I no longer support this version of your browser. Check <a href="http://browsehappy.com/" target="_blank">here</a> for upgrade options.</div><![endif]-->
     <header class="header">
         <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
-        <h1>Brian Rogstad &bull; UI Developer</h1>
+        <div class="id-container">
+            <h1>Brian Rogstad</h1>
+            <h5>UI Developer &bull; UI Designer</h5>
+        </div>
+
         <nav class="main-nav" id="main-nav">
             <ul>
                 <li><a href="#" title="Navigation" class="open-menu"><i class="fa fa-bars"></i></a></li>
@@ -22,13 +27,35 @@
         </nav>
     </header>
 
+    <nav class="project-nav">
+        <ul>
+            <li><a href="../" title="Home" class="active">Home</a></li>
+            <li><a href="http://codepen.io/brogstad/pens/public/" target="_blank" title="Codepen Projects">Codepen Projects <small>(external)</small></a></li>
+            <li><a href="pages/contact.html" title="Angular Contacts Application">Angular Contacts Application</a></li>
+            <li><a href="pages/bpm.html" title="Process Managment Application">Process Managment Application</a></li>
+            <li><a href="pages/admin.html" title="Admin Tool Application">Admin Tool Application</a></li>
+            <li><a href="pages/reporting.html" title="Reporting Application">Reporting Application</a></li>
+            <li><a href="pages/reflow.html" title="Adobe Reflow">Adobe Reflow</a></li>
+            <li><a href="pages/iphone.html" title="iPhone Application">iPhone Application</a></li>
+            <li><a href="pages/legal.html" title="Attorney Websites">Attorney Websites</a></li>
+            <li><a href="http://www.thelimited.com/" target="_blank "title="The Limited">The Limited Website <small>(external)</small></a></li>
+            <li><a href="http://faithslodge.org/hoperocks/" target="_blank" title="Hope Rocks">Hope Rocks Website <small>(external)</small></a></li>
+            <li><a href="pages/emails.html" title="HTML Emails">HTML Emails</a></li>
+            <li><a href="pages/kinetic.html" title="After Effects Kinetic Type">After Effects Kinetic Type</a></li>
+            <li><a href="pages/chess.html" title="3D Chess Set">3D Chess Set</a></li>
+            <li><a href="pages/mailer.html" title="Marketing Mailer">Marketing Mailers</a></li>
+            <li><a href="pages/earth.html" title="Earth Fest Poster">Earth Fest Poster</a></li>
+            <li><a href="pages/napa.html" title="NAPA Auto Parts Ads">NAPA Auto Parts Ads</a></li>
+        </ul>
+    </nav>
+
     <div class="page-wrap">
         <a id="top"></a>
         <div class="main-column" role="main">
             <h2>404 - Page Not Found</h2>
             <div class="lost">
                 <h3>The Page you were looking for does not exist, try the homepage.</h3>
-                <a href="index.html" class="btn btn-primary btn-lg">Take Me Home </a>
+                <a href="index.html" class="btn btn-secondary project-link btn-lg">Take Me Home </a>
             </div>
         </div>
 

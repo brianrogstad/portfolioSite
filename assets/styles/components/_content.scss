@@ -10,7 +10,7 @@
 
 .main-column {
     @include clearfix();
-    background: $gallery;
+    background: $white;
     clear: both;
     padding: 92px 0;
     position: relative;
@@ -23,31 +23,6 @@
 
 // Subsection Content
 // =============================================================
-.copy-subsection {
-    @include font-size(16);
-    margin: 0 auto 50px;
-    text-align: left;
-    width: 50%;
-
-    @include breakpoint(desktop) {
-        width: 70%;
-    }
-
-    @include breakpoint(laptop) {
-        width: 90%;
-    }
-
-    a {
-        color: $danube;
-        text-decoration: none;
-
-        &:hover {
-            color: $matisse;
-            text-decoration: none;
-        }
-    }
-}
-
 .image-container {
     margin: 0 auto;
     width: 50%;
@@ -92,10 +67,6 @@
     clear: both;
     padding: 100px 0 150px;
     width: 100%;
-}
-
-.content-footer {
-    clear: both;
 }
 
 

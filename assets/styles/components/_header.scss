@@ -12,7 +12,20 @@
     width: 100%;
     z-index: 999;
 
+    h5 {
+        float:left;
+        color: $white;
 
+        @include breakpoint(desktop) {
+            display: none;
+        }
+    }
+}
+
+.id-container {
+    float: left;
+    display: block;
+    width: 160px;
 }
 
 .logo {
@@ -20,8 +33,10 @@
     float: left;
     line-height: 1em;
     margin: 0 10px;
-    transition: width .3s ease;
-    width: 3%;
+
+    @include breakpoint(desktop) {
+        width: 4%;
+    }
 
     @include breakpoint(laptop) {
         width: 5%;
@@ -33,22 +48,5 @@
 
     img {
         max-width: 100%;
-    }
-}
-
-.tagline {
-    @include font-size(18);
-    color: $white;
-
-    font-family: $secondary-font;
-    font-style: italic;
-    margin: 0;
-
-    @include breakpoint(desktop) {
-        @include font-size(14);
-    }
-
-    @include breakpoint(laptop) {
-        display: none;
     }
 }

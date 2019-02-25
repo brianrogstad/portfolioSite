@@ -65,8 +65,8 @@ gulp.task('styles', function() {
         }))
         .pipe($.sass({outputStyle: 'compressed'}))
         .on('error', handleError)
-        .pipe($.sourcemaps.init())  // Process the original sources
-        .pipe($.sourcemaps.write()) // Add the map to modified source.
+        // .pipe($.sourcemaps.init())  // Process the original sources
+        // .pipe($.sourcemaps.write()) // Add the map to modified source.
         .pipe($.autoprefixer({browsers: ['last 2 versions', '> 5%']}))
         .pipe(gulp.dest('./assets/styles'));
 });
