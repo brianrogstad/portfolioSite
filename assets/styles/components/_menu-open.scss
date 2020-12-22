@@ -17,6 +17,14 @@
     }
 }
 
+.menu-open .open-menu {
+    display: none;
+}
+
+.menu-open .close-menu {
+    display: inline;
+}
+
 .menu-open .project-nav {
     display: block;
     left: 80%;

@@ -1,10 +1,12 @@
 // Fonts
 // =============================================================
 
-$arial: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+$helvetica: Helvetica Neue,Helvetica,Arial,sans-serif; 
 $times: 'Times New Roman', Times, Baskerville, Georgia, serif;
-$open-sans: 'Open Sans Condensed', sans-serif;
+$open-sans: 'Open Sans', sans-serif;
+$montserrat: 'Montserrat', sans-serif;
+$garamond: 'Cormorant Garamond', serif;
 
-$primary-font: $arial;
-$secondary-font: $open-sans;
-$tertiary-font: $times;
+$primary-font: $helvetica;
+$secondary-font: $montserrat;
+$tertiary-font: $garamond;

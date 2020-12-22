@@ -22,8 +22,16 @@
         display: inline;
     }
 
+    .open-menu {
+        display: block;
+    }
+
+    .close-menu {
+        display: none;
+    }
+
     a {
-        @include font-size(18);
+        @include font-size(24);
         color: $white;
         display: block;
         float: left;

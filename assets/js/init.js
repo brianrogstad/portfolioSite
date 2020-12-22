@@ -7,7 +7,12 @@ $(document).ready(function() {
 
     // toggle class to control open/close of off-canvas
     $('.open-menu').click(function() {
-        $('body').toggleClass('menu-open');
+        $('body').addClass('menu-open');
+    });
+
+    // toggle class to control open/close of off-canvas
+    $('.close-menu').click(function() {
+        $('body').removeClass('menu-open');
     });
 
     // Auto close off-canvas menu when item is clicked

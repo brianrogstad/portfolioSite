@@ -60,9 +60,6 @@ gulp.task('styles', function() {
     return gulp.src([
             './assets/styles/**/*.scss'
         ])
-        .pipe($.scssLint({
-            'config': './lint.yml',
-        }))
         .pipe($.sass({outputStyle: 'compressed'}))
         .on('error', handleError)
         // .pipe($.sourcemaps.init())  // Process the original sources
