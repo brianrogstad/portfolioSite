@@ -18,8 +18,11 @@
     $breakpoint-tablet: '(max-width: 768px)';
     $breakpoint-laptop: '(max-width: 978px)';
     $breakpoint-desktop: '(max-width: 1366px)';
+    $breakpoint-largescreen: '(max-width: 1920px)';
 
-    @if $point == desktop {
+    @if $point == largescreen {
+        @media #{$breakpoint-largescreen} { @content; }
+    } @else if $point == desktop {
         @media #{$breakpoint-desktop} { @content; }
     } @else if $point == laptop {
         @media #{$breakpoint-laptop} { @content; }

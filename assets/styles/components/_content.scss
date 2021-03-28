@@ -23,6 +23,7 @@
 
 // Subsection Content
 // =============================================================
+
 .image-container {
     margin: 0 auto;
     width: 50%;
@@ -37,8 +38,9 @@
 
     img {
         border: 1px solid $silver;
-        max-width: 100%;
+        max-width: 1000px;
     }
+
 }
 
 .text-container {
@@ -54,15 +56,6 @@
     }
 }
 
-.image-container-video {
-    margin: 0 auto 100px;
-    width: 640px;
-
-    @include breakpoint(tablet) {
-        width: 90%;
-    }
-}
-
 .subsection-title {
     margin: 0 5%;
 }
@@ -70,18 +63,6 @@
 .subsection-display {
     display: block;
     margin: 0 auto 100px;
-}
-
-.subsection-sketch {
-    display: block;
-    float: left;
-    width: 48%;
-    margin: 0 0 50px 2%;
-
-    @include breakpoint(tablet) {
-        width: 100%;
-        margin: 0 0 50px 0;
-    }
 }
 
 .brands-container {

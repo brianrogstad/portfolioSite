@@ -7,12 +7,14 @@
     grid-gap: 85px 2.5%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
-    @include breakpoint(desktop) {
+    @include breakpoint(largescreen) {
         grid-template-columns: 1fr 1fr;
+        grid-gap: 85px 2.5%;
     }
 
     @include breakpoint(tablet) {
         grid-template-columns: 1fr;
+        grid-gap: 25px 2.5%;
     }
 }
 
@@ -20,16 +22,20 @@
     background: $white;
 }
 
+.project-container,
+.codepen-container,
 .project-link {
     @include font-size(14);
     border: 0 none;
     color: $white;
+    display: block;
     font-weight: bold;
     margin-top: auto;
     margin-left: auto;
     padding: 0;
     text-decoration: none;
     box-shadow: 0px 0px 10px -2px $silver;
+    
 
     img {
         &:hover {
@@ -41,11 +47,19 @@
 }
 
 .description {
-    display: flex;
-    flex-direction: column;
+
+    h6 {
+        color: #555555;
+    }
+
+    .duration {
+        font-style: italic;
+    }
 
     p {
+        @include font-size(14);
         margin-bottom: 25px;
+        color: #888888;
     }
 }
 
