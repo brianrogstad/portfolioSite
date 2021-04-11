@@ -1,6 +1,8 @@
 // Footer
 // =============================================================
+
 .site-footer {
+
     @include clearfix();
     @include font-size(16);
     background: $mine-shaft;

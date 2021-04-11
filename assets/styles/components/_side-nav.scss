@@ -1,5 +1,6 @@
 // Project Navigation - Off Canvas Nav
 // =============================================================
+
 .project-nav {
     box-shadow: inset 10px 0 15px -5px $black;
     display: block;
@@ -24,6 +25,7 @@
     }
 
     a {
+
         @include font-size(16);
         border-bottom: 1px solid $mine-shaft;
         border-top: 1px solid $tundora;
@@ -43,13 +45,10 @@
         &:hover {
             background: $tundora;
             color: $danube;
-        } 
+        }
 
         &:last-child {
             border-bottom: 1px solid $tundora;
         }
     }
-
-    
-    
 }

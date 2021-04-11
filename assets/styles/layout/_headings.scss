@@ -1,7 +1,5 @@
-
-.changed h1 {
-    display: none;
-}
+// Heading Styles
+// =============================================================
 
 h1 {
     @include font-size(28);
@@ -10,10 +8,14 @@ h1 {
     font-family: $primary-font;
     font-weight: normal;
     line-height: 1.2em;
-    margin: 5px 0 0 0;
+    margin: 5px 0 0;
     padding: 0;
 
     @include breakpoint(laptop) {
+        display: none;
+    }
+
+    .changed h1 {
         display: none;
     }
 }
@@ -21,10 +23,10 @@ h1 {
 h2 {
     @include font-size(30);
     border-bottom: 1px solid $silver;
-    color: $mine-shaft;
     clear: both;
+    color: $mine-shaft;
     font-family: $secondary-font;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.2em;
     margin: 70px 4.667%;
     padding: 60px 0;
@@ -39,14 +41,14 @@ h3 {
     @include font-size(24);
     color: $mine-shaft;
     font-family: $secondary-font;
-    font-weight: 400;
+    font-weight: normal;
     line-height: 1.2em;
     margin: 15px 0 5px;
     padding: 0;
 }
 
 h4 {
-    @include font-size(18);
+    @include font-size(14);
     color: $mine-shaft;
     font-family: $primary-font;
     font-weight: normal;
@@ -56,7 +58,7 @@ h4 {
 }
 
 h5 {
-    @include font-size(18);
+    @include font-size(12);
     color: $mine-shaft;
     font-family: $secondary-font;
     font-weight: normal;
@@ -66,7 +68,7 @@ h5 {
 }
 
 h6 {
-    @include font-size(14);
+    @include font-size(10);
     color: $mine-shaft;
     font-family: $primary-font;
     font-weight: normal;

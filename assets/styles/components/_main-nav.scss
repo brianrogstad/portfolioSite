@@ -1,5 +1,6 @@
 // Main Navigation - Desktop
 // =============================================================
+
 .main-nav {
     position: fixed;
     right: 5%;
@@ -31,6 +32,7 @@
     }
 
     a {
+
         @include font-size(24);
         color: $white;
         display: block;

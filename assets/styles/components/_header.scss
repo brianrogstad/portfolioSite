@@ -1,5 +1,6 @@
-// Header
+// Page Header
 // =============================================================
+
 .header {
     background: $mine-shaft;
     left: 0;
@@ -11,21 +12,24 @@
     transition: left .3s ease, padding .3s ease, opacity .3s ease;
     width: 100%;
     z-index: 999;
+}
 
-    h5 {
-        float:left;
+.id-container {
+    display: block;
+    float: left;
+    width: 235px;
+
+    .tagline {
+        @include font-size(18);
+        font-family: $secondary-font;
+        font-weight: normal;
         color: $white;
+        float: left;
 
         @include breakpoint(desktop) {
             display: none;
         }
     }
-}
-
-.id-container {
-    float: left;
-    display: block;
-    width: 235px;
 }
 
 .logo {
@@ -37,11 +41,9 @@
     @include breakpoint(desktop) {
         width: 4%;
     }
-
     @include breakpoint(laptop) {
         width: 5%;
     }
-
     @include breakpoint(phone) {
         width: 9%;
     }

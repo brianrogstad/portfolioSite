@@ -3,55 +3,55 @@
 
 'use strict';
 
-var gulp          = require('gulp'),
-    $             = require('gulp-load-plugins')({lazy: true}),
-    args          = require('yargs').argv,
-    browserSync   = require('browser-sync'),
-    colors        = $.util.colors;
+var gulp = require('gulp'),
+    $ = require('gulp-load-plugins')({ lazy: true }),
+    args = require('yargs').argv,
+    browserSync = require('browser-sync'),
+    colors = $.util.colors;
 
 /////////////////////// set default task as serve app ///////////////////////
 gulp.task('default', ['serve']);
 
 ////////////////////////////// start application ///////////////////////////
-gulp.task('serve', ['scripts', 'styles'], function () {
+gulp.task('serve', ['scripts', 'styles'], function() {
     log('starting server and watching with gulp-nodemon');
     $.nodemon({
-        script: './server.js',
-        ext: 'js html'
-    })
-    .on('restart', ['scripts'], function () {
-        log('server restarted!');
-        setTimeout(function() {
-            browserSync.notify('reloading now ...');
-            browserSync.reload({stream: false});
-        }, 1000);
-    })
-    .on('start', function () {
-        log('server started');
-        startBrowserSync();
-    })
-    .on('crash', function () {
-        log('server crashed for some reason');
-    })
-    .on('exit', function () {
-        log('server exited cleanly');
-    });
+            script: './server.js',
+            ext: 'js html'
+        })
+        .on('restart', ['scripts'], function() {
+            log('server restarted!');
+            setTimeout(function() {
+                browserSync.notify('reloading now ...');
+                browserSync.reload({ stream: false });
+            }, 1000);
+        })
+        .on('start', function() {
+            log('server started');
+            startBrowserSync();
+        })
+        .on('crash', function() {
+            log('server crashed for some reason');
+        })
+        .on('exit', function() {
+            log('server exited cleanly');
+        });
 });
 
 ////////////////////////////// analyzing source code ///////////////////////////
-gulp.task('scripts', function () {
+gulp.task('scripts', function() {
     log('analyzing source with JSHint and JSCS');
     return gulp.src([
             './assets/**/*.js',
             './*.js',
             '!./assets/js/vendor/**/*.js',
         ])
-      .pipe($.if(args.verbose, $.print()))
-      .pipe($.jshint())
-      .pipe($.jshint.reporter('jshint-stylish', {verbose: true}))
-      .pipe($.jshint.reporter('fail'))
-      .pipe($.jscs())
-      .pipe($.jscs.reporter());
+        .pipe($.if(args.verbose, $.print()))
+        .pipe($.jshint())
+        .pipe($.jshint.reporter('jshint-stylish', { verbose: true }))
+        .pipe($.jshint.reporter('fail'))
+        .pipe($.jscs())
+        .pipe($.jscs.reporter());
 });
 
 /////////////////////// converting and compressing sass ///////////////////////
@@ -60,12 +60,13 @@ gulp.task('styles', function() {
     return gulp.src([
             './assets/styles/**/*.scss'
         ])
-        .pipe($.sass({outputStyle: 'compressed'}))
+        .pipe($.sass({ outputStyle: 'compressed' }))
         .on('error', handleError)
         // .pipe($.sourcemaps.init())  // Process the original sources
         // .pipe($.sourcemaps.write()) // Add the map to modified source.
-        .pipe($.autoprefixer({browsers: ['last 2 versions', '> 5%']}))
-        .pipe(gulp.dest('./assets/styles'));
+        .pipe($.autoprefixer({ browsers: ['last 2 versions', '> 5%'] }))
+
+    .pipe(gulp.dest('./assets/styles'));
 });
 
 /////////////////////// start up browser-sync ///////////////////////
@@ -90,7 +91,7 @@ function log(msg) {
     }
 }
 
-function  handleError(err) {
+function handleError(err) {
     console.error(err.toString());
     this.emit('end');
 }
@@ -99,7 +100,7 @@ function  handleError(err) {
 function changeEvent(event) {
     var srcPattern = new RegExp('/.*(?=/src/)/');
     log('File ' + event.path.replace(srcPattern, '') + ' ' + event.type);
-    browserSync.reload({stream: false});
+    browserSync.reload({ stream: false });
 }
 
 //////////////////////////// Start BrowserSync ///////////////////////////////////
@@ -123,10 +124,9 @@ function startBrowserSync() {
         logPrefix: 'debug info',
         notify: true,
         reloadDelay: 1000
-    } ;
+    };
 
     browserSync(options);
 }
 
 module.exports = gulp;
-

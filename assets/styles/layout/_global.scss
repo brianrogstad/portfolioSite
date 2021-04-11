@@ -1,5 +1,6 @@
 // Global Styles
 // =============================================================
+
 * {
     box-sizing: border-box;
 }
@@ -27,15 +28,15 @@ button {
 }
 
 a {
-    color: $danube;
+    color: $chambray;
     text-decoration: underline;
 
     &:hover {
-        color: $danube;
+        color: $chambray;
     }
 
     &:active {
-        color: $danube;
+        color: $chambray;
     }
 }
 

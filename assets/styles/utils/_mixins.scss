@@ -1,18 +1,18 @@
 // Mixins
 // =============================================================
+
 @mixin font-size($size-value: 1.6) {
     font-size: $size-value + px;
     font-size: ($size-value / 10) + rem;
 }
-
 @mixin clearfix {
+
     &::after {
         clear: both;
         content: '';
         display: table;
     }
 }
-
 @mixin breakpoint($point) {
     $breakpoint-phone: '(max-width: 568px)';
     $breakpoint-tablet: '(max-width: 768px)';
@@ -21,14 +21,24 @@
     $breakpoint-largescreen: '(max-width: 1920px)';
 
     @if $point == largescreen {
+
         @media #{$breakpoint-largescreen} { @content; }
-    } @else if $point == desktop {
+    }
+
+    @else if $point == desktop {
+
         @media #{$breakpoint-desktop} { @content; }
-    } @else if $point == laptop {
+    }
+    @else if $point == laptop {
+
         @media #{$breakpoint-laptop} { @content; }
-    } @else if $point == tablet {
-        @media #{$breakpoint-tablet}  { @content; }
-    } @else if $point == phone {
-        @media #{$breakpoint-phone}  { @content; }
+    }
+    @else if $point == tablet {
+
+        @media #{$breakpoint-tablet} { @content; }
+    }
+    @else if $point == phone {
+
+        @media #{$breakpoint-phone} { @content; }
     }
 }

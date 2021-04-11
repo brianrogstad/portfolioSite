@@ -1,5 +1,6 @@
 // Content
 // =============================================================
+
 .page-wrap {
     left: 0;
     overflow: hidden;
@@ -9,6 +10,7 @@
 }
 
 .main-column {
+
     @include clearfix();
     background: $white;
     clear: both;
@@ -20,7 +22,6 @@
     }
 }
 
-
 // Subsection Content
 // =============================================================
 
@@ -31,7 +32,6 @@
     @include breakpoint(desktop) {
         width: 70%;
     }
-
     @include breakpoint(laptop) {
         width: 90%;
     }
@@ -40,7 +40,6 @@
         border: 1px solid $silver;
         max-width: 1000px;
     }
-
 }
 
 .text-container {
@@ -50,7 +49,6 @@
     @include breakpoint(desktop) {
         width: 70%;
     }
-
     @include breakpoint(laptop) {
         width: 90%;
     }
@@ -75,10 +73,11 @@
     width: 100%;
 }
 
-
 // Social Nav
 // =============================================================
+
 .social-nav {
+
     @include clearfix();
     margin: 70px auto;
     width: 50%;
@@ -86,11 +85,9 @@
     @include breakpoint(desktop) {
         width: 60%;
     }
-
     @include breakpoint(laptop) {
         width: 70%;
     }
-
     @include breakpoint(tablet) {
         width: 90%;
     }
@@ -105,6 +102,7 @@
         display: inline;
 
         a {
+            color: $danube;
             display: block;
             float: left;
             margin: 0 auto;
@@ -157,6 +155,7 @@
 
 // Parallax
 // =============================================================
+
 .parallax-container {
     background: url('../images/parallax-bg.jpg') $gallery center center no-repeat;
     background-attachment: fixed;
@@ -166,7 +165,9 @@
 
 // Clients and Companies
 // =============================================================
+
 .clients {
+
     @include clearfix();
     margin: 40px auto;
     width: 50%;
@@ -174,7 +175,6 @@
     @include breakpoint(desktop) {
         width: 70%;
     }
-
     @include breakpoint(tablet) {
         width: 90%;
     }
@@ -201,4 +201,3 @@
         }
     }
 }
-
