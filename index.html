@@ -10,6 +10,13 @@
     <link rel="icon" type="image/x-icon" href="icon.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="assets/styles/styles.css" />
+    <script type="text/javascript">
+    var uri = window.location.toString();
+        if (uri.indexOf("?") > 0) {
+            var clean_uri = uri.substring(0, uri.indexOf("?"));
+            window.history.replaceState({}, document.title, clean_uri);
+        }
+    </script>
 </head>
 
 <body>
@@ -38,6 +45,14 @@
             <li><a href="/pages/maps.html">Flow Mapping Sample</a></li>
             <li><a href="/pages/bpm.html">Process Management Application</a></li>
             <li><a href="/pages/admin.html">Admin Tool Application</a></li>
+            <li><a href="/pages/logo.html">Logo Design Process</a></li>
+            <li><a href="/pages/earth.html">Earth Day Poster</a></li>
+            <li><a href="/pages/bluesky.html">Blue Sky Package Design</a></li>
+            <li><a href="/pages/travel.html">Travel Mailers</a></li>
+            <li><a href="/pages/life.html">Life Drawings</a></li>
+            <li><a href="/pages/model.html">Model Sessions</a></li>
+            <li><a href="/pages/reference.html">Reference Sketches</a></li>
+            <li><a href="/pages/rough.html">Rough Sketches</a></li>
             <li><a href="/pages/contact.html">Angular Contacts Application</a></li>
             <li><a href="/pages/legal.html">Attorney Websites</a></li>
             <li><a href="http://www.thelimited.com/" target="_blank" rel="noreferrer">The Limited Website</a></li>
@@ -50,7 +65,6 @@
         <main class="main-column">
             <h2>Interface Design</h2>
             <div class="grid-container">
-                <!-- version seven project -->
                 <div class="project">
                     <div class="project-container" style="--aspect-ratio: 41/28;">
                         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F0VcaG6JEeFydywrTQo5iN1%2FVersion-Seven%3Fnode-id%3D0%253A1" allowfullscreen title="Version Seven Application"></iframe>
@@ -67,10 +81,9 @@
                     <p>Information Architect, UI Designer, Content Strategist, Interaction Designer</p>
 
                     <h4>Project Description:</h4>
-                    <p>This piece is a work in progress of a financial application I've had in mind for financial budgeting and money management. It's currently in the very early stages of design and viewable on Figma.</p>
+                    <p>This piece is a work in progress of a financial application I've had in mind for financial budgeting and money management. Taking the mobile-first approach to building this application as there will potential to create this as a web based application as well. It's currently in the early stages of design and viewable on Figma.</p>
                 </div>
 
-                <!-- design system project -->
                 <div class="project">
                     <a href="pages/system.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/system.jpg" alt="design system sample" />
@@ -93,7 +106,6 @@
                         by anyone with access.</p>
                 </div>
 
-                <!-- Utility Page Design -->
                 <div class="project">
                     <a href="pages/utility.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/utility.jpg" alt="utility page design layout" />
@@ -115,7 +127,6 @@
                         the design layout, iconography and aesthetic in what we were designing.</p>
                 </div>
 
-                <!-- mobile app project -->
                 <div class="project">
                     <a href="pages/mobile.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/mobile.jpg" alt="mobile app design layout" />
@@ -137,9 +148,8 @@
                 </div>
             </div>
 
-            <h2>Information Architecture</h2>
+            <h2>Interaction Design &amp; Information Architecture</h2>
             <div class="grid-container">
-                <!-- prototype sample -->
                 <div class="project">
                     <a href="pages/proto.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/proto.jpg" alt="Prototype Samples" />
@@ -160,7 +170,6 @@
                         making designs interactive.</p>
                 </div>
 
-                <!-- user flow project -->
                 <div class="project">
                     <a href="pages/maps.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/map.jpg" alt="Flow Mapping Sample" />
@@ -180,7 +189,6 @@
                     <p>Sample screenshots of work that I did to help visually convey user flow in an application. Tools such as <a href="https://overflow.io/" target="blank">Overflow</a> and <a href="https://www.flowmapp.com/" target="blank">Flowmapp</a> are great for doing this task. It can also be achieved by using certain plugins to show a more granular task flow right in the mock up files themselves.</p>
                 </div>
 
-                <!-- process management app -->
                 <div class="project">
                     <a href="pages/bpm.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/bpm.jpg" alt="screenshot of process management application" />
@@ -201,7 +209,6 @@
                         owners, managers, and development team. I took responsibility for the interface design by presenting concepts, wireframes, app flows, and prototypes as needed. I also performed the UI development of this application within angular.</p>
                 </div>
 
-                <!-- admin tool app -->
                 <div class="project">
                     <a href="pages/admin.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/admin.jpg" alt="screenshot of admin application" />
@@ -223,10 +230,167 @@
                 </div>
             </div>
 
+            <h2>Brand &amp; Marketing Design</h2>
+            <div class="grid-container">
+                <div class="project">
+                    <a href="pages/logo.html" class="btn btn-secondary project-link">
+                        <img class="card-img-top" src="assets/images/display-images/logo-process.jpg" alt="Logo Design Process Sample" />
+                    </a>
+                </div>
+                <div class="description">
+                    <h3>Logo Design Process</h3>
+                    <p class="duration">Created in 2009 for Personal Use</p>
+
+                    <h4>Technology Used:</h4>
+                    <p>Illustrator, Photoshop, Sketching</p>
+
+                    <h4>Project Roles:</h4>
+                    <p>Visual Designer</p>
+
+                    <h4>Project Description:</h4>
+                    <p>These images show some of the steps I took in creating my own logo. This piece helps to illustrate how I work through the initial stages of design. This process took me weeks of constantly thinking of what the end result was going to be.</p>
+                </div>
+
+                <div class="project">
+                    <a href="pages/earth.html" class="btn btn-secondary project-link">
+                        <img class="card-img-top" src="assets/images/display-images/earth-fest.jpg" alt="Prototype Samples" />
+                    </a>
+                </div>
+                <div class="description">
+                    <h3>Earth Day Poster</h3>
+                    <p class="duration">Created in 2011 as a Personal Project</p>
+
+                    <h4>Technology Used:</h4>
+                    <p>Illustrator, Photoshop</p>
+
+                    <h4>Project Roles:</h4>
+                    <p>Visual Designer</p>
+
+                    <h4>Project Description:</h4>
+                    <p>A project that I created based on an Earth Day event. After finding an upcoming event I took that information and plugged it into a poster. The project was mostly created in <strong>Adobe Illustrator</strong>, but some of the final touches such as the texture layer was done using <strong>Adobe Photoshop</strong>.</p>
+                </div>
+
+                <div class="project">
+                    <a href="pages/bluesky.html" class="btn btn-secondary project-link">
+                        <img class="card-img-top" src="assets/images/display-images/bluesky.jpg" alt="Blue Sky Package Design Preview" />
+                    </a>
+                </div>
+                <div class="description">
+                    <h3>Blue Sky Package Design</h3>
+                    <p class="duration">Created in 2010 as a Personal Project</p>
+
+                    <h4>Technology Used:</h4>
+                    <p>Illustrator</p>
+
+                    <h4>Project Roles:</h4>
+                    <p>Visual Designer</p>
+
+                    <h4>Project Description:</h4>
+                    <p>A project that I created based on redesigning Blue Sky's Package design. The fruit was hand drawn and brought into <strong>Adobe Illustrator</strong> to be compiled with the rest of the designs. Taking a queue from their existing logo I made the illustrations mimic the logo to help tie in the design.</p>
+                </div>
+
+                <div class="project">
+                    <a href="pages/travel.html" class="btn btn-secondary project-link">
+                        <img class="card-img-top" src="assets/images/display-images/travel-mailer.jpg" alt="Travel Mailer Design Preview" />
+                    </a>
+                </div>
+                <div class="description">
+                    <h3>Travel Mailer Design</h3>
+                    <p class="duration">Created in 2010 as a Personal Project</p>
+
+                    <h4>Technology Used:</h4>
+                    <p>Illustrator, Photoshop</p>
+
+                    <h4>Project Roles:</h4>
+                    <p>Visual Designer</p>
+
+                    <h4>Project Description:</h4>
+                    <p>I created this series of direct mailers as part of project for marketing. The idea was to sell the state of Texas to would be travelers. The estimated time that I took in creating my designs was one to two weeks. In the end I created three different pieces to be a part of a series in a campaign.</p>
+                </div>
+            </div>
+
+            <h2>Sketching &amp; Drawing</h2>
+            <div class="grid-container">
+                <div class="project">
+                    <a href="pages/life.html" class="btn btn-secondary project-link">
+                        <img class="card-img-top" src="assets/images/display-images/life-drawings.jpg" alt="Life Drawings" />
+                    </a>
+                </div>
+                <div class="description">
+                    <h3>Life Drawings</h3>
+                    <p class="duration">Various Drawings as Personal Projects</p>
+
+                    <h4>Technology Used:</h4>
+                    <p>Photoshop, Sketching, Graphite</p>
+
+                    <h4>Project Roles:</h4>
+                    <p>Sketch Artist</p>
+
+                    <h4>Project Description:</h4>
+                    <p>I completed these sketches using live models in very short intervals. The few animal sketches in here that were done within thirty seconds to one minute when visiting a couple pet stores as well as some trips to the zoo.</p>
+                </div>
+
+                <div class="project">
+                    <a href="pages/model.html" class="btn btn-secondary project-link">
+                        <img class="card-img-top" src="assets/images/display-images/model.jpg" alt="Model Sessions" />
+                    </a>
+                </div>
+                <div class="description">
+                    <h3>Model Sessions</h3>
+                    <p class="duration">Various Drawings as Personal Project</p>
+                    
+                    <h4>Technology Used:</h4>
+                    <p>Photoshop, Sketching, Charcoal, Graphite</p>
+
+                    <h4>Project Roles:</h4>
+                    <p>Sketch Artist</p>
+
+                    <h4>Project Description:</h4>
+                    <p><p>I completed these sketches during several model sessions. Most of the poses varied between 15 seconds to 2 minutes. Some of the longer poses were held for up to 15 minutes at most.</p>
+                </div>
+
+                <div class="project">
+                    <a href="pages/reference.html" class="btn btn-secondary project-link">
+                        <img class="card-img-top" src="assets/images/display-images/eye.jpg" alt="Render Sketches" />
+                    </a>
+                </div>
+                <div class="description">
+                    <h3>Reference Sketches</h3>
+                    <p class="duration">Various Drawings as Personal Projects</p>
+
+                    <h4>Technology Used:</h4>
+                    <p>Photoshop, Sketching, Graphite</p>
+
+                    <h4>Project Roles:</h4>
+                    <p>Sketch Artist</p>
+
+                    <h4>Project Description:</h4>
+                    <p>These sketches were completed using a reference photograph and I also had no time constraints to complete the works.</p>
+                </div>
+
+                <div class="project">
+                    <a href="pages/rough.html" class="btn btn-secondary project-link">
+                        <img class="card-img-top" src="assets/images/display-images/rough.jpg" alt="Rough Sketches" />
+                    </a>
+                </div>
+                <div class="description">
+                    <h3>Rough Sketches</h3>
+                    <p class="duration">Various Drawings as Personal Projects</p>
+
+                    <h4>Technology Used:</h4>
+                    <p>Photoshop, Sketching, Graphite</p>
+
+                    <h4>Project Roles:</h4>
+                    <p>Sketch Artist</p>
+
+                    <h4>Project Description:</h4>
+                    <p>These sketches were completed using a reference photographs but they were quick sketches done as a part of research conducted for use with character creation.</p>
+                </div>
+            </div>
+
             <h2>Development</h2>
             <div class="grid-container">
 
-                <!-- CodePen -->
                 <div class="project">
                     <div class="codepen-container" style="--aspect-ratio: 41/28;">
                         <p class="codepen" data-height="100%" data-theme-id="dark" data-default-tab="js,result" data-user="brogstad" data-slug-hash="wGGXgg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -251,7 +415,6 @@
                     <p>I used Codepen as a sandbox to test the output when making edits to an application that was using KnockoutJS.</p>
                 </div>
 
-                <!-- CodePen -->
                 <div class="project">
                     <div class="codepen-container" style="--aspect-ratio: 41/28;">
                         <p class="codepen" data-height="100%" data-theme-id="dark" data-default-tab="js,result" data-user="brogstad" data-slug-hash="BZGxmJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -277,7 +440,6 @@
                         already exists, the value gets added and the table is resorted.</p>
                 </div>
 
-                <!-- CodePen -->
                 <div class="project">
                     <div class="codepen-container" style="--aspect-ratio: 41/28;">
                         <p class="codepen" data-height="100%" data-theme-id="dark" data-default-tab="js,result" data-user="brogstad" data-slug-hash="ybZyBN" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;"
@@ -302,7 +464,6 @@
                     <p>A sample React app that is connected to the Giphy API. it concatenates the string entered by the user to the string that is used to make the get request and returns any results to an empty container.</p>
                 </div>
 
-                <!-- contacts app -->
                 <div class="project">
                     <a href="pages/contact.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/contact.jpg" alt="screenshot of angular contacts application" />
@@ -323,7 +484,6 @@
                         data stores with MongoDB.</p>
                 </div>
 
-                <!-- legal sites -->
                 <div class="project">
                     <a href="pages/legal.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/legal.jpg" alt="screenshot of attorney websites" />
@@ -344,7 +504,6 @@
                         We used a proprietary CMS that housed all the websites and allowed the both developers and clients to update and maintain their websites. These websites shown are a small sample of websites I worked on.</p>
                 </div>
 
-                <!-- limited -->
                 <div class="project">
                     <a href="http://www.thelimited.com/" target="_blank" class="btn btn-secondary project-link" rel="noreferrer">
                         <img class="card-img-top" src="assets/images/display-images/limited.jpg" alt="screenshot of the limited website" />
@@ -365,7 +524,6 @@
                         of version control as there were several developers working on this project simultaneously. Debugging and CSS updates were a couple things I also helped with. <a href="http://www.thelimited.com/" target="_blank" rel="noreferrer">visit the limited.com</a></p>
                 </div>
 
-                <!-- hope rocks -->
                 <div class="project">
                     <a href="http://faithslodge.org/hoperocks/" target="_blank" class="btn btn-secondary project-link" rel="noreferrer">
                         <img class="card-img-top" src="assets/images/display-images/hoperocks.jpg" alt="screenshot of hope rocks website" />
@@ -386,7 +544,6 @@
                         evolves and change and or moves locations. It’s still an ongoing project today but has changed several times since I’ve worked on it. <a href="http://faithslodge.org/hoperocks/" target="_blank" rel="noreferrer">visit hoperocks.org</a></p>
                 </div>
 
-                <!-- emails project -->
                 <div class="project">
                     <a href="pages/emails.html" class="btn btn-secondary project-link">
                         <img class="card-img-top" src="assets/images/display-images/emails.jpg" alt="screenshot of html emails" />
@@ -408,6 +565,7 @@
                         in creating these projects was development. I had to code these in HTML working off of an <strong>Adobe Photoshop</strong> file. In the end making sure they passed QA for all email clients.</p>
                 </div>
             </div>
+
         </main>
 
         <aside class="subsection-container">
