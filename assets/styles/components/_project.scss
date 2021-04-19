@@ -49,6 +49,9 @@
 }
 
 .description {
+    @include breakpoint(laptop) {
+        padding-bottom: 70px;
+    }
 
     h6 {
         color: $tundora;

@@ -39,6 +39,10 @@
     img {
         border: 1px solid $silver;
         max-width: 1000px;
+
+        @include breakpoint(desktop) {
+            width: 100%;
+        }
     }
 }
 
