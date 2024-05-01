@@ -21,6 +21,7 @@
 
     li {
         display: inline;
+        cursor: pointer;
     }
 
     .open-menu {
@@ -42,6 +43,7 @@
         padding: 10px;
         text-align: center;
         text-decoration: none;
+        
 
         &:hover {
             color: $danube;

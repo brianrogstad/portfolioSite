@@ -43,7 +43,7 @@ h3 {
     font-family: $secondary-font;
     font-weight: normal;
     line-height: 1.2em;
-    margin: 15px 0 5px;
+    margin: 0 0 5px;
     padding: 0;
 }
 
@@ -51,7 +51,7 @@ h4 {
     @include font-size(14);
     color: $mine-shaft;
     font-family: $primary-font;
-    font-weight: normal;
+    font-weight: bold;
     line-height: 1.2em;
     margin: 0;
     padding: 0;

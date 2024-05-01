@@ -32,12 +32,22 @@ a {
     text-decoration: underline;
 
     &:hover {
-        color: $chambray;
+        color: $danube;
+        cursor: pointer;
     }
 
     &:active {
-        color: $chambray;
+        color: $danube;
     }
+}
+
+.link-icon {
+    padding-left: 8px;
+    vertical-align: middle;
+}
+
+video {
+    width: 100%;
 }
 
 strong {
