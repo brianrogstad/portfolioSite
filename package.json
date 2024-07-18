@@ -10,8 +10,8 @@
         "graceful-fs": "^4.2.11"
     },
     "engines": {
-        "node": "16.20.2",
-        "npm": "8.19.4",
+        "node": "11.15.0",
+        "npm": "6.7.0",
         "python": "^2.7"
     },
     "overrides": {

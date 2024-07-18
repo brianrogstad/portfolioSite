@@ -14,8 +14,7 @@
     <header class="header">
         <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
         <div class="id-container">
-            <h1>Brian Rogstad</h1>
-            <h5>UX Developer &amp; Designer</h5>
+            <h1>Brian Rogstad <br/> <span class="tagline">Digital Portfolio</span></h1>
         </div>
 
         <nav class="main-nav">
@@ -27,30 +26,60 @@
 
     <nav class="project-nav">
         <ul>
-            <li><a href="/" title="Home">Home</a></li>
-            <li><a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven" title="View project on Figma" target="_blank">Version Seven Application</a></li>
-            <li><a href="/pages/system.html" title="Design System Sample">Design System Sample</a></li>
-            <li><a href="/pages/utility.html" title="Utility Page Design">Utility Page Design</a></li>
-            <li><a href="/pages/mobile.html" title="Weather App Design">Weather App Design</a></li>
-            <li><a href="/pages/proto.html" title="Prototype Sample">Prototype Sample</a></li>
-            <li><a href="/pages/maps.html" title="User Flows">Flow Mapping Sample</a></li>
-            <li><a href="/pages/bpm.html" title="Process Management Application">Process Management Application</a></li>
-            <li><a href="/pages/admin.html" title="Admin Tool Application">Admin Tool Application</a></li>
-            <li><a href="/pages/contact.html" title="Angular Contacts Application">Angular Contacts Application</a></li>
-            <li><a href="/pages/legal.html" title="Attorney Websites">Attorney Websites</a></li>
-            <li><a href="http://www.thelimited.com/" target="_blank" title="The Limited">The Limited Website</a></li>
-            <li><a href="http://faithslodge.org/hoperocks/" target="_blank" title="Hope Rocks">Hope Rocks Website</a></li>
-            <li><a href="/pages/emails.html" title="HTML Emails">HTML Emails</a></li>
-            <li><a href="/pages/earth.html" title="EarthFest Poster">Earth Fest Poster</a></li>
+            <li><a href="/">Home</a></li>
+            <li><p>User Interface Design</p></li>
+            <li><a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/usb-system.html">USB Partner Design System Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/tremor-system.html">Tremor Design System Sample<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/utility.html">Utility Page Design<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><p>Information Architecture</p></li>
+            <li><a href="/pages/usb-maps.html">USB Partner Flow Mapping Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/proto.html">Prototype Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/tremor-maps.html">FlowMapp Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel="noreferrer">Story Mapping Sample<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/bpm.html">Process Management Application<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/admin.html">Admin Tool Application<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><p>Frontend Development</p></li>
+            <li><a href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel="noreferrer">Knockout JS Sample<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel="noreferrer">Giphy Search using React<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel="noreferrer">Local Storage Demo<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/contact.html">Contacts Application<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/legal.html">Attorney Websites<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="http://www.thelimited.com/" target="_blank" rel="noreferrer">The Limited Website<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><p>Brand &amp; Marketing Design</p></li>
+            <li><a href="/pages/logo.html">Logo Design Process<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/earth.html">Earth Day Poster<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><p>Sketching & Drawing</p></li>
+            <li><a href="/pages/rough.html">Rough Sketches<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/life.html">Life Drawings<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/model.html">Model Sessions<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/reference.html">Reference Sketches<i class="fa fa-chevron-right link-icon"></i></a></li>
         </ul>
     </nav>
 
     <div class="page-wrap">
+        <header class="header">
+            <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
+            <div class="id-container">
+                <h1>Brian Rogstad <br/> <span class="tagline">Digital Portfolio</span></h1>
+            </div>
+    
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" title="Navigation" class="open-menu"><i class="fa fa-bars"></i></a></li>
+                    <li><a href="#" title="Navigation" class="close-menu"><i class="fa fa-times"></i></a></li>
+                </ul>
+            </nav>
+        </header>
+
         <div class="main-column" role="main">
             <h2>404 - Page Not Found</h2>
             <div class="lost">
-                <h3>The Page you were looking for does not exist, try the homepage.</h3>
-                <a href="index.html" class="btn btn-secondary project-link btn-lg">Take Me Home </a>
+                <h3>We're sorry, but the page you are trying to access does not exist.
+                    <br/> Please consider visiting the homepage.</h3>
+                <a href="index.html" class="btn btn-secondary project-link btn-lg">Go to Home Page</a>
             </div>
         </div>
 
@@ -71,24 +100,42 @@
 
         <div class="subsection-container parallax-container"></div>
 
-        <div class="subsection-container brands-container">
+        <aside class="subsection-container brands-container">
             <header>
                 <h2 class="subsection-title">Clients and Companies</h2>
             </header>
             <div class="clients">
                 <ul>
-                    <li><a href="https://olson.com/" title="Olson" target="_blank"><img src="../assets/images/brands/olson-logo.png" alt="Olson Logo"></a></li>
-                    <li><a href="https://online.citi.com/US/Welcome.c" title="Citi Bank" target="_blank"><img src="../assets/images/brands/citi-logo.png" alt="Citi Bank Logo"></a></li>
-                    <li><a href="https://www.amtrak.com/home" title="Amtrack" target="_blank"><img src="../assets/images/brands/amtrack-logo.png" alt="Amtrack Logo"></a></li>
-                    <li><a href="https://www.suncountry.com/" title="Sun Country" target="_blank"><img src="../assets/images/brands/sun-logo.png" alt="Sun Country Logo"></a></li>
-                    <li><a href="http://www.thelimited.com/" title="Limited" target="_blank"><img src="../assets/images/brands/limited-logo.png" alt="The Limited Logo"></a></li>
-                    <li><a href="http://thomsonreuters.com/en.html" title="Thomson Reuters" target="_blank"><img src="../assets/images/brands/thomson-logo.png" alt="Thomson Reuters Logo"></a></li>
-                    <li><a href="http://www.pfizer.com/" title="Pfizer" target="_blank"><img src="../assets/images/brands/pfizer-logo.png" alt="Pfizer Logo"></a></li>
-                    <li><a href="http://www.luxottica.com/en" title="Luxottica" target="_blank"><img src="../assets/images/brands/lux-logo.png" alt="Luxxotica Logo"></a></li>
-                    <li><a href="http://www.napaonline.com/" title="Napa Auto Parts" target="_blank"><img src="../assets/images/brands/napa-logo.png" alt="Napa Auto Parts Logo"></a></li>
+                    <li>
+                        <a href="https://olson.com/" title="Olson" target="_blank" rel="noreferrer"><img src="../assets/images/brands/olson-logo.png" alt="Olson Logo"></a>
+                    </li>
+                    <li>
+                        <a href="https://online.citi.com/US/Welcome.c" title="Citi Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/citi-logo.png" alt="Citi Bank Logo"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.amtrak.com/home" title="Amtrack" target="_blank" rel="noreferrer"><img src="../assets/images/brands/amtrack-logo.png" alt="Amtrack Logo"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.suncountry.com/" title="Sun Country" target="_blank" rel="noreferrer"><img src="../assets/images/brands/sun-logo.png" alt="Sun Country Logo"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.thelimited.com/" title="Limited" target="_blank" rel="noreferrer"><img src="../assets/images/brands/limited-logo.png" alt="The Limited Logo"></a>
+                    </li>
+                    <li>
+                        <a href="http://thomsonreuters.com/en.html" title="Thomson Reuters" target="_blank" rel="noreferrer"><img src="../assets/images/brands/thomson-logo.png" alt="Thomson Reuters Logo"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.pfizer.com/" title="Pfizer" target="_blank" rel="noreferrer"><img src="../assets/images/brands/pfizer-logo.png" alt="Pfizer Logo"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.luxottica.com/en" title="Luxottica" target="_blank" rel="noreferrer"><img src="../assets/images/brands/lux-logo.png" alt="Luxxotica Logo"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.usbank.com/" title="US Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/us-bank.png" alt="US Bank Logo"></a>
+                    </li>
                 </ul>
             </div>
-        </div>
+        </aside>
 
         <footer class="site-footer">
         <p class="disclaimer"> &#169; Brian Rogstad  2009-<script>document.write(new Date().getFullYear())</script>. All rights reserved.</p>

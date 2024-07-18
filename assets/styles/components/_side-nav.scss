@@ -25,6 +25,14 @@
         cursor: pointer;
     }
 
+    p {
+        @include font-size(18);
+        color: $white;
+        padding: 10px 0 10px 20px;
+        margin: 0;
+        text-transform: capitalize;
+    }
+
     a {
 
         @include font-size(16);
@@ -35,8 +43,8 @@
         float: none;
         font-family: $secondary-font;
         margin: 0;
-        padding: 10px;
-        text-align: center;
+        padding: 10px 10px 10px 60px;
+        text-align: left;
         text-decoration: none;
 
         &.active {

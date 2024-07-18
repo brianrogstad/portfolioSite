@@ -27,7 +27,7 @@
 
 .image-container {
     margin: 0 auto;
-    width: 50%;
+    width: fit-content;
 
     @include breakpoint(desktop) {
         width: 70%;
