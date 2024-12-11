@@ -207,9 +207,9 @@
         </footer>
     </div>
 
-    <script type="text/javascript" src="assets/js/vendor/jquery-2.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/vendor/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/init.js"></script>
+    <script src="assets/js/vendor/jquery-2.2.1.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/init.js"></script>
 
     <script>
         var _gaq = _gaq || [];
