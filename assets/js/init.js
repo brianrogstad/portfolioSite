@@ -7,11 +7,13 @@ $(document).ready(function() {
 
     // toggle class to control open/close of off-canvas
     $('.open-menu').click(function() {
+        console.log('clicked open-menu');
         $('body').addClass('menu-open');
     });
 
     // toggle class to control open/close of off-canvas
     $('.close-menu').click(function() {
+        console.log('clicked close-menu');
         $('body').removeClass('menu-open');
     });
 
@@ -28,6 +30,14 @@ $(document).ready(function() {
             $('body').removeClass('changed');
         }
     });
+
+    $('.dropdown').hover(function() {
+        $(this).addClass('show');
+        $(this).find('.dropdown-menu').addClass('show');
+      }, function() {
+        $(this).removeClass('show');
+        $(this).find('.dropdown-menu').removeClass('show');
+      });
 
     // Write current year into footer
     document.getElementById('year').innerHTML = new Date().getFullYear();

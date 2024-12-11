@@ -3,7 +3,7 @@
 
 h1 {
     @include font-size(28);
-    color: $white;
+    color: $black;
     float: left;
     font-family: $primary-font;
     font-weight: normal;
@@ -29,7 +29,7 @@ h2 {
     font-weight: normal;
     line-height: 1.2em;
     margin: 70px 4.667%;
-    padding: 60px 0;
+    padding: 40px 0 100px;
     text-align: center;
 
     @include breakpoint(tablet) {
@@ -43,7 +43,7 @@ h3 {
     font-family: $secondary-font;
     font-weight: normal;
     line-height: 1.2em;
-    margin: 0 0 5px;
+    margin: 0 0 25px;
     padding: 0;
 }
 

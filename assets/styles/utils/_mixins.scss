@@ -1,23 +1,27 @@
 // Mixins
 // =============================================================
 
+// Font Size Mixin to convert value given to Rems
 @mixin font-size($size-value: 1.6) {
     font-size: $size-value + px;
     font-size: ($size-value / 10) + rem;
 }
-@mixin clearfix {
 
+// Clearfix Mixin
+@mixin clearfix {
     &::after {
         clear: both;
         content: '';
         display: table;
     }
 }
+
+// Breakpoint Mixin
 @mixin breakpoint($point) {
-    $breakpoint-phone: '(max-width: 568px)';
+    $breakpoint-phone: '(max-width: 480px)';
     $breakpoint-tablet: '(max-width: 768px)';
-    $breakpoint-laptop: '(max-width: 978px)';
-    $breakpoint-desktop: '(max-width: 1366px)';
+    $breakpoint-laptop: '(max-width: 1279px)';
+    $breakpoint-desktop: '(max-width: 1620px)';
     $breakpoint-largescreen: '(max-width: 1920px)';
 
     @if $point == largescreen {
@@ -42,3 +46,4 @@
         @media #{$breakpoint-phone} { @content; }
     }
 }
+

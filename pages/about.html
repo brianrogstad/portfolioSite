@@ -5,7 +5,7 @@
     <meta name="Author" content="Brian Rogstad" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta charset="UTF-8">
-    <title>Brian Rogstad - Digital Portfolio - Design System Sample</title>
+    <title>Brian Rogstad - Digital Portfolio - About</title>
     <link rel="icon" type="image/x-icon" href="icon.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="../assets/styles/styles.css" />
@@ -20,14 +20,14 @@
         <nav class="main-nav">
             <ul class="nav desktop-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/pages/about.html">About</a></li>
+                <li><a href="/pages/about.html" class="active">About</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle active" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         UI Design</i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                         <a class="dropdown-item" href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application <i class="fa fa-external-link link-icon"></i></a>
-                        <a class="dropdown-item active" href="/pages/usb-system.html">USB Design System Samples</a>
+                        <a class="dropdown-item" href="/pages/usb-system.html">USB Design System Samples</a>
                         <a class="dropdown-item" href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application <i class="fa fa-external-link link-icon"></i></a>
                         <a class="dropdown-item" href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup <i class="fa fa-external-link link-icon"></i></a>
                         <a class="dropdown-item" href="/pages/tremor-system.html">Tremor Design System Sample</a>
@@ -65,8 +65,8 @@
                         Branding &amp; Marketing</i>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                        <a class="dropdown-item" href="/pages/logo.html" class="active">Logo Design Process</a>
-                        <a class="dropdown-item" href="/pages/earth.html">Earth Day Poster</a>
+                        <a href="/pages/logo.html" class="active">Logo Design Process</a>
+                        <a href="/pages/earth.html">Earth Day Poster</a>
                     </div>
                 </li>
                 <li class="dropdown">
@@ -89,12 +89,13 @@
         </nav>
     </header>
 
-    <nav class="project-nav">
+    <nav class="project-nav" aria-label="Main Navigation">
         <ul>
             <li><a href="/">Home</a></li>
-            <li><p>User Interface Design</p></li>
+            <li><a class="active" href="/pages/about.html">About</a></li>
+            <li><p>UI Design</p></li>
             <li><a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application <i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/usb-system.html" class="active">USB Design System Samples</a></li>
+            <li><a href="/pages/usb-system.html">USB Design System Samples</a></li>
             <li><a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application <i class="fa fa-external-link link-icon"></i></a></li>
             <li><a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup <i class="fa fa-external-link link-icon"></i></a></li>
             <li><a href="/pages/tremor-system.html">Tremor Design System Sample</a></li>
@@ -106,7 +107,7 @@
             <li><a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel="noreferrer">Story Mapping Sample <i class="fa fa-external-link link-icon"></i></a></li>
             <li><a href="/pages/bpm.html">FindLaw Workspace</a></li>
             <li><a href="/pages/admin.html">Workflow Admin Application</a></li>
-            <li><p>Frontend Development</p></li>
+            <li><p>Development</p></li>
             <li><a href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel="noreferrer">Knockout JS Sample <i class="fa fa-external-link link-icon"></i></a></li>
             <li><a href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel="noreferrer">Giphy Search using React <i class="fa fa-external-link link-icon"></i></a></li>
             <li><a href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel="noreferrer">Local Storage Demo <i class="fa fa-external-link link-icon"></i></a></li>
@@ -116,7 +117,7 @@
             <li><p>Brand &amp; Marketing Design</p></li>
             <li><a href="/pages/logo.html">Logo Design Process</a></li>
             <li><a href="/pages/earth.html">Earth Day Poster</a></li>
-            <li><p>Sketching & Drawing</p></li>
+            <li><p>Sketches</p></li>
             <li><a href="/pages/rough.html">Animal Character Design</a></li>
             <li><a href="/pages/life.html">Observational Sketches</a></li>
             <li><a href="/pages/model.html">Model Sessions</a></li>
@@ -127,29 +128,28 @@
     <div class="page-wrap">
         <main class="main-column">
             <header>
-                <h2>USB Design System Samples</h2>
+                <h2>About Me</h2>
             </header>
 
-            <p class="text-container">This project focused on creating a robust and flexible design system, centralizing essential design tokens and visual guidelines to ensure brand consistency, scalability, and accessibility across digital products. To design and document a system of reusable components and variables, enabling seamless collaboration between designers and developers while ensuring a cohesive user experience across multiple brands and platforms.
-            <br/><br/>
-            This project delivered a robust, scalable design system that acted as the backbone for brand and product consistency. By combining a structured color system with centralized Figma variables, the team empowered designers and developers with a unified framework, enhancing productivity and design precision. The result is a flexible, future-proof system tailored to meet the needs of evolving products and platforms. <i>Note that these are only a few samples of the whole project.</i></p>
-
-            <div class="image-container">
-                <img src="../assets/images/usb-system/usbsystem5.jpg" width="1000" height="510" alt="Design System Color Variables Sample" class="subsection-display" />
+            <div class="profile-container">
+                <img src="../assets/images/Profile-Picture.jpg" width="255" height="244" alt="Profile Picture of Brian Rogstad" class="profile-picture" />
+                <p class="profile-content">Hi, I'm Brian Rogstad, a product designer with a strong foundation in development. My work bridges the gap between design and technology, ensuring that great ideas transform into seamless, user-centered experiences.
+                <br/><br/>
+                With a background in development, I bring a unique perspective to the design process. I understand how products are built from the ground up, and I use this knowledge to create designs that are not only visually appealing but also functional, scalable, and developer-friendly.
+                <br/><br/>
+                Over the years, I've had the opportunity to work on web applications, enterprise tools, and consumer-facing products. Each project has deepened my passion for solving complex problems through design and my commitment to crafting intuitive, accessible solutions that meet user and business needs.
+                <br/><br/>
+                When I'm not immersed in Figma, I'm experimenting with new design ideas, brushing up on the latest design technologies, on a dog walk, or watching a movie from my ever-growing movie collection.
+                <br/><br/>
+                This space is where I share my journey, insights, and projects. Whether you're a fellow designer, developer, or just curious about what I do, I'm always excited to connect and collaborate.
+                <br/><br/>
+                Let's create something amazing together!</p>
             </div>
-
-            <p class="text-container"><strong>Building a Color System:</strong> A meticulously crafted color system serves as the visual foundation for UI/UX elements, utilizing neutral tones as a universal palette. It incorporates dedicated colors for system feedback, including shades of red for errors, green for confirmations, blue for informational messages, and orange for cautionary cues. Additionally, the system features brand-specific palettes with various color variants and defines interactive button states to enhance usability and ensure both accessibility and consistency across different brands and platforms.</p>
-
-            <div class="image-container">
-                <img src="../assets/images/usb-system/usbsystem1.jpg" width="1000" height="678" alt="Design System Color Swatches Sample" class="subsection-display" />
-            </div>
-
-            <p class="text-container"><strong>Variable Management in Figma:</strong> A carefully designed color system establishes the visual foundation for UI/UX elements, using neutral tones as the core palette. It incorporates specific colors for system feedback, such as red for errors, green for confirmations, blue for informational messages, and orange for warnings, while also including customized palettes for individual brands. Furthermore, the system outlines interactive button states to improve usability and maintain a focus on accessibility and consistency across various platforms.</p>
         </main>
 
-        <aside class="subsection-container">
+        <aside id="scrollspyconnect" class="subsection-container">
             <header>
-                <h2 class="subsection-title inverse-title">Connect</h2>
+                <h2 id="connect" class="subsection-title inverse-title">Connect</h2>
             </header>
             <nav class="social-nav">
                 <ul>

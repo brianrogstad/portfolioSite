@@ -26,7 +26,7 @@
 .project-container,
 .codepen-container,
 .project-link {
-    @include font-size(14);
+    @include font-size(16);
     border: 0 none;
     box-shadow: 0 0 10px -2px $silver;
     color: $white;
@@ -62,7 +62,7 @@
     }
 
     p {
-        @include font-size(14);
+        @include font-size(16);
         color: $grey;
         margin-bottom: 25px;
     }

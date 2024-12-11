@@ -5,23 +5,87 @@
     <meta name="Author" content="Brian Rogstad" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta charset="UTF-8">
-    <title>Brian Rogstad - Portfolio - Process Managment Application</title>
+    <title>Brian Rogstad - Digital Portfolio - Process Managment Application</title>
     <link rel="icon" type="image/x-icon" href="icon.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="../assets/styles/styles.css" />
 </head>
 <body>
     <header class="header">
-        <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
+        <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo-inverse.png" width="66" height="66" alt="BrianRogstad.com" /></a>
         <div class="id-container">
             <h1>Brian Rogstad <br/> <span class="tagline">Digital Portfolio</span></h1>
         </div>
 
         <nav class="main-nav">
-            <ul>
+            <ul class="nav desktop-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UI Design</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="/pages/usb-system.html">USB Design System Samples</a>
+                        <a class="dropdown-item" href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="/pages/tremor-system.html">Tremor Design System Sample</a>
+                        <a class="dropdown-item" href="/pages/utility.html">Tremor Admin UI Design</a> 
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle active" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Information Architecture</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/pages/usb-maps.html">USB Flow Samples</a>
+                        <a class="dropdown-item" href="/pages/proto.html">Prototype Samples</a>
+                        <a class="dropdown-item" href="/pages/tremor-maps.html">Authentication Flow </a>
+                        <a class="dropdown-item" href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel="noreferrer">Story Mapping Sample <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item active" href="/pages/bpm.html">FindLaw Workspace</a>
+                        <a class="dropdown-item" href="/pages/admin.html">Workflow Admin Application</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Development</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel="noreferrer">Knockout JS Sample <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel="noreferrer">Giphy Search using React <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel="noreferrer">Local Storage Demo <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="/pages/contact.html">Contacts Application</a>
+                        <a class="dropdown-item" href="/pages/legal.html">Attorney Websites</a>
+                        <a class="dropdown-item" href="http://www.thelimited.com/" target="_blank" rel="noreferrer">The Limited Website <i class="fa fa-external-link link-icon"></i></a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Branding &amp; Marketing</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/pages/logo.html" class="active">Logo Design Process</a>
+                        <a class="dropdown-item" href="/pages/earth.html">Earth Day Poster</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sketches</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/pages/rough.html">Animal Character Design</a>
+                        <a class="dropdown-item" href="/pages/life.html">Observational Sketches</a>
+                        <a class="dropdown-item" href="/pages/model.html">Model Sessions</a>
+                        <a class="dropdown-item" href="/pages/reference.html">Reference Sketches</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="mobile-nav">
                 <li><a href="#" title="Navigation" class="open-menu"><i class="fa fa-bars"></i></a></li>
                 <li><a href="#" title="Navigation" class="close-menu"><i class="fa fa-times"></i></a></li>
             </ul>
+            
         </nav>
     </header>
 
@@ -29,57 +93,76 @@
         <ul>
             <li><a href="/">Home</a></li>
             <li><p>User Interface Design</p></li>
-            <li><a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/usb-system.html">USB Partner Design System Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/tremor-system.html">Tremor Design System Sample<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/utility.html">Utility Page Design<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/usb-system.html">USB Design System Samples</a></li>
+            <li><a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/tremor-system.html">Tremor Design System Sample</a></li>
+            <li><a href="/pages/utility.html">Tremor Admin UI Design</a></li>
             <li><p>Information Architecture</p></li>
-            <li><a href="/pages/usb-maps.html">USB Partner Flow Mapping Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/proto.html">Prototype Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/tremor-maps.html">FlowMapp Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel="noreferrer">Story Mapping Sample<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/bpm.html" class="active">Process Management Application<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/admin.html">Admin Tool Application<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/usb-maps.html">USB Flow Samples</a></li>
+            <li><a href="/pages/proto.html">Prototype Samples</a></li>
+            <li><a href="/pages/tremor-maps.html">Authentication Flow </a></li>
+            <li><a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel="noreferrer">Story Mapping Sample <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/bpm.html" class="active">FindLaw Workspace</a></li>
+            <li><a href="/pages/admin.html">Workflow Admin Application</a></li>
             <li><p>Frontend Development</p></li>
-            <li><a href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel="noreferrer">Knockout JS Sample<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel="noreferrer">Giphy Search using React<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel="noreferrer">Local Storage Demo<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/contact.html">Contacts Application<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/legal.html">Attorney Websites<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="http://www.thelimited.com/" target="_blank" rel="noreferrer">The Limited Website<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel="noreferrer">Knockout JS Sample <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel="noreferrer">Giphy Search using React <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel="noreferrer">Local Storage Demo <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/contact.html">Contacts Application</a></li>
+            <li><a href="/pages/legal.html">Attorney Websites</a></li>
+            <li><a href="http://www.thelimited.com/" target="_blank" rel="noreferrer">The Limited Website <i class="fa fa-external-link link-icon"></i></a></li>
             <li><p>Brand &amp; Marketing Design</p></li>
-            <li><a href="/pages/logo.html">Logo Design Process<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/earth.html">Earth Day Poster<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/logo.html">Logo Design Process</a></li>
+            <li><a href="/pages/earth.html">Earth Day Poster</a></li>
             <li><p>Sketching & Drawing</p></li>
-            <li><a href="/pages/rough.html">Rough Sketches<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/life.html">Life Drawings<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/model.html">Model Sessions<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/reference.html">Reference Sketches<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/rough.html">Animal Character Design</a></li>
+            <li><a href="/pages/life.html">Observational Sketches</a></li>
+            <li><a href="/pages/model.html">Model Sessions</a></li>
+            <li><a href="/pages/reference.html">Reference Sketches</a></li>
         </ul>
     </nav>
 
     <div class="page-wrap">
         <main class="main-column">
             <header>
-                <h2>Process Management Application</h2>
+                <h2>FindLaw Workspace</h2>
             </header>
+
+            <p class="text-container">The "FindLaw Workspace" is a comprehensive web-based platform designed for task and project management. This project focuses on enhancing productivity through an interactive, user-friendly dashboard that integrates task tracking, project visualization, and advanced search capabilities. The workspace emphasizes flexibility, customization, and data-driven insights to meet the diverse needs of teams and individual users.
+            <br/><br/>
+            This project delivers a robust and adaptable solution for managing tasks, projects, and team collaborations. It balances ease of use with powerful tools for filtering, tracking, and visualizing data, making it an indispensable platform for users looking to streamline their productivity.</p>
+
             <div class="image-container">
-                <img src="../assets/images/bpm/bpm-2.jpg" alt="Balsamiq render of Dashboard for Process Management Application" class="subsection-display" />
+                <img src="../assets/images/bpm/bpm-2.jpg" width="1000" height="495" alt="Balsamiq render of Dashboard for FindLaw Workspace" class="subsection-display" />
             </div>
+
+            <p class="text-container"><strong>Dashboard Interface:</strong> This image is a wireframe of the "FindLaw Workspace" dashboard, divided into four main widgets: Alerts, My Tasks, Team's Projects, and My Projects. It features a collapsible sidebar with navigation options and a header containing the workspace title and a customizable hamburger menu for managing widgets. Notes on the right describe potential features like interactivity for tasks, widget customization, and a future summary view to aggregate data from different sections.</p>
+
             <div class="image-container">
-                <img src="../assets/images/bpm/bpm-3.jpg" alt="Balsamiq render Summary Page for Process Management Application" class="subsection-display" />
+                <img src="../assets/images/bpm/bpm-3.jpg" width="1000" height="495" alt="Balsamiq render Summary Page for FindLaw Workspace" class="subsection-display" />
             </div>
+
+            <p class="text-container"><strong>Data-Driven Summary Dashboard:</strong> This image is a wireframe for a data-driven dashboard in "FindLaw Workspace," featuring four widgets: Alerts, My Tasks, Team's Projects, and My Projects, each displayed as different types of charts (bar, line, pie, and horizontal bar, respectively). The sidebar on the left provides navigation to key sections, maintaining consistency with the overall interface. Notes on the right mention this as a conceptual visualization for data table-to-graph conversion and highlight the customizable nature of the widget layout.</p>
+
             <div class="image-container">
-                <img src="../assets/images/bpm/bpm-1.jpg" alt="Screenshot of Tasks Page for Process Management Application" class="subsection-display" />
+                <img src="../assets/images/bpm/bpm-1.jpg" width="1000" height="495" alt="Screenshot of Tasks Page for FindLaw Workspace" class="subsection-display" />
             </div>
+
+            <p class="text-container"><strong>Task Management:</strong> This image shows a "My Tasks" interface in the "FindLaw Workspace," featuring a task table with columns for priority, due date, account designation, and other task details. Tasks are color-coded to indicate urgency, with actions available through "Complete" and "Details" buttons for each row. The page includes filtering tools, a quick filter bar, and a sidebar for navigation, highlighting "Tasks" as the active section.</p>
+
              <div class="image-container">
-                <img src="../assets/images/bpm/bpm-4.jpg" alt="Screenshot of Search Page for Process Management Application" class="subsection-display" />
+                <img src="../assets/images/bpm/bpm-4.jpg" width="1000" height="495" alt="Screenshot of Search Page for FindLaw Workspace" class="subsection-display" />
             </div>
+
+            <p class="text-container"><strong>Search Functionality:</strong> This image displays the "Search" interface of the "FindLaw Workspace," where users can build and save customized search queries. The layout includes a left panel for managing "Saved Searches," which lists preconfigured filters that can be edited or removed, and a main panel for creating or modifying search parameters using dropdown menus and input fields. Action buttons allow users to execute, save, or refine searches, while options for toggling filters and search visibility enhance usability.</p>
+
             <div class="image-container">
-                <img src="../assets/images/bpm/bpm-5.jpg" alt="Screenshot of Empty Tasks Page Process Management Application" class="subsection-display" />
+                <img src="../assets/images/bpm/bpm-5.jpg" width="1000" height="495" alt="Screenshot of Empty Tasks Page FindLaw Workspace" class="subsection-display" />
             </div>
+
+            <p class="text-container"><strong>Empty State Handling:</strong> This image shows the "My Tasks" page in the "FindLaw Workspace," featuring an empty task table with columns for details such as customer name, activity, process, and due dates. The interface includes controls for filtering, reassigning, and toggling task views, with additional buttons for clearing filters and managing task statuses (e.g., completed, held). The sidebar on the left highlights "Tasks" as the active section, and the design emphasizes clarity and organization for task management.</p>
         </main>
 
         <aside class="subsection-container">
@@ -105,31 +188,31 @@
             <div class="clients">
                 <ul>
                     <li>
-                        <a href="https://olson.com/" title="Olson" target="_blank" rel="noreferrer"><img src="../assets/images/brands/olson-logo.png" alt="Olson Logo"></a>
+                        <a href="https://olson.com/" title="Olson" target="_blank" rel="noreferrer"><img src="../assets/images/brands/olson-logo.png" width="187" height="142" alt="Olson Logo"></a>
                     </li>
                     <li>
-                        <a href="https://online.citi.com/US/Welcome.c" title="Citi Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/citi-logo.png" alt="Citi Bank Logo"></a>
+                        <a href="https://online.citi.com/US/Welcome.c" title="Citi Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/citi-logo.png" width="187" height="142" alt="Citi Bank Logo"></a>
                     </li>
                     <li>
-                        <a href="https://www.amtrak.com/home" title="Amtrack" target="_blank" rel="noreferrer"><img src="../assets/images/brands/amtrack-logo.png" alt="Amtrack Logo"></a>
+                        <a href="https://www.amtrak.com/home" title="Amtrack" target="_blank" rel="noreferrer"><img src="../assets/images/brands/amtrack-logo.png"width="187" height="142"  alt="Amtrack Logo"></a>
                     </li>
                     <li>
-                        <a href="https://www.suncountry.com/" title="Sun Country" target="_blank" rel="noreferrer"><img src="../assets/images/brands/sun-logo.png" alt="Sun Country Logo"></a>
+                        <a href="https://www.suncountry.com/" title="Sun Country" target="_blank" rel="noreferrer"><img src="../assets/images/brands/sun-logo.png" width="187" height="142" alt="Sun Country Logo"></a>
                     </li>
                     <li>
-                        <a href="http://www.thelimited.com/" title="Limited" target="_blank" rel="noreferrer"><img src="../assets/images/brands/limited-logo.png" alt="The Limited Logo"></a>
+                        <a href="http://www.thelimited.com/" title="Limited" target="_blank" rel="noreferrer"><img src="../assets/images/brands/limited-logo.png" width="187" height="142" alt="The Limited Logo"></a>
                     </li>
                     <li>
-                        <a href="http://thomsonreuters.com/en.html" title="Thomson Reuters" target="_blank" rel="noreferrer"><img src="../assets/images/brands/thomson-logo.png" alt="Thomson Reuters Logo"></a>
+                        <a href="http://thomsonreuters.com/en.html" title="Thomson Reuters" target="_blank" rel="noreferrer"><img src="../assets/images/brands/thomson-logo.png" width="187" height="142" alt="Thomson Reuters Logo"></a>
                     </li>
                     <li>
-                        <a href="http://www.pfizer.com/" title="Pfizer" target="_blank" rel="noreferrer"><img src="../assets/images/brands/pfizer-logo.png" alt="Pfizer Logo"></a>
+                        <a href="http://www.pfizer.com/" title="Pfizer" target="_blank" rel="noreferrer"><img src="../assets/images/brands/pfizer-logo.png" width="187" height="142" alt="Pfizer Logo"></a>
                     </li>
                     <li>
-                        <a href="http://www.luxottica.com/en" title="Luxottica" target="_blank" rel="noreferrer"><img src="../assets/images/brands/lux-logo.png" alt="Luxxotica Logo"></a>
+                        <a href="http://www.luxottica.com/en" title="Luxottica" target="_blank" rel="noreferrer"><img src="../assets/images/brands/lux-logo.png" width="187" height="142" alt="Luxxotica Logo"></a>
                     </li>
                     <li>
-                        <a href="http://www.usbank.com/" title="US Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/us-bank.png" alt="US Bank Logo"></a>
+                        <a href="http://www.usbank.com/" title="US Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/us-bank.png" width="187" height="142" alt="US Bank Logo"></a>
                     </li>
                 </ul>
             </div>
@@ -142,6 +225,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../assets/js/init.js"></script>
+    <script src="../assets/js/vendor/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script>

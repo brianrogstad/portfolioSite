@@ -6,7 +6,7 @@
     <meta name="Author" content="Brian Rogstad" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <meta charset="UTF-8">
-    <title>Brian Rogstad - Portfolio - Home</title>
+    <title>Brian Rogstad - Digital Portfolio - Home</title>
     <link rel="icon" type="image/x-icon" href="icon.png" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="assets/styles/styles.css" />
@@ -19,18 +19,82 @@
     </script>
 </head>
 
-<body>
+<body data-theme="dark">
     <header class="header">
-        <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo.png" alt="BrianRogstad.com" /></a>
+        <a href="../index.html" class="logo" title="Home"><img src="../assets/images/brianrogstad-logo-inverse.png" width="66" height="66" alt="BrianRogstad.com" /></a>
         <div class="id-container">
             <h1>Brian Rogstad <br/> <span class="tagline">Digital Portfolio</span></h1>
         </div>
 
         <nav class="main-nav">
-            <ul>
+            <ul class="nav desktop-nav">
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/pages/about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        UI Design</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="/pages/usb-system.html">USB Design System Samples</a>
+                        <a class="dropdown-item" href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="/pages/tremor-system.html">Tremor Design System Sample</a>
+                        <a class="dropdown-item" href="/pages/utility.html">Tremor Admin UI Design</a> 
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Information Architecture</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/pages/usb-maps.html">USB Flow Samples</a>
+                        <a class="dropdown-item" href="/pages/proto.html">Prototype Samples</a>
+                        <a class="dropdown-item" href="/pages/tremor-maps.html">Authentication Flow </a>
+                        <a class="dropdown-item" href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel="noreferrer">Story Mapping Sample <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="/pages/bpm.html">FindLaw Workspace</a>
+                        <a class="dropdown-item" href="/pages/admin.html" class="active">Workflow Admin Application</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Development</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel="noreferrer">Knockout JS Sample <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel="noreferrer">Giphy Search using React <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel="noreferrer">Local Storage Demo <i class="fa fa-external-link link-icon"></i></a>
+                        <a class="dropdown-item" href="/pages/contact.html">Contacts Application</a>
+                        <a class="dropdown-item" href="/pages/legal.html">Attorney Websites</a>
+                        <a class="dropdown-item" href="http://www.thelimited.com/" target="_blank" rel="noreferrer">The Limited Website <i class="fa fa-external-link link-icon"></i></a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Branding &amp; Marketing</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/pages/logo.html" class="active">Logo Design Process</a>
+                        <a class="dropdown-item" href="/pages/earth.html">Earth Day Poster</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sketches</i>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <a class="dropdown-item" href="/pages/rough.html">Animal Character Design</a>
+                        <a class="dropdown-item" href="/pages/life.html">Observational Sketches</a>
+                        <a class="dropdown-item" href="/pages/model.html">Model Sessions</a>
+                        <a class="dropdown-item" href="/pages/reference.html">Reference Sketches</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="mobile-nav">
                 <li><a href="#" title="Navigation" class="open-menu"><i class="fa fa-bars"></i></a></li>
                 <li><a href="#" title="Navigation" class="close-menu"><i class="fa fa-times"></i></a></li>
             </ul>
+            
         </nav>
     </header>
 
@@ -38,161 +102,182 @@
         <ul>
             <li><a href="/" class="active">Home</a></li>
             <li><p>User Interface Design</p></li>
-            <li><a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/usb-system.html">USB Partner Design System Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/tremor-system.html">Tremor Design System Sample<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/utility.html">Utility Page Design<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel="noreferrer">Version Seven Application <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/usb-system.html">USB Design System Samples</a></li>
+            <li><a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel="noreferrer">League of Legends Statics Application <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel="noreferrer">Component Library Mockup <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/tremor-system.html">Tremor Design System Sample</a></li>
+            <li><a href="/pages/utility.html">Tremor Admin UI Design</a></li>
             <li><p>Information Architecture</p></li>
-            <li><a href="/pages/usb-maps.html">USB Partner Flow Mapping Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/proto.html">Prototype Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/tremor-maps.html">FlowMapp Samples<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel="noreferrer">Story Mapping Sample<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/bpm.html">Process Management Application<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/admin.html">Admin Tool Application<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/usb-maps.html">USB Flow Samples</a></li>
+            <li><a href="/pages/proto.html">Prototype Samples</a></li>
+            <li><a href="/pages/tremor-maps.html">Authentication Flow </a></li>
+            <li><a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel="noreferrer">Story Mapping Sample <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/bpm.html">FindLaw Workspace</a></li>
+            <li><a href="/pages/admin.html">Workflow Admin Application</a></li>
             <li><p>Frontend Development</p></li>
-            <li><a href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel="noreferrer">Knockout JS Sample<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel="noreferrer">Giphy Search using React<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel="noreferrer">Local Storage Demo<i class="fa fa-external-link link-icon"></i></a></li>
-            <li><a href="/pages/contact.html">Contacts Application<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/legal.html">Attorney Websites<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="http://www.thelimited.com/" target="_blank" rel="noreferrer">The Limited Website<i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel="noreferrer">Knockout JS Sample <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel="noreferrer">Giphy Search using React <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel="noreferrer">Local Storage Demo <i class="fa fa-external-link link-icon"></i></a></li>
+            <li><a href="/pages/contact.html">Contacts Application</a></li>
+            <li><a href="/pages/legal.html">Attorney Websites</a></li>
+            <li><a href="http://www.thelimited.com/" target="_blank" rel="noreferrer">The Limited Website <i class="fa fa-external-link link-icon"></i></a></li>
             <li><p>Brand &amp; Marketing Design</p></li>
-            <li><a href="/pages/logo.html">Logo Design Process<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/earth.html">Earth Day Poster<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/logo.html">Logo Design Process</a></li>
+            <li><a href="/pages/earth.html">Earth Day Poster</a></li>
             <li><p>Sketching & Drawing</p></li>
-            <li><a href="/pages/rough.html">Rough Sketches<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/life.html">Life Drawings<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/model.html">Model Sessions<i class="fa fa-chevron-right link-icon"></i></a></li>
-            <li><a href="/pages/reference.html">Reference Sketches<i class="fa fa-chevron-right link-icon"></i></a></li>
+            <li><a href="/pages/rough.html">Animal Character Design</a></li>
+            <li><a href="/pages/life.html">Observational Sketches</a></li>
+            <li><a href="/pages/model.html">Model Sessions</a></li>
+            <li><a href="/pages/reference.html">Reference Sketches</a></li>
         </ul>
     </nav>
 
     <div class="page-wrap">
         <main class="main-column">
-            <h2>User Interface Design</h2>
+            <h2 id="UID">User Interface Design</h2>
             <div class="grid-container">
                 <div class="project">
-                    <div class="project-container" style="--aspect-ratio: 41/28;">
-                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2F0VcaG6JEeFydywrTQo5iN1%2FVersion-Seven%3Fnode-id%3D0%253A1" allowfullscreen title="Version Seven Application"></iframe>
-                    </div>
+                    <a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel=" no-referrer" class="btn btn-secondary project-link">
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/versionseven.jpg" alt="version seven figma file screenshot" />
+                    </a>
                 </div>
                 <div class="description">
                     <h3>Version Seven Application</h3>
-                    <p class="duration">Ongoing Personal Project</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Concept Design</span>
+                        <span class="badge badge-pill badge-secondary">Mobile Applications</span>
+                        <span class="badge badge-pill badge-secondary">Wireframes</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                        <span class="badge badge-pill badge-secondary">Interaction Design</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Content Strategist, Interaction Designer</p>
-
-                    <h4>Project Description:</h4>
                     <p>This piece is a work in progress on a financial application I've considered for financial budgeting and management. I'm taking the mobile-first approach to building this application, as there is potential to create it as a web-based application as well. It's currently in the early design stages and is viewable on Figma.</p>
-                    <a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel=" no-referrer">View Figma File<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://www.figma.com/file/0VcaG6JEeFydywrTQo5iN1/Version-Seven?type=design&node-id=0%3A1&mode=design&t=XAjhBFIkeHaps7TE-1" target="_blank" rel=" no-referrer">View Figma File <i class="fa fa-external-link link-icon"></i></a>
                 </div>
 
                 <div class="project">
                     <a href="pages/usb-system.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/usbsystem.jpg" alt="design system sample" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/usbsystem.jpg" alt="design system sample" />
                     </a>
                 </div>
                 <div class="description">
-                    <h3>USB Partner Design System Samples</h3>
-                    <p class="duration">Built between 2022-2024 for US Bank</p>
+                    <h3>USB Design System Samples</h3>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Design Systems</span>
+                        <span class="badge badge-pill badge-secondary">Branding</span>
+                        <span class="badge badge-pill badge-secondary">Theming</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Interaction Designer</p>
-
-                    <h4>Project Description:</h4>
                     <p>An example of <a href="https://www.figma.com/" target="_blank" rel="noreferrer">Figma's</a> collections feature, which allows theming components. It makes managing design assets straightforward and reusable. <a href="https://www.figma.com/design-systems/" target="_blank" rel="noopener">Design system</a> components used across multiple files or designs can be updated in one place using the symbol library. It also serves as a place to store and share assets such as icons, color variables, shades, logos, or other imagery used in the design that can be referenced, exported, and consumed by anyone with access.</p>
-                    <a href="pages/usb-system.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/usb-system.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
-                    <div href="pages/leauge.html" style="--aspect-ratio: 41/28;">
-                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FfNMrkPKrzuWTqkPdLzX4E6XQ%2FLeague-App%3Fnode-id%3D0-1%26t%3Dbxo2QUeVA5hYRFyT-1" allowfullscreen title="League of Legends Statics Application"></iframe>
-                    </div>
+                    <a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel=" no-referrer" class="btn btn-secondary project-link">
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/leaugeapp.jpg" alt="league app figma file screenshot" />
+                    </a>
                 </div>
                 <div class="description">
                     <h3>League of Legends Statics Application</h3>
-                    <p class="duration">Ongoing Personal Project</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma, Angular, CSS, HTML, Javascript</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Angular</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">Scss</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>UI Designer, Frontend Developer, Information Architect, Content Strategist, Interaction Designer</p>
-
-                    <h4>Project Description:</h4>
                     <p>As a gaming enthusiast and a lover of analysis and statistics, I set out to design an app that would gather API data from Riot Games, the developers of the popular e-sports game League of Legends. The app's primary aim is to provide users with a platform to filter and sort their recent games and specific champion data, enabling them to track their performance and identify their best-performing champions. This app, similar to Mobalytics or u.gg, is designed with the user in mind, with a focus on improving the layout and design of data-heavy information to enhance the user experience.</p>
-                    <a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel=" no-referrer">View Figma File<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://www.figma.com/design/fNMrkPKrzuWTqkPdLzX4E6XQ/League-App?node-id=0-1&t=bxo2QUeVA5hYRFyT-1" target="_blank" rel=" no-referrer">View Figma File <i class="fa fa-external-link link-icon"></i></a>
                     <br/>
-                    <a href="https://github.com/brianrogstad/league-app" target="_blank" rel=" no-referrer">View on Github<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://github.com/brianrogstad/league-app" target="_blank" rel=" no-referrer">View on Github <i class="fa fa-external-link link-icon"></i></a>
                 </div>
 
                 <div class="project">
-                    <div class="project-container" style="--aspect-ratio: 41/28;">
-                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FO3mueZB1Fl1DmNzu9EiZdV%2FPattern-Library-Design%3Fnode-id%3D0%253A1" allowfullscreen title="Component Library Mockup"></iframe>
-                    </div>
+                    <a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel=" no-referrer" class="btn btn-secondary project-link">
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/patternlibrary.jpg" alt="pattern library figma file screenshot" />
+                    </a>
                 </div>
                 <div class="description">
                     <h3>Component Library Mockup</h3>
-                    <p class="duration">Built in 2021 as a UX Consultant</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Concept Design</span>
+                        <span class="badge badge-pill badge-secondary">Design Systems</span>
+                        <span class="badge badge-pill badge-secondary">Component Library</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>UI Designer, Content Strategist</p>
-
-                    <h4>Project Description:</h4>
                     <p>This mockup was created to showcase and help visually share an idea of how a fully built component library should have a place for documentation where developers can reference design artifacts. It was also to showcase the types of information that could be shared through building this in tandem with a design system and component library.</p>
-                    <a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel=" no-referrer">View Figma File<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1" target="_blank" rel=" no-referrer">View Figma File <i class="fa fa-external-link link-icon"></i></a>
                 </div>
 
                 <div class="project">
                     <a href="pages/tremor-system.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/system.jpg" alt="design system sample" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/system.jpg" alt="design system sample" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>Tremor Design System Sample</h3>
-                    <p class="duration">Built in 2020 for Tremor Technologies</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Design Systems</span>
+                        <span class="badge badge-pill badge-secondary">Branding</span>
+                        <span class="badge badge-pill badge-secondary">Theming</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Interaction Designer, Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
                     <p>A small sample of a <a href="https://www.figma.com/design-systems/" target="_blank" rel="noopener">design system</a> I created in <a href="https://www.figma.com/" target="_blank" rel="noreferrer">Figma</a>. It makes managing design assets straightforward and reusable. Design system components that are used across multiple files or designs can be updated in one place using the symbol library; it's very similar to symbols in <a href="https://www.sketch.com/" target="_blank" rel="noopener">Sketch</a>. It also serves as a place to store and share assets such as icons, color variables, shades, logos, or other imagery used in the design that can be referenced, exported, and consumed by anyone with access.</p>
-                    <a href="pages/tremor-system.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/tremor-system.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
                     <a href="pages/utility.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/utility.jpg" alt="utility page design layout" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/utility.jpg" alt="Tremor Admin UI design layout" />
                     </a>
                 </div>
                 <div class="description">
-                    <h3>Utility Page Design</h3>
-                    <p class="duration">Built in 2020 for Tremor Technologies</p>
+                    <h3>Tremor Admin UI Design</h3>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Angular</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">Scss</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Interaction Designer, Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
-                    <p>A couple of screenshots taken from designs I was working on in <a href="https://www.figma.com/" target="_blank" rel=" no-referrer">Figma</a> as part of a redesign for the utility section of an application. One screenshot shows multiple utility pages combined to form a more modern settings page. The second screenshot is a user creation form, one screen within a multi-step process to add a user to the platform. The purpose here is to showcase the design layout, iconography, and aesthetic of what we were designing.</p>
-                    <a href="pages/utility.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <p>A couple of screenshots taken from designs I was working on in <a href="https://www.figma.com/" target="_blank" rel=" no-referrer">Figma</a> as part of a redesign for the utility section of an application. One screenshot shows multiple Tremor Admin UIs combined to form a more modern settings page. The second screenshot is a user creation form, one screen within a multi-step process to add a user to the platform. The purpose here is to showcase the design layout, iconography, and aesthetic of what we were designing.</p>
+                    <a href="pages/utility.html">View Screenshots</a>
                 </div>
 
             </div>
@@ -202,121 +287,140 @@
 
                 <div class="project">
                     <a href="pages/usb-maps.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/usb-maps.jpg" alt="Flow Mapping Sample" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/usb-maps.jpg" alt="Flow Mapping Sample" />
                     </a>
                 </div>
                 <div class="description">
-                    <h3>USB Partner Flow Mapping Samples</h3>
-                    <p class="duration">Built in 2022-2024 for US Bank</p>
+                    <h3>USB Flow Samples</h3>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                        <span class="badge badge-pill badge-secondary">Task Flows</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Interaction Designer</p>
-
-                    <h4>Project Description:</h4>
                     <p>Screenshots of some work to visually convey user flow in an application. These screenshots are from three projects where flow mapping was used to help identify certain information about each scenario.</p>
-                    <a href="pages/usb-maps.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/usb-maps.html">View Screenshots</a>
                 </div>
 
 
                 <div class="project">
                     <a href="pages/proto.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/proto.jpg" alt="Prototype Samples" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/proto.jpg" alt="Prototype Samples" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>Prototype Samples</h3>
-                    <p class="duration">Built between 2020-2024 for Various Clients</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                        <span class="badge badge-pill badge-secondary">Prototypes</span>
+                        <span class="badge badge-pill badge-secondary">Task Flows</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Interaction Designer</p>
-
-                    <h4>Project Description:</h4>
                     <p>A couple of screenshots taken from different prototypes I put together in <a href="https://www.figma.com/" target="_blank" rel="no-referrer">Figma</a>. These examples showcase the complex connections created when mapping hot spots and making designs interactive.</p>
-                    <a href="pages/proto.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/proto.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
                     <a href="pages/tremor-maps.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/map.jpg" alt="Flow Mapping Sample" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/map.jpg" alt="Flow Mapping Sample" />
                     </a>
                 </div>
                 <div class="description">
-                    <h3>FlowMapp Samples</h3>
-                    <p class="duration">Built in 2020 for Tremor Technologies</p>
+                    <h3>Authentication Flow </h3>
 
-                    <h4>Technology Used:</h4>
-                    <p>Flowmapp</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Flowmapp</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                        <span class="badge badge-pill badge-secondary">User Flow</span>
+                        <span class="badge badge-pill badge-secondary">Site Map</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect</p>
-
-                    <h4>Project Description:</h4>
                     <p>High-level screenshots of my work to help visually convey user flow in an application. Tools such as <a href="https://figma.com/" target="blank">Figma</a> and <a href="https://www.flowmapp.com/" target="blank" rel=" no-referrer">Flowmapp</a> are great for doing this task. It can also achieved using certain plugins to show a more granular task flow in the mockup files.</p>
-                    <a href="pages/tremor-maps.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/tremor-maps.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
-                    <div class="project-container" style="--aspect-ratio: 41/28;">
-                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="100%" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FejErsDkVBt4AoZThEJvqt4%2FStory-Map%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
-                    </div>
+                    <a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel=" no-referrer" class="btn btn-secondary project-link">
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/storymap.jpg" alt="story map figma file screenshot" />
+                    </a>
                 </div>
                 <div class="description">
                     <h3>Story Mapping Sample</h3>
-                    <p class="duration">Built in 2020 for Tremor Technologies</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Figma</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Figma</span>
+                        <span class="badge badge-pill badge-secondary">Project Planning</span>
+                        <span class="badge badge-pill badge-secondary">Agile</span>
+                        <span class="badge badge-pill badge-secondary">Story Map</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Agilist, Information Architect, UI Designer</p>
                     <p>Story mapping, while not exactly Information architecture, is a practical and relevant exercise for product and user stories. I've put together an example for the product team to show how story mapping can be used to determine what to build. It's a process that can be easily integrated into our workflow and can significantly improve our product development. For more information, I recommend reading <a href="https://www.oreilly.com/library/view/user-story-mapping/9781663728661/" target="blank">User Story Mapping</a> by Jeff Patton.</p>
-                    <a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel=" no-referrer">View Figma File<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://www.figma.com/file/ejErsDkVBt4AoZThEJvqt4/Story-Map?type=whiteboard&node-id=0%3A1&t=Od5uv7ZmpLiEVCv3-1" target="_blank" rel=" no-referrer">View Figma File <i class="fa fa-external-link link-icon"></i></a>
                 </div>
 
                 <div class="project">
                     <a href="pages/bpm.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/bpm.jpg" alt="screenshot of process management application" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/bpm.jpg" alt="screenshot of FindLaw Workspace" />
                     </a>
                 </div>
                 <div class="description">
-                    <h3>Process Management Application</h3>
-                    <p class="duration">Built between 2014-2015 for Thomson Reuters</p>
+                    <h3>FindLaw Workspace</h3>
 
-                    <h4>Technology Used:</h4>
-                    <p>Balsamiq, Angular, Bootstrap, Sass, Jira</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Balsamiq</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                        <span class="badge badge-pill badge-secondary">Angular</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">Scss</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Prototypes</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Interaction Designer, Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
                     <p>This was a redesign of an enterprise product with a budget of over one million dollars. I was the UX architect for this application as I conducted usability tests, evaluations, and analyses and presented findings to the product owners, managers, and development team. I took responsibility for the interface design by presenting concepts, wireframes, app flows, and prototypes as needed. I also performed the UI development of this application within angular.</p>
-                    <a href="pages/bpm.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/bpm.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
                     <a href="pages/admin.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/admin.jpg" alt="screenshot of admin application" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/admin.jpg" alt="screenshot of admin application" />
                     </a>
                 </div>
                 <div class="description">
-                    <h3>Admin Tool Application</h3>
-                    <p class="duration">Built between 2014-2015 for Thomson Reuters</p>
+                    <h3>Workflow Admin Application</h3>
 
-                    <h4>Technology Used:</h4>
-                    <p>Balsamiq, Angular, Bootstrap, Sass, Jira</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Balsamiq</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                        <span class="badge badge-pill badge-secondary">Angular</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">Scss</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Prototypes</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>    
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Interaction Designer, Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
                     <p> I helped design and build an admin application at FindLaw. This secondary application was used to set values and parameters for its parent application. I took responsibility for the interface design. I also performed the UI development of this application within angular with the help of a couple of others on this project team. We created this application in a short time frame while learning how to customize and integrate angular materials.</p>
-                    <a href="pages/admin.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/admin.html">View Screenshots</a>
                 </div>
 
             </div>
@@ -335,17 +439,18 @@
                 </div>
                 <div class="description">
                     <h3>Knockout JS Sample</h3>
-                    <p class="duration">Built in 2016 for Epsilon</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>KnockoutJS, Bootstrap, CSS, HTML</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Sandbox</span>
+                        <span class="badge badge-pill badge-secondary">KnockoutJS</span>
+                        <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
                     <p>I used Codepen as a sandbox to test the output when making edits to an application that was using KnockoutJS.</p>
-                    <a href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel=" no-referrer">View on Codepen<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://codepen.io/brogstad/pen/wGGXgg" target="_blank" rel=" no-referrer">View on Codepen <i class="fa fa-external-link link-icon"></i></a>
                 </div>
 
                 <div class="project">
@@ -360,17 +465,18 @@
                 </div>
                 <div class="description">
                     <h3>Giphy Search using React</h3>
-                    <p class="duration">Built in 2018 As A Personal Project</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>ReactJS, Bootstrap, CSS, HTML</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Sandbox</span>
+                        <span class="badge badge-pill badge-secondary">ReactJS</span>
+                        <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
                     <p>A sample React app connected to the Giphy API. It concatenates the string entered by the user to the string used to make the get request and returns any results to an empty container.</p>
-                    <a href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel=" no-referrer">View on Codepen<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://codepen.io/brogstad/pen/ybZyBN" target="_blank" rel=" no-referrer">View on Codepen <i class="fa fa-external-link link-icon"></i></a>
                 </div>
 
                 <div class="project">
@@ -385,82 +491,100 @@
                 </div>
                 <div class="description">
                     <h3>Local Storage Demo</h3>
-                    <p class="duration">Built in 2017 As A Personal Project</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Javascript, CSS, HTML</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Sandbox</span>
+                        <span class="badge badge-pill badge-secondary">Javascript</span>
+                        <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
                     <p>When there is nothing in local storage, the app creates four entries with the init function. From there, you can add more data using the form. Refresh or close the window and revisit to see that the data stays. If a value is added that already exists, the value gets added, and the table is resorted.</p>
-                    <a href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel=" no-referrer">View on Codepen<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://codepen.io/brogstad/pen/BZGxm" target="_blank" rel=" no-referrer">View on Codepen <i class="fa fa-external-link link-icon"></i></a>
                     <br/>
-                    <a href="https://github.com/brianrogstad/localStorage" target="_blank" rel=" no-referrer">View on Github<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://github.com/brianrogstad/localStorage" target="_blank" rel=" no-referrer">View on Github <i class="fa fa-external-link link-icon"></i></a>
                 </div>
 
                 <div class="project">
                     <a href="pages/contact.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/contact.jpg" alt="screenshot of angular contacts application" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/contact.jpg" alt="screenshot of angular contacts application" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>Contacts Application</h3>
-                    <p class="duration">Built between 2015-2018 As A Personal Project</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Angular, MongoDB, ExpressJS, NodeJS, Gulp, Bootstrap, SASS, HTML, Git</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Concept</span>
+                        <span class="badge badge-pill badge-secondary">Web Applications</span>
+                        <span class="badge badge-pill badge-secondary">Angular</span>
+                        <span class="badge badge-pill badge-secondary">MongoDB</span>
+                        <span class="badge badge-pill badge-secondary">ExpressJS</span>
+                        <span class="badge badge-pill badge-secondary">NodeJS</span>
+                        <span class="badge badge-pill badge-secondary">Gulp</span>
+                        <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">Scss</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                        <span class="badge badge-pill badge-secondary">UI Design</span>
+                        <span class="badge badge-pill badge-secondary">Interaction Design</span>
+                        <span class="badge badge-pill badge-secondary">Information Architecture</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                        <span class="badge badge-pill badge-secondary">APIs</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Information Architect, UI Designer, Interaction Designer, Frontend Developer, Backend Developer, Content Strategist</p>
-
-                    <h4>Project Description:</h4>
                     <p>Single page MEAN stack application I designed and built with help from <a href="http://pluralsight.com">pluralsight</a> tutorials. I learned about gulp automation, proper directory structure, middleware with ExpressJS, and backend data stores with MongoDB.</p>
-                    <a href="pages/contact.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/contact.html">View Screenshots</a>
                     <br/>
-                    <a href="https://bitbucket.org/brogstad/contactsapp/src/master/" target="_blank" rel=" no-referrer">View on Bitbucket<i class="fa fa-external-link link-icon"></i></a>
+                    <a href="https://bitbucket.org/brogstad/contactsapp/src/master/" target="_blank" rel=" no-referrer">View on Bitbucket</a>
                     
                 </div>
 
                 <div class="project">
                     <a href="pages/legal.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/legal.jpg" alt="screenshot of attorney websites" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/legal.jpg" alt="screenshot of attorney websites" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>Attorney Websites</h3>
-                    <p class="duration">Built between 2011-2013 For Findlaw</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Javascript, SASS, HTML, Adobe Suite, CMS</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Website</span>
+                        <span class="badge badge-pill badge-secondary">Javascript</span>
+                        <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">Scss</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
                     <p>When I worked with <strong>Findlaw</strong> we built a lot of attorney websites. As a web developer, I built 75+ websites, completing between 1-3 websites per week. We used a proprietary CMS that housed all the websites and allowed developers and clients to update and maintain their websites. These websites shown are a small sample of websites I worked on.</p>
-                    <a href="pages/legal.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/legal.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
                     <a href="https://www.thelimited.com/" target="_blank" class="btn btn-secondary project-link" rel="noreferrer">
-                        <img class="card-img-top" src="assets/images/display-images/limited.jpg" alt="screenshot of the limited website" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/limited.jpg" alt="screenshot of the limited website" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>The Limited Website</h3>
-                    <p class="duration">Built in 2011 For <a href="http://olson.com/" target="_blank" rel="noreferrer">Olson</a></p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Javascript, CSS, HTML</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Website</span>
+                        <span class="badge badge-pill badge-secondary">Javascript</span>
+                        <span class="badge badge-pill badge-secondary">Bootstrap</span>
+                        <span class="badge badge-pill badge-secondary">CSS</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                        <span class="badge badge-pill badge-secondary">HTML</span>
+                        <span class="badge badge-pill badge-secondary">Frontend Development</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Frontend Developer</p>
-
-                    <h4>Project Description:</h4>
                     <p>One of the various projects that was underway during my time at <strong>Olson</strong>. I helped with some of the development of the sight. Learning about the version control standards was a great project, as several developers were working on this project simultaneously. Debugging and CSS updates were a couple of things I also helped with. <a href="http://www.thelimited.com/" target="_blank" rel="no-referrer">visit the limited.com</a></p>
-                    <a href="https://www.thelimited.com/" target="_blank" rel=" no-referrer">View Website<i class="fa fa-external-link link-icon"></i></a> 
+                    <a href="https://www.thelimited.com/" target="_blank" rel=" no-referrer">View Website <i class="fa fa-external-link link-icon"></i></a> 
                 </div>
 
             </div>
@@ -470,42 +594,39 @@
 
                 <div class="project">
                     <a href="pages/logo.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/logo-process.jpg" alt="Logo Design Process Sample" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/logo-process.jpg" alt="Logo Design Process Sample" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>Logo Design Process</h3>
-                    <p class="duration">Created in 2009 for Personal Use</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Illustrator, Photoshop, Sketching</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Sketching</span>
+                        <span class="badge badge-pill badge-secondary">Branding</span>
+                        <span class="badge badge-pill badge-secondary">Marketing</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Visual Designer</p>
-
-                    <h4>Project Description:</h4>
                     <p>These images show some steps in creating my logo. This piece illustrates how I work through the initial stages of design. This process took me weeks of constantly thinking of what the result was going to be.</p>
-                    <a href="pages/logo.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/logo.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
                     <a href="pages/earth.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/earth-fest.jpg" alt="Prototype Samples" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/earth-fest.jpg" alt="Prototype Samples" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>Earth Day Poster</h3>
-                    <p class="duration">Created in 2011 as a Personal Project</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Illustrator, Photoshop</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Marketing</span>
+                        <span class="badge badge-pill badge-secondary">Visual Design</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Visual Designer</p>
-
-                    <h4>Project Description:</h4>
                     <p> I created a project based on an Earth Day event; after finding an upcoming event, I plugged that information into a poster. This project is primarily made in <strong>Adobe Illustrator</strong>, but some of the final touches, such as the texture layer, were done using <strong>Adobe Photoshop</strong>.</p>
-                    <a href="pages/earth.html">View Screenshot<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/earth.html">View Screenshot</a>
                 </div>
             </div>
 
@@ -513,82 +634,74 @@
             <div class="grid-container">
                 <div class="project">
                     <a href="pages/rough.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/rough.jpg" alt="Rough Sketches" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/rough.jpg" alt="Animal Character Design" />
                     </a>
                 </div>
                 <div class="description">
-                    <h3>Rough Sketches</h3>
-                    <p class="duration">Various Drawings as Personal Projects</p>
+                    <h3>Animal Character Design</h3>
 
-                    <h4>Technology Used:</h4>
-                    <p>Photoshop, Graphite</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Sketching</span>
+                        <span class="badge badge-pill badge-secondary">Drawing</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Sketch Artist</p>
-
-                    <h4>Project Description:</h4>
                     <p>These sketches were completed using reference photographs, but they were quick sketches done as a part of research conducted for use with character creation.</p>
-                    <a href="pages/rough.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/rough.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
                     <a href="pages/life.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/life-drawings.jpg" alt="Life Drawings" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/life-drawings.jpg" alt="Observational Sketches" />
                     </a>
                 </div>
                 <div class="description">
-                    <h3>Life Drawings</h3>
-                    <p class="duration">Various Drawings as Personal Projects</p>
+                    <h3>Observational Sketches</h3>
 
-                    <h4>Technology Used:</h4>
-                    <p>Photoshop, Graphite</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Sketching</span>
+                        <span class="badge badge-pill badge-secondary">Drawing</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Sketch Artist</p>
-
-                    <h4>Project Description:</h4>
                     <p>I completed these sketches using live models quickly. The few animal sketches in here were done within thirty seconds to one minute when visiting a couple of pet stores as well as some trips to the zoo.</p>
-                    <a href="pages/life.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/life.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
                     <a href="pages/model.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/model.jpg" alt="Model Sessions" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/model.jpg" alt="Model Sessions" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>Model Sessions</h3>
-                    <p class="duration">Various Drawings as Personal Project</p>
                     
-                    <h4>Technology Used:</h4>
-                    <p>Photoshop, Charcoal, Graphite</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Sketching</span>
+                        <span class="badge badge-pill badge-secondary">Drawing</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Sketch Artist</p>
-
-                    <h4>Project Description:</h4>
                     <p>I completed these sketches during several model sessions. Most of the poses varied between 15 seconds to 2 minutes. Some of the longer poses were held for up to 15 minutes.</p>
-                    <a href="pages/model.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/model.html">View Screenshots</a>
                 </div>
 
                 <div class="project">
                     <a href="pages/reference.html" class="btn btn-secondary project-link">
-                        <img class="card-img-top" src="assets/images/display-images/eye.jpg" alt="Render Sketches" />
+                        <img width="538" height="368" class="card-img-top" src="assets/images/display-images/eye.jpg" alt="Render Sketches" />
                     </a>
                 </div>
                 <div class="description">
                     <h3>Reference Sketches</h3>
-                    <p class="duration">Various Drawings as Personal Projects</p>
 
-                    <h4>Technology Used:</h4>
-                    <p>Photoshop, Graphite</p>
+                    <p>
+                        <span class="badge badge-pill badge-secondary">Sketching</span>
+                        <span class="badge badge-pill badge-secondary">Drawing</span>
+                        <span class="badge badge-pill badge-secondary">Adobe Creative Suite</span>
+                    </p>
 
-                    <h4>Project Roles:</h4>
-                    <p>Sketch Artist</p>
-
-                    <h4>Project Description:</h4>
                     <p>These sketches were completed using a reference photograph, and I had no time constraints to complete the works.</p>
-                    <a href="pages/reference.html">View Screenshots<i class="fa fa-chevron-right link-icon"></i></a>
+                    <a href="pages/reference.html">View Screenshots</a>
                 </div>
 
             </div>
@@ -618,31 +731,31 @@
             <div class="clients">
                 <ul>
                     <li>
-                        <a href="https://olson.com/" title="Olson" target="_blank" rel="noreferrer"><img src="../assets/images/brands/olson-logo.png" alt="Olson Logo"></a>
+                        <a href="https://olson.com/" title="Olson" target="_blank" rel="noreferrer"><img src="../assets/images/brands/olson-logo.png" width="187" height="142" alt="Olson Logo"></a>
                     </li>
                     <li>
-                        <a href="https://online.citi.com/US/Welcome.c" title="Citi Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/citi-logo.png" alt="Citi Bank Logo"></a>
+                        <a href="https://online.citi.com/US/Welcome.c" title="Citi Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/citi-logo.png" width="187" height="142" alt="Citi Bank Logo"></a>
                     </li>
                     <li>
-                        <a href="https://www.amtrak.com/home" title="Amtrack" target="_blank" rel="noreferrer"><img src="../assets/images/brands/amtrack-logo.png" alt="Amtrack Logo"></a>
+                        <a href="https://www.amtrak.com/home" title="Amtrack" target="_blank" rel="noreferrer"><img src="../assets/images/brands/amtrack-logo.png"width="187" height="142"  alt="Amtrack Logo"></a>
                     </li>
                     <li>
-                        <a href="https://www.suncountry.com/" title="Sun Country" target="_blank" rel="noreferrer"><img src="../assets/images/brands/sun-logo.png" alt="Sun Country Logo"></a>
+                        <a href="https://www.suncountry.com/" title="Sun Country" target="_blank" rel="noreferrer"><img src="../assets/images/brands/sun-logo.png" width="187" height="142" alt="Sun Country Logo"></a>
                     </li>
                     <li>
-                        <a href="http://www.thelimited.com/" title="Limited" target="_blank" rel="noreferrer"><img src="../assets/images/brands/limited-logo.png" alt="The Limited Logo"></a>
+                        <a href="http://www.thelimited.com/" title="Limited" target="_blank" rel="noreferrer"><img src="../assets/images/brands/limited-logo.png" width="187" height="142" alt="The Limited Logo"></a>
                     </li>
                     <li>
-                        <a href="http://thomsonreuters.com/en.html" title="Thomson Reuters" target="_blank" rel="noreferrer"><img src="../assets/images/brands/thomson-logo.png" alt="Thomson Reuters Logo"></a>
+                        <a href="http://thomsonreuters.com/en.html" title="Thomson Reuters" target="_blank" rel="noreferrer"><img src="../assets/images/brands/thomson-logo.png" width="187" height="142" alt="Thomson Reuters Logo"></a>
                     </li>
                     <li>
-                        <a href="http://www.pfizer.com/" title="Pfizer" target="_blank" rel="noreferrer"><img src="../assets/images/brands/pfizer-logo.png" alt="Pfizer Logo"></a>
+                        <a href="http://www.pfizer.com/" title="Pfizer" target="_blank" rel="noreferrer"><img src="../assets/images/brands/pfizer-logo.png" width="187" height="142" alt="Pfizer Logo"></a>
                     </li>
                     <li>
-                        <a href="http://www.luxottica.com/en" title="Luxottica" target="_blank" rel="noreferrer"><img src="../assets/images/brands/lux-logo.png" alt="Luxxotica Logo"></a>
+                        <a href="http://www.luxottica.com/en" title="Luxottica" target="_blank" rel="noreferrer"><img src="../assets/images/brands/lux-logo.png" width="187" height="142" alt="Luxxotica Logo"></a>
                     </li>
                     <li>
-                        <a href="http://www.usbank.com/" title="US Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/us-bank.png" alt="US Bank Logo"></a>
+                        <a href="http://www.usbank.com/" title="US Bank" target="_blank" rel="noreferrer"><img src="../assets/images/brands/us-bank.png" width="187" height="142" alt="US Bank Logo"></a>
                     </li>
                 </ul>
             </div>
@@ -654,9 +767,11 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="assets/js/init.js"></script>
+    <script src="../assets/js/init.js"></script>
+    <script src="../assets/js/vendor/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
     <script>
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-19844455-1']);

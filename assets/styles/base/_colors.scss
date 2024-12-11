@@ -1,11 +1,9 @@
 // Colors
 // =============================================================
 
-/* stylelint-disable */
-
 // blues
-$danube: #6699cc;
-$chambray: #2B5782;
+$danube: #307ecd;
+$chambray: #166fc8;
 
 // neutral
 $white: #ffffff;
@@ -18,4 +16,44 @@ $mine-shaft: #2e2e2e;
 $tundora: #484848;
 $grey: #595959;
 
-/* stylelint-enable */
+
+// Define theme maps
+$themes: (
+  light: (
+    primary-color: #007bff,
+    secondary-color: #6c757d,
+    background-color: #ffffff,
+    text-color: #212529
+  ),
+  dark: (
+    primary-color: #375a7f,
+    secondary-color: #444950,
+    background-color: #181818,
+    text-color: #f8f9fa
+  )
+);
+
+// Declare global theme variables (initialized to default values)
+$primary-color: null;
+$secondary-color: null;
+$background-color: null;
+$text-color: null;
+
+// Mixin to set theme variables based on the theme map
+@mixin set-theme($theme-name) {
+    $theme: map-get($themes, $theme-name);
+  
+    @if $theme {
+      $primary-color: map-get($theme, primary-color) !global;
+      $secondary-color: map-get($theme, secondary-color) !global;
+      $background-color: map-get($theme, background-color) !global;
+      $text-color: map-get($theme, text-color) !global;
+    } @else {
+      @error "Theme '#{$theme-name}' is not defined in the theme map.";
+    }
+  }
+
+// Mixin for using theme colors in styles
+@mixin theme-color($property, $color-variable) {
+    #{$property}: #{$color-variable};
+}

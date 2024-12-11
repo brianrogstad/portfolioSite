@@ -2,7 +2,11 @@
 // =============================================================
 
 .menu-open .page-wrap {
-    left: -20%;
+    left: 0%;
+
+    @include breakpoint(desktop) {
+        left: -45%;
+    }
 
     @include breakpoint(tablet) {
         left: -60%;
@@ -13,8 +17,12 @@
     right: 25%;
     transition: right .3s ease;
 
+    @include breakpoint(desktop) {
+        right: 45%;
+    }
+
     @include breakpoint(tablet) {
-        right: 64%;
+        right: 60%;
     }
 }
 
@@ -28,9 +36,14 @@
 
 .menu-open .project-nav {
     display: block;
-    left: 80%;
+    left: -20%;
     padding: 0;
     transition: left .3s ease;
+
+    @include breakpoint(desktop) {
+        left: 55%;
+        width: 63%;
+    }
 
     @include breakpoint(tablet) {
         left: 40%;
@@ -39,7 +52,11 @@
 }
 
 .menu-open .header {
-    left: -20%;
+    left: 0%;
+
+    @include breakpoint(desktop) {
+        left: -45%;
+    }
 
     @include breakpoint(tablet) {
         left: -60%;
