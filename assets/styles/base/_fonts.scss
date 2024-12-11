@@ -6,7 +6,7 @@
     font-style: normal;
     font-weight: 100;
     font-display: swap;
-    src: url(assets/fonts/Montserrat-Light.ttf) format('woff2');
+    src: url(/fonts/Montserrat-Light.ttf) format('woff2');
 }
 
 @font-face {
@@ -14,7 +14,7 @@
     font-style: normal;
     font-weight: 300;
     font-display: swap;
-    src: url(assets/fonts/Montserrat-Regular.ttf) format('woff2');
+    src: url(/fonts/Montserrat-Regular.ttf) format('woff2');
 }
 
 @font-face {
@@ -22,16 +22,14 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url(assets/fonts/Montserrat-Bold.ttf) format('woff2');
+    src: url(/fonts/Montserrat-Bold.ttf) format('woff2');
 }
-
 
 
 $helvetica: helvetica neue, helvetica, arial, sans-serif;
 $montserrat: 'Montserrat', sans-serif;
-$garamond: 'Cormorant Garamond', serif;
 
 $primary-font: $helvetica;
 $secondary-font: $montserrat;
-$tertiary-font: $montserrat;
+
 
