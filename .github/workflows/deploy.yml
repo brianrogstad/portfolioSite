@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build -- --base-href /portfolioSite/
+        run: npm run build -- --base-href /
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
