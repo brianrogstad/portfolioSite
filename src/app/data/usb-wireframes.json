@@ -14,7 +14,7 @@
     },
     {
       "type": "video",
-      "src": "/images/usb-wireframes/usbwires.mov",
+      "src": "/images/usb-wireframes/usbwires.mp4",
       "alt": "Brand Switching Demonstration",
       "caption": "<strong>Dynamic Brand Theming in Action:</strong> This demonstration showcases the power of Figma's collections feature and the USB Design System's variable architecture. By simply selecting different brands from the collections dropdown, the wireframes instantly transform between Acme, Fidelity, and Elan brand themes, updating colors, logos, and brand-specific styling while maintaining consistent structure and functionality. This illustrates the efficiency and flexibility of a well-implemented design system, where a single dropdown action can completely rebrand an entire interface.",
       "autoplay": false,
