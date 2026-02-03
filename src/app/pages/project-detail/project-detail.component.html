@@ -1,0 +1,146 @@
+<main class="main-column" *ngIf="project">
+  <header>
+    <h2>{{ project.title }}</h2>
+  </header>
+
+  <!-- Main project content -->
+  <div *ngIf="project.content" [innerHTML]="project.content" class="project-description"></div>
+
+  <!-- Unified media (images and videos) -->
+  <ng-container *ngIf="project.media && project.media.length > 0">
+    <div *ngFor="let item of project.media" class="image-section">
+      <div class="image-container">
+        <img *ngIf="item.type === 'image'"
+          [src]="item.src" 
+          [alt]="item.alt"
+          [width]="item.width || 1000"
+          [height]="item.height || 495"
+          class="subsection-display">
+        <video *ngIf="item.type === 'video'"
+          [src]="item.src"
+          [autoplay]="item.autoplay || false"
+          [loop]="item.loop || true"
+          [muted]="item.muted || true"
+          playsinline
+          controls
+          class="subsection-display"
+          style="width: 100%; height: auto;">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p *ngIf="item.caption" [innerHTML]="item.caption" class="text-container"></p>
+    </div>
+  </ng-container>
+
+  <!-- Project images with captions (legacy support) -->
+  <ng-container *ngIf="!project.media && project.images && project.images.length > 0">
+    <div *ngFor="let image of project.images" class="image-section">
+      <div class="image-container">
+        <img 
+          [src]="image.src" 
+          [alt]="image.alt"
+          [width]="image.width || 1000"
+          [height]="image.height || 495"
+          class="subsection-display">
+      </div>
+      <p *ngIf="image.caption" [innerHTML]="image.caption" class="text-container"></p>
+    </div>
+  </ng-container>
+
+  <!-- Project videos with captions (legacy support) -->
+  <ng-container *ngIf="!project.media && project.videos && project.videos.length > 0">
+    <div *ngFor="let video of project.videos" class="image-section">
+      <div class="image-container">
+        <video 
+          [src]="video.src"
+          [autoplay]="video.autoplay || false"
+          [loop]="video.loop || true"
+          [muted]="video.muted || true"
+          playsinline
+          controls
+          class="subsection-display"
+          style="width: 100%; height: auto;">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <p *ngIf="video.caption" [innerHTML]="video.caption" class="text-container"></p>
+    </div>
+  </ng-container>
+</main>
+
+<aside id="scrollspyconnect" class="subsection-container">
+  <header>
+    <h2 id="connect" class="subsection-title inverse-title">Connect</h2>
+  </header>
+  <nav class="social-nav">
+    <ul>
+      <li><a href="https://github.com/brianrogstad" class="github" target="_blank" rel="noopener noreferrer">See my work on GitHub</a></li>
+      <li><a href="https://twitter.com/B_Rogstad" class="twitter" target="_blank" rel="noopener noreferrer">Follow me on Twitter</a></li>
+      <li><a href="http://www.linkedin.com/pub/brian-rogstad/24/30b/61" class="linkedin" target="_blank" rel="noopener noreferrer">Connect with me on LinkedIn</a></li>
+      <li><a href="http://codepen.io/brogstad/pens/public/" class="codepen" target="_blank" rel="noopener noreferrer">My Codepen profile</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<div class="subsection-container parallax-container"></div>
+
+<aside class="subsection-container brands-container">
+  <header>
+    <h2 class="subsection-title">Clients and Companies</h2>
+  </header>
+  <div class="clients">
+    <ul>
+      <li>
+        <a href="https://olson.com/" title="Olson" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/olson-logo.png" width="187" height="142" alt="Olson Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://online.citi.com/US/Welcome.c" title="Citi Bank" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/citi-logo.png" width="187" height="142" alt="Citi Bank Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.amtrak.com/home" title="Amtrack" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/amtrack-logo.png" width="187" height="142" alt="Amtrack Logo">
+        </a>
+      </li>
+      <li>
+        <a href="https://www.suncountry.com/" title="Sun Country" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/sun-logo.png" width="187" height="142" alt="Sun Country Logo">
+        </a>
+      </li>
+      <li>
+        <a href="http://www.thelimited.com/" title="Limited" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/limited-logo.png" width="187" height="142" alt="The Limited Logo">
+        </a>
+      </li>
+      <li>
+        <a href="http://thomsonreuters.com/en.html" title="Thomson Reuters" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/thomson-logo.png" width="187" height="142" alt="Thomson Reuters Logo">
+        </a>
+      </li>
+      <li>
+        <a href="http://www.pfizer.com/" title="Pfizer" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/pfizer-logo.png" width="187" height="142" alt="Pfizer Logo">
+        </a>
+      </li>
+      <li>
+        <a href="http://www.luxottica.com/en" title="Luxottica" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/lux-logo.png" width="187" height="142" alt="Luxxotica Logo">
+        </a>
+      </li>
+      <li>
+        <a href="http://www.usbank.com/" title="US Bank" target="_blank" rel="noopener noreferrer">
+          <img src="/images/brands/us-bank.png" width="187" height="142" alt="US Bank Logo">
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
+
+<main class="main-column" *ngIf="!project">
+  <h2>Project Not Found</h2>
+  <p>The project you're looking for doesn't exist.</p>
+  <a routerLink="/">Return Home</a>
+</main>

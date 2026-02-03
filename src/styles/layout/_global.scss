@@ -1,0 +1,78 @@
+// Global Styles
+// =============================================================
+@include set-theme(light); // For light theme
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    @include font-size(18);
+    background: $mine-shaft;
+    color: $mine-shaft;
+    font-family: $primary-font;
+    line-height: 1.5em;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow-y: scroll;
+    height: auto;
+}
+
+a,
+img,
+button {
+    border: 0 none;
+    outline: none;
+    text-decoration: none;
+}
+
+a {
+    color: $chambray;
+    text-decoration: underline;
+
+    &:hover {
+        color: $danube;
+        cursor: pointer;
+    }
+
+    &:active {
+        color: $danube;
+    }
+}
+
+.link-icon {
+    padding-left: 8px;
+    vertical-align: middle;
+}
+
+video {
+    width: 100%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.inverse-title {
+    color: $gallery;
+}
+
+::-webkit-scrollbar {
+    background: $mine-shaft;
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    background: $mine-shaft;
+    box-shadow: inset 0 0 6px $black;
+    padding: 0 1px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $danube;
+}

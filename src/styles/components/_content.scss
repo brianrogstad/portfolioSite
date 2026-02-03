@@ -1,0 +1,231 @@
+// Content
+// =============================================================
+
+.page-wrap {
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: left .3s ease;
+    width: 100%;
+}
+
+.main-column {
+
+    @include clearfix();
+    background: $white;
+    clear: both;
+    padding: 92px 0;
+    position: relative;
+
+    @include breakpoint(tablet) {
+        padding: 100px 0 50px;
+    }
+}
+
+// Subsection Content
+// =============================================================
+
+.image-container {
+    margin: 0 auto;
+    width: 40%;
+
+    @include breakpoint(desktop) {
+        width: 90%;
+    }
+
+    img {
+        border: 1px solid $silver;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+
+        @include breakpoint(desktop) {
+            max-width: 100%;
+            width: auto;
+        }
+    }
+}
+
+.text-container {
+    margin: 0px auto 100px;
+    width: 40%;
+
+    @include breakpoint(desktop) {
+        width: 90%;
+    }
+}
+
+.subsection-title {
+    margin: 0 5%;
+}
+
+.subsection-display {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.brands-container {
+    background: $white;
+}
+
+.subsection-container {
+    clear: both;
+    padding: 100px 0 150px;
+    width: 100%;
+}
+
+.profile-container {
+    margin: 0px auto 100px;
+    width: 40%;
+
+    @include breakpoint(desktop) {
+        width: 90%;
+    }
+}
+
+.profile-picture {
+    width: 25%;
+    border-radius: 50%;
+    float: left;
+    margin-right: 25px;
+}
+
+.card-img-top {
+    height: auto;
+}
+
+
+// Social Nav
+// =============================================================
+
+.social-nav {
+
+    @include clearfix();
+    margin: 70px auto;
+    width: 50%;
+
+    @include breakpoint(desktop) {
+        width: 60%;
+    }
+    @include breakpoint(laptop) {
+        width: 70%;
+    }
+    @include breakpoint(tablet) {
+        width: 90%;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+
+        a {
+            color: $danube;
+            display: block;
+            float: left;
+            margin: 0 auto;
+            padding: 0 0 28px;
+            text-indent: -9999px;
+            width: 25%;
+        }
+    }
+}
+
+.twitter {
+    background: url('/images/social/twitter-icons.png') no-repeat top center;
+
+    &:hover {
+        background-position: bottom center;
+    }
+}
+
+.linkedin {
+    background: url('/images/social/linkedin-icons.png') no-repeat top center;
+
+    &:hover {
+        background-position: bottom center;
+    }
+}
+
+.facebook {
+    background: url('/images/social/facebook-icons.png') no-repeat top center;
+
+    &:hover {
+        background-position: bottom center;
+    }
+}
+
+.codepen {
+    background: url('/images/social/codepen-icons.png') no-repeat top center;
+
+    &:hover {
+        background-position: bottom center;
+    }
+}
+
+.github {
+    background: url('/images/social/github-icons.png') no-repeat top center;
+
+    &:hover {
+        background-position: bottom center;
+    }
+}
+
+// Parallax
+// =============================================================
+
+.parallax-container {
+    background: url('/images/parallax-bg.jpg') $gallery center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    padding: 200px 0;
+}
+
+// Clients and Companies
+// =============================================================
+
+.clients {
+
+    @include clearfix();
+    margin: 40px auto;
+    width: 50%;
+
+    @include breakpoint(desktop) {
+        width: 70%;
+    }
+    @include breakpoint(tablet) {
+        width: 90%;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+    }
+
+    a {
+        display: block;
+        float: left;
+        padding: 20px 2%;
+        text-align: center;
+        width: 33%;
+
+        img {
+            max-width: 100%;
+            width: 50%;
+            height: auto;
+
+            @include breakpoint(tablet) {
+                width: 80%;
+            }
+        }
+    }
+}

@@ -1,0 +1,22 @@
+{
+  "id": "mobile",
+  "title": "Weather App Prototype",
+  "category": "Mobile Application Design",
+  "content": "<p class=\"text-container\">This weather app prototype was created in Adobe XD as a learning project to explore the tool's capabilities for mobile app design. The goal was to practice mobile UI patterns, work with XD's prototyping features, and design a clean, functional interface for displaying weather data.<br><br>As a self-directed learning exercise, this project helped me get comfortable with XD's artboards, component systems, and interactive prototyping. The simple concept of a weather app allowed me to focus on the fundamentals of mobile design: clear typography, intuitive information hierarchy, and touch-friendly interface elements.</p>",
+  "images": [
+    {
+      "src": "/images/mobile/mobile-1.jpg",
+      "alt": "Weather app prototype main screen",
+      "width": 750,
+      "height": 1334,
+      "caption": "<strong>Main Screen:</strong> The primary weather display designed in Adobe XD. This learning project focused on clean data presentation and mobile-first design principles."
+    },
+    {
+      "src": "/images/mobile/mobile-2.jpg",
+      "alt": "Weather app prototype secondary view",
+      "width": 750,
+      "height": 1334,
+      "caption": "<strong>Secondary View:</strong> Additional screen from the XD prototype exploring different ways to display weather information and forecast data."
+    }
+  ]
+}

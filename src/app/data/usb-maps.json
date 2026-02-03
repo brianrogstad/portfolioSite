@@ -1,0 +1,29 @@
+{
+  "id": "usb-maps",
+  "title": "USB Flow Samples",
+  "category": "Information Architecture",
+  "content": "<p class=\"text-container\">This project showcases the design, development, and documentation of an end-to-end error-handling framework. It integrates technical workflows, style consistency, and detailed UI/UX considerations to improve user experiences across a digital product.<br><br>This project exemplifies the ability to balance technical complexity with user-centric design principles. The integration of error-handling protocols, cohesive design documentation, and comprehensive workflow mapping fosters an intuitive and reliable digital experience. It highlights collaboration between product design, development, and user experience teams to deliver scalable, user-friendly solutions.</p>",
+  "images": [
+    {
+      "src": "/images/usb-maps/map4.jpg",
+      "alt": "Screenshot of Site Map",
+      "width": 0,
+      "height": 0,
+      "caption": "<strong>Error Handling Flow:</strong> The goal is to systematically address and present user-facing error responses for both technical (4xx) and non-technical errors. For client-side errors (4xx), a detailed flowchart organizes various error conditions, such as bad requests and unauthorized access. The flowchart features color-coded decisions, with red indicating errors, green for successful outcomes, and yellow for warnings. Additionally, there are UI examples that provide tailored error messages, corrective actions, and visual clarity through the use of icons and highlights.<br><br>In regard to server-side errors (5xx), a streamlined flow focuses on server-related issues. Example screens display actionable feedback, which may include retry options or support contact details. A key achievement of this approach is the differentiation between client-side and server-side errors, ensuring specific and actionable user interface responses. This differentiation minimizes user frustration and aids in error resolution."
+    },
+    {
+      "src": "/images/usb-maps/map3.jpg",
+      "alt": "Screenshot of Site Map",
+      "width": 1000,
+      "height": 458,
+      "caption": "<strong>Design System Planning Flow:</strong> The goal is to create a scalable and maintainable design system that ensures consistency across all user interfaces. The component libraries include style maps for buttons, modals, and input fields, documenting various design variations, such as primary, secondary, and floating styles. Additionally, the UI theming, which encompasses both dark mode and light mode setups, enhances accessibility and allows for user customization.<br><br>In terms of visual guidelines, calendar and grid components demonstrate design flexibility and configurability, while style mapping guarantees uniformity across complex flows. The design process includes step-by-step diagrams that guide system integration and component creation, along with notes on challenges and decisions that provide insights into the design rationale.<br><br>A key achievement of this initiative is that it offers a cohesive structure for designers and developers to collaborate effectively, maintain visual consistency, and streamline UI/UX updates."
+    },
+    {
+      "src": "/images/usb-maps/map5.jpg",
+      "alt": "Screenshot of Site Map",
+      "width": 1000,
+      "height": 617,
+      "caption": "<strong>Comprehensive Workflow Mapping:</strong> The goal of this initiative is to map user journeys, highlight interactions, and identify areas for improvement. To achieve this, we visualize the \"New to Digital\" setup process alongside other initial flows, providing a clear picture of onboarding and entry points. <br><br>We emphasize key user flows, which include intermediate actions such as \"Autopay\" and \"Add To...\" steps, ensuring that users can easily navigate through these functionalities. Additionally, we introduce extended features, like adding authorized users and promoting the mobile app, which enhance the overall functionality without sacrificing clarity.<br><br>To address error and failure management, we dedicate specific sections for handling \"Extended Failure,\" ensuring that robust fallback mechanisms are in place. A significant achievement of this approach is the detailed mapping and annotations provided, which support cross-functional alignment and enable seamless implementation and iteration."
+    }
+  ]
+}

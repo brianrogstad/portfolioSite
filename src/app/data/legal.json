@@ -1,0 +1,29 @@
+{
+  "id": "legal",
+  "title": "Attorney Websites",
+  "category": "Development",
+  "content": "<p class=\"text-container\">This project involves designing and developing tailored website interfaces for three law firms specializing in different legal areas. The websites prioritize clear branding, user-friendly navigation, and detailed content presentation to showcase the firms' expertise and attract potential clients effectively.<br><br>These websites effectively convey professionalism and expertise tailored to the needs of diverse legal clients. Combining clean design, clear messaging, and intuitive navigation is for client acquisition and brand representation in the competitive legal industry. <i>These are only a few samples of the vast number of websites I created.</i></p>",
+  "images": [
+    {
+      "src": "/images/legal/legal-1.jpg",
+      "alt": "Greenspan Attorney Website",
+      "width": 1000,
+      "height": 645,
+      "caption": "<strong>Greenspan & Greenspan Website:</strong> The firm specializes in personal injury, DWI, and tax law services in New York, featuring a professional header with the firm's name, tagline, and contact details for easy access. A striking hero image of a stethoscope highlights their dedication to personal injury cases, while icons and links guide clients to key practice areas such as business tax, car accidents, and DWI defense. Content emphasizing their expertise in DWI cases strengthens their credibility and fosters client trust."
+    },
+    {
+      "src": "/images/legal/legal-2.jpg",
+      "alt": "Sthal Attorney Website",
+      "width": 1000,
+      "height": 645,
+      "caption": "<strong>Robert G. Stahl, LLC Website:</strong> The focus of the firm is on criminal defense, specifically handling white-collar crimes and internet crimes. The website features a compelling hero banner with the tagline \"We Protect Your Rights\" and highlights contact information for offices in both New Jersey and New York. Additionally, there are navigation links to provide insights on firm details, practice areas, and media coverage, alongside sections detailing expertise in high-profile cases for clients facing serious legal challenges."
+    },
+    {
+      "src": "/images/legal/legal-3.jpg",
+      "alt": "Smith Attorney Website",
+      "width": 1000,
+      "height": 645,
+      "caption": "<strong>Robert G. Smith, PLLC Website:</strong> The focus is on divorce and family law, with additional expertise in paternity and criminal defense. The design includes a toll-free number for free consultations prominently displayed in the header, along with a testimonial to establish credibility and client satisfaction. Content is centered around New York divorce law, complemented by a sidebar linking to specific family law services, supported by visual elements like legal scales and courtroom images to reinforce the firm's authority in the field."
+    }
+  ]
+}

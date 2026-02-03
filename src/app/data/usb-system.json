@@ -1,0 +1,64 @@
+{
+  "id": "usb-system",
+  "title": "USB Design System Samples",
+  "category": "UI Design",
+  "content": "<p class=\"text-container\">This project focused on creating a robust and flexible design system, centralizing essential design tokens and visual guidelines to ensure brand consistency, scalability, and accessibility across digital products. To design and document a system of reusable components and variables, enabling seamless collaboration between designers and developers while ensuring a cohesive user experience across multiple brands and platforms.<br><br>This project delivered a robust, scalable design system that acted as the backbone for brand and product consistency. By combining a structured color system with centralized Figma variables, the team empowered designers and developers with a unified framework, enhancing productivity and design precision. The result is a flexible, future-proof system tailored to meet the needs of evolving products and platforms. <i>Note that these are only a few samples of the whole project.</i></p>",
+  "images": [
+    {
+      "src": "/images/usb-system/usbsystem1.jpg",
+      "alt": "Brand Style Map Interface",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Brand Style Map Configuration:</strong> A comprehensive design token management interface displaying multiple brand variants with detailed color mapping configurations. This includes heading colors, logo color maps, upper and lower header settings, and interactive states across different brand identities. Each variant maintains consistent structure while allowing brand-specific customization through variables like Brand ID, various blues, purples, and accent colors, demonstrating how the design system enables scalable multi-brand theming through centralized token management."
+    },
+    {
+      "src": "/images/usb-system/usbsystem2.jpg",
+      "alt": "Base Colors Design System Documentation",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Comprehensive Color System Architecture:</strong> A complete color system documentation showcasing universal colors including neutral grayscale palette from white to black, support and status colors featuring danger, success, info, and warning variants, and interactive button states. The system includes brand-specific color palettes for multiple brands like Fidelity and Acme Windstone with lightened, standard, and darkened variants, demonstrating how the design system maintains both functional consistency and brand flexibility through a structured token-based approach."
+    },
+    {
+      "src": "/images/usb-system/usbsystem3.jpg",
+      "alt": "Brand Assets and Logo Library",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Multi-Brand Logo Asset Management:</strong> A centralized brand asset library displaying various logo treatments and brand applications within the design system. This includes financial service branding such as Fidelity bank with shield icon, Cardmember Service, Acme United Corporation, and Harley-Davidson Visa, along with iconic brand logos like the Harley-Davidson Motorcycles orange and black shield, and browser compatibility icons for Firefox, Safari, Edge, and Chrome. The system demonstrates how diverse brand assets are organized and maintained for consistent implementation across different contexts and platforms."
+    },
+    {
+      "src": "/images/usb-system/usbsystem4.jpg",
+      "alt": "Notification Component System",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Notification Component Variations:</strong> A comprehensive notification component library showcasing four distinct notification types including Info with blue styling, Success with green styling, Error with red styling, and Warning with yellow styling, each with consistent structure including status icon, message content, and close button. The documentation demonstrates both standard and margin-spaced layout variants, illustrating how notification components maintain visual consistency while supporting different contextual states and spacing requirements throughout the application."
+    },
+    {
+      "src": "/images/usb-system/usbsystem5.jpg",
+      "alt": "Extended Global Footer Component Variations",
+      "width": 1000,
+      "height": 510,
+      "caption": "<strong>Footer Component System:</strong> Extended Global Footer component documentation displaying four variations with consistent structural elements including disclosures, footer navigation links such as Privacy Policy, Contact Us, System Requirements, and Legal Agreements, security indicators featuring a lock icon with Connection Secured text, and copyright information for 2025 Elan Financial Services. The variations demonstrate different spacing, layout arrangements, and conditional element inclusion, showing how the footer component adapts to different contexts while maintaining brand consistency and required legal and security information."
+    },
+    {
+      "src": "/images/usb-system/usbsystem6.jpg",
+      "alt": "Typography Headings System",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Comprehensive Typography Hierarchy:</strong> A headings component documentation displaying the complete typographic scale across multiple variations shown in a 3x2 grid. Each panel demonstrates the heading hierarchy from large headings to progressively smaller sizes including H1, H2, H3, and H4 styles, with consistent spacing and visual rhythm. The system includes 72 variants that accommodate different contexts, brand applications, and content needs, showcasing the flexibility and scalability of the typography system while maintaining readability and visual consistency across all heading combinations."
+    },
+    {
+      "src": "/images/usb-system/usbsystem7.jpg",
+      "alt": "Link Card Component Variations",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Interactive Link Card Component Library:</strong> A comprehensive grid displaying numerous Link Card component variations showing white rounded cards with teal Lorem Ipsum headings, gray body text, and right-facing chevrons indicating clickability. The variations demonstrate different content scenarios including cards with varying text lengths, optional metric badges displaying counts like +726, date stamps showing information such as as of 11/02/2023, and superscript annotations. This systematic documentation allows designers and developers to see how the component adapts to different content needs while maintaining consistent structure, spacing, and interactive affordances."
+    },
+    {
+      "src": "/images/usb-system/usbsystem8.jpg",
+      "alt": "Global Header Component System",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Comprehensive Global Header Architecture:</strong> A complete header component system documentation showing multiple brand variations including Acme United Corporation, Harley-Davidson Visa, Fidelity, Cardmember Service, and bank with full navigation structures featuring primary navigation such as Statements, My Card, Discounts, Card Management, and Rewards alongside utility links for Search, Profile & Settings, and Log Out. The documentation includes responsive mobile states with hamburger menus, component breakdowns of Upper and Lower Header sections, and organized link sets demonstrating how the header system maintains consistent functionality and usability while adapting to different brand identities and viewport sizes."
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "id": "utility",
+  "title": "Tremor Admin UI Design",
+  "category": "UI Design",
+  "content": "<p class=\"text-container\">The Tremor Administrative Interface is a user-centric, modular platform designed to streamline administrative tasks for managing accounts, users, auctions, and settings. The project prioritizes clarity, intuitive navigation, and user feedback mechanisms to ensure efficiency in performing complex administrative functions. Below are key components and their design highlights.<br><br>The Tremor Administrative Interface enhances administrative efficiency by combining a user-friendly design with robust functionality. It demonstrates an effective blend of intuitive interaction elements, clear visual hierarchy, and responsive feedback mechanisms, making it an exemplary case study in administrative interface design. <i>Note that these are only a few samples of the whole project.</i></p>",
+  "images": [
+    {
+      "src": "/images/utility/utility1.jpg",
+      "alt": "Tremor Admin UI Settings Page Layout",
+      "width": 1000,
+      "height": 778,
+      "caption": "<strong>Add Account Form:</strong> The Add Account page allows administrators to easily create and configure accounts, featuring a well-structured form divided into three sections: Account Information, Account Owner Information, and Owner's Contact Information. It includes real-time validation that provides visual feedback, such as green for valid entries and red for errors, along with a toggle switch for account status and radio buttons for selecting primary contact numbers. The design adopts a clean, minimalist layout with proper spacing and consistent typography, ensuring intuitive navigation through a clearly labeled sidebar with logically grouped menu items."
+    },
+    {
+      "src": "/images/utility/utility2.jpg",
+      "alt": "Tremor Admin UI Add User Form Layout",
+      "width": 1000,
+      "height": 903,
+      "caption": "<strong>Account Settings:</strong> The Account Settings page allows users to view and update their account preferences and authorization details. <br><br>It features a Profile Overview section that displays read-only information such as email, name, and role, accompanied by an edit icon for future updates. The Authorization section includes options for password updates, two-factor authentication (2FA) setup with clear instructions, and account deactivation options. Users can also customize their settings in the Platform Preferences area, where they can select their preferred language, time zone, and decimal delimiters. In the Notification Preferences section, toggle switches are provided for enabling or disabling updates across various notification types.<br><br>Action buttons are color-coded for clarity, with green buttons designated for \"Save\" and \"Enable\" actions, while a red button is used for the \"Deactivate Account\" option. The overall design is structured with clear section divisions and headings to enhance usability."
+    },
+    {
+      "src": "/images/utility/utility3.jpg",
+      "alt": "Tremor Admin UI Add User Form Layout",
+      "width": 1000,
+      "height": 510,
+      "caption": "<strong>Get Started Screen:</strong> The Get Started page serves as an introduction to the Tremor Auction Setup Tool, aimed at simplifying the auction creation process. It features a welcoming header along with instructional text that outlines the tool's functionality and provides usage tips. A prominent \"Start\" button facilitates seamless progression through the setup.<br><br>The design approach includes ample whitespace to enhance readability and ensure a focus on the instructional content. Additionally, there is a sidebar navigation that allows users to quickly access related features such as Manage Auctions and Execute Auctions."
+    },
+    {
+      "src": "/images/utility/utility4.jpg",
+      "alt": "Tremor Admin UI Add User Form Layout",
+      "width": 1000,
+      "height": 687,
+      "caption": "<strong>Add User Form:</strong> The Add User page is designed to streamline user onboarding by gathering essential profile and contact details. It includes a Profile Information section where users can enter basic information such as email, name, and account role. Additionally, there is a Contact Information section that allows for the input of optional phone numbers and the selection of a primary contact.<br><br>The page features dropdown menus and toggle switches to facilitate easy and intuitive data entry. Users have access to actionable buttons, including \"Cancel\" to discard changes and \"Add User,\" which is the primary action for saving the new user. The design approach emphasizes well-structured and clearly labeled fields, maintaining a focus on visual simplicity. Furthermore, a navigation sidebar is available for managing related settings such as notifications and accounts."
+    }
+  ]
+}

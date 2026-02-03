@@ -1,0 +1,43 @@
+{
+  "id": "emails",
+  "title": "Amtrak Email Campaigns",
+  "category": "Email Design & Development",
+  "content": "<p class=\"text-container\">These HTML email campaigns were created for Amtrak while I was working as a freelancer at Olson, a Minneapolis-based advertising agency. Each design represents a unique email campaign that I developed from concept to production-ready HTML. The emails were built to render consistently across all major email clients and tested thoroughly using Litmus before deployment.<br><br>Working within the constraints of email HTML (table-based layouts, inline styles, and varying client support) required creative problem-solving to achieve the desired visual design while maintaining cross-client compatibility. Each campaign was tailored to specific marketing objectives and aligned with Amtrak's brand guidelines.</p>",
+  "images": [
+    {
+      "src": "/images/emails/email-1.jpg",
+      "alt": "Amtrak Email Campaign",
+      "width": 377,
+      "height": 474,
+      "caption": "<strong>Amtrak Campaign:</strong> Marketing email designed and coded for Amtrak at Olson agency. Built with table-based layouts and inline CSS for cross-client compatibility."
+    },
+    {
+      "src": "/images/emails/email-2.jpg",
+      "alt": "Amtrak Promotional Email",
+      "width": 377,
+      "height": 474,
+      "caption": "<strong>Promotional Campaign:</strong> Customer-facing email promoting Amtrak services. Tested across multiple email clients using Litmus to ensure consistent rendering."
+    },
+    {
+      "src": "/images/emails/email-3.jpg",
+      "alt": "Amtrak Newsletter Email",
+      "width": 377,
+      "height": 474,
+      "caption": "<strong>Newsletter Design:</strong> Email campaign with structured content hierarchy, designed to drive engagement and click-through rates."
+    },
+    {
+      "src": "/images/emails/email-4.jpg",
+      "alt": "Amtrak Marketing Email",
+      "width": 377,
+      "height": 474,
+      "caption": "<strong>Marketing Email:</strong> Campaign email featuring Amtrak offerings, built to brand specifications with responsive considerations for mobile viewing."
+    },
+    {
+      "src": "/images/emails/email-5.jpg",
+      "alt": "Amtrak Customer Email",
+      "width": 377,
+      "height": 474,
+      "caption": "<strong>Customer Communication:</strong> Email template designed for Amtrak customer outreach, coded and tested for deployment through their email platform."
+    }
+  ]
+}

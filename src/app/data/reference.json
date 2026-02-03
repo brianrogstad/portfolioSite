@@ -1,0 +1,29 @@
+{
+  "id": "reference",
+  "title": "Reference Sketches",
+  "category": "Sketches",
+  "content": "<p class=\"text-container\">This portfolio showcases a series of pencil sketches that highlight technical precision, artistic expression, and mastery of shading techniques. Each piece explores a distinct subject, ranging from detailed realism to abstract representation, demonstrating versatility and depth in pencil artistry.<br><br>This series demonstrates a range of styles and techniques, from realistic detail to conceptual abstraction, showcasing the adaptability and skill in creating compelling visual narratives.</p>",
+  "images": [
+    {
+      "src": "/images/reference-sketches/eye.jpg",
+      "alt": "Screenshot of Eye Reference Sketch",
+      "width": 1000,
+      "height": 682,
+      "caption": "<strong>Realism in Focus:</strong> The first sketch is a highly detailed depiction of a human eye. Intricate attention to the curvature of the eyelids, individual eyelashes, and skin texture captures the essence of realism. The meticulously shaded iris creates a sense of depth, while the reflective highlight on the cornea enhances the three-dimensional quality. This piece exemplifies the artist's ability to bring lifelike detail to paper."
+    },
+    {
+      "src": "/images/reference-sketches/girl.jpg",
+      "alt": "Screenshot of Girl Reference Sketch",
+      "width": 1000,
+      "height": 682,
+      "caption": "<strong>Expressive Portraiture:</strong> The second drawing portrays a smiling individual with curly hair. The playful and cheerful expression is brought to life through the dynamic use of light and shadow. Detailed shading emphasizes the contours of the face, while the soft rendering of the hair adds texture and movement. The lively character of the piece, combined with a well-shaded background, creates a balanced and engaging composition."
+    },
+    {
+      "src": "/images/reference-sketches/sculpture.jpg",
+      "alt": "Screenshot of Sculpture Reference Sketch",
+      "width": 1000,
+      "height": 682,
+      "caption": "<strong>Abstract Exploration:</strong> The final artwork in the series is an abstract rendering of a metallic sculpture. This piece shifts from realism to modern abstraction, featuring smooth, reflective surfaces and geometric shapes. The interplay of light and shadow highlights the structure's dynamic and mechanical nature. The darkly crosshatched background contrasts with the polished forms, enhancing the industrial and futuristic feel of the piece."
+    }
+  ]
+}

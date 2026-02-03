@@ -1,0 +1,14 @@
+{
+  "id": "earth",
+  "title": "Earth Day Poster",
+  "category": "Branding & Marketing",
+  "content": "<p class=\"text-container\">This project involved designing a promotional poster for \"Earth Fest 2011,\" an eco-focused community event held at the Oak Park Public Works Center. The poster uses an earthy green and beige color palette, complemented by a delicate tree illustration to evoke themes of sustainability and environmental consciousness. Clean typography and a balanced layout highlight key event details, including the date, location, activities, and the event's connection to the global Earth Day movement.<br><br>The design aimed to communicate the event's family-friendly and educational nature while reinforcing its focus on eco-friendly vendors, live entertainment, and advocacy for environmental action. By incorporating the \"Billion Acts of Green\" initiative, the poster extended the event's message, encouraging attendees to take part in broader sustainability efforts. The result was a visually engaging and informative piece that successfully reflected the event's mission and inspired community participation.</p>",
+  "images": [
+    {
+      "src": "/images/earth/earth-fest-poster.jpg",
+      "alt": "Screenshot of Earth Fest Poster",
+      "width": 1000,
+      "height": 1269
+    }
+  ]
+}

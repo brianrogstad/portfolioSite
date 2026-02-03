@@ -1,0 +1,56 @@
+{
+  "id": "logo",
+  "title": "Logo Design Process",
+  "category": "Branding & Marketing",
+  "content": "<p class=\"text-container\">This project showcases a comprehensive branding exploration for \"Brian Rogstad,\" spanning initial hand-drawn sketches to polished digital designs. Beginning with medieval and heraldic-inspired concepts, the process evolved into modern interpretations of personal identity, utilizing shields, banners, and monograms. Early designs focused on creativity and abstraction, incorporating themes like ripples, droplets, and geometric precision while experimenting with initials (\"BR\") and typography variations.<br><br>The project further explored circular emblem designs, ripple patterns, and playful coding references (\"i++\"), blending structure and creativity to produce a clean, professional aesthetic. Multiple iterations considered diverse styles, from decorative to minimalistic, with both monochrome and vibrant color schemes to emphasize flexibility in application. The final stages of development resulted in a bold, iconic logo featuring \"BR\" encased in concentric circles, balancing simplicity and brand recognition, making the identity versatile for digital and print use.<br><br>Through this iterative process, the project reflects a thoughtful approach to personal branding, merging modern design principles with creative experimentation.</p>",
+  "images": [
+    {
+      "src": "/images/logo/logo-process-5.jpg",
+      "alt": "Early Sketch of Logo Ideas",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "/images/logo/logo-process-8.jpg",
+      "alt": "Second Render of Logo Sketches",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "/images/logo/logo-process-6.jpg",
+      "alt": "Third Render of Logo Sketches",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "/images/logo/logo-process-3.jpg",
+      "alt": "First pass of digitizing logo sketches",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "/images/logo/logo-process-4.jpg",
+      "alt": "Second pass of digitizing logo sketches",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "/images/logo/logo-process-2.jpg",
+      "alt": "More refined logo ideas",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "/images/logo/logo-process-1.jpg",
+      "alt": "Final render of logo ideation",
+      "width": 1000,
+      "height": 750
+    },
+    {
+      "src": "/images/logo/logo-process-7.jpg",
+      "alt": "Final Logo Render",
+      "width": 1000,
+      "height": 750
+    }
+  ]
+}

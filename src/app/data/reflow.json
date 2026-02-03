@@ -1,0 +1,29 @@
+{
+  "id": "reflow",
+  "title": "Adobe Edge Reflow",
+  "category": "Responsive Web Design",
+  "content": "<p class=\"text-container\">These screenshots are from my early work in Adobe Edge Reflow, a responsive web design tool that was in beta before Adobe XD and Figma existed. Reflow was Adobe's experimental approach to visual responsive design—allowing designers to create fluid layouts with real breakpoints and CSS output. The product was eventually discontinued, and many of its concepts evolved into what became Adobe XD.<br><br>I was an early adopter of Reflow during its beta phase, using it to design responsive layouts at a time when responsive web design was still a relatively new concept. These examples represent some of that early exploration into breakpoint-based design and fluid grid systems before the modern design tools we use today were available.</p>",
+  "images": [
+    {
+      "src": "/images/reflow/reflow-1.jpg",
+      "alt": "Adobe Edge Reflow responsive layout",
+      "width": 1000,
+      "height": 750,
+      "caption": "<strong>Responsive Layout:</strong> A responsive web layout created in Adobe Edge Reflow during its beta period. The tool allowed visual manipulation of breakpoints and fluid grid systems."
+    },
+    {
+      "src": "/images/reflow/reflow-2.jpg",
+      "alt": "Adobe Edge Reflow breakpoint design",
+      "width": 1000,
+      "height": 750,
+      "caption": "<strong>Breakpoint Design:</strong> Designing across multiple breakpoints in Reflow. This was cutting-edge at the time - visually designing responsive behavior before tools like Figma made it commonplace."
+    },
+    {
+      "src": "/images/reflow/reflow-3.jpg",
+      "alt": "Adobe Edge Reflow fluid grid",
+      "width": 1000,
+      "height": 750,
+      "caption": "<strong>Fluid Grid System:</strong> Early responsive design work using Reflow's fluid grid capabilities. Adobe discontinued the product, but these concepts carried forward into modern design tools."
+    }
+  ]
+}

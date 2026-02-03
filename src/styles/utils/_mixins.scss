@@ -1,0 +1,55 @@
+// Mixins
+// =============================================================
+
+// Theme Mixin
+@mixin set-theme($theme) {
+    // Placeholder mixin for theme support
+    // Can be expanded later with theme-specific styles
+}
+
+// Font Size Mixin to convert value given to Rems
+@mixin font-size($size-value: 1.6) {
+    font-size: $size-value + px;
+    font-size: ($size-value / 10) + rem;
+}
+
+// Clearfix Mixin
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+// Breakpoint Mixin
+@mixin breakpoint($point) {
+    $breakpoint-phone: '(max-width: 480px)';
+    $breakpoint-tablet: '(max-width: 768px)';
+    $breakpoint-laptop: '(max-width: 1279px)';
+    $breakpoint-desktop: '(max-width: 1620px)';
+    $breakpoint-largescreen: '(max-width: 1920px)';
+
+    @if $point == largescreen {
+
+        @media #{$breakpoint-largescreen} { @content; }
+    }
+
+    @else if $point == desktop {
+
+        @media #{$breakpoint-desktop} { @content; }
+    }
+    @else if $point == laptop {
+
+        @media #{$breakpoint-laptop} { @content; }
+    }
+    @else if $point == tablet {
+
+        @media #{$breakpoint-tablet} { @content; }
+    }
+    @else if $point == phone {
+
+        @media #{$breakpoint-phone} { @content; }
+    }
+}
+

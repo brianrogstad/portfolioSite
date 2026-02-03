@@ -1,0 +1,77 @@
+// Heading Styles
+// =============================================================
+
+h1 {
+    @include font-size(28);
+    color: $black;
+    float: left;
+    font-family: $primary-font;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 5px 0 0;
+    padding: 0;
+
+    @include breakpoint(laptop) {
+        display: none;
+    }
+
+    .changed h1 {
+        display: none;
+    }
+}
+
+h2 {
+    @include font-size(30);
+    border-bottom: 1px solid $silver;
+    clear: both;
+    color: $mine-shaft;
+    font-family: $secondary-font;
+    font-weight: 400;
+    line-height: 1.2em;
+    margin: 70px 4.667%;
+    padding: 40px 0 100px;
+    text-align: center;
+
+    @include breakpoint(tablet) {
+        margin: 20px 5%;
+    }
+}
+
+h3 {
+    @include font-size(24);
+    color: $mine-shaft;
+    font-family: $secondary-font;
+    font-weight: 100;
+    line-height: 1.2em;
+    margin: 0 0 25px;
+    padding: 0;
+}
+
+h4 {
+    @include font-size(14);
+    color: $mine-shaft;
+    font-family: $primary-font;
+    font-weight: bold;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+h5 {
+    @include font-size(12);
+    color: $mine-shaft;
+    font-family: $secondary-font;
+    font-weight: normal;
+    line-height: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+h6 {
+    @include font-size(10);
+    color: $mine-shaft;
+    font-family: $primary-font;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}

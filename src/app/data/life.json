@@ -1,0 +1,36 @@
+{
+  "id": "life",
+  "title": "Observational Sketches",
+  "category": "Sketches",
+  "content": "<p class=\"text-container\">This project is a series of black-and-white pencil sketches that explore the nuances of human and animal forms, gestures, and expressions. The collection is divided into four parts, each focusing on different subjects and artistic approaches.<br><br>This project highlights the ability to observe and translate subtle details into compelling visual narratives, blending simplicity with emotional depth. The collection reflects a keen eye for detail and an appreciation for the quiet moments that define human and animal life.</p>",
+  "images": [
+    {
+      "src": "/images/life-drawings/life-drawings-1.jpg",
+      "alt": "Classmate Sketch",
+      "width": 1000,
+      "height": 750,
+      "caption": "<strong>Focused Individual at Work:</strong> A single sketch capturing a person deeply engaged in writing or drawing. The artwork emphasizes posture, concentration, and the simplicity of human engagement in creative activities. The subject's bent head, relaxed arms, and precise hand movements highlight the natural beauty of focused moments."
+    },
+    {
+      "src": "/images/life-drawings/life-drawings-2.jpg",
+      "alt": "Compotation of various people drawings",
+      "width": 1000,
+      "height": 750,
+      "caption": "<strong>Studies of Human Figures:</strong> A collection of quick studies depicting people in a variety of casual poses and perspectives. Each sketch focuses on the essence of body language, from seated postures and thoughtful expressions to standing or leaning gestures. Minimal detailing allows the gestures and natural poses to take center stage, showcasing a dynamic range of human behaviors."
+    },
+    {
+      "src": "/images/life-drawings/life-drawings-8.jpg",
+      "alt": "Compotation of various animal drawings",
+      "width": 1000,
+      "height": 750,
+      "caption": "<strong>Dog Portraits and Postures:</strong> This set of sketches centers on a dog, featuring a detailed frontal portrait with expressive eyes and floppy ears, alongside depictions of the animal resting in curled-up positions. The loose, sketchy style captures the warmth, relaxation, and personality of the subject, reflecting the artist's sensitivity to the dog's character."
+    },
+    {
+      "src": "/images/life-drawings/life-drawings-9.jpg",
+      "alt": "Compotation of more animal drawings",
+      "width": 1000,
+      "height": 750,
+      "caption": "<strong>Diverse Animal Studies:</strong> A broader exploration of animals, this series includes rodents, rabbits, birds, monkeys, and dogs. Each subject is drawn in natural poses, from a rodent cleaning itself and a rabbit lying down to birds perched calmly and monkeys at play. The combination of detailed textures and expressive gestures brings these creatures to life, emphasizing their individuality and natural behaviors."
+    }
+  ]
+}

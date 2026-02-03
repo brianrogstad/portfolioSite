@@ -1,0 +1,22 @@
+{
+  "id": "tremor-maps",
+  "title": "Authentication Flow",
+  "category": "Information Architecture",
+  "content": "<p class=\"text-container\">This project showcases the design and mapping of two critical user experience components: user authentication flow and application navigation structure. The goal was to create intuitive, user-friendly workflows that address account management, error recovery, and seamless navigation across the platform.<br><br>This project demonstrates the ability to create seamless and secure authentication systems, incorporating user recovery mechanisms. It also focuses on designing a scalable and logical navigation framework suitable for complex applications. The project ensures clarity and efficiency in both error handling and data export options. By prioritizing user-centered design principles, it enhances the overall user experience while effectively addressing the operational and administrative needs of the platform.</p>",
+  "images": [
+    {
+      "src": "/images/tremor-maps/map1.jpg",
+      "alt": "Screenshot of Site Map",
+      "width": 1000,
+      "height": 612,
+      "caption": "<strong>User Authentication Flow:</strong> The authentication process was designed to streamline account access and recovery through clear, guided pathways. Users can easily log in, create an account, or recover forgotten credentials. The login process involves a step-by-step system that checks for account existence, validates credentials, and includes retry loops for incorrect inputs.<br><br>For the recovery process, integrated email or username verification is utilized for resetting usernames or passwords, ensuring secure access restoration. Additionally, visual cues are employed, with success indicated in green and failure in red, highlighting decision points and feedback loops. This approach enhances clarity and reduces user frustration, ultimately prioritizing user efficiency and error recovery while minimizing friction in accessing or creating accounts."
+    },
+    {
+      "src": "/images/tremor-maps/map2.jpg",
+      "alt": "Screenshot of Site Map",
+      "width": 1000,
+      "height": 612,
+      "caption": "<strong>Add Account Form:</strong> The navigation flow emphasizes the connection between core functionalities and administrative capabilities within the platform. It features top-level pages that include a login page, account management, home dashboard, analytics, notifications, settings, admin tools, and error handling, specifically a 404 error page.<br><br>Further, the Placements Page links to sub-pages such as listing info, results, audit logs, and preferences. Modals support task-specific actions, including managing brokers and providing contextual tooltips. Additionally, print pages are available to deliver printable outputs for reports and logs, addressing user documentation needs.<br><br>This sitemap establishes a clear hierarchical structure that enables users to efficiently access key features and delve into detailed workflows."
+    }
+  ]
+}

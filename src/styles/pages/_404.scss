@@ -1,0 +1,29 @@
+// 404 Page
+// =============================================================
+
+.lost {
+    margin: 0 0 160px;
+    padding: 0;
+    width: 100%;
+
+    h3 {
+        margin: 0 5% 50px;
+        padding: 0;
+        text-align: center;
+    }
+
+    a {
+        display: block;
+        margin: 0 auto;
+        padding: 15px 0;
+        text-decoration: none;
+        width: 20%;
+
+        @include breakpoint(max-width 978px) {
+            width: 30%;
+        }
+        @include breakpoint(max-width 768px) {
+            width: 70%;
+        }
+    }
+}

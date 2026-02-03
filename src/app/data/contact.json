@@ -1,0 +1,29 @@
+{
+  "id": "contact",
+  "title": "Contacts Application",
+  "category": "Development",
+  "content": "<p class=\"text-container\">The \"Contacts Application\" is a user-friendly platform designed for managing contact information effectively. The application provides a clean and intuitive interface with features for adding, editing, deleting, and searching for contacts, making it a practical tool for personal or professional use.<br><br>This app is a robust and efficient tool for contact management. Its thoughtful design and functionality ensure users can easily maintain and interact with their contact database, making it a versatile solution for various use cases.</p>",
+  "images": [
+    {
+      "src": "/images/contact/contact-1.jpg",
+      "alt": "Screenshot of Contacts Application",
+      "width": 1000,
+      "height": 498,
+      "caption": "<strong>Dashboard Screen:</strong> This image depicts an interface with a blue background and a card-style layout displaying individual contact information. Each card includes details such as document ID, date added, company, email, phone, and a description, along with edit and delete icons in the top-right corner for managing the contact. A search bar at the top allows users to filter contacts by name, and the header indicates the total number of contacts."
+    },
+    {
+      "src": "/images/contact/contact-2.jpg",
+      "alt": "Screenshot of Contacts Application",
+      "width": 1000,
+      "height": 498,
+      "caption": "<strong>Add Contact Screen:</strong> This image shows an interface with a split-screen design. The left panel includes a form titled \"Add Contact\" with input fields for name, email, company, phone, and description, along with buttons to cancel, clear, or add the contact. The right panel retains the card-style layout for displaying existing contacts, along with a search bar at the top for filtering by name and options to edit or delete individual contacts."
+    },
+    {
+      "src": "/images/contact/contact-4.jpg",
+      "alt": "Screenshot of Contacts Application",
+      "width": 1000,
+      "height": 498,
+      "caption": "<strong>New Contact Added:</strong> This image displays an updated interface with a split-screen design, where the left panel provides an \"Add Contact\" form with fields for name, email, company, phone, and description, alongside action buttons to cancel, clear, or add the contact. The right panel now lists three contact cards, each displaying details like document ID, date added, company, email, phone, and description, with options to edit or delete individual contacts. A total contact count is shown at the top, along with a search bar for filtering contacts by name."
+    }
+  ]
+}

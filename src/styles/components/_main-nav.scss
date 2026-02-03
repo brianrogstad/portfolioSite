@@ -1,0 +1,89 @@
+// Main Navigation - Desktop
+// =============================================================
+
+.main-nav {
+    margin-top: 35px;
+    transition: top .3s ease, right .3s ease;
+    width: auto;
+    z-index: 9999;
+
+    @include breakpoint(desktop) {
+        margin-top: 15px;
+    }
+
+    @include breakpoint(laptop) {
+        margin-top: 5px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline;
+    }
+
+    .open-menu {
+        color: $mine-shaft;
+        display: none;
+
+        @include breakpoint(desktop) {
+            display: block;
+        }        
+        
+    }
+
+    .close-menu {
+        color: $mine-shaft;
+        display: none;
+    }
+
+    a {
+        @include font-size(16);
+        color: $black;
+        display: block;
+        float: left;
+        font-family: $secondary-font;
+        margin: 0;
+        padding: 10px 20px;
+        text-decoration: none;
+
+        &.active {
+            color: $danube;
+            text-decoration: underline;
+        }
+
+        &:hover {
+            color: $danube;
+        }
+
+    }
+
+    .desktop-nav {
+        float: right;
+    
+        @include breakpoint(desktop) {
+            display: none;
+        }
+    }
+
+    .mobile-nav {
+        float: right;
+        display: none;
+    
+        @include breakpoint(desktop) {
+            display: block;
+        }
+
+        a {
+            @include font-size(24); 
+        }
+    }
+
+    .dropdown-item.active,
+    .dropdown-item:active {
+        background: none;
+    }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "model",
+  "title": "Model Session Drawings",
+  "category": "Sketches",
+  "content": "<p class=\"text-container\">This portfolio project presents a comprehensive exploration of the human form, emphasizing expression, posture, and movement through a series of charcoal and pencil drawings. The collection showcases a range of techniques, from deeply textured and evocative compositions to minimalist and gestural studies. Each piece captures the complexity and beauty of the human body, highlighting its natural curves, dynamic poses, and emotional depth.<br><br>This project emphasizes the beauty of simplicity and spontaneity in figure drawing, leveraging techniques such as crosshatching, contouring, and gesture drawing to create dynamic and emotionally resonant works. The absence of facial details shifts the focus to posture and proportion, allowing viewers to interpret the narratives conveyed through body language.<br><br>These studies reflect a deep appreciation for the human form, making this project a testament to the power of art to capture fleeting moments of emotion and movement with elegance and clarity.</p>",
+  "images": [
+    {
+      "src": "/images/model-sessions/model-1.jpg",
+      "alt": "Screenshots of Mobile App Design",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Expressive Charcoal Drawing:</strong> A loose and textured composition depicting a figure viewed from behind, embodying introspection and moodiness. Strong contrasts of light and shadow enhance the form while leaving much to interpretation, evoking emotion and atmosphere."
+    },
+    {
+      "src": "/images/model-sessions/model-2.jpg",
+      "alt": "Screenshots of Mobile App Design",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Reclining Nude:</strong> A detailed figure drawing of a nude subject in a relaxed, three-quarters pose. The use of crosshatching and sketchy strokes lends depth and fluidity, focusing on the body's natural musculature and form."
+    },
+    {
+      "src": "/images/model-sessions/model-3.jpg",
+      "alt": "Screenshots of Mobile App Design",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Triad of Gestural Poses:</strong> A series of three minimalist sketches capturing seated and standing figures. Each sketch emphasizes the essence of posture and body language, using light shading to suggest movement and volume."
+    },
+    {
+      "src": "/images/model-sessions/model-4.jpg",
+      "alt": "Screenshots of Mobile App Design",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Varying Poses of Female Forms:</strong> A collection of three gestural studies highlighting introspection, vulnerability, and casual confidence in female figures. Clean lines and subtle shading focus on proportion, curvature, and expressive body language, capturing fleeting moments."
+    },
+    {
+      "src": "/images/model-sessions/model-5.jpg",
+      "alt": "Screenshots of Mobile App Design",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Dynamic Gestures:</strong> A set of four quick sketches that explore standing, seated, leaning, and reclining poses. The fluid lines and sparing use of shading emphasize the movement and essence of each pose, prioritizing energy over detail."
+    }
+  ]
+}

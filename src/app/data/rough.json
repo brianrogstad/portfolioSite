@@ -1,0 +1,29 @@
+{
+  "id": "rough",
+  "title": "Animal Character Design",
+  "category": "Sketches",
+  "content": "<p class=\"text-container\">This project showcases a series of hand-drawn sketches focused on developing animal characters with distinct personalities and expressive traits. The sketches depict creatures such as otters, prairie dogs, and seal lions in dynamic poses and exaggerated facial expressions, highlighting emotions like surprise, anger, happiness, and frustration. The designs emphasize storytelling potential through gestures and interactions, such as a dramatic paw raise, attentive observations, and playful or annoyed expressions.<br><br>The loose, textured linework conveys movement and energy, creating a strong sense of character and individuality. These drawings represent an exploratory phase in character design, aimed at capturing the unique personality and emotional range of the animals, making them suitable for animation or visual storytelling projects.</p>",
+  "images": [
+    {
+      "src": "/images/rough-sketches/rough-1.jpg",
+      "alt": "Compotation of rough character sketches",
+      "width": 1000,
+      "height": 1092,
+      "caption": ""
+    },
+    {
+      "src": "/images/rough-sketches/rough-2.jpg",
+      "alt": "Compotation of prairie dog Animal Character Design",
+      "width": 1000,
+      "height": 1092,
+      "caption": ""
+    },
+    {
+      "src": "/images/rough-sketches/rough-3.jpg",
+      "alt": "Compotation of sea lion character sketches",
+      "width": 1000,
+      "height": 1092,
+      "caption": ""
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "id": "usb-wireframes",
+  "title": "USB Themed Wireframes",
+  "category": "UI Design",
+  "content": "<p class=\"text-container\">This project demonstrates the practical application of the USB Design System through the creation of themable, branded wireframes. Building upon the foundation of the design system's variables, components, and tokens, this work showcases how a robust design system enables rapid creation of consistent, brand-flexible user interfaces.<br><br>The wireframes leverage the design system's color variables, typography scales, spacing tokens, and component library to create a cohesive set of application screens that can be easily themed for different brands or use cases. This project illustrates the power of systematic design—where changes to core variables cascade through entire designs, enabling efficient brand customization and maintaining visual consistency across multiple touchpoints.<br><br>By using the variables and components established in the USB Design System, these wireframes demonstrate how design tokens translate from abstract system documentation into concrete, production-ready interface designs. The result is a flexible, scalable approach to creating branded experiences that maintain consistency while allowing for customization.</p>",
+  "media": [
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires1.jpg",
+      "alt": "Multi-Brand Responsive Wireframe Overview",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Responsive Multi-Brand Wireframe System:</strong> A comprehensive Figma design file displaying three brand experiences for Acme, Fidelity, and Elan across three device sizes for Desktop, Tablet, and Mobile. Each brand variant maintains consistent structure and functionality while featuring distinct brand-specific styling with Fidelity showcasing green accents, Elan featuring blue footer and accents, and Acme presenting neutral theming. The wireframes demonstrate responsive design patterns for a financial services application, showcasing how the USB Design System enables efficient multi-brand, multi-device design through shared components and themable variables."
+    },
+    {
+      "type": "video",
+      "src": "/images/usb-wireframes/usbwires.mov",
+      "alt": "Brand Switching Demonstration",
+      "caption": "<strong>Dynamic Brand Theming in Action:</strong> This demonstration showcases the power of Figma's collections feature and the USB Design System's variable architecture. By simply selecting different brands from the collections dropdown, the wireframes instantly transform between Acme, Fidelity, and Elan brand themes, updating colors, logos, and brand-specific styling while maintaining consistent structure and functionality. This illustrates the efficiency and flexibility of a well-implemented design system, where a single dropdown action can completely rebrand an entire interface.",
+      "autoplay": false,
+      "loop": true,
+      "muted": true
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires2.jpg",
+      "alt": "Wireframe Detail View",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Detailed Wireframe Component Structure:</strong> A close-up view of one of the branded wireframes, providing a clearer look at the component structure, spacing, typography hierarchy, and how design system tokens are applied throughout the interface. This detailed perspective showcases the thoughtful application of design system variables including header styling, content cards with chevrons, link treatments, and footer elements that make up the complete user experience."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires3.jpg",
+      "alt": "Design System Scale and Implementation",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Enterprise-Scale Design System Application:</strong> A comprehensive view of the Figma collection showing 4 major projects that leverage the USB Design System. This demonstrates the real-world scale and impact of the system, with the design variables and components applied across 500+ Figma frames and approximately 10 project files. This illustrates how a well-structured design system enables efficient, consistent design at enterprise scale while maintaining brand flexibility across multiple product initiatives."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires4.jpg",
+      "alt": "Header Design Exploration Sketches",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Conceptual Design Exploration:</strong> Hand-drawn sketches exploring new header and main navigation design concepts for the USB wireframe project. This iterative sketching process helped reimagine the header structure and navigation patterns before moving into digital wireframes, demonstrating the thoughtful design exploration that informed the final component architecture and user experience decisions within the design system framework."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires5.jpg",
+      "alt": "Refined Header Design and Production Impact",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>From Concept to Production Impact:</strong> The refined header and navigation design built from the exploration sketches, alongside a screenshot from the <a href='https://www.usbank.com/online-mobile-banking.html' target='_blank' rel='noopener noreferrer'>US Bank online mobile banking page</a> showing how these concepts influenced the final production implementation. While this particular design was not ultimately adopted by our team, the innovative navigation patterns and header structure went on to inspire another team at USB, demonstrating the real-world impact and broader organizational influence of design system work."
+    }
+  ]
+}

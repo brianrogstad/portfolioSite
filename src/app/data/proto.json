@@ -1,0 +1,29 @@
+{
+  "id": "proto",
+  "title": "Prototype Samples",
+  "category": "Information Architecture",
+  "content": "<p class=\"text-container\">This project showcases the end-to-end design and prototyping of a comprehensive software application, focusing on data-intensive workflows, administrative tools, and user management systems. The work combines high-level prototyping, detailed user flows, and edge case handling to ensure a robust, scalable, and user-friendly interface.<br><br>This project delivered a scalable, user-focused interface and workflow system that meets the needs of both everyday users and enterprise-level administrators. By prioritizing detailed navigation, edge case handling, and modular designs, the project ensures reliability, flexibility, and ease of use for all stakeholders.</p>",
+  "images": [
+    {
+      "src": "/images/proto/map3.jpg",
+      "alt": "Screenshot of Prototype Overview For Lockton Project",
+      "width": 1000,
+      "height": 620,
+      "caption": "<strong>High-Level Prototype for a Data-Driven Application:</strong> The dark theme aesthetic is designed with a modern dark mode UI to enhance usability in data-intensive contexts. The layout is organized into logical modules, including \"Results,\" \"Preferences,\" \"Listing Detail,\" and \"Audit Log,\" which highlight the key functional areas. Complex interactions are reflected through defined user flows and navigation paths that detail the connections between screens, showcasing how users interact with charts, data tables, and settings panels. Each individual frame is carefully crafted to ensure seamless navigation and intuitive data exploration."
+    },
+    {
+      "src": "/images/proto/map4.jpg",
+      "alt": "Screenshot of Prototype Overview for Utility Screens",
+      "width": 1000,
+      "height": 620,
+      "caption": "<strong>Administrative Tool for User and Account Management:</strong> The text outlines a structured workflow by organizing frames into sections such as \"Settings,\" \"Placements,\" and \"Admin/Manage Accounts,\" each addressing different application modules and workflows. It also highlights dynamic navigation by mapping out extensive user flows that facilitate the addition, editing, and management of accounts, effectively handling complex decision paths. Moreover, scalable UI elements are integrated, including tables, forms, and menus, which provide flexible, data-driven tools for administrative users. The design is purpose-driven, specifically created to support account and role management, ensuring streamlined data management for enterprise users."
+    },
+    {
+      "src": "/images/proto/map5.jpg",
+      "alt": "Screenshot of Prototype Overview for Utility Screens",
+      "width": 1000,
+      "height": 620,
+      "caption": "<strong>Detailed User Flows for Feature Testing and Implementation:</strong> In the context of Scenario-Based Design, I documented various user flows and edge cases, including the default flow, input errors encountered while adding users, scenarios at maximum user capacity, and the process of deleting users from lists. I emphasized robust error handling to address exceptions, particularly focusing on boundary cases like adding too many users and managing input errors, ensuring a high level of fault tolerance. To support the development process, I maintained visual consistency by upholding a uniform design system across all flows, complete with annotations and detailed navigation paths to guide both developers and stakeholders. Lastly, I designed these flows with comprehensive testing in mind, aiming for seamless integration, effective quality assurance, and an overall smooth user experience."
+    }
+  ]
+}
