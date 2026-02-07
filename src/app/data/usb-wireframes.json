@@ -5,14 +5,6 @@
   "content": "<p class=\"text-container\">This project demonstrates the practical application of the USB Design System through the creation of themable, branded wireframes. Building upon the foundation of the design system's variables, components, and tokens, this work showcases how a robust design system enables rapid creation of consistent, brand-flexible user interfaces.<br><br>The wireframes leverage the design system's color variables, typography scales, spacing tokens, and component library to create a cohesive set of application screens that can be easily themed for different brands or use cases. This project illustrates the power of systematic design—where changes to core variables cascade through entire designs, enabling efficient brand customization and maintaining visual consistency across multiple touchpoints.<br><br>By using the variables and components established in the USB Design System, these wireframes demonstrate how design tokens translate from abstract system documentation into concrete, production-ready interface designs. The result is a flexible, scalable approach to creating branded experiences that maintain consistency while allowing for customization.</p>",
   "media": [
     {
-      "type": "image",
-      "src": "/images/usb-wireframes/usbwires1.jpg",
-      "alt": "Multi-Brand Responsive Wireframe Overview",
-      "width": 1000,
-      "height": 678,
-      "caption": "<strong>Responsive Multi-Brand Wireframe System:</strong> A comprehensive Figma design file displaying three brand experiences for Acme, Fidelity, and Elan across three device sizes for Desktop, Tablet, and Mobile. Each brand variant maintains consistent structure and functionality while featuring distinct brand-specific styling with Fidelity showcasing green accents, Elan featuring blue footer and accents, and Acme presenting neutral theming. The wireframes demonstrate responsive design patterns for a financial services application, showcasing how the USB Design System enables efficient multi-brand, multi-device design through shared components and themable variables."
-    },
-    {
       "type": "video",
       "src": "/images/usb-wireframes/usbwires.mp4",
       "alt": "Brand Switching Demonstration",

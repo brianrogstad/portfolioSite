@@ -2,6 +2,7 @@
 // =============================================================
 
 .project-nav {
+    background: $mine-shaft;
     box-shadow: inset 10px 0 15px -5px $black;
     display: none;
     height: 100%;
@@ -41,7 +42,7 @@
         @include font-size(16);
         border-bottom: 1px solid $mine-shaft;
         border-top: 1px solid $tundora;
-        color: $white;
+        color: $white !important;
         display: block;
         float: none;
         font-family: $secondary-font;
@@ -50,13 +51,18 @@
         text-align: left;
         text-decoration: none;
 
+        &:link,
+        &:visited {
+            color: $white !important;
+        }
+
         &.active {
-            color: $danube;
+            color: $danube !important;
         }
 
         &:hover {
             background: $tundora;
-            color: $danube;
+            color: $danube !important;
         }
 
         &:last-child {

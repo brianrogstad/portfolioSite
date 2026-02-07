@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 export interface NavItem {
@@ -21,6 +21,16 @@ export class AppComponent {
   mobileMenuOpen = false;
   startYear = 2009;
   currentYear = new Date().getFullYear();
+  private readonly DESKTOP_BREAKPOINT = 1620;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  @HostListener('window:resize')
+  onResize() {
+    if (isPlatformBrowser(this.platformId) && window.innerWidth > this.DESKTOP_BREAKPOINT) {
+      this.mobileMenuOpen = false;
+    }
+  }
 
   get yearRange(): string {
     return this.startYear === this.currentYear 
@@ -98,6 +108,10 @@ export class AppComponent {
 
   closeMobileMenu(event: Event) {
     event.preventDefault();
+    this.mobileMenuOpen = false;
+  }
+
+  closeMenu() {
     this.mobileMenuOpen = false;
   }
 }

@@ -1,3 +1,4 @@
+<div [class.menu-open]="mobileMenuOpen">
 <header class="header">
     <a routerLink="/" class="logo" title="Home"><img src="/images/brianrogstad-logo-inverse.png" width="66" height="66" alt="BrianRogstad.com"></a>
     <div class="id-container">
@@ -27,24 +28,24 @@
         </ul>
         
     </nav>
-
-    <nav class="project-nav">
-        <ul>
-            <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
-            <ng-container *ngFor="let item of navItems">
-                <li *ngIf="item.children" class="nav-section-header">
-                    <p>{{ item.label }}</p>
-                </li>
-                <li *ngFor="let child of item.children">
-                    <a [routerLink]="child.external ? null : child.route" [attr.href]="child.external ? child.route : null" [attr.target]="child.external ? '_blank' : null" [attr.rel]="child.external ? 'noopener noreferrer' : null">
-                        {{ child.label }}
-                        <i *ngIf="child.external" class="fa fa-external-link link-icon"></i>
-                    </a>
-                </li>
-            </ng-container>
-        </ul>
-    </nav>
 </header>
+
+<nav class="project-nav">
+    <ul>
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+        <ng-container *ngFor="let item of navItems">
+            <li *ngIf="item.children">
+                <p>{{ item.label }}</p>
+            </li>
+            <li *ngFor="let child of item.children">
+                <a [routerLink]="child.external ? null : child.route" [attr.href]="child.external ? child.route : null" [attr.target]="child.external ? '_blank' : null" [attr.rel]="child.external ? 'noopener noreferrer' : null" (click)="closeMenu()">
+                    {{ child.label }}
+                    <i *ngIf="child.external" class="fa fa-external-link link-icon"></i>
+                </a>
+            </li>
+        </ng-container>
+    </ul>
+</nav>
 
 <div class="page-wrap">
   <router-outlet />
@@ -52,4 +53,5 @@
   <footer class="site-footer">
       <p class="disclaimer">&#169; Brian Rogstad {{ yearRange }}. All rights reserved.</p>
   </footer>
+</div>
 </div>
