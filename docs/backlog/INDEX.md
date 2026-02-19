@@ -25,24 +25,24 @@ Intake queue for work that's not currently scheduled. Ideas, bugs, tech debt, an
 
 ## Current Backlog Status
 
-### Bugs
-- No critical bugs (site is stable)
-- See `bugs/` folder for any reported issues
+### Bugs (1 triaged)
+- **BUG-001** — Broken unit tests (5/6 failing, missing router providers) — **High** — Triaged 2026-02-19
 - Use `bugs/_TEMPLATE.md` to add new bugs
 
-### Tech Debt
-- See `tech-debt/` folder for internal improvements
-- None are blocking development
+### Tech Debt (3 triaged)
+- **DEBT-001** — Angular XSS vulnerabilities, upgrade to Angular 19 — **Must-Fix** — Triaged 2026-02-19
+- **DEBT-002** — Legacy control flow directives, migrate to @if/@for — **Should-Fix** — Triaged 2026-02-19
+- **DEBT-003** — Lint cleanup, 32 ESLint + 143 Stylelint errors — **Should-Fix** — Triaged 2026-02-19
 - Use `tech-debt/_TEMPLATE.md` to add new items
 
 ### Features
 - See `features/` folder for requested enhancements
-- Most are nice-to-haves, not essential
+- No items filed yet
 - Use `features/_TEMPLATE.md` to add new features
 
 ### Ideas
 - See `ideas/` folder for brainstorm items
-- Unvetted, just captured for later consideration
+- No items filed yet
 - Use `ideas/_TEMPLATE.md` to add new ideas
 
 ---
@@ -69,4 +69,4 @@ Intake queue for work that's not currently scheduled. Ideas, bugs, tech debt, an
 
 ---
 
-**Last Updated:** 2026-02-17
+**Last Updated:** 2026-02-19

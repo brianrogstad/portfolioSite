@@ -30,7 +30,7 @@
 - ✅ SEO optimization (semantic HTML, meta tags, sitemap)
 - ✅ Analytics integration (Google Analytics)
 - ✅ Dark theme support (respects system preference)
-- ✅ Project showcase (6+ projects, expandable)
+- ✅ Project showcase (20 projects, expandable)
 - ✅ Project detail pages (markdown support, images, videos)
 - ✅ About page with background and values
 - ✅ Automated deployment (GitHub Pages + Actions)
@@ -147,4 +147,4 @@ See **docs/backlog/** for:
 
 ---
 
-**Last Updated:** 2026-02-17
+**Last Updated:** 2026-02-19

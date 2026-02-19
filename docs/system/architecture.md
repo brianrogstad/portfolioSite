@@ -91,11 +91,10 @@ Technical reference for how the portfolio site is built and how components inter
 
 #### Projects Service
 - **File:** `src/app/services/projects.service.ts`
-- **Purpose:** Centralized project data
+- **Purpose:** Centralized project data (20 projects)
 - **Methods:**
-  - `getProjects()` — All projects for homepage
-  - `getProject(id)` — Single project for detail page
-- **Data Source:** Hardcoded array (can be replaced with API if needed)
+  - `getProject(id)` — Single project by key for detail page
+- **Data Source:** Individual JSON files in `src/app/data/*.json`, imported into a `{ [key: string]: ProjectDetail }` dictionary
 
 ---
 
@@ -109,12 +108,12 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'project/:id',
-    component: ProjectDetailComponent
-  },
-  {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'projects/:id',
+    component: ProjectDetailComponent
   },
   {
     path: '**',
@@ -165,23 +164,50 @@ export interface ProjectVideo {
 ### SCSS Organization
 ```
 src/styles/
-├── _variables.scss       # Design tokens (colors, spacing, fonts)
-├── _mixins.scss          # Reusable mixins
-├── _base.scss            # Global styles (body, html, reset)
-├── _typography.scss      # Font styles and hierarchy
-├── _components.scss      # Component-specific styles
-├── _utilities.scss       # Utility classes
-└── _accessibility.scss   # A11y-specific styles (focus, reduced-motion)
+├── styles.scss           # Entry point
+├── base/                 # Foundation styles
+│   ├── _glob.scss        # Base barrel file
+│   ├── _colors.scss      # Color variables and theme definitions
+│   └── _fonts.scss       # Font declarations
+├── components/           # Component-specific styles
+│   ├── _glob.scss        # Components barrel file
+│   ├── _content.scss     # Content area styles
+│   ├── _footer.scss      # Footer styles
+│   ├── _header.scss      # Header styles
+│   ├── _main-nav.scss    # Main navigation
+│   ├── _menu-open.scss   # Mobile menu open state
+│   ├── _project.scss     # Project card/detail styles
+│   └── _side-nav.scss    # Side navigation
+├── layout/               # Layout and structural styles
+│   ├── _glob.scss        # Layout barrel file
+│   ├── _global.scss      # Global layout rules
+│   └── _headings.scss    # Heading hierarchy
+├── pages/                # Page-specific styles
+│   ├── _glob.scss        # Pages barrel file
+│   └── _404.scss         # 404 page styles
+├── utils/                # Utilities and helpers
+│   ├── _glob.scss        # Utils barrel file
+│   ├── _mixins.scss      # Reusable mixins
+│   └── _normalize.scss   # CSS normalization
+└── vendor/               # Third-party styles
+    ├── _glob.scss        # Vendor barrel file
+    ├── _font-awesome.scss
+    └── font-awesome/     # Font Awesome partials
 ```
 
 ### Design Tokens
 ```scss
-// Colors
-$primary: #your-color;
-$background-light: #ffffff;
-$background-dark: #1a1a1a;
-$text-light: #1a1a1a;
-$text-dark: #ffffff;
+// Colors (src/styles/base/_colors.scss)
+// Named color variables
+$danube: #307ecd;        // Blue
+$chambray: #166fc8;      // Darker blue
+
+// Theme map with light/dark definitions
+$themes: (
+  light: (bg: #ffffff, text: #333333, primary: #4285f4, secondary: #fbbc05),
+  dark:  (bg: #121212, text: #f5f5f5, primary: #8ab4f8, secondary: #fdd663)
+);
+// Themes output as CSS custom properties (--bg, --text, --primary, --secondary)
 
 // Spacing (4px baseline)
 $spacing-xs: 0.25rem;   // 4px
@@ -366,4 +392,4 @@ npm run build
 
 ---
 
-**Last Updated:** 2026-02-17
+**Last Updated:** 2026-02-19

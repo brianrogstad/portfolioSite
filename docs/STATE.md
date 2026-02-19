@@ -1,6 +1,6 @@
 # Current State
 
-**Last Updated:** 2026-02-17
+**Last Updated:** 2026-02-19
 **Status:** 🚀 **Live & Stable** — monitoring analytics, accepting new project submissions
 
 ---
@@ -8,7 +8,7 @@
 ## Right Now
 
 ### What's Live
-- **Homepage** — Shows your 6+ projects with brief descriptions
+- **Homepage** — Shows your 20 projects with brief descriptions
 - **Project detail pages** — Full case studies with images, videos, markdown content
 - **About page** — Your background, approach, and contact info
 - **Accessibility** — WCAG 2.1 AA compliant throughout
