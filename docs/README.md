@@ -5,6 +5,7 @@ Complete documentation for brianrogstad.com — how it's built, how it works, an
 **Live site:** [brianrogstad.com](https://brianrogstad.com)
 **Status:** 🚀 Live and stable
 **Last rebuilt:** February 2025 (Angular 18)
+**Work tracking:** Linear (workspace: Unwritten, https://linear.app/unwritten)
 
 ---
 
@@ -42,16 +43,11 @@ docs/
 ├── STATE.md                     # What's happening now
 ├── RULES.md                     # Standards & how-tos
 │
-├── system/                      # Technical reference (no timelines)
-│   └── architecture.md          # How the code is organized
-│
-└── backlog/                     # Intake queue for work
-    ├── INDEX.md                 # Backlog overview
-    ├── bugs.md                  # Issues to fix
-    ├── tech-debt.md             # Code improvements
-    ├── features.md              # Feature requests
-    └── ideas.md                 # Brainstorm items
+└── system/                      # Technical reference (no timelines)
+    └── architecture.md          # How the code is organized
 ```
+
+**Work tracking:** See Linear (workspace: Unwritten)
 
 ### Core Documents (Read These First)
 
@@ -67,11 +63,6 @@ docs/
 | Document | Purpose | Use when... |
 |----------|---------|------------|
 | **system/architecture.md** | Code structure and design | You're working on technical changes |
-| **backlog/INDEX.md** | Backlog overview | You're deciding what to work on next |
-| **backlog/bugs.md** | Open issues | Something's broken |
-| **backlog/features.md** | Feature requests | You have an idea or received feedback |
-| **backlog/tech-debt.md** | Code improvements | You want to improve internal quality |
-| **backlog/ideas.md** | Raw brainstorm | You're thinking of something wild |
 
 ---
 
@@ -99,17 +90,15 @@ system/architecture.md (deep technical)
 4. **Test thoroughly** — especially new projects
 5. **Commit with clear message** — helps future you
 
-### Adding to Backlog
-1. **Decide the category** — Bug / Feature / Tech Debt / Idea
-2. **Add to the right file** — bugs.md, features.md, etc.
-3. **Use the template** — section header, status, details
-4. **Include context** — why, who, impact
+### Adding Work Items
+1. Create an issue in Linear (workspace: Unwritten)
+2. Add context and labels
+3. Link to related documentation if needed
 
 ### Quarterly Review (Every 3 months)
-1. Read all backlog files
+1. Review Linear issues (workspace: Unwritten)
 2. Triage items (schedule high-priority, close low-priority)
-3. Move scheduled items to ROADMAP.md
-4. Update STATE.md and ROADMAP.md if anything changed
+3. Update STATE.md and ROADMAP.md if anything changed
 
 ---
 
@@ -142,27 +131,19 @@ system/architecture.md (deep technical)
 **Add a new project:**
 → RULES.md → "Adding a New Project" (step-by-step)
 
-**Fix a bug:**
-→ Find it in bugs.md
-→ Update status to "In Progress"
-→ Make the fix
-→ Mark status as "Fixed"
-
-**Work on a feature:**
-→ Move from backlog/features.md to ROADMAP.md phase
-→ Add details to ROADMAP.md phase file
+**Fix a bug or work on a feature:**
+→ Create or find issue in Linear (workspace: Unwritten)
+→ Mark as "In Progress"
 → Work on it
 → Mark complete when done
 
 **Improve the code:**
-→ Add to tech-debt.md
+→ Create issue in Linear as tech debt
 → Prioritize during quarterly review
-→ Schedule in ROADMAP.md if high priority
 → Fix it
-→ Mark complete
 
 **Have a random idea:**
-→ ideas.md → Add using template
+→ Create issue in Linear as idea/brainstorm
 → Revisit quarterly
 → Promote to "Considering" if interesting
 
@@ -202,10 +183,10 @@ system/architecture.md (deep technical)
 4. **Frustrated with something?** → Add to tech-debt.md, triage later
 
 ### If You Find an Issue
-- **It's broken?** → bugs.md
-- **It's slow?** → tech-debt.md
-- **You have a feature idea?** → features.md
-- **It's a wild idea?** → ideas.md
+- **It's broken?** → Create bug issue in Linear
+- **It's slow?** → Create tech-debt issue in Linear
+- **You have a feature idea?** → Create feature issue in Linear
+- **It's a wild idea?** → Create brainstorm issue in Linear
 
 ---
 
@@ -218,7 +199,6 @@ system/architecture.md (deep technical)
 | ROADMAP.md | You (future plans) | Quarterly review |
 | RULES.md | You (standards) | When standards change |
 | system/architecture.md | You (technical reference) | When structure changes |
-| backlog/* | You (work intake) | Ongoing (as ideas arise) |
 
 ---
 

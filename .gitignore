@@ -43,3 +43,6 @@ Thumbs.db
 
 # Old project files
 /Old Project
+
+# Claude Code (machine-specific, don't commit)
+.claude/settings.local.json

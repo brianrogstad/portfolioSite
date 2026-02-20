@@ -1,5 +1,7 @@
 # Roadmap
 
+**Work tracking has moved to Linear** (workspace: Unwritten). Milestones and issues are managed there.
+
 **Current Phase:** v1 (Stable) — Live and monitoring
 **Overall Timeline:** No formal deadline (organic updates as you add projects)
 
@@ -104,11 +106,11 @@
 
 ## Backlog & Ideas
 
-See **docs/backlog/** for:
-- [ ] New features (not planned for v1)
-- [ ] Technical debt (non-critical improvements)
-- [ ] Nice-to-haves (low priority)
-- [ ] Ideas (brainstorm, not committed)
+Unscheduled work is tracked in Linear (workspace: Unwritten), including:
+- New features (not planned for v1)
+- Technical debt (non-critical improvements)
+- Nice-to-haves (low priority)
+- Ideas (brainstorm, not committed)
 
 ---
 

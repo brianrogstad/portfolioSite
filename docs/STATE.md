@@ -66,6 +66,7 @@
 - [ ] Search functionality (if project count grows)
 - [ ] Case study templates (to speed up new project additions)
 - [ ] Dark/light theme toggle (currently respects system preference)
+- [ ] **Kinetic typography / motion showcase piece** — Create a standalone animation project using Remotion (React-based programmatic video) as a portfolio piece to showcase. Leans into Brian's animation background. Not a site redesign — a project *on* the site. Open questions: Does Remotion fit the Angular stack or is this a standalone React piece? Is the design community's AI content saturation an opportunity (hand-crafted motion stands out) or a minefield (perceived as AI-generated)? Antigravity (physics-based animation) also mentioned but may not fit the brand. Raw idea — needs discovery if pursued. (Added 2026-02-19)
 
 ---
 
