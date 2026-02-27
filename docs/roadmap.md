@@ -1,3 +1,5 @@
+> **ARCHIVED** — Historical record, not a living document. Current work tracked in [Linear](https://linear.app/unwritten).
+
 # Roadmap
 
 **Work tracking has moved to Linear** (workspace: Unwritten). Milestones and issues are managed there.
