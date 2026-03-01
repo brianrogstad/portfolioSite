@@ -13,7 +13,7 @@
     "lint:styles:fix": "stylelint \"src/**/*.scss\" --fix",
     "serve:ssr:portfolioSite": "node dist/portfolio-site/server/server.mjs",
     "lint": "ng lint",
-    "prepare": "cp .hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit"
+    "prepare": "test -d .git/hooks && cp .hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || true"
   },
   "private": true,
   "dependencies": {
