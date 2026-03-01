@@ -1,0 +1,5 @@
+#!/bin/sh
+# Pre-commit hook: runs lint-staged on staged files
+# Installed via: npm run prepare
+
+npx lint-staged

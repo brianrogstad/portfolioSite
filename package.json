@@ -12,7 +12,8 @@
     "lint:styles": "stylelint \"src/**/*.scss\"",
     "lint:styles:fix": "stylelint \"src/**/*.scss\" --fix",
     "serve:ssr:portfolioSite": "node dist/portfolio-site/server/server.mjs",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "prepare": "cp .hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit"
   },
   "private": true,
   "dependencies": {
@@ -47,6 +48,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "lint-staged": "^16.3.0",
     "prettier": "^3.8.1",
     "stylelint": "^16.26.1",
     "stylelint-config-standard-scss": "^14.0.0",
