@@ -27,6 +27,7 @@ When reviewing PRs for this project, query QMD for reference material:
 | Leo (design) | `qmd query "Portfolio design standards"` |
 | Sam (backend) | `qmd query "Portfolio backend conventions"` |
 | Elizabeth (content) | `qmd query "Portfolio voice and content standards"` |
+| Raven (security) | Static site on GitHub Pages — no auth, no user data, no API keys. Flag any addition of forms, tracking scripts, or third-party data collection. |
 
 ## Deep Docs
 
