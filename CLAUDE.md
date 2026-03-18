@@ -15,4 +15,24 @@ Design and development portfolio at brianrogstad.com.
 
 - **Frontend:** Angular 18, TypeScript, SCSS, RxJS
 - **SSR:** Express + Angular Universal
+- **Hosting:** GitHub Pages via GitHub Actions
 - **Status:** Live, stable — monitor analytics only
+
+## L2.5 Review Context
+
+When reviewing PRs for this project, query QMD for reference material:
+
+| Reviewer | Query |
+|----------|-------|
+| Leo (design) | `qmd query "Portfolio design standards"` |
+| Sam (backend) | `qmd query "Portfolio backend conventions"` |
+| Elizabeth (content) | `qmd query "Portfolio voice and content standards"` |
+| Raven (security) | Static site on GitHub Pages — no auth, no user data, no API keys. Flag any addition of forms, tracking scripts, or third-party data collection. |
+
+## Deep Docs
+
+For architecture, design tokens, and performance budgets — search the knowledge base:
+```
+qmd query "Portfolio <your question>"
+```
+Full docs live in `unwritten-ops/projects/portfolio/`.
