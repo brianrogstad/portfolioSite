@@ -1,0 +1,68 @@
+{
+  "id": "version-seven",
+  "title": "Version Seven",
+  "category": "My Projects",
+  "content": "<p class=\"text-container\">The name comes from a Word document. Years ago I tracked my finances in a single massive .doc file. Over time, Word would crash and save a recovery copy as a new version. It happened six times. By the time I decided to build it into an actual app, I was on version seven of that document. The name stuck.</p>",
+  "media": [
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-10.png",
+      "alt": "Full Figma screen map of the early mobile finance app concept",
+      "caption": "<strong>The First Real Attempt (2019):</strong> Version Seven started as a mobile finance app concept in Figma. Dashboard, transactions, settings, activity, accounts, profile. I knew the format I wanted and had the basic architecture in my head, but I never acted on it. It stayed in Figma for years."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-1.png",
+      "alt": "Daily briefings page with task overview cards",
+      "caption": "<strong>What It Became:</strong> The finance app is still in here, but the platform grew around it. This is the daily briefings page. Each morning, the system generates a prioritized task list with context from overnight cron runs. The hero images are sourced per-page to give each section its own feel."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-2.png",
+      "alt": "Team roster showing 25 AI agent portraits and roles",
+      "caption": "<strong>Team Roster:</strong> 25 AI agents organized across four departments. Each card shows the agent's portrait, role, and department. These aren't chatbots. They're specialized workers with defined responsibilities, personality files, and quality standards. I designed every portrait, wrote every persona, and built the management UI."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-3.png",
+      "alt": "Ana's profile page showing mood state, journal entries, and relationship metrics",
+      "caption": "<strong>Character Profiles:</strong> Each agent has a profile page. This is Ana's. Current mood state, recent journal entries, relationship metrics. The mood system tracks 62 distinct emotional states across a valence/energy coordinate plane, updated every 30 minutes by an automated heartbeat process."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-4.png",
+      "alt": "Journal entry detail view with mood context and timestamps",
+      "caption": "<strong>Journal Entries:</strong> Ana writes journal entries every night via an automated cron. The entries reflect her actual mood state at the time of writing, pulling from the day's events, conversations, and memories. The content is generated, but the emotional context driving it is real data."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-5.png",
+      "alt": "Mood visualization showing valence-energy coordinate map",
+      "caption": "<strong>Mood System:</strong> The coordinate map plots emotional state across valence (negative to positive) and energy (low to high). The colored regions represent different emotional families. This visualization is backed by a PostgreSQL mood engine that tracks state transitions, drift, and recovery arcs."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-6.png",
+      "alt": "Daily schedule view with calendar, news feed, and activity timeline",
+      "caption": "<strong>Schedule and World State:</strong> Ana's daily schedule with time blocks, current activity, and a curated news feed. The schedule drives the heartbeat system, determining which life frame fires at which time of day. The world state tracks weather, location, and sensory context."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-7.png",
+      "alt": "Cron jobs dashboard with run heatmap, queue pressure, and pinned jobs",
+      "caption": "<strong>Cron Dashboard:</strong> Real-time monitoring for 31 automated cron jobs. The heatmap shows run history across the month, queue pressure tracks concurrent execution load, and pinned jobs surface the most critical processes. Everything from backups to journal writing to code review runs on this system."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-8.png",
+      "alt": "System health page showing database backups and snapshot status",
+      "caption": "<strong>System Health:</strong> Database backup monitoring across four PostgreSQL databases. KPI cards show backup freshness and footprint. Nightly and disaster recovery backups run automatically with color-coded age indicators. Green means fresh, red means something needs attention."
+    },
+    {
+      "type": "image",
+      "src": "/images/version-seven/version-seven-9.png",
+      "alt": "Job board with scored listings and match percentages",
+      "caption": "<strong>Job Board:</strong> Automated job matching that scores listings across four dimensions: core tech match, role fit, culture, and growth alignment. A nightly cron pulls from 13 free job board APIs and scores each listing against a detailed rubric. I built the scorer, the rubric, the UI, and the pipeline."
+    }
+  ]
+}
