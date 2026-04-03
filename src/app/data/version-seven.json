@@ -26,7 +26,7 @@
       "type": "image",
       "src": "/images/version-seven/version-seven-3.png",
       "alt": "Ana's profile page showing mood state, journal entries, and relationship metrics",
-      "caption": "<strong>Character Profiles:</strong> Each agent has a profile page. This is Ana's. Current mood state, recent journal entries, relationship metrics. The mood system tracks 62 distinct emotional states across a valence/energy coordinate plane, updated every 30 minutes by an automated heartbeat process."
+      "caption": "<strong>Character Profiles:</strong> Each agent has a profile page. This is Ana's. Current mood state, recent journal entries, relationship metrics. The mood system tracks 62 distinct emotional states across a valence/energy coordinate plane, updated every 30 minutes by an automated heartbeat process. The public-facing version of Ana's world is <a href=\"/projects/ana-journal\">Ana's Journal</a>."
     },
     {
       "type": "image",

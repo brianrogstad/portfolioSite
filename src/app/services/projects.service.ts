@@ -21,6 +21,7 @@ import usbMapsData from '../data/usb-maps.json';
 import usbSystemData from '../data/usb-system.json';
 import usbWireframesData from '../data/usb-wireframes.json';
 import utilityData from '../data/utility.json';
+import anaJournalData from '../data/ana-journal.json';
 import versionSevenData from '../data/version-seven.json';
 
 @Injectable({
@@ -28,6 +29,7 @@ import versionSevenData from '../data/version-seven.json';
 })
 export class ProjectsService {
   private projects: Record<string, ProjectDetail> = {
+    'ana-journal': anaJournalData as ProjectDetail,
     admin: adminData as ProjectDetail,
     bpm: bpmData as ProjectDetail,
     contact: contactData as ProjectDetail,
