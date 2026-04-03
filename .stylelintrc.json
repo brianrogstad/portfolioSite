@@ -4,7 +4,11 @@
   "plugins": ["stylelint-scss", "@stylistic/stylelint-plugin"],
   "overrides": [
     {
-      "files": ["src/styles/_color-system.scss", "src/styles/_pagination.scss"],
+      "files": [
+        "src/styles/_color-system.scss",
+        "src/styles/_pagination.scss",
+        "src/styles/base/_colors.scss"
+      ],
       "rules": {
         "color-no-hex": null
       }
@@ -19,18 +23,27 @@
     "color-hex-length": "short",
     "color-no-hex": true,
     "comment-no-empty": true,
-    "declaration-block-no-duplicate-properties": [true, {
-      "ignore": ["consecutive-duplicates-with-different-values"]
-    }],
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignore": ["consecutive-duplicates-with-different-values"]
+      }
+    ],
     "declaration-block-no-redundant-longhand-properties": true,
     "declaration-block-no-shorthand-property-overrides": true,
     "declaration-no-important": true,
-    "no-descending-specificity": [true, {
-      "severity": "warning"
-    }],
-    "no-duplicate-selectors": [true, {
-      "severity": "warning"
-    }],
+    "no-descending-specificity": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "no-duplicate-selectors": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
     "font-family-no-duplicate-names": true,
     "function-calc-no-unspaced-operator": true,
     "function-linear-gradient-no-nonstandard-direction": true,
@@ -38,15 +51,24 @@
     "media-feature-name-no-unknown": true,
     "no-empty-source": null,
     "property-no-unknown": true,
-    "selector-pseudo-class-no-unknown": [true, {
-      "ignorePseudoClasses": ["global", "ng-deep"]
-    }],
-    "selector-pseudo-element-no-unknown": [true, {
-      "ignorePseudoElements": ["ng-deep"]
-    }],
-    "selector-type-no-unknown": [true, {
-      "ignore": ["custom-elements"]
-    }],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      {
+        "ignorePseudoClasses": ["global", "ng-deep"]
+      }
+    ],
+    "selector-pseudo-element-no-unknown": [
+      true,
+      {
+        "ignorePseudoElements": ["ng-deep"]
+      }
+    ],
+    "selector-type-no-unknown": [
+      true,
+      {
+        "ignore": ["custom-elements"]
+      }
+    ],
     "selector-class-pattern": [
       "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^(mdc|x)-.*$",
       {
@@ -70,4 +92,3 @@
     "@stylistic/number-no-trailing-zeros": true
   }
 }
-

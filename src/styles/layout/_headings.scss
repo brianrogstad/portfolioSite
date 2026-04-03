@@ -2,76 +2,88 @@
 // =============================================================
 
 h1 {
-    @include font-size(28);
-    color: $black;
-    float: left;
-    font-family: $primary-font;
-    font-weight: normal;
-    line-height: 1.2em;
-    margin: 5px 0 0;
-    padding: 0;
+  @include font-size(24);
 
-    @include breakpoint(laptop) {
-        display: none;
-    }
+  color: $ink;
+  float: left;
+  font-family: $primary-font;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 5px 0 0;
+  padding: 0;
+  letter-spacing: -0.01em;
 
-    .changed h1 {
-        display: none;
-    }
+  @include breakpoint(laptop) {
+    display: none;
+  }
+
+  .changed h1 {
+    display: none;
+  }
 }
 
 h2 {
-    @include font-size(30);
-    border-bottom: 1px solid $silver;
-    clear: both;
-    color: $mine-shaft;
-    font-family: $secondary-font;
-    font-weight: 400;
-    line-height: 1.2em;
-    margin: 70px 4.667%;
-    padding: 40px 0 100px;
-    text-align: center;
+  @include font-size(13);
 
-    @include breakpoint(tablet) {
-        margin: 20px 5%;
-    }
+  border-bottom: none;
+  clear: both;
+  color: $stone;
+  font-family: $secondary-font;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  margin: 80px 5% 40px;
+  padding: 0;
+  text-align: left;
+  text-transform: uppercase;
+
+  @include breakpoint(tablet) {
+    margin: 40px 5% 24px;
+  }
 }
 
 h3 {
-    @include font-size(24);
-    color: $mine-shaft;
-    font-family: $secondary-font;
-    font-weight: 100;
-    line-height: 1.2em;
-    margin: 0 0 25px;
-    padding: 0;
+  @include font-size(22);
+
+  color: $ink;
+  font-family: $secondary-font;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+  margin: 0 0 16px;
+  padding: 0;
 }
 
 h4 {
-    @include font-size(14);
-    color: $mine-shaft;
-    font-family: $primary-font;
-    font-weight: bold;
-    line-height: 1.2em;
-    margin: 0;
-    padding: 0;
+  @include font-size(14);
+
+  color: $charcoal;
+  font-family: $primary-font;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
 }
 
 h5 {
-    @include font-size(12);
-    color: $mine-shaft;
-    font-family: $secondary-font;
-    font-weight: normal;
-    line-height: 1.2em;
-    margin: 0;
-    padding: 0;
+  @include font-size(12);
+
+  color: $slate;
+  font-family: $secondary-font;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
 
 h6 {
-    @include font-size(10);
-    color: $mine-shaft;
-    font-family: $primary-font;
-    font-weight: normal;
-    margin: 0;
-    padding: 0;
+  @include font-size(11);
+
+  color: $stone;
+  font-family: $primary-font;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
 }

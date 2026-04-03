@@ -1,78 +1,89 @@
 // Global Styles
 // =============================================================
-@include set-theme(light); // For light theme
+@include set-theme(light);
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-    @include font-size(18);
-    background: $mine-shaft;
-    color: $mine-shaft;
-    font-family: $primary-font;
-    line-height: 1.5em;
-    margin: 0;
-    padding: 0;
-    position: relative;
-    overflow-y: scroll;
-    height: auto;
+  @include font-size(17);
+
+  background: $snow;
+  color: $charcoal;
+  font-family: $primary-font;
+  line-height: 1.65;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow-y: scroll;
+  height: auto;
 }
 
 a,
 img,
 button {
-    border: 0 none;
-    outline: none;
-    text-decoration: none;
+  border: 0 none;
+  outline: none;
+  text-decoration: none;
 }
 
 a {
-    color: $chambray;
-    text-decoration: underline;
+  color: $accent;
+  text-decoration: none;
+  transition: color 0.2s ease;
 
-    &:hover {
-        color: $danube;
-        cursor: pointer;
-    }
+  &:hover {
+    color: $accent-hover;
+    cursor: pointer;
+  }
 
-    &:active {
-        color: $danube;
-    }
+  &:active {
+    color: $accent-hover;
+  }
 }
 
 .link-icon {
-    padding-left: 8px;
-    vertical-align: middle;
+  padding-left: 6px;
+  vertical-align: middle;
+  @include font-size(12);
+
+  opacity: 0.6;
 }
 
 video {
-    width: 100%;
+  width: 100%;
 }
 
 strong {
-    font-weight: bold;
+  font-weight: 600;
 }
 
 .inverse-title {
-    color: $gallery;
+  color: $mist;
 }
 
+// Scrollbar
 ::-webkit-scrollbar {
-    background: $mine-shaft;
-    width: 15px;
+  background: $fog;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: $mine-shaft;
-    box-shadow: inset 0 0 6px $black;
-    padding: 0 1px;
+  background: $fog;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $danube;
+  background: $mist;
+  border-radius: 5px;
+
+  &:hover {
+    background: $stone;
+  }
 }

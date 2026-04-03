@@ -2,51 +2,60 @@
 // =============================================================
 
 .header {
-    background: $white;
-    left: 0;
-    margin: 0;
-    opacity: 1;
-    padding: 13px 5%;
-    position: fixed;
-    top: 0;
-    transition: left .3s ease, padding .3s ease, opacity .3s ease, background-color .3s ease;
-    width: 100%;
-    z-index: 999;
-    border-bottom: 1px solid $silver;
+  background: rgba(250, 250, 254, 0.92);
+  backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  left: 0;
+  margin: 0;
+  opacity: 1;
+  padding: 16px 5%;
+  position: fixed;
+  top: 0;
+  transition:
+    left 0.3s ease,
+    padding 0.3s ease,
+    opacity 0.3s ease,
+    background-color 0.3s ease;
+  width: 100%;
+  z-index: 999;
+  border-bottom: 1px solid $cloud;
 }
 
 .id-container {
-    display: block;
+  display: block;
+  float: left;
+  width: 235px;
+
+  .tagline {
+    @include font-size(14);
+
+    font-family: $secondary-font;
+    font-weight: 300;
+    color: $stone;
     float: left;
-    width: 235px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 
-    .tagline {
-        @include font-size(18);
-        font-family: $secondary-font;
-        font-weight: normal;
-        color: $black;
-        float: left;
-
-        @include breakpoint(tablet) {
-            display: none;
-        }
+    @include breakpoint(tablet) {
+      display: none;
     }
+  }
 }
 
 .logo {
-    display: block;
-    float: left;
-    line-height: 1em;
-    margin: 0 10px;
-    width: 80px;
+  display: block;
+  float: left;
+  line-height: 1em;
+  margin: 0 10px;
+  width: 80px;
 
-    @include breakpoint(laptop) {
-        width: 60px;
-    }
+  @include breakpoint(laptop) {
+    width: 60px;
+  }
 
-    img {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-    }
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
 }

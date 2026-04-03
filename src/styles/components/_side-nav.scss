@@ -2,71 +2,80 @@
 // =============================================================
 
 .project-nav {
-    background: $mine-shaft;
-    box-shadow: inset 10px 0 15px -5px $black;
-    display: none;
-    height: 100%;
-    left: 100%;
+  background: $ink;
+  box-shadow: inset 10px 0 15px -5px rgba(0, 0, 0, 0.3);
+  display: none;
+  height: 100%;
+  left: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 0 2%;
+  position: fixed;
+  top: 0;
+  transition: left 0.3s ease;
+  width: 40%;
+
+  @include breakpoint(desktop) {
+    display: block;
+  }
+
+  ul {
+    list-style: none;
     margin: 0;
-    overflow-y: scroll;
-    padding: 0 2%;
-    position: fixed;
-    top: 0;
-    transition: left .3s ease;
-    width: 40%;
+    padding: 0;
+  }
 
-    @include breakpoint(desktop) {
-        display: block;
+  li {
+    display: block;
+    cursor: pointer;
+  }
+
+  p {
+    @include font-size(11);
+
+    color: $stone;
+    font-family: $secondary-font;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 10px 0 10px 20px;
+    margin: 30px 0 0;
+    text-transform: uppercase;
+  }
+
+  li a {
+    @include font-size(15);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: none;
+    color: $mist;
+    display: block;
+    float: none;
+    font-family: $secondary-font;
+    font-weight: 300;
+    margin: 0;
+    padding: 12px 10px 12px 40px;
+    text-align: left;
+    text-decoration: none;
+    transition:
+      color 0.2s ease,
+      background 0.2s ease;
+
+    &:link,
+    &:visited {
+      color: $mist;
     }
 
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+    &.active {
+      color: $accent;
     }
 
-    li {
-        display: block;
-        cursor: pointer;
+    &:hover {
+      background: rgba(255, 255, 255, 0.05);
+      color: $white;
     }
 
-    p {
-        @include font-size(18);
-        color: $white;
-        padding: 10px 0 10px 20px;
-        margin: 30px 0 0;
-        text-transform: capitalize;
+    &:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
-
-    a {
-        @include font-size(16);
-        border-bottom: 1px solid $mine-shaft;
-        border-top: 1px solid $tundora;
-        color: $white !important;
-        display: block;
-        float: none;
-        font-family: $secondary-font;
-        margin: 0;
-        padding: 10px 10px 10px 40px;
-        text-align: left;
-        text-decoration: none;
-
-        &:link,
-        &:visited {
-            color: $white !important;
-        }
-
-        &.active {
-            color: $danube !important;
-        }
-
-        &:hover {
-            background: $tundora;
-            color: $danube !important;
-        }
-
-        &:last-child {
-            border-bottom: 1px solid $tundora;
-        }
-    }
+  }
 }

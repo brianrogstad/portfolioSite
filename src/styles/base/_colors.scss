@@ -1,36 +1,48 @@
 // Colors
 // =============================================================
 
-// blues
-$danube: #307ecd;
-$chambray: #166fc8;
+@use 'sass:map';
 
-// neutral
-$white: #ffffff;
-$black: #000000;
-$gallery: #ececec;
+// Primary palette
+$ink: #1a1a2e;
+$charcoal: #2d2d3a;
+$slate: #64647a;
+$stone: #8e8e9e;
+$mist: #c4c4d0;
+$cloud: #e8e8ed;
+$fog: #f4f4f7;
+$snow: #fafafe;
+$white: #fff;
+$black: #000;
 
-// greys
-$silver: #cccccc;
-$mine-shaft: #2e2e2e;
-$tundora: #484848;
-$grey: #595959;
+// Accent
+$accent: #4a6cf7;
+$accent-hover: #3a5ce7;
+$accent-subtle: rgba(74, 108, 247, 0.08);
 
+// Legacy aliases (keep for components that still reference them)
+$danube: $accent;
+$chambray: $accent-hover;
+$gallery: $cloud;
+$silver: $mist;
+$mine-shaft: $charcoal;
+$tundora: $slate;
+$grey: $stone;
 
 // Theme definitions
 $themes: (
   light: (
-    bg: #ffffff,
-    text: #333333,
-    primary: #4285f4,
-    secondary: #fbbc05,
+    bg: $snow,
+    text: $charcoal,
+    primary: $accent,
+    secondary: $stone,
   ),
   dark: (
-    bg: #121212,
-    text: #f5f5f5,
-    primary: #8ab4f8,
-    secondary: #fdd663,
-  )
+    bg: #0f0f1a,
+    text: #e8e8ed,
+    primary: #6b8cff,
+    secondary: #9e9eb0,
+  ),
 );
 
 // Convert SASS map to CSS variables
@@ -42,7 +54,7 @@ $themes: (
 
 // Apply theme
 @mixin apply-theme($theme-name) {
-  $theme: map-get($themes, $theme-name);
+  $theme: map.get($themes, $theme-name);
   @include generate-theme-vars($theme);
 }
 
@@ -59,12 +71,14 @@ $themes: (
 body {
   background-color: var(--bg);
   color: var(--text);
-  transition: background-color 0.3s, color 0.3s;
-  
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+
   .primary {
     color: var(--primary);
   }
-  
+
   .btn-primary {
     background-color: var(--primary);
     color: var(--bg);

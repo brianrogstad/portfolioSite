@@ -2,88 +2,127 @@
 // =============================================================
 
 .main-nav {
-    margin-top: 35px;
-    transition: top .3s ease, right .3s ease;
-    width: auto;
-    z-index: 9999;
+  margin-top: 35px;
+  transition:
+    top 0.3s ease,
+    right 0.3s ease;
+  width: auto;
+  z-index: 9999;
+
+  @include breakpoint(desktop) {
+    margin-top: 15px;
+  }
+
+  @include breakpoint(laptop) {
+    margin-top: 5px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+  }
+
+  .open-menu {
+    color: $charcoal;
+    display: none;
 
     @include breakpoint(desktop) {
-        margin-top: 15px;
+      display: block;
+    }
+  }
+
+  .close-menu {
+    color: $charcoal;
+    display: none;
+  }
+
+  a {
+    @include font-size(14);
+
+    color: $charcoal;
+    display: block;
+    float: left;
+    font-family: $secondary-font;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &.active {
+      color: $accent;
+      text-decoration: none;
+      font-weight: 500;
     }
 
-    @include breakpoint(laptop) {
-        margin-top: 5px;
+    &:hover {
+      color: $accent;
     }
+  }
 
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+  .desktop-nav {
+    float: right;
+
+    @include breakpoint(desktop) {
+      display: none;
     }
+  }
 
-    li {
-        display: inline;
-    }
+  .mobile-nav {
+    float: right;
+    display: none;
 
-    .open-menu {
-        color: $mine-shaft;
-        display: none;
-
-        @include breakpoint(desktop) {
-            display: block;
-        }        
-        
-    }
-
-    .close-menu {
-        color: $mine-shaft;
-        display: none;
+    @include breakpoint(desktop) {
+      display: block;
     }
 
     a {
-        @include font-size(16);
-        color: $black;
-        display: block;
-        float: left;
-        font-family: $secondary-font;
-        margin: 0;
-        padding: 10px 20px;
-        text-decoration: none;
-
-        &.active {
-            color: $danube;
-            text-decoration: underline;
-        }
-
-        &:hover {
-            color: $danube;
-        }
-
+      @include font-size(22);
     }
+  }
 
-    .desktop-nav {
-        float: right;
-    
-        @include breakpoint(desktop) {
-            display: none;
-        }
+  // Override Bootstrap dropdown styles
+  .dropdown-toggle {
+    &::after {
+      display: none; // kill the Bootstrap caret
     }
+  }
 
-    .mobile-nav {
-        float: right;
-        display: none;
-    
-        @include breakpoint(desktop) {
-            display: block;
-        }
+  .dropdown-menu {
+    background: $white;
+    border: 1px solid $cloud;
+    border-radius: 8px;
+    box-shadow: 0 12px 32px rgba(26, 26, 46, 0.1);
+    margin-top: 8px;
+    padding: 8px 0;
 
-        a {
-            @include font-size(24); 
-        }
+    .dropdown-item {
+      @include font-size(14);
+
+      color: $charcoal;
+      font-family: $secondary-font;
+      font-weight: 300;
+      padding: 8px 20px;
+      transition:
+        background 0.15s ease,
+        color 0.15s ease;
+
+      &:hover {
+        background: $fog;
+        color: $accent;
+      }
+
+      &.active,
+      &:active {
+        background: $accent-subtle;
+        color: $accent;
+      }
     }
-
-    .dropdown-item.active,
-    .dropdown-item:active {
-        background: none;
-    }
+  }
 }

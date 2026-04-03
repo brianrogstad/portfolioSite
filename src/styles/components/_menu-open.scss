@@ -2,63 +2,63 @@
 // =============================================================
 
 .menu-open .page-wrap {
-    left: 0%;
+  left: 0%;
 
-    @include breakpoint(desktop) {
-        left: -45%;
-    }
+  @include breakpoint(desktop) {
+    left: -45%;
+  }
 
-    @include breakpoint(tablet) {
-        left: -60%;
-    }
+  @include breakpoint(tablet) {
+    left: -60%;
+  }
 }
 
 .menu-open .main-nav {
-    right: 25%;
-    transition: right .3s ease;
+  right: 25%;
+  transition: right 0.3s ease;
 
-    @include breakpoint(desktop) {
-        right: 45%;
-    }
+  @include breakpoint(desktop) {
+    right: 45%;
+  }
 
-    @include breakpoint(tablet) {
-        right: 60%;
-    }
+  @include breakpoint(tablet) {
+    right: 60%;
+  }
 }
 
 .menu-open .open-menu {
-    display: none;
+  display: none;
 }
 
 .menu-open .close-menu {
-    display: inline;
+  display: inline;
 }
 
 .menu-open .project-nav {
-    display: block;
-    left: -20%;
-    padding: 0;
-    transition: left .3s ease;
+  display: block;
+  left: -20%;
+  padding: 0;
+  transition: left 0.3s ease;
 
-    @include breakpoint(desktop) {
-        left: 55%;
-        width: 63%;
-    }
+  @include breakpoint(desktop) {
+    left: 55%;
+    width: 63%;
+  }
 
-    @include breakpoint(tablet) {
-        left: 40%;
-        width: 63%;
-    }
+  @include breakpoint(tablet) {
+    left: 40%;
+    width: 63%;
+  }
 }
 
 .menu-open .header {
-    left: 0%;
+  left: 0%;
 
-    @include breakpoint(desktop) {
-        left: -45%;
-    }
+  @include breakpoint(desktop) {
+    left: -45%;
+  }
 
-    @include breakpoint(tablet) {
-        left: -60%;
-    }
+  @include breakpoint(tablet) {
+    left: -60%;
+  }
 }
