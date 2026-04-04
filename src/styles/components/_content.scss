@@ -15,12 +15,8 @@
   background: $snow;
   clear: both;
   min-height: 100vh;
-  padding: 80px 0;
+  padding: 0 0 100px;
   position: relative;
-
-  @include breakpoint(tablet) {
-    padding: 80px 0 56px;
-  }
 }
 
 // Hero intro section
@@ -190,14 +186,8 @@
   img {
     border: 1px solid $cloud;
     border-radius: 12px;
-    max-width: 100%;
-    width: auto;
+    width: 100%;
     height: auto;
-
-    @include breakpoint(desktop) {
-      max-width: 100%;
-      width: auto;
-    }
   }
 }
 

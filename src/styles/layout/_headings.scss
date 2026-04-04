@@ -31,14 +31,20 @@ h2 {
   font-weight: 400;
   letter-spacing: -0.01em;
   line-height: 1.2;
-  margin: 96px 5% 48px;
+  margin: 0;
   padding: 0;
   text-align: left;
   text-transform: none;
 
   @include breakpoint(tablet) {
     @include font-size(26);
+  }
+}
 
+.section-heading {
+  margin: 96px 5% 48px;
+
+  @include breakpoint(tablet) {
     margin: 56px 5% 32px;
   }
 }

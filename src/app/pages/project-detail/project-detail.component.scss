@@ -1,4 +1,6 @@
-.project-detail {
+@use 'styles/base/colors' as *;
+
+:host {
   .main-column {
     margin-bottom: 3rem;
 
@@ -6,8 +8,7 @@
       margin-bottom: 2rem;
 
       h2 {
-        font-size: 2rem;
-        margin: 0;
+        margin: 150px 5% 48px;
       }
     }
   }
@@ -38,7 +39,7 @@
   .subsection-container {
     margin-top: 3rem;
     padding: 2rem;
-    background: #f8f9fa;
+    background: $fog;
     border-radius: 8px;
   }
 
@@ -47,7 +48,7 @@
     margin-bottom: 1.5rem;
 
     &.inverse-title {
-      color: #333;
+      color: $charcoal;
     }
   }
 
@@ -64,23 +65,34 @@
     a {
       display: block;
       padding: 1rem;
-      background: white;
+      background: $white;
       border-radius: 4px;
       text-decoration: none;
-      color: #333;
+      color: $charcoal;
       font-weight: 500;
       transition: all 0.3s ease;
 
       &:hover {
-        background: #0066cc;
-        color: white;
+        background: $accent;
+        color: $white;
         transform: translateY(-2px);
       }
 
-      &.github:hover { background: #333; }
-      &.twitter:hover { background: #1da1f2; }
-      &.linkedin:hover { background: #0077b5; }
-      &.codepen:hover { background: #000; }
+      &.github:hover {
+        background: $charcoal;
+      }
+
+      &.twitter:hover {
+        background: $accent;
+      }
+
+      &.linkedin:hover {
+        background: $accent-hover;
+      }
+
+      &.codepen:hover {
+        background: $ink;
+      }
     }
   }
 
@@ -95,7 +107,7 @@
         gap: 2rem;
         align-items: center;
 
-        @media (max-width: 768px) {
+        @media (width <= 768px) {
           grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
           gap: 1rem;
         }
@@ -108,13 +120,15 @@
       a {
         display: block;
         padding: 1rem;
-        background: white;
+        background: $white;
         border-radius: 4px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
 
         &:hover {
           transform: translateY(-4px);
-          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 12px rgba($ink, 0.1);
         }
       }
 
@@ -132,21 +146,17 @@
   text-align: center;
   padding: 4rem 2rem;
 
-  h2 {
-    margin-bottom: 1rem;
-  }
-
   a {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.75rem 1.5rem;
-    background: #0066cc;
-    color: white;
+    background: $accent;
+    color: $white;
     text-decoration: none;
     border-radius: 4px;
 
     &:hover {
-      background: #0052a3;
+      background: $accent-hover;
     }
   }
 }

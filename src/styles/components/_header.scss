@@ -45,7 +45,7 @@
   display: block;
   float: left;
   line-height: 1em;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
   width: 72px;
 
   @include breakpoint(laptop) {
