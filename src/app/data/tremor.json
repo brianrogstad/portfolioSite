@@ -1,0 +1,120 @@
+{
+  "id": "tremor",
+  "title": "Tremor Technologies",
+  "category": "Enterprise Design",
+  "content": "<p class=\"text-container\">Design system, admin UI redesign, and authentication flow mapping at Tremor Technologies. Built a unified design system covering color, typography, elevation, and component documentation. Redesigned multiple admin interfaces into a modern settings experience with multi-step forms. Mapped authentication and navigation flows to support cross-functional alignment.</p>",
+  "media": [
+    {
+      "type": "image",
+      "src": "/images/tremor-system/Project.jpg",
+      "alt": "Tremor Design System Project Overview",
+      "width": 1000,
+      "height": 313,
+      "caption": "<strong>Design System Overview:</strong> Complete Tremor Design System in Figma — modals, chips, tables, elevations, typography, colors, buttons, form elements, navigation patterns, and other UI components organized for designer and developer collaboration."
+    },
+    {
+      "type": "image",
+      "src": "/images/tremor-system/colors.jpg",
+      "alt": "Color System",
+      "width": 1000,
+      "height": 1423,
+      "caption": "<strong>Color System:</strong> Structured palette of support colors and grayscale range. Each swatch includes names, hex codes, and RGB values, organized to accommodate brand identity and accessibility standards."
+    },
+    {
+      "type": "image",
+      "src": "/images/tremor-system/Type-Styles.jpg",
+      "alt": "Typography Styles",
+      "width": 1000,
+      "height": 1423,
+      "caption": "<strong>Typography Styles:</strong> Type style guide establishing consistent text styles for headings, subheadings, body text, quotes, and links with variations in size, weight, decoration, and casing."
+    },
+    {
+      "type": "image",
+      "src": "/images/tremor-system/Font-Families.jpg",
+      "alt": "Font Family Guide",
+      "width": 1000,
+      "height": 1423,
+      "caption": "<strong>Font Family Guide:</strong> Open Sans and Open Sans Condensed — weights, styles, and application examples for branding consistency."
+    },
+    {
+      "type": "image",
+      "src": "/images/tremor-system/Example-Content.jpg",
+      "alt": "Layout Variations",
+      "width": 1000,
+      "height": 1423,
+      "caption": "<strong>Typographic and Layout Variations:</strong> Full-width and multi-column layout explorations optimizing readability, alignment, and spacing across different use cases."
+    },
+    {
+      "type": "image",
+      "src": "/images/tremor-system/Elevation.jpg",
+      "alt": "Elevation Styles",
+      "width": 1000,
+      "height": 313,
+      "caption": "<strong>Elevation Styles:</strong> Six elevation levels ($elevation-1 through $elevation-6) standardized for consistent shadow and depth across interactive and static components."
+    },
+    {
+      "type": "image",
+      "src": "/images/utility/utility1.jpg",
+      "alt": "Add Account Form",
+      "width": 1000,
+      "height": 778,
+      "caption": "<strong>Add Account Form:</strong> Well-structured form with real-time validation — green for valid entries, red for errors — toggle switches, and a clean sidebar with logically grouped menu items."
+    },
+    {
+      "type": "image",
+      "src": "/images/utility/utility2.jpg",
+      "alt": "Account Settings",
+      "width": 1000,
+      "height": 903,
+      "caption": "<strong>Account Settings:</strong> Profile overview, authorization (password, 2FA, deactivation), platform preferences (language, time zone, delimiters), and notification toggles. Color-coded actions — green for save, red for deactivate."
+    },
+    {
+      "type": "image",
+      "src": "/images/utility/utility3.jpg",
+      "alt": "Get Started Screen",
+      "width": 1000,
+      "height": 510,
+      "caption": "<strong>Get Started Screen:</strong> Introduction to the Auction Setup Tool with instructional text and prominent start action. Sidebar navigation to related features."
+    },
+    {
+      "type": "image",
+      "src": "/images/utility/utility4.jpg",
+      "alt": "Add User Form",
+      "width": 1000,
+      "height": 687,
+      "caption": "<strong>Add User Form:</strong> User onboarding form with profile and contact sections, dropdown menus, toggle switches, and clear action buttons."
+    },
+    {
+      "type": "image",
+      "src": "/images/tremor-maps/map1.jpg",
+      "alt": "Authentication Flow",
+      "width": 1000,
+      "height": 612,
+      "caption": "<strong>Authentication Flow:</strong> Login, account creation, and credential recovery through guided pathways. Step-by-step validation with retry loops. Visual cues — green for success, red for failure — highlighting decision points and feedback loops."
+    },
+    {
+      "type": "image",
+      "src": "/images/tremor-maps/map2.jpg",
+      "alt": "Navigation Sitemap",
+      "width": 1000,
+      "height": 612,
+      "caption": "<strong>Navigation Structure:</strong> Hierarchical sitemap connecting core functionalities — login, dashboard, analytics, notifications, settings, admin tools. Sub-pages for listings, results, audit logs, and preferences."
+    },
+    {
+      "type": "image",
+      "src": "/images/proto/map3.jpg",
+      "alt": "Prototype Overview",
+      "width": 1000,
+      "height": 620,
+      "caption": "<strong>High-Level Prototype:</strong> Dark theme data-driven application organized into logical modules — Results, Preferences, Listing Detail, and Audit Log. Defined user flows and navigation paths detail the connections between screens, charts, data tables, and settings panels."
+    },
+    {
+      "type": "image",
+      "src": "/images/proto/map4.jpg",
+      "alt": "Administrative Tool Prototype",
+      "width": 1000,
+      "height": 620,
+      "caption": "<strong>Administrative Tool:</strong> Structured workflow for Settings, Placements, and Admin/Manage Accounts. Extensive user flows for adding, editing, and managing accounts with complex decision paths."
+    }
+  ]
+}

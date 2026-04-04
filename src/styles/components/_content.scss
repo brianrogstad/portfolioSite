@@ -151,6 +151,24 @@
     }
   }
 
+  .project-card__body {
+    h3 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.55);
+    }
+  }
+
+  .project-card__links a {
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover {
+      color: $white;
+    }
+  }
+
   .badge.badge-pill.badge-secondary,
   .tag {
     border-color: rgba(255, 255, 255, 0.12);

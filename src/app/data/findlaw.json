@@ -1,0 +1,80 @@
+{
+  "id": "findlaw",
+  "title": "FindLaw (Thomson Reuters)",
+  "category": "Enterprise Design",
+  "content": "<p class=\"text-container\">UX architecture and frontend development at FindLaw, a Thomson Reuters company. Led the redesign of FindLaw Workspace — a million-dollar enterprise product — from usability testing through wireframes, prototypes, and the Angular frontend build. Also designed and built an admin application for workflow management, learning Angular Material on the job.</p>",
+  "media": [
+    {
+      "type": "image",
+      "src": "/images/bpm/bpm-2.jpg",
+      "alt": "Dashboard wireframe",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>Dashboard Interface:</strong> Wireframe of the Workspace dashboard with four main widgets — Alerts, My Tasks, Team's Projects, and My Projects. Collapsible sidebar, customizable hamburger menu for widget management, and notes on interactivity and future summary views."
+    },
+    {
+      "type": "image",
+      "src": "/images/bpm/bpm-3.jpg",
+      "alt": "Summary Dashboard",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>Data-Driven Summary:</strong> Conceptual visualization converting data tables to charts — bar, line, pie, and horizontal bar — across the four dashboard widgets. Customizable layout with consistent sidebar navigation."
+    },
+    {
+      "type": "image",
+      "src": "/images/bpm/bpm-1.jpg",
+      "alt": "Tasks Page",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>Task Management:</strong> Task table with priority color-coding, due dates, account designations, and row-level actions. Filtering tools, quick filter bar, and sidebar navigation."
+    },
+    {
+      "type": "image",
+      "src": "/images/bpm/bpm-4.jpg",
+      "alt": "Search Page",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>Search:</strong> Customized search query builder with saved searches panel, dropdown filters, and input fields. Options for toggling filters and search visibility."
+    },
+    {
+      "type": "image",
+      "src": "/images/bpm/bpm-5.jpg",
+      "alt": "Empty State",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>Empty State Handling:</strong> Empty task table with controls for filtering, reassigning, and toggling task views. Clear organization for status management — completed, held, in progress."
+    },
+    {
+      "type": "image",
+      "src": "/images/admin/admin-2.jpg",
+      "alt": "Whiteboards and Sketches",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>Ideation and Sketching:</strong> Whiteboarding, sticky notes, and marker sketching. Workshopping requirements with clients and stakeholders to surface conflicting needs and solve pain points before committing to design."
+    },
+    {
+      "type": "image",
+      "src": "/images/admin/admin-4.jpg",
+      "alt": "Story Map",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>User Story Mapping:</strong> Structured planning — identifying epics, personas, and user stories as a team. Transition from free-form exploration to organized design activities."
+    },
+    {
+      "type": "image",
+      "src": "/images/admin/admin-3.jpg",
+      "alt": "Balsamiq Mockups",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>Low-Fidelity Prototyping:</strong> Balsamiq wireframes for rapid iteration and testing before investing in pixel-perfect mockups."
+    },
+    {
+      "type": "image",
+      "src": "/images/admin/admin-1.jpg",
+      "alt": "Final Application",
+      "width": 1000,
+      "height": 495,
+      "caption": "<strong>Shipped Application:</strong> Custom wizard tool for workflow step configuration — extensible, non-prescriptive data model allowing each step to be configured with unique sets of required information."
+    }
+  ]
+}

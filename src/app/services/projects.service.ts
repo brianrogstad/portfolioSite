@@ -6,6 +6,7 @@ import bpmData from '../data/bpm.json';
 import contactData from '../data/contact.json';
 import earthData from '../data/earth.json';
 import emailsData from '../data/emails.json';
+import findlawData from '../data/findlaw.json';
 import legalData from '../data/legal.json';
 import lifeData from '../data/life.json';
 import logoData from '../data/logo.json';
@@ -15,8 +16,10 @@ import protoData from '../data/proto.json';
 import referenceData from '../data/reference.json';
 import reflowData from '../data/reflow.json';
 import roughData from '../data/rough.json';
+import tremorData from '../data/tremor.json';
 import tremorMapsData from '../data/tremor-maps.json';
 import tremorSystemData from '../data/tremor-system.json';
+import usbData from '../data/usb.json';
 import usbMapsData from '../data/usb-maps.json';
 import usbSystemData from '../data/usb-system.json';
 import usbWireframesData from '../data/usb-wireframes.json';
@@ -35,6 +38,7 @@ export class ProjectsService {
     contact: contactData as ProjectDetail,
     earth: earthData as ProjectDetail,
     emails: emailsData as ProjectDetail,
+    findlaw: findlawData as ProjectDetail,
     legal: legalData as ProjectDetail,
     life: lifeData as ProjectDetail,
     logo: logoData as ProjectDetail,
@@ -44,8 +48,10 @@ export class ProjectsService {
     reference: referenceData as ProjectDetail,
     reflow: reflowData as ProjectDetail,
     rough: roughData as ProjectDetail,
+    tremor: tremorData as ProjectDetail,
     'tremor-maps': tremorMapsData as ProjectDetail,
     'tremor-system': tremorSystemData as ProjectDetail,
+    usb: usbData as ProjectDetail,
     'usb-maps': usbMapsData as ProjectDetail,
     'usb-system': usbSystemData as ProjectDetail,
     'usb-wireframes': usbWireframesData as ProjectDetail,

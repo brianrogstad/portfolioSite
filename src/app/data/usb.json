@@ -1,0 +1,145 @@
+{
+  "id": "usb",
+  "title": "US Bancorp",
+  "category": "Enterprise Design",
+  "content": "<p class=\"text-container\">Design system architecture, themed wireframes, user flow mapping, and prototyping across multiple products at US Bancorp. The work centered on building a scalable design system in Figma using collections for multi-brand theming, then applying it across 500+ frames and approximately 10 project files. Flow mapping and prototyping supported cross-functional alignment on error handling, onboarding, and feature implementation.</p>",
+  "media": [
+    {
+      "type": "image",
+      "src": "/images/usb-system/usbsystem1.jpg",
+      "alt": "Brand Style Map Interface",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Brand Style Map Configuration:</strong> A comprehensive design token management interface displaying multiple brand variants with detailed color mapping configurations. This includes heading colors, logo color maps, upper and lower header settings, and interactive states across different brand identities."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-system/usbsystem2.jpg",
+      "alt": "Base Colors Design System Documentation",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Color System Architecture:</strong> Complete color system documentation showcasing universal colors including neutral grayscale, support and status colors, and interactive button states. Brand-specific palettes for multiple brands with lightened, standard, and darkened variants."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-system/usbsystem3.jpg",
+      "alt": "Brand Assets and Logo Library",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Multi-Brand Logo Asset Management:</strong> Centralized brand asset library displaying various logo treatments and brand applications within the design system, organized for consistent implementation across different contexts and platforms."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-system/usbsystem4.jpg",
+      "alt": "Notification Component System",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Notification Component Variations:</strong> Component library showcasing four distinct notification types — Info, Success, Error, and Warning — each with consistent structure including status icon, message content, and close button. Standard and margin-spaced layout variants."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-system/usbsystem5.jpg",
+      "alt": "Extended Global Footer Component Variations",
+      "width": 1000,
+      "height": 510,
+      "caption": "<strong>Footer Component System:</strong> Four footer variations with consistent structural elements including disclosures, navigation links, security indicators, and copyright information. Variations demonstrate different spacing, layout, and conditional element inclusion."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-system/usbsystem6.jpg",
+      "alt": "Typography Headings System",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Typography Hierarchy:</strong> Complete typographic scale across multiple variations in a 3x2 grid. 72 variants accommodating different contexts, brand applications, and content needs."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-system/usbsystem7.jpg",
+      "alt": "Link Card Component Variations",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Link Card Component Library:</strong> Comprehensive grid of Link Card variations showing different content scenarios — varying text lengths, optional metric badges, date stamps, and superscript annotations."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-system/usbsystem8.jpg",
+      "alt": "Global Header Component System",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Global Header Architecture:</strong> Complete header system across multiple brand variations with full navigation structures, responsive mobile states, and component breakdowns of Upper and Lower Header sections."
+    },
+    {
+      "type": "video",
+      "src": "/images/usb-wireframes/usbwires.mp4",
+      "alt": "Brand Switching Demonstration",
+      "caption": "<strong>Dynamic Brand Theming in Action:</strong> By selecting different brands from Figma's collections dropdown, wireframes instantly transform between Acme, Fidelity, and Elan brand themes — updating colors, logos, and brand-specific styling while maintaining consistent structure.",
+      "autoplay": false,
+      "loop": true,
+      "muted": true
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires2.jpg",
+      "alt": "Wireframe Detail View",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Themed Wireframe Detail:</strong> Close-up view of a branded wireframe showing the component structure, spacing, typography hierarchy, and how design system tokens are applied throughout the interface."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires3.jpg",
+      "alt": "Design System Scale and Implementation",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Enterprise-Scale Application:</strong> Comprehensive view of the Figma collection showing 4 major projects that leverage the design system — 500+ frames across approximately 10 project files."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires4.jpg",
+      "alt": "Header Design Exploration Sketches",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Conceptual Design Exploration:</strong> Hand-drawn sketches exploring header and navigation design concepts before moving into digital wireframes."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-wireframes/usbwires5.jpg",
+      "alt": "Refined Header Design and Production Impact",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>From Concept to Production:</strong> The refined header and navigation design built from exploration sketches, alongside a screenshot from the <a href='https://www.usbank.com/online-mobile-banking.html' target='_blank' rel='noopener noreferrer'>US Bank online mobile banking page</a> showing how these concepts influenced the final production implementation."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-maps/map4.jpg",
+      "alt": "Error Handling Flow",
+      "width": 1000,
+      "height": 678,
+      "caption": "<strong>Error Handling Flow:</strong> Systematic approach to user-facing error responses for both client-side (4xx) and server-side (5xx) errors. Color-coded decisions — red for errors, green for successful outcomes, yellow for warnings — with UI examples providing tailored error messages and corrective actions."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-maps/map3.jpg",
+      "alt": "Design System Planning Flow",
+      "width": 1000,
+      "height": 458,
+      "caption": "<strong>Design System Planning Flow:</strong> Step-by-step diagrams guiding system integration and component creation. Calendar and grid components demonstrate design flexibility, while style mapping guarantees uniformity across complex flows."
+    },
+    {
+      "type": "image",
+      "src": "/images/usb-maps/map5.jpg",
+      "alt": "Comprehensive Workflow Mapping",
+      "width": 1000,
+      "height": 617,
+      "caption": "<strong>Workflow Mapping:</strong> User journey mapping for the 'New to Digital' setup process alongside onboarding flows. Includes intermediate actions like Autopay and extended features like adding authorized users, with dedicated sections for error and failure management."
+    },
+    {
+      "type": "image",
+      "src": "/images/proto/map5.jpg",
+      "alt": "User Flows for Feature Testing",
+      "width": 1000,
+      "height": 620,
+      "caption": "<strong>Detailed User Flows:</strong> Scenario-based design documenting default flows, input error handling, maximum user capacity, and deletion workflows. Annotations and navigation paths guide developers and stakeholders."
+    }
+  ]
+}
