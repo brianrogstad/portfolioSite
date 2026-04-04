@@ -23,8 +23,7 @@
 // =============================================================
 
 .hero-intro {
-  padding: 140px 5% 80px;
-  max-width: 900px;
+  padding: 170px 5% 80px;
 
   @include breakpoint(tablet) {
     padding: 120px 5% 48px;
@@ -372,12 +371,7 @@
       max-width: 100%;
       width: 50%;
       height: auto;
-      opacity: 0.6;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 1;
-      }
+      opacity: 1;
 
       @include breakpoint(tablet) {
         width: 80%;

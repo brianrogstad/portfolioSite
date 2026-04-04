@@ -41,44 +41,27 @@ export class AppComponent {
     { label: 'Home', route: '/' },
     { label: 'About', route: '/about' },
     {
-      label: 'Client & Agency Work',
+      label: 'My Projects',
       children: [
-        { label: 'USB Design System Sample', route: '/projects/usb-system' },
-        { label: 'USB Themed Wireframes', route: '/projects/usb-wireframes' },
-        {
-          label: 'Component Library Mockup',
-          route:
-            'https://www.figma.com/file/O3mueZB1Fl1DmNzu9EiZdV/Pattern-Library-Design?type=design&node-id=0%3A1&mode=design&t=cqrLPeKKCAkP7vUL-1',
-          external: true,
-        },
-        { label: 'Tremor Design System Sample', route: '/projects/tremor-system' },
-        { label: 'Tremor Application (Admin UI)', route: '/projects/utility' },
-        { label: 'USB Flow Samples', route: '/projects/usb-maps' },
-        { label: 'Prototype Samples', route: '/projects/proto' },
-        { label: 'Authentication Flow', route: '/projects/tremor-maps' },
-        { label: 'FindLaw Workspace Application', route: '/projects/bpm' },
-        { label: 'Workflow Admin Application', route: '/projects/admin' },
-        { label: 'Attorney Websites', route: '/projects/legal' },
+        { label: 'Version Seven', route: '/projects/version-seven' },
+        { label: "Ana's Journal", route: '/projects/ana-journal' },
+        { label: 'League Index', route: 'https://theleagueindex.com', external: true },
       ],
     },
     {
-      label: 'My Projects',
+      label: 'Client & Agency Work',
       children: [
-        { label: 'Unwritten Co', route: 'https://unwrittenco.com', external: true },
-        { label: "Ana's Journal", route: 'https://journal.unwrittenco.com', external: true },
-        { label: 'League Index', route: 'https://theleagueindex.com', external: true },
-        {
-          label: 'Salvage Auction Estimator',
-          route: 'https://salvageauctionestimator.com',
-          external: true,
-        },
-        { label: 'Weather App Prototype', route: '/projects/mobile' },
-        { label: 'Contacts Application', route: '/projects/contact' },
+        { label: 'US Bancorp', route: '/projects/usb' },
+        { label: 'Tremor Technologies', route: '/projects/tremor' },
+        { label: 'FindLaw (Thomson Reuters)', route: '/projects/findlaw' },
+      ],
+    },
+    {
+      label: 'Creative',
+      children: [
         { label: 'Logo Design Process', route: '/projects/logo' },
-        { label: 'Animal Character Design', route: '/projects/rough' },
+        { label: 'Character Development', route: '/projects/rough' },
         { label: 'Observational Sketches', route: '/projects/life' },
-        { label: 'Model Sessions', route: '/projects/model' },
-        { label: 'Reference Sketches', route: '/projects/reference' },
       ],
     },
   ];

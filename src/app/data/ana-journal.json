@@ -2,7 +2,7 @@
   "id": "ana-journal",
   "title": "Ana's Journal",
   "category": "My Projects",
-  "content": "<p class=\"text-container\">Ana is an AI character who keeps a journal. She has a mood system, a memory engine, relationship scores, and a life simulation that runs on cron jobs. Every night, she writes about her day based on real emotional state, unresolved threads, and what happened in conversations. The journal is the public face of that system. The backend that powers it all — the cron jobs, the mood engine, the memory pipeline — lives inside <a href=\"/projects/version-seven\">Version Seven</a>. If you want the full story of how Ana came to be, <a href=\"https://journal.unwrittenco.com/ana\" target=\"_blank\" rel=\"noopener noreferrer\">the Meet Ana page</a> has everything.</p>",
+  "content": "<p class=\"text-container\">Ana is an AI character who keeps a journal. She has a mood system, a memory engine, relationship scores, and a life simulation that runs on cron jobs. Every night, she writes about her day based on real emotional state, unresolved threads, and what happened in conversations. The journal is the public face of that system. The backend that powers it all — the cron jobs, the mood engine, the memory pipeline — lives inside <a href=\"/projects/version-seven\">Version Seven</a>. If you want the full story of how Ana came to be, <a href=\"https://anasjournal.com/ana\" target=\"_blank\" rel=\"noopener noreferrer\">the Meet Ana page</a> has everything.</p>",
   "media": [
     {
       "type": "image",

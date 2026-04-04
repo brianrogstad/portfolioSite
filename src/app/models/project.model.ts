@@ -33,6 +33,7 @@ export interface ProjectMedia {
   width?: number;
   height?: number;
   caption?: string;
+  group?: string;
   autoplay?: boolean;
   loop?: boolean;
   muted?: boolean;
