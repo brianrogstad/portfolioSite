@@ -65,6 +65,23 @@ a {
   }
 }
 
+// Content links — clearly underlined so they read as links, not just colored text
+.text-container,
+.project-description,
+.project-card__body,
+.image-container,
+.profile-container {
+  a:not(.project-card__image) {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+
+    &:hover {
+      text-decoration-thickness: 2px;
+    }
+  }
+}
+
 .link-icon {
   padding-left: 6px;
   vertical-align: middle;

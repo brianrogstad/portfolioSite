@@ -2,20 +2,12 @@
 // =============================================================
 
 .main-nav {
-  margin-top: 35px;
+  margin-left: auto;
   transition:
     top 0.3s ease,
     right 0.3s ease;
   width: auto;
   z-index: 9999;
-
-  @include breakpoint(desktop) {
-    margin-top: 15px;
-  }
-
-  @include breakpoint(laptop) {
-    margin-top: 5px;
-  }
 
   ul {
     list-style: none;

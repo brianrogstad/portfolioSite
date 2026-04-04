@@ -2,7 +2,7 @@
   "id": "ana-journal",
   "title": "Ana's Journal",
   "category": "My Projects",
-  "content": "<p class=\"text-container\">Ana is an AI character who keeps a journal. She has a mood system, a memory engine, relationship scores, and a life simulation that runs on cron jobs. Every night, she writes about her day based on real emotional state, unresolved threads, and what happened in conversations. The journal is the public face of that system. The backend that powers it all — the cron jobs, the mood engine, the memory pipeline — lives inside <a href=\"/projects/version-seven\">Version Seven</a>. If you want the full story of how Ana came to be, <a href=\"https://anasjournal.com/ana\" target=\"_blank\" rel=\"noopener noreferrer\">the Meet Ana page</a> has everything.</p>",
+  "content": "<p class=\"text-container\">Ana is an AI character who keeps a journal. She has a mood system, a memory engine, relationship scores, and a life simulation that runs on cron jobs. Every night, she writes about her day based on real emotional state, unresolved threads, and what happened in conversations. The journal is the public face of that system. The backend that powers it all (the cron jobs, the mood engine, the memory pipeline) lives inside <a href=\"/projects/version-seven\">Version Seven</a>. If you want the full story of how Ana came to be, <a href=\"https://anasjournal.com/ana\" target=\"_blank\" rel=\"noopener noreferrer\">the Meet Ana page</a> has everything.</p>",
   "media": [
     {
       "type": "image",
@@ -14,19 +14,19 @@
       "type": "image",
       "src": "/images/ana-journal/ana-journal-2.png",
       "alt": "Character page for Elias Snow showing portrait and biography",
-      "caption": "<strong>Character Pages:</strong> Ana isn't alone. There are recurring people in her life, each with their own page, portrait, and relationship to her. The bios are written in her voice. These aren't static profiles — they evolve as the journal entries reference them and relationship scores shift."
+      "caption": "<strong>Character Pages:</strong> Ana isn't alone. There are recurring people in her life, each with their own page, portrait, and relationship to her. The bios are written in her voice. These aren't static profiles. They evolve as the journal entries reference them and relationship scores shift."
     },
     {
       "type": "image",
       "src": "/images/ana-journal/ana-journal-3.png",
       "alt": "Journal entry detail with inline image, drop cap typography, and audio player",
-      "caption": "<strong>Entry Detail:</strong> Full entries with drop caps, inline images, and an audio narration player. The writing style shifts with her mood — the same character at different emotional coordinates produces noticeably different prose. The images are generated to match the scene described."
+      "caption": "<strong>Entry Detail:</strong> Full entries with drop caps, inline images, and an audio narration player. The writing style shifts with her mood. The same character at different emotional coordinates produces noticeably different prose. The images are generated to match the scene described."
     },
     {
       "type": "image",
       "src": "/images/ana-journal/ana-journal-4.png",
       "alt": "Journal entry about Ruby at a coffee shop with portrait and audio narration",
-      "caption": "<strong>Voice and Texture:</strong> Entries read like fiction because that's what they are — autofiction driven by real data. The audio is AI-narrated. The images, the mood, the prose, and the character interactions are all downstream of the same emotion engine."
+      "caption": "<strong>Voice and Texture:</strong> Entries read like fiction because that's what they are: autofiction driven by real data. The audio is AI-narrated. The images, the mood, the prose, and the character interactions are all downstream of the same emotion engine."
     }
   ]
 }

@@ -6,15 +6,6 @@
   "media": [
     {
       "type": "image",
-      "src": "/images/tremor-system/Project.jpg",
-      "alt": "Tremor Design System Project Overview",
-      "width": 1000,
-      "height": 313,
-      "group": "Design System",
-      "caption": "<strong>Design System Overview:</strong> Complete Tremor Design System in Figma — modals, chips, tables, elevations, typography, colors, buttons, form elements, navigation patterns, and other UI components organized for designer and developer collaboration."
-    },
-    {
-      "type": "image",
       "src": "/images/tremor-system/colors.jpg",
       "alt": "Color System",
       "width": 1000,
@@ -38,7 +29,7 @@
       "width": 1000,
       "height": 1423,
       "group": "Design System",
-      "caption": "<strong>Font Family Guide:</strong> Open Sans and Open Sans Condensed — weights, styles, and application examples for branding consistency."
+      "caption": "<strong>Font Family Guide:</strong> Open Sans and Open Sans Condensed. Weights, styles, and application examples for branding consistency."
     },
     {
       "type": "image",
@@ -60,12 +51,21 @@
     },
     {
       "type": "image",
+      "src": "/images/tremor-system/Project.jpg",
+      "alt": "Tremor Design System Project Overview",
+      "width": 1000,
+      "height": 313,
+      "group": "Design System",
+      "caption": "<strong>Design System Overview:</strong> Complete Tremor Design System in Figma: modals, chips, tables, elevations, typography, colors, buttons, form elements, navigation patterns, and other UI components organized for designer and developer collaboration."
+    },
+    {
+      "type": "image",
       "src": "/images/utility/utility1.jpg",
       "alt": "Add Account Form",
       "width": 1000,
       "height": 778,
       "group": "Admin Redesign",
-      "caption": "<strong>Add Account Form:</strong> Well-structured form with real-time validation — green for valid entries, red for errors — toggle switches, and a clean sidebar with logically grouped menu items."
+      "caption": "<strong>Add Account Form:</strong> Well-structured form with real-time validation (green for valid entries, red for errors), toggle switches, and a clean sidebar with logically grouped menu items."
     },
     {
       "type": "image",
@@ -74,7 +74,7 @@
       "width": 1000,
       "height": 903,
       "group": "Admin Redesign",
-      "caption": "<strong>Account Settings:</strong> Profile overview, authorization (password, 2FA, deactivation), platform preferences (language, time zone, delimiters), and notification toggles. Color-coded actions — green for save, red for deactivate."
+      "caption": "<strong>Account Settings:</strong> Profile overview, authorization (password, 2FA, deactivation), platform preferences (language, time zone, delimiters), and notification toggles. Color-coded actions: green for save, red for deactivate."
     },
     {
       "type": "image",
@@ -101,7 +101,7 @@
       "width": 1000,
       "height": 612,
       "group": "Flow Mapping",
-      "caption": "<strong>Authentication Flow:</strong> Login, account creation, and credential recovery through guided pathways. Step-by-step validation with retry loops. Visual cues — green for success, red for failure — highlighting decision points and feedback loops."
+      "caption": "<strong>Authentication Flow:</strong> Login, account creation, and credential recovery through guided pathways. Step-by-step validation with retry loops. Visual cues (green for success, red for failure) highlighting decision points and feedback loops."
     },
     {
       "type": "image",
@@ -110,7 +110,7 @@
       "width": 1000,
       "height": 612,
       "group": "Flow Mapping",
-      "caption": "<strong>Navigation Structure:</strong> Hierarchical sitemap connecting core functionalities — login, dashboard, analytics, notifications, settings, admin tools. Sub-pages for listings, results, audit logs, and preferences."
+      "caption": "<strong>Navigation Structure:</strong> Hierarchical sitemap connecting core functionalities: login, dashboard, analytics, notifications, settings, admin tools. Sub-pages for listings, results, audit logs, and preferences."
     },
     {
       "type": "image",
@@ -119,7 +119,7 @@
       "width": 1000,
       "height": 620,
       "group": "Prototyping",
-      "caption": "<strong>High-Level Prototype:</strong> Dark theme data-driven application organized into logical modules — Results, Preferences, Listing Detail, and Audit Log. Defined user flows and navigation paths detail the connections between screens, charts, data tables, and settings panels."
+      "caption": "<strong>High-Level Prototype:</strong> Dark theme data-driven application organized into logical modules: Results, Preferences, Listing Detail, and Audit Log. Defined user flows and navigation paths detail the connections between screens, charts, data tables, and settings panels."
     },
     {
       "type": "image",

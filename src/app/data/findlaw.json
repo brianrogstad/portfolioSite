@@ -2,8 +2,44 @@
   "id": "findlaw",
   "title": "FindLaw (Thomson Reuters)",
   "category": "Enterprise Design",
-  "content": "<p class=\"text-container\">UX architecture and frontend development at FindLaw, a Thomson Reuters company. Led the redesign of FindLaw Workspace — a million-dollar enterprise product — from usability testing through wireframes, prototypes, and the Angular frontend build. Also designed and built an admin application for workflow management, learning Angular Material on the job.</p>",
+  "content": "<p class=\"text-container\">UX architecture and frontend development at FindLaw, a Thomson Reuters company. Led the redesign of FindLaw Workspace, a million-dollar enterprise product, from usability testing through wireframes, prototypes, and the Angular frontend build. Also designed and built an admin application for workflow management, learning Angular Material on the job.</p>",
   "media": [
+    {
+      "type": "image",
+      "src": "/images/admin/admin-2.jpg",
+      "alt": "Whiteboards and Sketches",
+      "width": 1000,
+      "height": 495,
+      "group": "Admin Application",
+      "caption": "<strong>Ideation and Sketching:</strong> Whiteboarding, sticky notes, and marker sketching. Workshopping requirements with clients and stakeholders to surface conflicting needs and solve pain points before committing to design."
+    },
+    {
+      "type": "image",
+      "src": "/images/admin/admin-4.jpg",
+      "alt": "Story Map",
+      "width": 1000,
+      "height": 495,
+      "group": "Admin Application",
+      "caption": "<strong>User Story Mapping:</strong> Structured planning: identifying epics, personas, and user stories as a team. Transition from free-form exploration to organized design activities."
+    },
+    {
+      "type": "image",
+      "src": "/images/admin/admin-3.jpg",
+      "alt": "Balsamiq Mockups",
+      "width": 1000,
+      "height": 495,
+      "group": "Admin Application",
+      "caption": "<strong>Low-Fidelity Prototyping:</strong> Balsamiq wireframes for rapid iteration and testing before investing in pixel-perfect mockups."
+    },
+    {
+      "type": "image",
+      "src": "/images/admin/admin-1.jpg",
+      "alt": "Final Application",
+      "width": 1000,
+      "height": 495,
+      "group": "Admin Application",
+      "caption": "<strong>Shipped Application:</strong> Custom wizard tool for workflow step configuration. Extensible, non-prescriptive data model allowing each step to be configured with unique sets of required information."
+    },
     {
       "type": "image",
       "src": "/images/bpm/bpm-2.jpg",
@@ -11,7 +47,7 @@
       "width": 1000,
       "height": 495,
       "group": "Workspace Redesign",
-      "caption": "<strong>Dashboard Interface:</strong> Wireframe of the Workspace dashboard with four main widgets — Alerts, My Tasks, Team's Projects, and My Projects. Collapsible sidebar, customizable hamburger menu for widget management, and notes on interactivity and future summary views."
+      "caption": "<strong>Dashboard Interface:</strong> Wireframe of the Workspace dashboard with four main widgets: Alerts, My Tasks, Team's Projects, and My Projects. Collapsible sidebar, customizable hamburger menu for widget management, and notes on interactivity and future summary views."
     },
     {
       "type": "image",
@@ -20,7 +56,7 @@
       "width": 1000,
       "height": 495,
       "group": "Workspace Redesign",
-      "caption": "<strong>Data-Driven Summary:</strong> Conceptual visualization converting data tables to charts — bar, line, pie, and horizontal bar — across the four dashboard widgets. Customizable layout with consistent sidebar navigation."
+      "caption": "<strong>Data-Driven Summary:</strong> Conceptual visualization converting data tables to charts (bar, line, pie, and horizontal bar) across the four dashboard widgets. Customizable layout with consistent sidebar navigation."
     },
     {
       "type": "image",
@@ -47,43 +83,7 @@
       "width": 1000,
       "height": 495,
       "group": "Workspace Redesign",
-      "caption": "<strong>Empty State Handling:</strong> Empty task table with controls for filtering, reassigning, and toggling task views. Clear organization for status management — completed, held, in progress."
-    },
-    {
-      "type": "image",
-      "src": "/images/admin/admin-2.jpg",
-      "alt": "Whiteboards and Sketches",
-      "width": 1000,
-      "height": 495,
-      "group": "Admin Application",
-      "caption": "<strong>Ideation and Sketching:</strong> Whiteboarding, sticky notes, and marker sketching. Workshopping requirements with clients and stakeholders to surface conflicting needs and solve pain points before committing to design."
-    },
-    {
-      "type": "image",
-      "src": "/images/admin/admin-4.jpg",
-      "alt": "Story Map",
-      "width": 1000,
-      "height": 495,
-      "group": "Admin Application",
-      "caption": "<strong>User Story Mapping:</strong> Structured planning — identifying epics, personas, and user stories as a team. Transition from free-form exploration to organized design activities."
-    },
-    {
-      "type": "image",
-      "src": "/images/admin/admin-3.jpg",
-      "alt": "Balsamiq Mockups",
-      "width": 1000,
-      "height": 495,
-      "group": "Admin Application",
-      "caption": "<strong>Low-Fidelity Prototyping:</strong> Balsamiq wireframes for rapid iteration and testing before investing in pixel-perfect mockups."
-    },
-    {
-      "type": "image",
-      "src": "/images/admin/admin-1.jpg",
-      "alt": "Final Application",
-      "width": 1000,
-      "height": 495,
-      "group": "Admin Application",
-      "caption": "<strong>Shipped Application:</strong> Custom wizard tool for workflow step configuration — extensible, non-prescriptive data model allowing each step to be configured with unique sets of required information."
+      "caption": "<strong>Empty State Handling:</strong> Empty task table with controls for filtering, reassigning, and toggling task views. Clear organization for status management: completed, held, in progress."
     }
   ]
 }

@@ -38,7 +38,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Notification Component Variations:</strong> Component library showcasing four distinct notification types — Info, Success, Error, and Warning — each with consistent structure including status icon, message content, and close button. Standard and margin-spaced layout variants."
+      "caption": "<strong>Notification Component Variations:</strong> Component library showcasing four distinct notification types (Info, Success, Error, and Warning), each with consistent structure including status icon, message content, and close button. Standard and margin-spaced layout variants."
     },
     {
       "type": "image",
@@ -65,7 +65,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Link Card Component Library:</strong> Comprehensive grid of Link Card variations showing different content scenarios — varying text lengths, optional metric badges, date stamps, and superscript annotations."
+      "caption": "<strong>Link Card Component Library:</strong> Comprehensive grid of Link Card variations showing different content scenarios: varying text lengths, optional metric badges, date stamps, and superscript annotations."
     },
     {
       "type": "image",
@@ -81,7 +81,7 @@
       "src": "/images/usb-wireframes/usbwires.mp4",
       "alt": "Brand Switching Demonstration",
       "group": "Themed Wireframes",
-      "caption": "<strong>Dynamic Brand Theming in Action:</strong> By selecting different brands from Figma's collections dropdown, wireframes instantly transform between Acme, Fidelity, and Elan brand themes — updating colors, logos, and brand-specific styling while maintaining consistent structure.",
+      "caption": "<strong>Dynamic Brand Theming in Action:</strong> By selecting different brands from Figma's collections dropdown, wireframes instantly transform between Acme, Fidelity, and Elan brand themes, updating colors, logos, and brand-specific styling while maintaining consistent structure.",
       "autoplay": false,
       "loop": true,
       "muted": true
@@ -102,7 +102,7 @@
       "width": 1000,
       "height": 678,
       "group": "Themed Wireframes",
-      "caption": "<strong>Enterprise-Scale Application:</strong> Comprehensive view of the Figma collection showing 4 major projects that leverage the design system — 500+ frames across approximately 10 project files."
+      "caption": "<strong>Enterprise-Scale Application:</strong> Comprehensive view of the Figma collection showing 4 major projects that leverage the design system: 500+ frames across approximately 10 project files."
     },
     {
       "type": "image",
@@ -129,7 +129,7 @@
       "width": 1000,
       "height": 678,
       "group": "Flow Mapping",
-      "caption": "<strong>Error Handling Flow:</strong> Systematic approach to user-facing error responses for both client-side (4xx) and server-side (5xx) errors. Color-coded decisions — red for errors, green for successful outcomes, yellow for warnings — with UI examples providing tailored error messages and corrective actions."
+      "caption": "<strong>Error Handling Flow:</strong> Systematic approach to user-facing error responses for both client-side (4xx) and server-side (5xx) errors. Color-coded decisions (red for errors, green for successful outcomes, yellow for warnings) with UI examples providing tailored error messages and corrective actions."
     },
     {
       "type": "image",

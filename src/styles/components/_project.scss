@@ -236,13 +236,13 @@
   }
 }
 
-// Tags — quiet, monospace-influenced
+// Tags
 .tag {
   background: transparent;
-  border: 1px solid $cloud;
+  border: 1px solid $mist;
   border-radius: 4px;
   color: $stone;
-  font-family: $mono;
+  font-family: $montserrat;
   font-size: 10px;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -251,13 +251,13 @@
   display: inline-block;
 }
 
-// Legacy badge override — same style as .tag
+// Legacy badge override
 .description .badge.badge-pill.badge-secondary {
   background: transparent;
-  border: 1px solid $cloud;
+  border: 1px solid $mist;
   border-radius: 4px;
   color: $stone;
-  font-family: $mono;
+  font-family: $montserrat;
   font-size: 10px;
   font-weight: 400;
   letter-spacing: 0.02em;
