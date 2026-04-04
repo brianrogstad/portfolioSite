@@ -70,9 +70,9 @@
       }
     ],
     "selector-class-pattern": [
-      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$|^(mdc|x)-.*$",
+      "^([a-z][a-z0-9]*)(-[a-z0-9]+)*((__[a-z0-9]+(-[a-z0-9]+)*)?(--.+)?)?$|^(mdc|x)-.*$",
       {
-        "message": "Expected class selector to be kebab-case or valid library pattern (mdc-, x-)"
+        "message": "Expected class selector to be kebab-case, BEM, or valid library pattern (mdc-, x-)"
       }
     ],
     "shorthand-property-no-redundant-values": true,

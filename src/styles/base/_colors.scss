@@ -3,22 +3,27 @@
 
 @use 'sass:map';
 
-// Primary palette
-$ink: #1a1a2e;
-$charcoal: #2d2d3a;
-$slate: #64647a;
-$stone: #8e8e9e;
-$mist: #c4c4d0;
-$cloud: #e8e8ed;
-$fog: #f4f4f7;
-$snow: #fafafe;
+// Primary palette — warmed
+$ink: #141419;
+$charcoal: #2a2a32;
+$slate: #5c5c6e;
+$stone: #8a8a9a;
+$mist: #bfbfc8;
+$cloud: #e2e2e8;
+$fog: #f0f0f3;
+$snow: #f8f7f5;
 $white: #fff;
 $black: #000;
 
-// Accent
-$accent: #4a6cf7;
-$accent-hover: #3a5ce7;
-$accent-subtle: rgba(74, 108, 247, 0.08);
+// Accent — shifted from pure blue to a warm slate-blue
+$accent: #3d5a80;
+$accent-hover: #2c4a6e;
+$accent-subtle: rgba(61, 90, 128, 0.08);
+
+// Warm accent for highlights
+$warm: #c4703e;
+$warm-hover: #b36030;
+$warm-subtle: rgba(196, 112, 62, 0.08);
 
 // Legacy aliases (keep for components that still reference them)
 $danube: $accent;
@@ -38,9 +43,9 @@ $themes: (
     secondary: $stone,
   ),
   dark: (
-    bg: #0f0f1a,
+    bg: #0d0d12,
     text: #e8e8ed,
-    primary: #6b8cff,
+    primary: #6b8cad,
     secondary: #9e9eb0,
   ),
 );

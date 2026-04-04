@@ -3,7 +3,7 @@
 
 .grid-container {
   display: grid;
-  grid-gap: 64px 4%;
+  grid-gap: 56px 3%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-left: 5%;
   margin-right: 5%;
@@ -14,8 +14,104 @@
   }
 
   @include breakpoint(tablet) {
-    grid-gap: 32px 0;
+    grid-gap: 36px 0;
     grid-template-columns: 1fr;
+  }
+}
+
+// Project card grid — 3-up
+.grid-container--featured {
+  display: grid;
+  grid-gap: 48px 3%;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  @include breakpoint(largescreen) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(tablet) {
+    grid-gap: 36px 0;
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card__image {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition:
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.03);
+      opacity: 0.92;
+    }
+
+    &--static {
+      cursor: default;
+
+      &:hover img {
+        transform: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  .project-card__body {
+    h3 {
+      @include font-size(22);
+
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include font-size(15);
+
+      color: $slate;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+  }
+
+  .project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .project-card__links {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+
+    a {
+      @include font-size(13);
+
+      font-family: $grotesk;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-1px);
+      }
+    }
   }
 }
 
@@ -48,7 +144,7 @@
   @include font-size(16);
 
   border: 0 none;
-  border-radius: 6px;
+  border-radius: 1.25rem;
   box-shadow: none;
   color: $white;
   display: block;
@@ -59,21 +155,27 @@
   padding: 0;
   text-decoration: none;
   transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.4s ease;
 
   img {
-    border-radius: 6px;
-    transition: opacity 0.25s ease;
+    border-radius: 1.25rem;
+    transition:
+      transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      opacity 0.3s ease;
 
     &:hover {
-      opacity: 0.88;
+      opacity: 0.92;
     }
   }
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(26, 26, 46, 0.08);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(20, 20, 25, 0.08);
+
+    img {
+      transform: scale(1.02);
+    }
   }
 
   &.project-link-stub {
@@ -83,14 +185,14 @@
     aspect-ratio: 538 / 368;
     background: $fog;
     border: 1px solid $cloud;
-    border-radius: 6px;
+    border-radius: 1.25rem;
 
     .stub-label {
-      font-family: $secondary-font;
-      font-weight: 300;
-      @include font-size(16);
+      font-family: $grotesk;
+      font-weight: 400;
+      @include font-size(14);
 
-      color: $slate;
+      color: $stone;
       letter-spacing: 0.04em;
     }
   }
@@ -114,27 +216,50 @@
 
     color: $slate;
     line-height: 1.7;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
   }
 
   a {
-    @include font-size(14);
+    @include font-size(13);
 
+    font-family: $grotesk;
     font-weight: 500;
     letter-spacing: 0.01em;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+    display: inline-block;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
   }
 }
 
-// Badges — override Bootstrap pills into quiet tags
-// Triple-class specificity to beat Bootstrap without !important
+// Tags — quiet, monospace-influenced
+.tag {
+  background: transparent;
+  border: 1px solid $cloud;
+  border-radius: 4px;
+  color: $stone;
+  font-family: $mono;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 0 4px 4px 0;
+  padding: 3px 8px;
+  display: inline-block;
+}
+
+// Legacy badge override — same style as .tag
 .description .badge.badge-pill.badge-secondary {
   background: transparent;
   border: 1px solid $cloud;
-  border-radius: 3px;
+  border-radius: 4px;
   color: $stone;
-  font-family: $primary-font;
-  font-size: 11px;
-  font-weight: 500;
+  font-family: $mono;
+  font-size: 10px;
+  font-weight: 400;
   letter-spacing: 0.02em;
   margin: 0 4px 4px 0;
   padding: 3px 8px;

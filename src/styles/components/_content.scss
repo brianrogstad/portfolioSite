@@ -15,11 +15,146 @@
   background: $snow;
   clear: both;
   min-height: 100vh;
-  padding: 100px 0 60px;
+  padding: 80px 0;
   position: relative;
 
   @include breakpoint(tablet) {
-    padding: 100px 0 40px;
+    padding: 80px 0 56px;
+  }
+}
+
+// Hero intro section
+// =============================================================
+
+.hero-intro {
+  padding: 140px 5% 80px;
+  max-width: 900px;
+
+  @include breakpoint(tablet) {
+    padding: 120px 5% 48px;
+  }
+}
+
+.hero-intro__label {
+  @include font-size(11);
+
+  font-family: $grotesk;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: $stone;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.hero-intro__name {
+  @include font-size(56);
+
+  font-family: $editorial;
+  font-weight: 400;
+  font-style: italic;
+  color: $ink;
+  line-height: 1.08;
+  margin: 0 0 24px;
+  letter-spacing: -0.02em;
+
+  @include breakpoint(laptop) {
+    @include font-size(42);
+  }
+
+  @include breakpoint(tablet) {
+    @include font-size(34);
+  }
+}
+
+.hero-intro__description {
+  @include font-size(18);
+
+  font-family: $grotesk;
+  font-weight: 300;
+  color: $slate;
+  line-height: 1.6;
+  max-width: 640px;
+  margin: 0;
+
+  @include breakpoint(tablet) {
+    @include font-size(16);
+  }
+}
+
+.hero-intro__meta {
+  @include font-size(12);
+
+  font-family: $mono;
+  font-weight: 400;
+  color: $mist;
+  margin-top: 32px;
+  letter-spacing: 0.02em;
+
+  a {
+    color: $stone;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  span {
+    margin: 0 8px;
+    opacity: 0.4;
+  }
+}
+
+// Dark section divider
+// =============================================================
+
+.section-dark {
+  background: $ink;
+  padding: 16px 5% 80px;
+  position: relative;
+
+  h2 {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .grid-container,
+  .grid-container--featured {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .project-link {
+    &:hover {
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .description {
+    p {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    h3 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.6);
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .badge.badge-pill.badge-secondary,
+  .tag {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.35);
   }
 }
 
@@ -36,7 +171,7 @@
 
   img {
     border: 1px solid $cloud;
-    border-radius: 4px;
+    border-radius: 12px;
     max-width: 100%;
     width: auto;
     height: auto;
@@ -99,7 +234,7 @@
 
 .card-img-top {
   height: auto;
-  border-radius: 6px;
+  border-radius: 1.25rem;
 }
 
 // Social Nav
@@ -229,10 +364,37 @@
       max-width: 100%;
       width: 50%;
       height: auto;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
 
       @include breakpoint(tablet) {
         width: 80%;
       }
     }
+  }
+}
+
+// Project description layout for detail pages
+// =============================================================
+
+.project-description {
+  margin: 0 0 60px;
+  max-width: none;
+  width: 100%;
+
+  p {
+    @include font-size(16);
+
+    color: $slate;
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  a {
+    font-weight: 500;
   }
 }

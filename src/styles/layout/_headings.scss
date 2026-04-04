@@ -1,55 +1,58 @@
 // Heading Styles
 // =============================================================
 
-h1 {
-  @include font-size(24);
+// Header h1 only — scoped to .id-container
+.id-container h1 {
+  @include font-size(22);
 
   color: $ink;
   float: left;
-  font-family: $primary-font;
+  font-family: $grotesk;
   font-weight: 500;
   line-height: 1.2;
   margin: 5px 0 0;
   padding: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 
   @include breakpoint(laptop) {
     display: none;
   }
-
-  .changed h1 {
-    display: none;
-  }
 }
 
+// Section headers
 h2 {
-  @include font-size(13);
+  @include font-size(32);
 
   border-bottom: none;
   clear: both;
-  color: $stone;
-  font-family: $secondary-font;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  line-height: 1;
-  margin: 80px 5% 40px;
+  color: $ink;
+  font-family: $editorial;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  margin: 96px 5% 48px;
   padding: 0;
   text-align: left;
-  text-transform: uppercase;
+  text-transform: none;
 
   @include breakpoint(tablet) {
-    margin: 40px 5% 24px;
+    @include font-size(26);
+
+    margin: 56px 5% 32px;
   }
 }
 
+// Project titles — editorial serif
 h3 {
-  @include font-size(22);
+  @include font-size(26);
 
   color: $ink;
-  font-family: $secondary-font;
-  font-weight: 300;
+  font-family: $editorial;
+  font-weight: 400;
+  font-style: italic;
   letter-spacing: -0.01em;
-  line-height: 1.3;
+  line-height: 1.25;
   margin: 0 0 16px;
   padding: 0;
 }
@@ -58,7 +61,7 @@ h4 {
   @include font-size(14);
 
   color: $charcoal;
-  font-family: $primary-font;
+  font-family: $grotesk;
   font-weight: 600;
   line-height: 1.2;
   margin: 0;
@@ -66,12 +69,12 @@ h4 {
 }
 
 h5 {
-  @include font-size(12);
+  @include font-size(11);
 
-  color: $slate;
-  font-family: $secondary-font;
+  color: $stone;
+  font-family: $grotesk;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   line-height: 1.2;
   margin: 0;
   padding: 0;
@@ -82,8 +85,8 @@ h6 {
   @include font-size(11);
 
   color: $stone;
-  font-family: $primary-font;
-  font-weight: 500;
+  font-family: $grotesk;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }

@@ -42,13 +42,13 @@
   }
 
   a {
-    @include font-size(14);
+    @include font-size(13);
 
-    color: $charcoal;
+    color: $slate;
     display: block;
     float: left;
-    font-family: $secondary-font;
-    font-weight: 300;
+    font-family: $grotesk;
+    font-weight: 400;
     letter-spacing: 0.02em;
     margin: 0;
     padding: 10px 20px;
@@ -56,13 +56,13 @@
     transition: color 0.2s ease;
 
     &.active {
-      color: $accent;
+      color: $ink;
       text-decoration: none;
       font-weight: 500;
     }
 
     &:hover {
-      color: $accent;
+      color: $ink;
     }
   }
 
@@ -90,24 +90,24 @@
   // Override Bootstrap dropdown styles
   .dropdown-toggle {
     &::after {
-      display: none; // kill the Bootstrap caret
+      display: none;
     }
   }
 
   .dropdown-menu {
     background: $white;
     border: 1px solid $cloud;
-    border-radius: 8px;
-    box-shadow: 0 12px 32px rgba(26, 26, 46, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 16px 48px rgba(20, 20, 25, 0.1);
     margin-top: 8px;
     padding: 8px 0;
 
     .dropdown-item {
-      @include font-size(14);
+      @include font-size(13);
 
-      color: $charcoal;
-      font-family: $secondary-font;
-      font-weight: 300;
+      color: $slate;
+      font-family: $grotesk;
+      font-weight: 400;
       padding: 8px 20px;
       transition:
         background 0.15s ease,
@@ -115,7 +115,7 @@
 
       &:hover {
         background: $fog;
-        color: $accent;
+        color: $ink;
       }
 
       &.active,

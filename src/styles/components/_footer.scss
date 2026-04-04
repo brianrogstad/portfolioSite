@@ -3,14 +3,16 @@
 
 .site-footer {
   @include clearfix;
-  @include font-size(13);
+  @include font-size(12);
 
   background: $ink;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   clear: both;
   color: $stone;
-  font-family: $primary-font;
+  font-family: $grotesk;
+  letter-spacing: 0.02em;
   margin: 0 auto;
-  padding: 32px 5%;
+  padding: 28px 5%;
 }
 
 .disclaimer {

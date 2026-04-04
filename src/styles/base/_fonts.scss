@@ -1,6 +1,7 @@
 // Fonts
 // =============================================================
 
+// Local Montserrat (legacy — kept for nav/section labels)
 @font-face {
   font-family: Montserrat;
   font-style: normal;
@@ -22,6 +23,17 @@
   src: url('/fonts/Montserrat-Bold.ttf') format('truetype');
 }
 
+// New type system — editorial contrast
+$grotesk:
+  'Space Grotesk',
+  -apple-system,
+  blinkmacsystemfont,
+  'Segoe UI',
+  sans-serif;
+$editorial: 'Instrument Serif', 'Georgia', serif;
+$mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+// Legacy aliases mapped to new system
 $montserrat:
   'Montserrat',
   -apple-system,
@@ -29,6 +41,6 @@ $montserrat:
   'Segoe UI',
   sans-serif;
 $system: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, 'Helvetica Neue', arial, sans-serif;
-$primary-font: $system;
-$secondary-font: $montserrat;
+$primary-font: $grotesk;
+$secondary-font: $montserrat; // section labels keep Montserrat
 $helvetica: $system; // legacy alias
