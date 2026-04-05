@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 import { ProjectsService } from '../../services/projects.service';
 import { ProjectDetail } from '../../models/project.model';
 
@@ -13,6 +14,7 @@ import { ProjectDetail } from '../../models/project.model';
 export class ProjectDetailComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private projectsService = inject(ProjectsService);
+  private titleService = inject(Title);
 
   project?: ProjectDetail;
   projectId = '';
@@ -21,6 +23,9 @@ export class ProjectDetailComponent implements OnInit {
     this.route.params.subscribe((params) => {
       this.projectId = params['id'];
       this.project = this.projectsService.getProject(this.projectId);
+      if (this.project) {
+        this.titleService.setTitle(`${this.project.title} - Brian Rogstad`);
+      }
     });
   }
 }

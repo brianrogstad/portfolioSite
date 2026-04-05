@@ -1,4 +1,5 @@
 <div [class.menu-open]="mobileMenuOpen">
+<a class="skip-link" href="#main-content">Skip to content</a>
 <header class="header">
     <a routerLink="/" class="logo" title="Home"><img src="/images/brianrogstad-logo-inverse.png" width="66" height="66" alt="BrianRogstad.com"></a>
     <div class="id-container">
@@ -33,6 +34,7 @@
 <nav class="project-nav">
     <ul>
         <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
         <ng-container *ngFor="let item of navItems">
             <li *ngIf="item.children">
                 <p>{{ item.label }}</p>
@@ -47,11 +49,11 @@
     </ul>
 </nav>
 
-<div class="page-wrap">
+<main id="main-content" class="page-wrap">
   <router-outlet />
   
   <footer class="site-footer">
       <p class="disclaimer">&#169; Brian Rogstad {{ yearRange }}. All rights reserved.</p>
   </footer>
-</div>
+</main>
 </div>
