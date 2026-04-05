@@ -1,59 +1,162 @@
 <div [class.menu-open]="mobileMenuOpen">
-<a class="skip-link" href="#main-content">Skip to content</a>
-<header class="header">
-    <a routerLink="/" class="logo" title="Home"><img src="/images/brianrogstad-logo-inverse.png" width="66" height="66" alt="BrianRogstad.com"></a>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="header">
+    <a routerLink="/" class="logo" title="Home"
+      ><img
+        src="/images/brianrogstad-logo-inverse.png"
+        width="66"
+        height="66"
+        alt="BrianRogstad.com"
+    /></a>
     <div class="id-container">
-        <h1>Brian Rogstad <br> <span class="tagline">Digital Portfolio</span></h1>
+      <h1>
+        Brian Rogstad <br />
+        <span class="tagline">Digital Portfolio</span>
+      </h1>
     </div>
 
     <nav class="main-nav">
-        <ul class="nav desktop-nav">
-            <li *ngFor="let item of navItems">
-                <a *ngIf="!item.children" [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: item.route === '/'}">{{ item.label }}</a>
+      <ul class="desktop-nav">
+        @for (item of navItems; track item.label) {
+          @if (!item.children) {
+            <li>
+              <a
+                [routerLink]="item.route"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: item.route === '/' }"
+                >{{ item.label }}</a
+              >
             </li>
-            <li *ngFor="let item of navItems" class="dropdown" [class.dropdown]="item.children">
-                <a *ngIf="item.children" href="#" class="dropdown-toggle" role="button" [id]="item.label + 'dropdownMenu'" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    {{ item.label }}
-                </a>
-                <div *ngIf="item.children" class="dropdown-menu" [attr.aria-labelledby]="item.label + 'dropdownMenu'">
-                    <a *ngFor="let child of item.children" class="dropdown-item" [routerLink]="child.external ? null : child.route" [attr.href]="child.external ? child.route : null" [attr.target]="child.external ? '_blank' : null" [attr.rel]="child.external ? 'noopener noreferrer' : null">
-                        {{ child.label }}
-                        <i *ngIf="child.external" class="fa fa-external-link link-icon"></i>
+          }
+          @if (item.children) {
+            <li class="dropdown" (mouseleave)="closeDropdown()">
+              <button
+                type="button"
+                class="dropdown-toggle"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                {{ item.label }}
+              </button>
+              <ul class="dropdown-menu" role="menu">
+                @for (child of item.children; track child.label) {
+                  <li role="none">
+                    <a
+                      role="menuitem"
+                      [routerLink]="child.external ? null : child.route"
+                      [attr.href]="child.external ? child.route : null"
+                      [attr.target]="child.external ? '_blank' : null"
+                      [attr.rel]="child.external ? 'noopener noreferrer' : null"
+                      (click)="closeDropdown()"
+                    >
+                      {{ child.label }}
+                      @if (child.external) {
+                        <svg
+                          class="link-icon"
+                          width="12"
+                          height="12"
+                          viewBox="0 0 12 12"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                        >
+                          <path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" />
+                        </svg>
+                      }
                     </a>
-                </div>
+                  </li>
+                }
+              </ul>
             </li>
-        </ul>
-        <ul class="mobile-nav">
-            <li><a href="#" title="Navigation" class="open-menu" (click)="openMobileMenu($event)"><i class="fa fa-bars"></i></a></li>
-            <li><a href="#" title="Navigation" class="close-menu" (click)="closeMobileMenu($event)"><i class="fa fa-times"></i></a></li>
-        </ul>
-        
+          }
+        }
+      </ul>
+      <ul class="mobile-nav">
+        <li>
+          <a href="#" title="Navigation" class="open-menu" (click)="openMobileMenu($event)"
+            ><svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            >
+              <path d="M2 4.5h14M2 9h14M2 13.5h14" /></svg
+          ></a>
+        </li>
+        <li>
+          <a href="#" title="Navigation" class="close-menu" (click)="closeMobileMenu($event)"
+            ><svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            >
+              <path d="M4 4l10 10M14 4L4 14" /></svg
+          ></a>
+        </li>
+      </ul>
     </nav>
-</header>
+  </header>
 
-<nav class="project-nav">
+  <nav class="project-nav">
     <ul>
-        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">Home</a></li>
-        <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
-        <ng-container *ngFor="let item of navItems">
-            <li *ngIf="item.children">
-                <p>{{ item.label }}</p>
-            </li>
-            <li *ngFor="let child of item.children">
-                <a [routerLink]="child.external ? null : child.route" [attr.href]="child.external ? child.route : null" [attr.target]="child.external ? '_blank' : null" [attr.rel]="child.external ? 'noopener noreferrer' : null" (click)="closeMenu()">
-                    {{ child.label }}
-                    <i *ngIf="child.external" class="fa fa-external-link link-icon"></i>
-                </a>
-            </li>
-        </ng-container>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="closeMenu()"
+          >Home</a
+        >
+      </li>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+      @for (item of navItems; track item.label) {
+        @if (item.children) {
+          <li>
+            <p>{{ item.label }}</p>
+          </li>
+        }
+        @for (child of item.children; track child.label) {
+          <li>
+            <a
+              [routerLink]="child.external ? null : child.route"
+              [attr.href]="child.external ? child.route : null"
+              [attr.target]="child.external ? '_blank' : null"
+              [attr.rel]="child.external ? 'noopener noreferrer' : null"
+              (click)="closeMenu()"
+            >
+              {{ child.label }}
+              @if (child.external) {
+                <svg
+                  class="link-icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                >
+                  <path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" />
+                </svg>
+              }
+            </a>
+          </li>
+        }
+      }
     </ul>
-</nav>
+  </nav>
 
-<main id="main-content" class="page-wrap">
-  <router-outlet />
-  
-  <footer class="site-footer">
+  <main id="main-content" class="page-wrap">
+    <router-outlet />
+
+    <footer class="site-footer">
       <p class="disclaimer">&#169; Brian Rogstad {{ yearRange }}. All rights reserved.</p>
-  </footer>
-</main>
+    </footer>
+  </main>
 </div>

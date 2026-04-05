@@ -1,5 +1,5 @@
 import { Component, HostListener, PLATFORM_ID, inject } from '@angular/core';
-import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
 export interface NavItem {
@@ -11,7 +11,7 @@ export interface NavItem {
 
 @Component({
   selector: 'app-root',
-  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
@@ -78,5 +78,11 @@ export class AppComponent {
 
   closeMenu() {
     this.mobileMenuOpen = false;
+  }
+
+  closeDropdown() {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
   }
 }
