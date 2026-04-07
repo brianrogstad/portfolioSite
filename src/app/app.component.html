@@ -41,16 +41,15 @@
               <ul class="dropdown-menu" role="menu">
                 @for (child of item.children; track child.label) {
                   <li role="none">
-                    <a
-                      role="menuitem"
-                      [routerLink]="child.external ? null : child.route"
-                      [attr.href]="child.external ? child.route : null"
-                      [attr.target]="child.external ? '_blank' : null"
-                      [attr.rel]="child.external ? 'noopener noreferrer' : null"
-                      (click)="closeDropdown()"
-                    >
-                      {{ child.label }}
-                      @if (child.external) {
+                    @if (child.external) {
+                      <a
+                        role="menuitem"
+                        [href]="child.route"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        (click)="closeDropdown()"
+                      >
+                        {{ child.label }}
                         <svg
                           class="link-icon"
                           width="12"
@@ -62,8 +61,12 @@
                         >
                           <path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" />
                         </svg>
-                      }
-                    </a>
+                      </a>
+                    } @else {
+                      <a role="menuitem" [routerLink]="child.route" (click)="closeDropdown()">
+                        {{ child.label }}
+                      </a>
+                    }
                   </li>
                 }
               </ul>
@@ -124,15 +127,14 @@
         }
         @for (child of item.children; track child.label) {
           <li>
-            <a
-              [routerLink]="child.external ? null : child.route"
-              [attr.href]="child.external ? child.route : null"
-              [attr.target]="child.external ? '_blank' : null"
-              [attr.rel]="child.external ? 'noopener noreferrer' : null"
-              (click)="closeMenu()"
-            >
-              {{ child.label }}
-              @if (child.external) {
+            @if (child.external) {
+              <a
+                [href]="child.route"
+                target="_blank"
+                rel="noopener noreferrer"
+                (click)="closeMenu()"
+              >
+                {{ child.label }}
                 <svg
                   class="link-icon"
                   width="12"
@@ -144,8 +146,12 @@
                 >
                   <path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" />
                 </svg>
-              }
-            </a>
+              </a>
+            } @else {
+              <a [routerLink]="child.route" (click)="closeMenu()">
+                {{ child.label }}
+              </a>
+            }
           </li>
         }
       }
