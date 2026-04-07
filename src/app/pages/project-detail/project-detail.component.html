@@ -25,6 +25,9 @@
                 [alt]="item.alt"
                 [width]="item.width || 1000"
                 [height]="item.height || 495"
+                [attr.loading]="i === 0 ? 'eager' : 'lazy'"
+                [attr.fetchpriority]="i === 0 ? 'high' : null"
+                [attr.decoding]="i === 0 ? 'auto' : 'async'"
                 class="subsection-display"
               />
             }
@@ -54,7 +57,7 @@
 
     <!-- Project images with captions (legacy support) -->
     @if (!project.media && project.images && project.images.length > 0) {
-      @for (image of project.images; track image.src) {
+      @for (image of project.images; track image.src; let i = $index) {
         <div class="image-section">
           <div class="image-container">
             <img
@@ -62,6 +65,9 @@
               [alt]="image.alt"
               [width]="image.width || 1000"
               [height]="image.height || 495"
+              [attr.loading]="i === 0 ? 'eager' : 'lazy'"
+              [attr.fetchpriority]="i === 0 ? 'high' : null"
+              [attr.decoding]="i === 0 ? 'auto' : 'async'"
               class="subsection-display"
             />
           </div>
@@ -159,12 +165,26 @@
     <ul>
       <li>
         <a href="https://olson.com/" title="Olson" target="_blank" rel="noopener noreferrer">
-          <img src="/images/brands/olson-logo.png" width="187" height="142" alt="Olson Logo" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/images/brands/olson-logo.png"
+            width="187"
+            height="142"
+            alt="Olson Logo"
+          />
         </a>
       </li>
       <li>
         <a href="https://www.citi.com/" title="Citi Bank" target="_blank" rel="noopener noreferrer">
-          <img src="/images/brands/citi-logo.png" width="187" height="142" alt="Citi Bank Logo" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/images/brands/citi-logo.png"
+            width="187"
+            height="142"
+            alt="Citi Bank Logo"
+          />
         </a>
       </li>
       <li>
@@ -174,7 +194,14 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/brands/amtrack-logo.png" width="187" height="142" alt="Amtrak Logo" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/images/brands/amtrack-logo.png"
+            width="187"
+            height="142"
+            alt="Amtrak Logo"
+          />
         </a>
       </li>
       <li>
@@ -184,7 +211,14 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/brands/sun-logo.png" width="187" height="142" alt="Sun Country Logo" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/images/brands/sun-logo.png"
+            width="187"
+            height="142"
+            alt="Sun Country Logo"
+          />
         </a>
       </li>
       <li>
@@ -195,6 +229,8 @@
           rel="noopener noreferrer"
         >
           <img
+            loading="lazy"
+            decoding="async"
             src="/images/brands/limited-logo.png"
             width="187"
             height="142"
@@ -210,6 +246,8 @@
           rel="noopener noreferrer"
         >
           <img
+            loading="lazy"
+            decoding="async"
             src="/images/brands/thomson-logo.png"
             width="187"
             height="142"
@@ -219,7 +257,14 @@
       </li>
       <li>
         <a href="https://www.pfizer.com/" title="Pfizer" target="_blank" rel="noopener noreferrer">
-          <img src="/images/brands/pfizer-logo.png" width="187" height="142" alt="Pfizer Logo" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/images/brands/pfizer-logo.png"
+            width="187"
+            height="142"
+            alt="Pfizer Logo"
+          />
         </a>
       </li>
       <li>
@@ -229,12 +274,26 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/images/brands/lux-logo.png" width="187" height="142" alt="Luxottica Logo" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/images/brands/lux-logo.png"
+            width="187"
+            height="142"
+            alt="Luxottica Logo"
+          />
         </a>
       </li>
       <li>
         <a href="https://www.usbank.com/" title="US Bank" target="_blank" rel="noopener noreferrer">
-          <img src="/images/brands/us-bank.png" width="187" height="142" alt="US Bank Logo" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="/images/brands/us-bank.png"
+            width="187"
+            height="142"
+            alt="US Bank Logo"
+          />
         </a>
       </li>
     </ul>
