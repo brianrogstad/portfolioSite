@@ -31,6 +31,8 @@
             @if (item.type === 'video') {
               <video
                 [src]="item.src"
+                [attr.aria-label]="item.alt"
+                [attr.title]="item.alt"
                 [autoplay]="item.autoplay || false"
                 [loop]="item.loop || true"
                 [muted]="item.muted || true"
@@ -77,6 +79,8 @@
           <div class="image-container">
             <video
               [src]="video.src"
+              [attr.aria-label]="video.alt"
+              [attr.title]="video.alt"
               [autoplay]="video.autoplay || false"
               [loop]="video.loop || true"
               [muted]="video.muted || true"
@@ -119,11 +123,7 @@
         >
       </li>
       <li>
-        <a
-          href="https://x.com/B_Rogstad"
-          class="twitter"
-          target="_blank"
-          rel="noopener noreferrer"
+        <a href="https://x.com/B_Rogstad" class="twitter" target="_blank" rel="noopener noreferrer"
           >Follow me on X</a
         >
       </li>
