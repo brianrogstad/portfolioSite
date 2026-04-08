@@ -43,16 +43,11 @@
 
       &:hover {
         color: var(--ink);
-        text-decoration: underline;
       }
     }
 
     li[aria-current='page'] {
       color: var(--ink);
-    }
-
-    .breadcrumbs__sep {
-      opacity: 0.5;
     }
   }
 
@@ -98,6 +93,11 @@
   .project-pager__title {
     font-style: italic;
     font-size: 1.25rem;
+  }
+
+  .project-loading {
+    margin: 150px auto;
+    text-align: center;
   }
 
   .text-container {

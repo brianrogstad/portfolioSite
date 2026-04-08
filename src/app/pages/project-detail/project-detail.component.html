@@ -1,4 +1,8 @@
-@if (project) {
+@if (loading) {
+  <main class="main-column" aria-busy="true" aria-live="polite">
+    <p class="project-loading">Loading…</p>
+  </main>
+} @else if (project) {
   <main class="main-column">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <ol>

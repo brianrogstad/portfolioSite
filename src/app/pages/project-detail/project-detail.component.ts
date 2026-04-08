@@ -23,6 +23,7 @@ export class ProjectDetailComponent implements OnInit {
 
   project?: ProjectDetail;
   projectId = '';
+  loading = true;
   prevProject?: ProjectNeighbor;
   nextProject?: ProjectNeighbor;
   sectionLabel?: string;
@@ -30,14 +31,23 @@ export class ProjectDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe((params) => {
       this.projectId = params['id'];
-      this.project = this.projectsService.getProject(this.projectId);
-      if (this.project) {
-        this.titleService.setTitle(`${this.project.title} - Brian Rogstad`);
-      }
+      this.project = undefined;
+      this.loading = true;
       const nav = this.projectsService.getProjectNav(this.projectId);
       this.prevProject = nav.prev;
       this.nextProject = nav.next;
       this.sectionLabel = nav.section;
+      this.projectsService
+        .getProject(this.projectId)
+        .then((data) => {
+          this.project = data;
+          if (data) {
+            this.titleService.setTitle(`${data.title} - Brian Rogstad`);
+          }
+        })
+        .finally(() => {
+          this.loading = false;
+        });
     });
   }
 }

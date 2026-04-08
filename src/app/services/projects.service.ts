@@ -1,70 +1,62 @@
 import { Injectable } from '@angular/core';
 import { ProjectDetail, HomeCardSection, HomeCardsManifest } from '../models/project.model';
 
+// Home cards stay statically imported — small file, needed on first paint
+// for the home page, and used to drive project-detail breadcrumbs/prev-next.
 import homeCardsData from '../data/home-cards.json';
-
-import adminData from '../data/admin.json';
-import bpmData from '../data/bpm.json';
-import contactData from '../data/contact.json';
-import earthData from '../data/earth.json';
-import emailsData from '../data/emails.json';
-import findlawData from '../data/findlaw.json';
-import legalData from '../data/legal.json';
-import lifeData from '../data/life.json';
-import logoData from '../data/logo.json';
-import mobileData from '../data/mobile.json';
-import modelData from '../data/model.json';
-import protoData from '../data/proto.json';
-import referenceData from '../data/reference.json';
-import reflowData from '../data/reflow.json';
-import roughData from '../data/rough.json';
-import tremorData from '../data/tremor.json';
-import tremorMapsData from '../data/tremor-maps.json';
-import tremorSystemData from '../data/tremor-system.json';
-import usbData from '../data/usb.json';
-import usbMapsData from '../data/usb-maps.json';
-import usbSystemData from '../data/usb-system.json';
-import usbWireframesData from '../data/usb-wireframes.json';
-import utilityData from '../data/utility.json';
-import anaJournalData from '../data/ana-journal.json';
-import versionSevenData from '../data/version-seven.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProjectsService {
-  private projects: Record<string, ProjectDetail> = {
-    'ana-journal': anaJournalData as ProjectDetail,
-    admin: adminData as ProjectDetail,
-    bpm: bpmData as ProjectDetail,
-    contact: contactData as ProjectDetail,
-    earth: earthData as ProjectDetail,
-    emails: emailsData as ProjectDetail,
-    findlaw: findlawData as ProjectDetail,
-    legal: legalData as ProjectDetail,
-    life: lifeData as ProjectDetail,
-    logo: logoData as ProjectDetail,
-    mobile: mobileData as ProjectDetail,
-    model: modelData as ProjectDetail,
-    proto: protoData as ProjectDetail,
-    reference: referenceData as ProjectDetail,
-    reflow: reflowData as ProjectDetail,
-    rough: roughData as ProjectDetail,
-    tremor: tremorData as ProjectDetail,
-    'tremor-maps': tremorMapsData as ProjectDetail,
-    'tremor-system': tremorSystemData as ProjectDetail,
-    usb: usbData as ProjectDetail,
-    'usb-maps': usbMapsData as ProjectDetail,
-    'usb-system': usbSystemData as ProjectDetail,
-    'usb-wireframes': usbWireframesData as ProjectDetail,
-    utility: utilityData as ProjectDetail,
-    'version-seven': versionSevenData as ProjectDetail,
+  // Dynamic-import loaders, one per project JSON. Each import() becomes its
+  // own lazy-loaded chunk at build time, so none of these are shipped in the
+  // initial bundle — they're fetched on demand when a user navigates to the
+  // corresponding /projects/:id route.
+  private loaders: Record<string, () => Promise<ProjectDetail>> = {
+    'ana-journal': () => import('../data/ana-journal.json').then((m) => m.default as ProjectDetail),
+    admin: () => import('../data/admin.json').then((m) => m.default as ProjectDetail),
+    bpm: () => import('../data/bpm.json').then((m) => m.default as ProjectDetail),
+    contact: () => import('../data/contact.json').then((m) => m.default as ProjectDetail),
+    earth: () => import('../data/earth.json').then((m) => m.default as ProjectDetail),
+    emails: () => import('../data/emails.json').then((m) => m.default as ProjectDetail),
+    findlaw: () => import('../data/findlaw.json').then((m) => m.default as ProjectDetail),
+    legal: () => import('../data/legal.json').then((m) => m.default as ProjectDetail),
+    life: () => import('../data/life.json').then((m) => m.default as ProjectDetail),
+    logo: () => import('../data/logo.json').then((m) => m.default as ProjectDetail),
+    mobile: () => import('../data/mobile.json').then((m) => m.default as ProjectDetail),
+    model: () => import('../data/model.json').then((m) => m.default as ProjectDetail),
+    proto: () => import('../data/proto.json').then((m) => m.default as ProjectDetail),
+    reference: () => import('../data/reference.json').then((m) => m.default as ProjectDetail),
+    reflow: () => import('../data/reflow.json').then((m) => m.default as ProjectDetail),
+    rough: () => import('../data/rough.json').then((m) => m.default as ProjectDetail),
+    tremor: () => import('../data/tremor.json').then((m) => m.default as ProjectDetail),
+    'tremor-maps': () => import('../data/tremor-maps.json').then((m) => m.default as ProjectDetail),
+    'tremor-system': () =>
+      import('../data/tremor-system.json').then((m) => m.default as ProjectDetail),
+    usb: () => import('../data/usb.json').then((m) => m.default as ProjectDetail),
+    'usb-maps': () => import('../data/usb-maps.json').then((m) => m.default as ProjectDetail),
+    'usb-system': () => import('../data/usb-system.json').then((m) => m.default as ProjectDetail),
+    'usb-wireframes': () =>
+      import('../data/usb-wireframes.json').then((m) => m.default as ProjectDetail),
+    utility: () => import('../data/utility.json').then((m) => m.default as ProjectDetail),
+    'version-seven': () =>
+      import('../data/version-seven.json').then((m) => m.default as ProjectDetail),
   };
+
+  // In-memory cache — re-visiting a project after back-nav shouldn't re-fetch.
+  private cache = new Map<string, ProjectDetail>();
 
   private homeCards: HomeCardsManifest = homeCardsData as HomeCardsManifest;
 
-  getProject(id: string): ProjectDetail | undefined {
-    return this.projects[id];
+  async getProject(id: string): Promise<ProjectDetail | undefined> {
+    const cached = this.cache.get(id);
+    if (cached) return cached;
+    const loader = this.loaders[id];
+    if (!loader) return undefined;
+    const data = await loader();
+    this.cache.set(id, data);
+    return data;
   }
 
   getHomeCardSections(): HomeCardSection[] {

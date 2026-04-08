@@ -1,0 +1,5 @@
+// Component-scoped styles intentionally minimal — the .lost class picks up
+// its full treatment from styles/pages/_404.scss (global).
+:host {
+  display: block;
+}
