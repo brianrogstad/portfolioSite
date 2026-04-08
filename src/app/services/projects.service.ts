@@ -70,4 +70,35 @@ export class ProjectsService {
   getHomeCardSections(): HomeCardSection[] {
     return this.homeCards.sections;
   }
+
+  /**
+   * Flattens the home cards manifest into the ordered sequence of routed
+   * project pages (skipping externals like League Index) and returns the
+   * neighbours for the current project plus the section it belongs to.
+   * Used by project-detail for breadcrumbs and prev/next navigation.
+   */
+  getProjectNav(id: string): {
+    prev?: { id: string; title: string };
+    next?: { id: string; title: string };
+    section?: string;
+  } {
+    const routed: { id: string; title: string; section: string }[] = [];
+    for (const section of this.homeCards.sections) {
+      for (const card of section.cards) {
+        if (card.primaryLink.type !== 'route') continue;
+        const targetId = card.primaryLink.target.replace(/^\/projects\//, '');
+        routed.push({ id: targetId, title: card.title, section: section.heading });
+      }
+    }
+    const idx = routed.findIndex((c) => c.id === id);
+    if (idx === -1) return {};
+    return {
+      prev: idx > 0 ? { id: routed[idx - 1].id, title: routed[idx - 1].title } : undefined,
+      next:
+        idx < routed.length - 1
+          ? { id: routed[idx + 1].id, title: routed[idx + 1].title }
+          : undefined,
+      section: routed[idx].section,
+    };
+  }
 }

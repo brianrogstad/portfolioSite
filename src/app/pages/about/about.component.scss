@@ -1,4 +1,5 @@
 :host {
+  .main-column header h1,
   .main-column header h2 {
     width: 40%;
     margin: 150px auto 48px;
@@ -7,8 +8,4 @@
       width: 90%;
     }
   }
-}
-
-.profile-picture {
-  border-radius: 0;
 }

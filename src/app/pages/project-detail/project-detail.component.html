@@ -1,5 +1,16 @@
 @if (project) {
   <main class="main-column">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a routerLink="/">Home</a></li>
+        @if (sectionLabel) {
+          <li aria-hidden="true" class="breadcrumbs__sep">/</li>
+          <li>{{ sectionLabel }}</li>
+        }
+        <li aria-hidden="true" class="breadcrumbs__sep">/</li>
+        <li aria-current="page">{{ project.title }}</li>
+      </ol>
+    </nav>
     <header>
       <h1>{{ project.title }}</h1>
     </header>
@@ -103,6 +114,31 @@
           }
         </div>
       }
+    }
+
+    @if (prevProject || nextProject) {
+      <nav class="project-pager" aria-label="Project navigation">
+        @if (prevProject) {
+          <a
+            class="project-pager__link project-pager__link--prev"
+            [routerLink]="['/projects', prevProject.id]"
+          >
+            <span class="project-pager__label">Previous</span>
+            <span class="project-pager__title">{{ prevProject.title }}</span>
+          </a>
+        } @else {
+          <span></span>
+        }
+        @if (nextProject) {
+          <a
+            class="project-pager__link project-pager__link--next"
+            [routerLink]="['/projects', nextProject.id]"
+          >
+            <span class="project-pager__label">Next</span>
+            <span class="project-pager__title">{{ nextProject.title }}</span>
+          </a>
+        }
+      </nav>
     }
   </main>
 } @else {
