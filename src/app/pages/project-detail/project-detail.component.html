@@ -35,16 +35,19 @@
         <div class="image-section">
           <div class="image-container">
             @if (item.type === 'image') {
-              <img
-                [src]="item.src"
-                [alt]="item.alt"
-                [width]="item.width || 1000"
-                [height]="item.height || 495"
-                [attr.loading]="i === 0 ? 'eager' : 'lazy'"
-                [attr.fetchpriority]="i === 0 ? 'high' : null"
-                [attr.decoding]="i === 0 ? 'auto' : 'async'"
-                class="subsection-display"
-              />
+              <picture>
+                <source type="image/webp" [srcset]="item.src | toWebp" />
+                <img
+                  [src]="item.src"
+                  [alt]="item.alt"
+                  [width]="item.width || 1000"
+                  [height]="item.height || 495"
+                  [attr.loading]="i === 0 ? 'eager' : 'lazy'"
+                  [attr.fetchpriority]="i === 0 ? 'high' : null"
+                  [attr.decoding]="i === 0 ? 'auto' : 'async'"
+                  class="subsection-display"
+                />
+              </picture>
             }
             @if (item.type === 'video') {
               <video
@@ -75,16 +78,19 @@
       @for (image of project.images; track image.src; let i = $index) {
         <div class="image-section">
           <div class="image-container">
-            <img
-              [src]="image.src"
-              [alt]="image.alt"
-              [width]="image.width || 1000"
-              [height]="image.height || 495"
-              [attr.loading]="i === 0 ? 'eager' : 'lazy'"
-              [attr.fetchpriority]="i === 0 ? 'high' : null"
-              [attr.decoding]="i === 0 ? 'auto' : 'async'"
-              class="subsection-display"
-            />
+            <picture>
+              <source type="image/webp" [srcset]="image.src | toWebp" />
+              <img
+                [src]="image.src"
+                [alt]="image.alt"
+                [width]="image.width || 1000"
+                [height]="image.height || 495"
+                [attr.loading]="i === 0 ? 'eager' : 'lazy'"
+                [attr.fetchpriority]="i === 0 ? 'high' : null"
+                [attr.decoding]="i === 0 ? 'auto' : 'async'"
+                class="subsection-display"
+              />
+            </picture>
           </div>
           @if (image.caption) {
             <p [innerHTML]="image.caption" class="text-container"></p>

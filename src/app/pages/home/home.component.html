@@ -56,27 +56,33 @@
               rel="noopener noreferrer"
               class="project-card__image"
             >
-              <img
-                [width]="card.image.width || 538"
-                [height]="card.image.height || 368"
-                [src]="card.image.src"
-                [alt]="card.image.alt"
-                [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
-                [attr.fetchpriority]="card.image.priority ? 'high' : null"
-                [attr.decoding]="card.image.priority ? 'auto' : 'async'"
-              />
+              <picture>
+                <source type="image/webp" [srcset]="card.image.src | toWebp" />
+                <img
+                  [width]="card.image.width || 538"
+                  [height]="card.image.height || 368"
+                  [src]="card.image.src"
+                  [alt]="card.image.alt"
+                  [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
+                  [attr.fetchpriority]="card.image.priority ? 'high' : null"
+                  [attr.decoding]="card.image.priority ? 'auto' : 'async'"
+                />
+              </picture>
             </a>
           } @else {
             <a [routerLink]="card.primaryLink.target" class="project-card__image">
-              <img
-                [width]="card.image.width || 538"
-                [height]="card.image.height || 368"
-                [src]="card.image.src"
-                [alt]="card.image.alt"
-                [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
-                [attr.fetchpriority]="card.image.priority ? 'high' : null"
-                [attr.decoding]="card.image.priority ? 'auto' : 'async'"
-              />
+              <picture>
+                <source type="image/webp" [srcset]="card.image.src | toWebp" />
+                <img
+                  [width]="card.image.width || 538"
+                  [height]="card.image.height || 368"
+                  [src]="card.image.src"
+                  [alt]="card.image.alt"
+                  [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
+                  [attr.fetchpriority]="card.image.priority ? 'high' : null"
+                  [attr.decoding]="card.image.priority ? 'auto' : 'async'"
+                />
+              </picture>
             </a>
           }
           <div class="project-card__body">
@@ -112,27 +118,33 @@
               rel="noopener noreferrer"
               class="project-card__image"
             >
-              <img
-                [width]="card.image.width || 538"
-                [height]="card.image.height || 368"
-                [src]="card.image.src"
-                [alt]="card.image.alt"
-                [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
-                [attr.fetchpriority]="card.image.priority ? 'high' : null"
-                [attr.decoding]="card.image.priority ? 'auto' : 'async'"
-              />
+              <picture>
+                <source type="image/webp" [srcset]="card.image.src | toWebp" />
+                <img
+                  [width]="card.image.width || 538"
+                  [height]="card.image.height || 368"
+                  [src]="card.image.src"
+                  [alt]="card.image.alt"
+                  [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
+                  [attr.fetchpriority]="card.image.priority ? 'high' : null"
+                  [attr.decoding]="card.image.priority ? 'auto' : 'async'"
+                />
+              </picture>
             </a>
           } @else {
             <a [routerLink]="card.primaryLink.target" class="project-card__image">
-              <img
-                [width]="card.image.width || 538"
-                [height]="card.image.height || 368"
-                [src]="card.image.src"
-                [alt]="card.image.alt"
-                [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
-                [attr.fetchpriority]="card.image.priority ? 'high' : null"
-                [attr.decoding]="card.image.priority ? 'auto' : 'async'"
-              />
+              <picture>
+                <source type="image/webp" [srcset]="card.image.src | toWebp" />
+                <img
+                  [width]="card.image.width || 538"
+                  [height]="card.image.height || 368"
+                  [src]="card.image.src"
+                  [alt]="card.image.alt"
+                  [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
+                  [attr.fetchpriority]="card.image.priority ? 'high' : null"
+                  [attr.decoding]="card.image.priority ? 'auto' : 'async'"
+                />
+              </picture>
             </a>
           }
           <div class="project-card__body">

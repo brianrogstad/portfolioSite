@@ -4,10 +4,11 @@ import { RouterLink } from '@angular/router';
 import { ProjectsService } from '../../services/projects.service';
 import { SeoService } from '../../services/seo.service';
 import { HomeCardSection } from '../../models/project.model';
+import { ToWebpPipe } from '../../pipes/to-webp.pipe';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink, NgTemplateOutlet],
+  imports: [CommonModule, RouterLink, NgTemplateOutlet, ToWebpPipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

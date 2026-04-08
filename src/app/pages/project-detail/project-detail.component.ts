@@ -14,6 +14,7 @@ import { ProjectDetail } from '../../models/project.model';
 import { ConnectSectionComponent } from '../../components/connect-section/connect-section.component';
 import { ClientsSectionComponent } from '../../components/clients-section/clients-section.component';
 import { ParallaxComponent } from '../../components/parallax/parallax.component';
+import { ToWebpPipe } from '../../pipes/to-webp.pipe';
 
 interface ProjectNeighbor {
   id: string;
@@ -28,6 +29,7 @@ interface ProjectNeighbor {
     ConnectSectionComponent,
     ClientsSectionComponent,
     ParallaxComponent,
+    ToWebpPipe,
   ],
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss',
