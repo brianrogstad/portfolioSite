@@ -1,4 +1,4 @@
-import { Component, AfterViewInit, OnInit, inject } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProjectsService } from '../../services/projects.service';
@@ -16,6 +16,7 @@ declare global {
   imports: [CommonModule, RouterLink, NgTemplateOutlet],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   private projectsService = inject(ProjectsService);

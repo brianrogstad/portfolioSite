@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-connect-section',
   standalone: true,
   templateUrl: './connect-section.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ConnectSectionComponent {
   /** Optional id applied to the <aside> element (e.g. scrollspy target). */

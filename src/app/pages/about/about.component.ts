@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ConnectSectionComponent } from '../../components/connect-section/connect-section.component';
 import { ClientsSectionComponent } from '../../components/clients-section/clients-section.component';
@@ -10,6 +10,7 @@ import { SeoService } from '../../services/seo.service';
   imports: [CommonModule, ConnectSectionComponent, ClientsSectionComponent, ParallaxComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent implements OnInit {
   private seo = inject(SeoService);

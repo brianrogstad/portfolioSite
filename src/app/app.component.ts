@@ -1,4 +1,10 @@
-import { Component, HostListener, PLATFORM_ID, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  HostListener,
+  PLATFORM_ID,
+  inject,
+} from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 
@@ -14,6 +20,7 @@ export interface NavItem {
   imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   private platformId = inject<object>(PLATFORM_ID);

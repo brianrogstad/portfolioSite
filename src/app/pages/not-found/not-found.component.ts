@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { SeoService } from '../../services/seo.service';
 
@@ -7,6 +7,7 @@ import { SeoService } from '../../services/seo.service';
   imports: [RouterLink],
   templateUrl: './not-found.component.html',
   styleUrl: './not-found.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NotFoundComponent {
   constructor() {

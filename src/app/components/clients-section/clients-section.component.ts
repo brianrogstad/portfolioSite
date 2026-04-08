@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 interface Client {
@@ -13,6 +13,7 @@ interface Client {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './clients-section.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ClientsSectionComponent {
   /** When true, images are lazy-loaded (used below the fold on long pages). */

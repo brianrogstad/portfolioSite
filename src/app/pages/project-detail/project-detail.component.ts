@@ -1,4 +1,10 @@
-import { Component, OnInit, inject } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+  inject,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -25,12 +31,14 @@ interface ProjectNeighbor {
   ],
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectDetailComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private projectsService = inject(ProjectsService);
   private titleService = inject(Title);
   private seo = inject(SeoService);
+  private cdr = inject(ChangeDetectorRef);
 
   project?: ProjectDetail;
   projectId = '';
@@ -76,6 +84,7 @@ export class ProjectDetailComponent implements OnInit {
         })
         .finally(() => {
           this.loading = false;
+          this.cdr.markForCheck();
         });
     });
   }
