@@ -14,13 +14,42 @@
 
     <meta charset="utf-8" />
     <meta
-      name="Description"
-      content="Brian Rogstad. UI/UX designer and frontend engineer. Angular, design systems, and accessibility-first development."
+      name="description"
+      content="Brian Rogstad — designer and frontend engineer building UI, design systems, and applications in Angular and TypeScript. 15 years of enterprise product design for Thomson Reuters, Citi, Amtrak, and US Bank, plus AI character systems with mood and memory engines."
     />
-    <meta name="Author" content="Brian Rogstad" />
+    <meta name="author" content="Brian Rogstad" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
-    <title>Brian Rogstad - Digital Portfolio</title>
+    <title>Brian Rogstad — Designer and Frontend Engineer</title>
     <base href="/" />
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://brianrogstad.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Brian Rogstad" />
+    <meta property="og:title" content="Brian Rogstad — Designer and Frontend Engineer" />
+    <meta
+      property="og:description"
+      content="Designer and frontend engineer building UI, design systems, and applications in Angular and TypeScript. Enterprise product design for Thomson Reuters, Citi, Amtrak, and US Bank, plus AI character systems with mood and memory engines."
+    />
+    <meta property="og:url" content="https://brianrogstad.com/" />
+    <meta property="og:image" content="https://brianrogstad.com/images/ProfileImg.png" />
+    <meta property="og:image:alt" content="Brian Rogstad" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@B_Rogstad" />
+    <meta name="twitter:creator" content="@B_Rogstad" />
+    <meta name="twitter:title" content="Brian Rogstad — Designer and Frontend Engineer" />
+    <meta
+      name="twitter:description"
+      content="Designer and frontend engineer building UI, design systems, and applications in Angular and TypeScript."
+    />
+    <meta name="twitter:image" content="https://brianrogstad.com/images/ProfileImg.png" />
+    <meta name="twitter:image:alt" content="Brian Rogstad" />
+
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link rel="icon" type="image/png" href="/icon.png" />
     <link rel="apple-touch-icon" href="/icon.png" />
@@ -30,6 +59,37 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
     />
+
+    <!-- JSON-LD Person schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Brian Rogstad",
+        "url": "https://brianrogstad.com/",
+        "image": "https://brianrogstad.com/images/ProfileImg.png",
+        "jobTitle": "Designer and Frontend Engineer",
+        "description": "Designer and frontend engineer building UI, design systems, and applications in Angular and TypeScript. 15 years of enterprise product design plus AI character systems.",
+        "knowsAbout": [
+          "UI Design",
+          "UX Design",
+          "Design Systems",
+          "Frontend Development",
+          "Angular",
+          "TypeScript",
+          "SCSS",
+          "Node.js",
+          "PostgreSQL",
+          "AI Systems"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/brian-rogstad-06130b24",
+          "https://github.com/brianrogstad",
+          "https://x.com/B_Rogstad",
+          "https://codepen.io/brogstad"
+        ]
+      }
+    </script>
   </head>
   <body data-theme="dark">
     <app-root></app-root>

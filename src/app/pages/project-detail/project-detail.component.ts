@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { ProjectsService } from '../../services/projects.service';
+import { SeoService } from '../../services/seo.service';
 import { ProjectDetail } from '../../models/project.model';
 import { ConnectSectionComponent } from '../../components/connect-section/connect-section.component';
 import { ClientsSectionComponent } from '../../components/clients-section/clients-section.component';
@@ -29,6 +30,7 @@ export class ProjectDetailComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private projectsService = inject(ProjectsService);
   private titleService = inject(Title);
+  private seo = inject(SeoService);
 
   project?: ProjectDetail;
   projectId = '';
@@ -51,7 +53,25 @@ export class ProjectDetailComponent implements OnInit {
         .then((data) => {
           this.project = data;
           if (data) {
-            this.titleService.setTitle(`${data.title} - Brian Rogstad`);
+            const title = `${data.title} — Brian Rogstad`;
+            this.titleService.setTitle(title);
+            const leadImage =
+              data.media?.find((m) => m.type === 'image')?.src ?? data.images?.[0]?.src;
+            this.seo.update({
+              title,
+              description:
+                data.description ??
+                `${data.title} — a ${data.category.toLowerCase()} project by Brian Rogstad.`,
+              path: `/projects/${this.projectId}`,
+              image: leadImage,
+              type: 'article',
+            });
+          } else {
+            this.seo.update({
+              title: 'Project Not Found — Brian Rogstad',
+              description: "The project you're looking for doesn't exist.",
+              path: `/projects/${this.projectId}`,
+            });
           }
         })
         .finally(() => {

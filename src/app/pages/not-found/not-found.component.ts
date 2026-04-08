@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Title } from '@angular/platform-browser';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-not-found',
@@ -10,6 +10,10 @@ import { Title } from '@angular/platform-browser';
 })
 export class NotFoundComponent {
   constructor() {
-    inject(Title).setTitle('Page Not Found - Brian Rogstad');
+    inject(SeoService).update({
+      title: 'Page Not Found — Brian Rogstad',
+      description: "The page you're looking for doesn't exist.",
+      path: '/404',
+    });
   }
 }
