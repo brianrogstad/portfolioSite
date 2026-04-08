@@ -74,7 +74,8 @@
       display: block;
     }
 
-    a {
+    a,
+    button {
       @include font-size(22);
     }
   }
