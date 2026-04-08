@@ -1,8 +1,10 @@
 // Heading Styles
 // =============================================================
 
-// Header h1 only — scoped to .id-container
-.id-container h1 {
+// Global header site name — presentational, not a heading.
+// Each page now provides its own <h1>, so this label doesn't need to be
+// in the heading hierarchy. Visually hidden at laptop+ to match prior layout.
+.id-container .site-name {
   @include font-size(22);
 
   color: $ink;
@@ -14,8 +16,6 @@
   letter-spacing: -0.02em;
 
   @include breakpoint(laptop) {
-    // Visually hide but keep in the accessibility tree — this is the only h1
-    // on about/project-detail pages, so screen readers still need it.
     position: absolute;
     width: 1px;
     height: 1px;
@@ -28,7 +28,11 @@
   }
 }
 
-// Section headers
+// Page-level h1 — matches section header (h2) rendering so About and
+// Project Detail pages keep their visual treatment while exposing a
+// proper <h1> to assistive tech. The home hero overrides via
+// `.hero-intro__name`.
+h1,
 h2 {
   @include font-size(32);
 

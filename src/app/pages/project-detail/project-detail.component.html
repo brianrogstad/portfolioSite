@@ -1,7 +1,7 @@
 @if (project) {
   <main class="main-column">
     <header>
-      <h2>{{ project.title }}</h2>
+      <h1>{{ project.title }}</h1>
     </header>
 
     <!-- Main project content -->
@@ -107,7 +107,7 @@
   </main>
 } @else {
   <main class="main-column">
-    <h2>Project Not Found</h2>
+    <h1>Project Not Found</h1>
     <p>The project you're looking for doesn't exist.</p>
     <a routerLink="/">Return Home</a>
   </main>
