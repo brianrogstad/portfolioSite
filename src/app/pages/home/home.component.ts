@@ -1,15 +1,9 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
 import { CommonModule, NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProjectsService } from '../../services/projects.service';
 import { SeoService } from '../../services/seo.service';
 import { HomeCardSection } from '../../models/project.model';
-
-declare global {
-  interface Window {
-    __CPEmbed?: (selector: string) => void;
-  }
-}
 
 @Component({
   selector: 'app-home',
@@ -18,7 +12,7 @@ declare global {
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit, AfterViewInit {
+export class HomeComponent implements OnInit {
   private projectsService = inject(ProjectsService);
   private seo = inject(SeoService);
 
@@ -33,12 +27,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
         'Designer and frontend engineer building UI, design systems, and applications in Angular and TypeScript. 15 years of enterprise product design for Thomson Reuters, Citi, Amtrak, and US Bank, plus AI character systems with mood and memory engines.',
       path: '/',
     });
-  }
-
-  ngAfterViewInit() {
-    // Reinitialize CodePen embeds after view loads
-    if (typeof window !== 'undefined' && window.__CPEmbed) {
-      window.__CPEmbed('.codepen');
-    }
   }
 }
