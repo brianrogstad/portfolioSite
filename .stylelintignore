@@ -1,0 +1,9 @@
+# Vendor SCSS — not authored by us, upstream style conventions differ
+src/styles/vendor/font-awesome/**
+
+# Build artifacts
+dist/**
+.angular/**
+
+# Compiled CSS committed alongside source (generated, not authored)
+src/styles/styles.css
