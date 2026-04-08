@@ -22,10 +22,13 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('portfolioSite');
   });
 
-  it('should render the site heading', () => {
+  it('should render the site name in the header', () => {
+    // Note: AppComponent no longer owns an <h1>. Per UNW-192, h1s moved
+    // into per-page components for accessibility. AppComponent's chrome
+    // exposes the brand via `.site-name` in the header.
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Brian Rogstad');
+    expect(compiled.querySelector('.site-name')?.textContent).toContain('Brian Rogstad');
   });
 });
