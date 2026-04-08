@@ -63,6 +63,7 @@
                 [alt]="card.image.alt"
                 [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
                 [attr.fetchpriority]="card.image.priority ? 'high' : null"
+                [attr.decoding]="card.image.priority ? 'auto' : 'async'"
               />
             </a>
           } @else {
@@ -74,6 +75,7 @@
                 [alt]="card.image.alt"
                 [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
                 [attr.fetchpriority]="card.image.priority ? 'high' : null"
+                [attr.decoding]="card.image.priority ? 'auto' : 'async'"
               />
             </a>
           }
@@ -117,6 +119,7 @@
                 [alt]="card.image.alt"
                 [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
                 [attr.fetchpriority]="card.image.priority ? 'high' : null"
+                [attr.decoding]="card.image.priority ? 'auto' : 'async'"
               />
             </a>
           } @else {
@@ -128,6 +131,7 @@
                 [alt]="card.image.alt"
                 [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
                 [attr.fetchpriority]="card.image.priority ? 'high' : null"
+                [attr.decoding]="card.image.priority ? 'auto' : 'async'"
               />
             </a>
           }
