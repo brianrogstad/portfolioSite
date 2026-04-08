@@ -20,335 +20,133 @@
   </div>
 </section>
 
+<ng-template #cardLinks let-links="links">
+  @for (link of links; track link.target) {
+    @if (link.type === 'external') {
+      <a [href]="link.target" target="_blank" rel="noopener noreferrer">
+        {{ link.label }}
+        <svg
+          class="link-icon"
+          width="12"
+          height="12"
+          viewBox="0 0 12 12"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" />
+        </svg>
+      </a>
+    } @else {
+      <a [routerLink]="link.target">{{ link.label }}</a>
+    }
+  }
+</ng-template>
+
 <main class="main-column">
-  <h2 class="section-heading">My Projects</h2>
-  <div class="grid-container--featured">
-    <div class="project-card">
-      <a routerLink="/projects/version-seven" class="project-card__image">
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/versionseven2.jpg"
-          alt="version seven application screenshot"
-          loading="eager"
-          fetchpriority="high"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>Version Seven</h3>
-        <div class="project-card__tags">
-          <span class="tag">Angular</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">SCSS</span>
-          <span class="tag">Git</span>
-          <span class="tag">Railway</span>
-          <span class="tag">Webpack</span>
-          <span class="tag">Claude Code</span>
-          <span class="tag">AI Agent Architecture</span>
-          <span class="tag">LLM Orchestration</span>
-          <span class="tag">Prompt Engineering</span>
-        </div>
-        <p>
-          Started as a mobile finance concept. Evolved into the internal operations platform for
-          everything I build: scheduling, mood systems, memory engines, cron orchestration, and
-          real-time dashboards across multiple projects.
-        </p>
-        <div class="project-card__links">
-          <a routerLink="/projects/version-seven">View Screenshots</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <a routerLink="/projects/ana-journal" class="project-card__image">
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/anasjournal.jpg"
-          alt="Ana's Journal homepage"
-          loading="lazy"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>Ana's Journal</h3>
-        <div class="project-card__tags">
-          <span class="tag">Angular</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">SCSS</span>
-          <span class="tag">Docker</span>
-          <span class="tag">Nginx</span>
-          <span class="tag">Railway</span>
-          <span class="tag">Cloudflare R2</span>
-          <span class="tag">Git</span>
-          <span class="tag">Claude Code</span>
-          <span class="tag">ElevenLabs</span>
-          <span class="tag">AI Generation</span>
-          <span class="tag">AI Agent Architecture</span>
-          <span class="tag">LLM Orchestration</span>
-          <span class="tag">Prompt Engineering</span>
-        </div>
-        <p>
-          A journal written by an AI character with a mood system, memory engine, and narrative arc
-          architecture. Entries generate nightly based on emotional state, world events, and
-          unresolved threads.
-        </p>
-        <div class="project-card__links">
-          <a href="https://anasjournal.com" target="_blank" rel="noopener noreferrer"
-            >View Site
-            <svg
-              class="link-icon"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
+  @for (section of lightSections; track section.heading) {
+    <h2 class="section-heading">{{ section.heading }}</h2>
+    <div class="grid-container--featured">
+      @for (card of section.cards; track card.id) {
+        <div class="project-card">
+          @if (card.primaryLink.type === 'external') {
+            <a
+              [href]="card.primaryLink.target"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card__image"
             >
-              <path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" /></svg
-          ></a>
-          <a routerLink="/projects/ana-journal">View Screenshots</a>
+              <img
+                [width]="card.image.width || 538"
+                [height]="card.image.height || 368"
+                [src]="card.image.src"
+                [alt]="card.image.alt"
+                [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
+                [attr.fetchpriority]="card.image.priority ? 'high' : null"
+              />
+            </a>
+          } @else {
+            <a [routerLink]="card.primaryLink.target" class="project-card__image">
+              <img
+                [width]="card.image.width || 538"
+                [height]="card.image.height || 368"
+                [src]="card.image.src"
+                [alt]="card.image.alt"
+                [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
+                [attr.fetchpriority]="card.image.priority ? 'high' : null"
+              />
+            </a>
+          }
+          <div class="project-card__body">
+            <h3>{{ card.title }}</h3>
+            <div class="project-card__tags">
+              @for (tag of card.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+            <p>{{ card.summary }}</p>
+            <div class="project-card__links">
+              <ng-container
+                *ngTemplateOutlet="cardLinks; context: { links: card.links }"
+              ></ng-container>
+            </div>
+          </div>
         </div>
-      </div>
+      }
     </div>
-
-    <div class="project-card">
-      <a
-        href="https://theleagueindex.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="project-card__image"
-      >
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/leagueindex.jpg"
-          alt="league index home page screenshot"
-          loading="lazy"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>League Index</h3>
-        <div class="project-card__tags">
-          <span class="tag">Angular</span>
-          <span class="tag">TypeScript</span>
-          <span class="tag">Node.js</span>
-          <span class="tag">Express</span>
-          <span class="tag">PostgreSQL</span>
-          <span class="tag">SCSS</span>
-          <span class="tag">Railway</span>
-          <span class="tag">Riot API</span>
-          <span class="tag">Git</span>
-          <span class="tag">Claude Code</span>
-          <span class="tag">AI Agent Architecture</span>
-          <span class="tag">LLM Orchestration</span>
-          <span class="tag">Prompt Engineering</span>
-        </div>
-        <p>
-          Performance analytics for League of Legends. Customizable composite scoring across KDA,
-          farm, vision, and damage. Personalized champion rankings based on actual gameplay data.
-        </p>
-        <div class="project-card__links">
-          <a href="https://theleagueindex.com" target="_blank" rel="noopener noreferrer"
-            >View Site
-            <svg
-              class="link-icon"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="1.5"
-            >
-              <path d="M4.5 1.5H10.5V7.5M10.5 1.5L1.5 10.5" /></svg
-          ></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h2 class="section-heading">Client &amp; Agency Work</h2>
-  <div class="grid-container--featured">
-    <div class="project-card">
-      <a routerLink="/projects/usb" class="project-card__image">
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/usbsystem.jpg"
-          alt="US Bancorp design system"
-          loading="lazy"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>US Bancorp</h3>
-        <div class="project-card__tags">
-          <span class="tag">Figma</span>
-          <span class="tag">Design Systems</span>
-          <span class="tag">Design Tokens</span>
-          <span class="tag">Prototyping</span>
-          <span class="tag">Wireframing</span>
-          <span class="tag">Information Architecture</span>
-          <span class="tag">Flow Mapping</span>
-          <span class="tag">WCAG</span>
-          <span class="tag">User Research</span>
-          <span class="tag">Visual Design</span>
-        </div>
-        <p>
-          Design system architecture, multi-brand theming, wireframes, flow mapping, and prototyping
-          across 500+ frames and 10 project files.
-        </p>
-        <div class="project-card__links">
-          <a routerLink="/projects/usb">View Screenshots</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <a routerLink="/projects/tremor" class="project-card__image">
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/system.jpg"
-          alt="Tremor Technologies design system"
-          loading="lazy"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>Tremor Technologies</h3>
-        <div class="project-card__tags">
-          <span class="tag">Figma</span>
-          <span class="tag">Angular</span>
-          <span class="tag">Angular Material</span>
-          <span class="tag">SCSS</span>
-          <span class="tag">Design Systems</span>
-          <span class="tag">Prototyping</span>
-          <span class="tag">Flow Mapping</span>
-          <span class="tag">Information Architecture</span>
-          <span class="tag">Visual Design</span>
-        </div>
-        <p>
-          Design system, admin UI redesign, and authentication flow mapping. Component
-          documentation, multi-step forms, and navigation architecture.
-        </p>
-        <div class="project-card__links">
-          <a routerLink="/projects/tremor">View Screenshots</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <a routerLink="/projects/findlaw" class="project-card__image">
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/admin.jpg"
-          alt="FindLaw application"
-          loading="lazy"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>FindLaw (Thomson Reuters)</h3>
-        <div class="project-card__tags">
-          <span class="tag">Angular</span>
-          <span class="tag">Angular Material</span>
-          <span class="tag">Balsamiq</span>
-          <span class="tag">Prototyping</span>
-          <span class="tag">Wireframing</span>
-          <span class="tag">UX Architecture</span>
-          <span class="tag">User Research</span>
-          <span class="tag">Usability Testing</span>
-          <span class="tag">Information Architecture</span>
-        </div>
-        <p>
-          Million-dollar enterprise product redesign. UX architect from usability testing through
-          wireframes, prototypes, and the Angular frontend build.
-        </p>
-        <div class="project-card__links">
-          <a routerLink="/projects/findlaw">View Screenshots</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  }
 </main>
 
-<section class="section-dark">
-  <h2 class="section-heading">Creative</h2>
-  <div class="grid-container--featured">
-    <div class="project-card">
-      <a routerLink="/projects/logo" class="project-card__image">
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/logo-process.jpg"
-          alt="Logo Design Process Sample"
-          loading="lazy"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>Logo Design Process</h3>
-        <div class="project-card__tags">
-          <span class="tag">Sketching</span>
-          <span class="tag">Branding</span>
-          <span class="tag">Adobe Creative Suite</span>
+@for (section of darkSections; track section.heading) {
+  <section class="section-dark">
+    <h2 class="section-heading">{{ section.heading }}</h2>
+    <div class="grid-container--featured">
+      @for (card of section.cards; track card.id) {
+        <div class="project-card">
+          @if (card.primaryLink.type === 'external') {
+            <a
+              [href]="card.primaryLink.target"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-card__image"
+            >
+              <img
+                [width]="card.image.width || 538"
+                [height]="card.image.height || 368"
+                [src]="card.image.src"
+                [alt]="card.image.alt"
+                [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
+                [attr.fetchpriority]="card.image.priority ? 'high' : null"
+              />
+            </a>
+          } @else {
+            <a [routerLink]="card.primaryLink.target" class="project-card__image">
+              <img
+                [width]="card.image.width || 538"
+                [height]="card.image.height || 368"
+                [src]="card.image.src"
+                [alt]="card.image.alt"
+                [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
+                [attr.fetchpriority]="card.image.priority ? 'high' : null"
+              />
+            </a>
+          }
+          <div class="project-card__body">
+            <h3>{{ card.title }}</h3>
+            <div class="project-card__tags">
+              @for (tag of card.tags; track tag) {
+                <span class="tag">{{ tag }}</span>
+              }
+            </div>
+            <p>{{ card.summary }}</p>
+            <div class="project-card__links">
+              <ng-container
+                *ngTemplateOutlet="cardLinks; context: { links: card.links }"
+              ></ng-container>
+            </div>
+          </div>
         </div>
-        <p>
-          The initial stages of creating my logo. Weeks of iteration from concept to final mark.
-        </p>
-        <div class="project-card__links">
-          <a routerLink="/projects/logo">View Screenshots</a>
-        </div>
-      </div>
+      }
     </div>
-
-    <div class="project-card">
-      <a routerLink="/projects/rough" class="project-card__image">
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/rough.jpg"
-          alt="Animal Character Design"
-          loading="lazy"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>Character Development</h3>
-        <div class="project-card__tags">
-          <span class="tag">Sketching</span>
-          <span class="tag">Drawing</span>
-        </div>
-        <p>Quick sketches from reference photographs. Research for character creation.</p>
-        <div class="project-card__links">
-          <a routerLink="/projects/rough">View Screenshots</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <a routerLink="/projects/life" class="project-card__image">
-        <img
-          width="538"
-          height="368"
-          src="/images/display-images/life-drawings.jpg"
-          alt="Observational Sketches"
-          loading="lazy"
-        />
-      </a>
-      <div class="project-card__body">
-        <h3>Observational Sketches</h3>
-        <div class="project-card__tags">
-          <span class="tag">Sketching</span>
-          <span class="tag">Drawing</span>
-        </div>
-        <p>
-          Live model sketches and quick animal studies. Thirty seconds to one minute at pet stores
-          and the zoo.
-        </p>
-        <div class="project-card__links">
-          <a routerLink="/projects/life">View Screenshots</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+}

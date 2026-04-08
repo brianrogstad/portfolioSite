@@ -1,0 +1,230 @@
+{
+  "sections": [
+    {
+      "heading": "My Projects",
+      "tone": "light",
+      "cards": [
+        {
+          "id": "version-seven",
+          "title": "Version Seven",
+          "image": {
+            "src": "/images/display-images/versionseven2.jpg",
+            "alt": "version seven application screenshot",
+            "width": 538,
+            "height": 368,
+            "priority": true
+          },
+          "tags": [
+            "Angular",
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "PostgreSQL",
+            "SCSS",
+            "Git",
+            "Railway",
+            "Webpack",
+            "Claude Code",
+            "AI Agent Architecture",
+            "LLM Orchestration",
+            "Prompt Engineering"
+          ],
+          "summary": "Started as a mobile finance concept. Evolved into the internal operations platform for everything I build: scheduling, mood systems, memory engines, cron orchestration, and real-time dashboards across multiple projects.",
+          "primaryLink": { "type": "route", "target": "/projects/version-seven" },
+          "links": [
+            { "type": "route", "label": "View Screenshots", "target": "/projects/version-seven" }
+          ]
+        },
+        {
+          "id": "ana-journal",
+          "title": "Ana's Journal",
+          "image": {
+            "src": "/images/display-images/anasjournal.jpg",
+            "alt": "Ana's Journal homepage",
+            "width": 538,
+            "height": 368
+          },
+          "tags": [
+            "Angular",
+            "TypeScript",
+            "SCSS",
+            "Docker",
+            "Nginx",
+            "Railway",
+            "Cloudflare R2",
+            "Git",
+            "Claude Code",
+            "ElevenLabs",
+            "AI Generation",
+            "AI Agent Architecture",
+            "LLM Orchestration",
+            "Prompt Engineering"
+          ],
+          "summary": "A journal written by an AI character with a mood system, memory engine, and narrative arc architecture. Entries generate nightly based on emotional state, world events, and unresolved threads.",
+          "primaryLink": { "type": "route", "target": "/projects/ana-journal" },
+          "links": [
+            { "type": "external", "label": "View Site", "target": "https://anasjournal.com" },
+            { "type": "route", "label": "View Screenshots", "target": "/projects/ana-journal" }
+          ]
+        },
+        {
+          "id": "league-index",
+          "title": "League Index",
+          "image": {
+            "src": "/images/display-images/leagueindex.jpg",
+            "alt": "league index home page screenshot",
+            "width": 538,
+            "height": 368
+          },
+          "tags": [
+            "Angular",
+            "TypeScript",
+            "Node.js",
+            "Express",
+            "PostgreSQL",
+            "SCSS",
+            "Railway",
+            "Riot API",
+            "Git",
+            "Claude Code",
+            "AI Agent Architecture",
+            "LLM Orchestration",
+            "Prompt Engineering"
+          ],
+          "summary": "Performance analytics for League of Legends. Customizable composite scoring across KDA, farm, vision, and damage. Personalized champion rankings based on actual gameplay data.",
+          "primaryLink": { "type": "external", "target": "https://theleagueindex.com" },
+          "links": [
+            { "type": "external", "label": "View Site", "target": "https://theleagueindex.com" }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Client & Agency Work",
+      "tone": "light",
+      "cards": [
+        {
+          "id": "usb",
+          "title": "US Bancorp",
+          "image": {
+            "src": "/images/display-images/usbsystem.jpg",
+            "alt": "US Bancorp design system",
+            "width": 538,
+            "height": 368
+          },
+          "tags": [
+            "Figma",
+            "Design Systems",
+            "Design Tokens",
+            "Prototyping",
+            "Wireframing",
+            "Information Architecture",
+            "Flow Mapping",
+            "WCAG",
+            "User Research",
+            "Visual Design"
+          ],
+          "summary": "Design system architecture, multi-brand theming, wireframes, flow mapping, and prototyping across 500+ frames and 10 project files.",
+          "primaryLink": { "type": "route", "target": "/projects/usb" },
+          "links": [{ "type": "route", "label": "View Screenshots", "target": "/projects/usb" }]
+        },
+        {
+          "id": "tremor",
+          "title": "Tremor Technologies",
+          "image": {
+            "src": "/images/display-images/system.jpg",
+            "alt": "Tremor Technologies design system",
+            "width": 538,
+            "height": 368
+          },
+          "tags": [
+            "Figma",
+            "Angular",
+            "Angular Material",
+            "SCSS",
+            "Design Systems",
+            "Prototyping",
+            "Flow Mapping",
+            "Information Architecture",
+            "Visual Design"
+          ],
+          "summary": "Design system, admin UI redesign, and authentication flow mapping. Component documentation, multi-step forms, and navigation architecture.",
+          "primaryLink": { "type": "route", "target": "/projects/tremor" },
+          "links": [{ "type": "route", "label": "View Screenshots", "target": "/projects/tremor" }]
+        },
+        {
+          "id": "findlaw",
+          "title": "FindLaw (Thomson Reuters)",
+          "image": {
+            "src": "/images/display-images/admin.jpg",
+            "alt": "FindLaw application",
+            "width": 538,
+            "height": 368
+          },
+          "tags": [
+            "Angular",
+            "Angular Material",
+            "Balsamiq",
+            "Prototyping",
+            "Wireframing",
+            "UX Architecture",
+            "User Research",
+            "Usability Testing",
+            "Information Architecture"
+          ],
+          "summary": "Million-dollar enterprise product redesign. UX architect from usability testing through wireframes, prototypes, and the Angular frontend build.",
+          "primaryLink": { "type": "route", "target": "/projects/findlaw" },
+          "links": [{ "type": "route", "label": "View Screenshots", "target": "/projects/findlaw" }]
+        }
+      ]
+    },
+    {
+      "heading": "Creative",
+      "tone": "dark",
+      "cards": [
+        {
+          "id": "logo",
+          "title": "Logo Design Process",
+          "image": {
+            "src": "/images/display-images/logo-process.jpg",
+            "alt": "Logo Design Process Sample",
+            "width": 538,
+            "height": 368
+          },
+          "tags": ["Sketching", "Branding", "Adobe Creative Suite"],
+          "summary": "The initial stages of creating my logo. Weeks of iteration from concept to final mark.",
+          "primaryLink": { "type": "route", "target": "/projects/logo" },
+          "links": [{ "type": "route", "label": "View Screenshots", "target": "/projects/logo" }]
+        },
+        {
+          "id": "rough",
+          "title": "Character Development",
+          "image": {
+            "src": "/images/display-images/rough.jpg",
+            "alt": "Animal Character Design",
+            "width": 538,
+            "height": 368
+          },
+          "tags": ["Sketching", "Drawing"],
+          "summary": "Quick sketches from reference photographs. Research for character creation.",
+          "primaryLink": { "type": "route", "target": "/projects/rough" },
+          "links": [{ "type": "route", "label": "View Screenshots", "target": "/projects/rough" }]
+        },
+        {
+          "id": "life",
+          "title": "Observational Sketches",
+          "image": {
+            "src": "/images/display-images/life-drawings.jpg",
+            "alt": "Observational Sketches",
+            "width": 538,
+            "height": 368
+          },
+          "tags": ["Sketching", "Drawing"],
+          "summary": "Live model sketches and quick animal studies. Thirty seconds to one minute at pet stores and the zoo.",
+          "primaryLink": { "type": "route", "target": "/projects/life" },
+          "links": [{ "type": "route", "label": "View Screenshots", "target": "/projects/life" }]
+        }
+      ]
+    }
+  ]
+}

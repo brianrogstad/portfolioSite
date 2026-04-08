@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
-import { ProjectDetail } from '../models/project.model';
+import { ProjectDetail, HomeCardSection, HomeCardsManifest } from '../models/project.model';
+
+import homeCardsData from '../data/home-cards.json';
 
 import adminData from '../data/admin.json';
 import bpmData from '../data/bpm.json';
@@ -59,7 +61,13 @@ export class ProjectsService {
     'version-seven': versionSevenData as ProjectDetail,
   };
 
+  private homeCards: HomeCardsManifest = homeCardsData as HomeCardsManifest;
+
   getProject(id: string): ProjectDetail | undefined {
     return this.projects[id];
+  }
+
+  getHomeCardSections(): HomeCardSection[] {
+    return this.homeCards.sections;
   }
 }
