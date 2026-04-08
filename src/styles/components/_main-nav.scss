@@ -33,7 +33,9 @@
     border: none;
     color: $slate;
     cursor: pointer;
-    display: block;
+    display: flex;
+    align-items: center;
+    min-height: 44px; // WCAG 2.5.8 — minimum touch target
     font-family: $grotesk;
     font-weight: 400;
     letter-spacing: 0.02em;
@@ -119,6 +121,9 @@
       font-family: $grotesk;
       font-weight: 400;
       padding: 8px 20px;
+      min-height: 44px; // WCAG 2.5.8 — minimum touch target
+      display: flex;
+      align-items: center;
       white-space: nowrap;
       transition:
         background 0.15s ease,

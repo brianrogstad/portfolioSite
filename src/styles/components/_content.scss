@@ -279,9 +279,19 @@
       float: left;
       margin: 0 auto;
       padding: 0 0 28px;
-      text-indent: -9999px;
+      position: relative; // anchor for .sr-only child
       width: 25%;
     }
+  }
+}
+
+// Windows High Contrast Mode hides the background-image sprites used by
+// .twitter/.linkedin/.codepen/.github. Restore visible labels there by
+// exposing the .sr-only children — see layout/_global.scss forced-colors rule.
+@media (forced-colors: active) {
+  .social-nav li a {
+    padding: 10px;
+    text-align: center;
   }
 }
 
