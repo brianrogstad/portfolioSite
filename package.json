@@ -56,5 +56,8 @@
     "stylelint-scss": "^6.14.0",
     "typescript": "~5.5.2",
     "typescript-eslint": "8.46.4"
+  },
+  "overrides": {
+    "serialize-javascript": "^7.0.5"
   }
 }
