@@ -1,0 +1,65 @@
+// Modern Reset
+// =============================================================
+// Minimal reset for a 2026 portfolio. Replaces normalize v3.0.2 (2014,
+// IE8/9/10 fixes). Only the defaults that still earn their line —
+// box-sizing, body margin, img behavior, sensible form inheritance,
+// and a couple of semantic block corrections.
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  background-color: transparent;
+}
+
+[hidden] {
+  display: none;
+}

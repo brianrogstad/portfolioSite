@@ -2,28 +2,31 @@
 // =============================================================
 
 .site-footer {
-  @include clearfix;
   @include font-size(12);
 
+  align-items: center;
   background: $ink;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
-  clear: both;
   color: $stone;
+  display: flex;
   font-family: $grotesk;
+  justify-content: flex-start;
   letter-spacing: 0.02em;
   margin: 0 auto;
   padding: 28px 5%;
+
+  @include breakpoint(laptop) {
+    justify-content: center;
+  }
 }
 
 .disclaimer {
-  display: block;
-  float: left;
+  flex: 0 1 50%;
   margin: 0;
   text-align: left;
-  width: 50%;
 
   @include breakpoint(laptop) {
+    flex: 1 1 100%;
     text-align: center;
-    width: 100%;
   }
 }

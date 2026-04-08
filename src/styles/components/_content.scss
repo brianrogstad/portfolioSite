@@ -10,10 +10,7 @@
 }
 
 .main-column {
-  @include clearfix;
-
   background: $snow;
-  clear: both;
   min-height: 100vh;
   padding: 0 0 100px;
   position: relative;
@@ -213,7 +210,6 @@
 }
 
 .subsection-container {
-  clear: both;
   padding: 80px 0 100px;
   width: 100%;
 
@@ -232,13 +228,6 @@
   }
 }
 
-.profile-picture {
-  width: 25%;
-  border-radius: 50%;
-  float: left;
-  margin-right: 25px;
-}
-
 .project-img {
   width: 100%;
   height: auto;
@@ -249,8 +238,6 @@
 // =============================================================
 
 .social-nav {
-  @include clearfix;
-
   margin: 70px auto;
   width: 50%;
 
@@ -265,22 +252,23 @@
   }
 
   ul {
+    display: flex;
+    flex-wrap: nowrap;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   li {
-    display: inline;
+    flex: 1 1 25%;
 
     a {
       color: $accent;
       display: block;
-      float: left;
       margin: 0 auto;
       padding: 0 0 28px;
       position: relative; // anchor for .sr-only child
-      width: 25%;
+      width: 100%;
     }
   }
 }
@@ -349,8 +337,6 @@
 // =============================================================
 
 .clients {
-  @include clearfix;
-
   margin: 40px auto;
   width: 50%;
 
@@ -362,21 +348,22 @@
   }
 
   ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   li {
-    display: inline;
+    display: block;
   }
 
   a {
     display: block;
-    float: left;
     padding: 20px 2%;
     text-align: center;
-    width: 33%;
+    width: 100%;
 
     img {
       max-width: 100%;
