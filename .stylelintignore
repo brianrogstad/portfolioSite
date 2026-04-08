@@ -1,6 +1,3 @@
-# Vendor SCSS — not authored by us, upstream style conventions differ
-src/styles/vendor/font-awesome/**
-
 # Build artifacts
 dist/**
 .angular/**

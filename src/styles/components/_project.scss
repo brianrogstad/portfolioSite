@@ -19,102 +19,6 @@
   }
 }
 
-// Project card grid — 3-up
-.grid-container--featured {
-  display: grid;
-  grid-gap: 48px 3%;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-left: 5%;
-  margin-right: 5%;
-
-  @include breakpoint(largescreen) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @include breakpoint(tablet) {
-    grid-gap: 36px 0;
-    grid-template-columns: 1fr;
-  }
-
-  .project-card {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project-card__image {
-    border-radius: 1.25rem;
-    overflow: hidden;
-    margin-bottom: 20px;
-
-    img {
-      width: 100%;
-      height: auto;
-      display: block;
-      transition:
-        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        opacity 0.3s ease;
-    }
-
-    &:hover img {
-      transform: scale(1.03);
-      opacity: 0.92;
-    }
-
-    &--static {
-      cursor: default;
-
-      &:hover img {
-        transform: none;
-        opacity: 1;
-      }
-    }
-  }
-
-  .project-card__body {
-    h3 {
-      @include font-size(22);
-
-      margin-bottom: 10px;
-    }
-
-    p {
-      @include font-size(15);
-
-      color: $slate;
-      line-height: 1.7;
-      margin-bottom: 14px;
-    }
-  }
-
-  .project-card__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-bottom: 14px;
-  }
-
-  .project-card__links {
-    display: flex;
-    gap: 16px;
-    margin-top: auto;
-
-    a {
-      @include font-size(13);
-
-      font-family: $grotesk;
-      font-weight: 500;
-      letter-spacing: 0.01em;
-      transition:
-        color 0.2s ease,
-        transform 0.2s ease;
-
-      &:hover {
-        transform: translateY(-1px);
-      }
-    }
-  }
-}
-
 .about-container {
   display: grid;
   grid-gap: 64px 4%;
@@ -136,6 +40,39 @@
 
 .project {
   background: transparent;
+}
+
+// Responsive iframes for Figma projects
+// =============================================================
+// Placed before `.project-container` so the attribute selector's
+// `> img` rule (low specificity) comes before `.project-container img:hover`
+// — satisfies no-descending-specificity.
+
+[style*='--aspect-ratio'] > :first-child {
+  width: 100%;
+}
+
+[style*='--aspect-ratio'] > img {
+  height: auto;
+}
+
+@supports (--custom: property) {
+  [style*='--aspect-ratio'] {
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }
+
+    & > :first-child {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+    }
+  }
 }
 
 .project-container,
@@ -266,32 +203,101 @@
   display: inline-block;
 }
 
-// Responsive iframes for Figma projects
-// =============================================================
+// Project card grid — 3-up
+// Placed at end of file so its higher-specificity selectors come after
+// the generic .project-container / .description / [style*='--aspect-ratio']
+// rules above, satisfying no-descending-specificity.
+.grid-container--featured {
+  display: grid;
+  grid-gap: 48px 3%;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 5%;
+  margin-right: 5%;
 
-[style*='--aspect-ratio'] > :first-child {
-  width: 100%;
-}
+  @include breakpoint(largescreen) {
+    grid-template-columns: 1fr 1fr;
+  }
 
-[style*='--aspect-ratio'] > img {
-  height: auto;
-}
+  @include breakpoint(tablet) {
+    grid-gap: 36px 0;
+    grid-template-columns: 1fr;
+  }
 
-@supports (--custom: property) {
-  [style*='--aspect-ratio'] {
-    position: relative;
+  .project-card {
+    display: flex;
+    flex-direction: column;
+  }
 
-    &::before {
-      content: '';
+  .project-card__image {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    img {
+      width: 100%;
+      height: auto;
       display: block;
-      padding-bottom: calc(100% / (var(--aspect-ratio)));
+      transition:
+        transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.3s ease;
     }
 
-    & > :first-child {
-      height: 100%;
-      left: 0;
-      position: absolute;
-      top: 0;
+    &:hover img {
+      transform: scale(1.03);
+      opacity: 0.92;
+    }
+
+    &--static {
+      cursor: default;
+
+      &:hover img {
+        transform: none;
+        opacity: 1;
+      }
+    }
+  }
+
+  .project-card__body {
+    h3 {
+      @include font-size(22);
+
+      margin-bottom: 10px;
+    }
+
+    p {
+      @include font-size(15);
+
+      color: $slate;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+  }
+
+  .project-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .project-card__links {
+    display: flex;
+    gap: 16px;
+    margin-top: auto;
+
+    a {
+      @include font-size(13);
+
+      font-family: $grotesk;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+
+      &:hover {
+        transform: translateY(-1px);
+      }
     }
   }
 }

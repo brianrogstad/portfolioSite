@@ -83,15 +83,9 @@
   margin-top: 32px;
   letter-spacing: 0.02em;
 
-  a {
-    color: $stone;
-    text-decoration: none;
-    transition: color 0.2s ease;
-
-    &:hover {
-      color: $accent;
-    }
-  }
+  // NOTE: the nested `a { &:hover {} }` block that used to live here
+  // was extracted to the bottom of this file to satisfy
+  // no-descending-specificity. See `.hero-intro__meta a` near EOF.
 
   span {
     margin: 0 8px;
@@ -99,72 +93,27 @@
   }
 }
 
-// Dark section divider
+// Project description layout for detail pages
 // =============================================================
+// Placed before `.section-dark` so its lower-specificity `p` and `a`
+// children come before the higher-specificity `.section-dark .description`
+// descendants — satisfies no-descending-specificity.
 
-.section-dark {
-  background: $ink;
-  padding: 16px 5% 80px;
-  position: relative;
+.project-description {
+  margin: 0 0 60px;
+  max-width: none;
+  width: 100%;
 
-  h2 {
-    color: rgba(255, 255, 255, 0.7);
-    margin-left: 0;
-    margin-right: 0;
+  p {
+    @include font-size(16);
+
+    color: $slate;
+    line-height: 1.75;
+    margin-bottom: 16px;
   }
 
-  .grid-container,
-  .grid-container--featured {
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .project-link {
-    &:hover {
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
-    }
-  }
-
-  .description {
-    p {
-      color: rgba(255, 255, 255, 0.5);
-    }
-
-    h3 {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    a {
-      color: rgba(255, 255, 255, 0.6);
-
-      &:hover {
-        color: $white;
-      }
-    }
-  }
-
-  .project-card__body {
-    h3 {
-      color: rgba(255, 255, 255, 0.9);
-    }
-
-    p {
-      color: rgba(255, 255, 255, 0.55);
-    }
-  }
-
-  .project-card__links a {
-    color: rgba(255, 255, 255, 0.6);
-
-    &:hover {
-      color: $white;
-    }
-  }
-
-  .badge.badge-pill.badge-secondary,
-  .tag {
-    border-color: rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.35);
+  a {
+    font-weight: 500;
   }
 }
 
@@ -261,15 +210,18 @@
 
   li {
     flex: 1 1 25%;
+  }
 
-    a {
-      color: $accent;
-      display: block;
-      margin: 0 auto;
-      padding: 0 0 28px;
-      position: relative; // anchor for .sr-only child
-      width: 100%;
-    }
+  // Flattened from `.social-nav li a` — dropping the `li` step keeps this
+  // at the same (0,1,1) specificity as `.clients a` / `.hero-intro__meta a`
+  // so source order can stay ascending for no-descending-specificity.
+  a {
+    color: $accent;
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 28px;
+    position: relative; // anchor for .sr-only child
+    width: 100%;
   }
 }
 
@@ -277,7 +229,7 @@
 // .twitter/.linkedin/.codepen/.github. Restore visible labels there by
 // exposing the .sr-only children — see layout/_global.scss forced-colors rule.
 @media (forced-colors: active) {
-  .social-nav li a {
+  .social-nav a {
     padding: 10px;
     text-align: center;
   }
@@ -378,23 +330,87 @@
   }
 }
 
-// Project description layout for detail pages
+// Extracted from `.hero-intro__meta` (see note in that block).
+// Placed here so bare `a` selectors in earlier blocks (.social-nav, .clients,
+// .project-description) don't sit below a higher-specificity `a:hover`.
+.hero-intro__meta a {
+  color: $stone;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+// Dark section divider
 // =============================================================
+// Moved to end of file — its higher-specificity `.section-dark .description a`
+// and `a:hover` rules must come after all the lower-specificity bare-`a`
+// selectors above (.social-nav, .clients, .project-description,
+// .hero-intro__meta a). Internal rule order is deliberate too: bare `a`
+// children come before any `a:hover` children (grouped near the bottom
+// of the block) so no-descending-specificity stays quiet. Don't re-nest
+// the hovers without thinking about the cascade.
 
-.project-description {
-  margin: 0 0 60px;
-  max-width: none;
-  width: 100%;
+.section-dark {
+  background: $ink;
+  padding: 16px 5% 80px;
+  position: relative;
 
-  p {
-    @include font-size(16);
-
-    color: $slate;
-    line-height: 1.75;
-    margin-bottom: 16px;
+  h2 {
+    color: rgba(255, 255, 255, 0.7);
+    margin-left: 0;
+    margin-right: 0;
   }
 
-  a {
-    font-weight: 500;
+  .grid-container,
+  .grid-container--featured {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .project-link:hover {
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.25);
+  }
+
+  .description {
+    p {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    h3 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .project-card__body {
+    h3 {
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.55);
+    }
+  }
+
+  .project-card__links a {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  // Hover states grouped after all bare `a` rules above.
+  .description a:hover,
+  .project-card__links a:hover {
+    color: $white;
+  }
+
+  .badge.badge-pill.badge-secondary,
+  .tag {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.35);
   }
 }
