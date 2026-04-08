@@ -14,7 +14,17 @@
   letter-spacing: -0.02em;
 
   @include breakpoint(laptop) {
-    display: none;
+    // Visually hide but keep in the accessibility tree — this is the only h1
+    // on about/project-detail pages, so screen readers still need it.
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 }
 
