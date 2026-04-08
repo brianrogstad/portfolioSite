@@ -1,0 +1,23 @@
+<aside class="subsection-container brands-container">
+  <header>
+    <h2 class="subsection-title">Clients and Companies</h2>
+  </header>
+  <div class="clients">
+    <ul>
+      @for (client of clients; track client.href) {
+        <li>
+          <a [href]="client.href" [title]="client.title" target="_blank" rel="noopener noreferrer">
+            <img
+              [src]="client.src"
+              width="187"
+              height="142"
+              [alt]="client.alt"
+              [attr.loading]="lazy ? 'lazy' : null"
+              [attr.decoding]="lazy ? 'async' : null"
+            />
+          </a>
+        </li>
+      }
+    </ul>
+  </div>
+</aside>

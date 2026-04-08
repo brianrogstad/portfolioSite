@@ -4,6 +4,9 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { ProjectsService } from '../../services/projects.service';
 import { ProjectDetail } from '../../models/project.model';
+import { ConnectSectionComponent } from '../../components/connect-section/connect-section.component';
+import { ClientsSectionComponent } from '../../components/clients-section/clients-section.component';
+import { ParallaxComponent } from '../../components/parallax/parallax.component';
 
 interface ProjectNeighbor {
   id: string;
@@ -12,7 +15,13 @@ interface ProjectNeighbor {
 
 @Component({
   selector: 'app-project-detail',
-  imports: [CommonModule, RouterLink],
+  imports: [
+    CommonModule,
+    RouterLink,
+    ConnectSectionComponent,
+    ClientsSectionComponent,
+    ParallaxComponent,
+  ],
   templateUrl: './project-detail.component.html',
   styleUrl: './project-detail.component.scss',
 })
