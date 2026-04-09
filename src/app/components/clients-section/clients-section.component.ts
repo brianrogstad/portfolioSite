@@ -35,7 +35,7 @@ export class ClientsSectionComponent {
     {
       href: 'https://www.amtrak.com/home',
       title: 'Amtrak',
-      src: '/images/brands/amtrack-logo.png',
+      src: '/images/brands/amtrak-logo.png',
       alt: 'Amtrak Logo',
     },
     {
