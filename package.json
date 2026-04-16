@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.23",
-    "@angular/cli": "^19.2.23",
+    "@angular/cli": "^21.2.7",
     "@angular/compiler-cli": "^19.2.20",
     "@stylistic/stylelint-plugin": "^4.0.1",
     "@types/express": "^4.17.17",
