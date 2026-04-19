@@ -5,7 +5,7 @@ import {
   OnInit,
   inject,
 } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { ProjectsService } from '../../services/projects.service';
@@ -24,7 +24,6 @@ interface ProjectNeighbor {
 @Component({
   selector: 'app-project-detail',
   imports: [
-    CommonModule,
     RouterLink,
     ConnectSectionComponent,
     ClientsSectionComponent,

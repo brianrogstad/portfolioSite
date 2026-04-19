@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 interface Client {
   href: string;
@@ -11,7 +10,7 @@ interface Client {
 @Component({
   selector: 'app-clients-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './clients-section.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

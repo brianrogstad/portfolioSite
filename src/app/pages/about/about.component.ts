@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { ConnectSectionComponent } from '../../components/connect-section/connect-section.component';
 import { ClientsSectionComponent } from '../../components/clients-section/clients-section.component';
 import { ParallaxComponent } from '../../components/parallax/parallax.component';
@@ -7,7 +7,7 @@ import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-about',
-  imports: [CommonModule, ConnectSectionComponent, ClientsSectionComponent, ParallaxComponent],
+  imports: [ConnectSectionComponent, ClientsSectionComponent, ParallaxComponent],
   templateUrl: './about.component.html',
   styleUrl: './about.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
