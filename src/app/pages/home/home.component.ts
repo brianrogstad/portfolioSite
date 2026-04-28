@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit, inject } from '@angular/core';
-import { CommonModule, NgTemplateOutlet } from '@angular/common';
+import { NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProjectsService } from '../../services/projects.service';
 import { SeoService } from '../../services/seo.service';
@@ -8,7 +8,7 @@ import { ToWebpPipe } from '../../pipes/to-webp.pipe';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, RouterLink, NgTemplateOutlet, ToWebpPipe],
+  imports: [RouterLink, NgTemplateOutlet, ToWebpPipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
