@@ -2,35 +2,35 @@
   "id": "admin",
   "title": "Workflow Admin Application",
   "category": "Information Architecture",
-  "content": "<p class=\"text-container\">The Workflow Admin Application is a comprehensive tool that allows organization administrators to create custom workflows for processing member submissions. The application provides all the functionality necessary to create linear sequences that enable organizational growth and provide transparency and clarity throughout the lifecycle of the workflow, from submission through to completion.</p>",
+  "content": "<p class=\"text-container\">A workflow administration tool I designed for organization administrators at FindLaw. It lets admins build custom linear workflows for processing member submissions — configuring each step with its own required data and review logic, from submission through to completion.</p>",
   "images": [
     {
       "src": "/images/admin/admin-2.jpg",
       "alt": "Whiteboards and Sketches",
       "width": 1000,
       "height": 495,
-      "caption": "<strong>Ideation and Sketching:</strong> In most projects, I like to start with brainstorming and sketching. Here I have used a variety of methods including whiteboarding, sticky notes, and marker sketching. Workshopping requirements with clients and stakeholders often yields important project insights, surfaces conflicting business needs, and can help solve user pain points before you even commit to a design."
+      "caption": "<strong>Ideation and Sketching:</strong> Early-stage brainstorming using whiteboards, sticky notes, and marker sketching. Workshopping requirements with clients surfaces conflicting business needs and can resolve user pain points before committing to a design direction."
     },
     {
       "src": "/images/admin/admin-4.jpg",
       "alt": "Story map showing workflow planning",
       "width": 1000,
       "height": 495,
-      "caption": "<strong>Structured Planning:</strong> As a project moves through the requirements and discovery phase I like to transition from free-form exploratory activities to more structured planning and design activities. My go-to is the User Story Map. I find that the process of identifying epics, personas, and users stories as a team is an invaluable process for collaborative design."
+      "caption": "<strong>Structured Planning:</strong> A user story map I put together as the project moved from discovery into design. Identifying epics, personas, and user stories as a team is one of the most useful parts of the process — it surfaces alignment problems early."
     },
     {
       "src": "/images/admin/admin-3.jpg",
       "alt": "Balsamiq Mockups",
       "width": 1000,
       "height": 495,
-      "caption": "<strong>Prototyping:</strong> Prior to investing time on pixel perfect mockups, I like to use low-fidelity interactive prototypes. Depending on the project I will use html/css interactive wireframes or tools like Balsamiq or Sketch for lower fidelity mockups. Low fidelity approaches allow faster iteration and testing of new ideas."
+      "caption": "<strong>Prototyping:</strong> Low-fidelity interactive prototypes in Balsamiq before moving to high-fidelity mockups. Lower fidelity keeps iteration fast and makes it easier to test ideas without getting attached to execution details."
     },
     {
       "src": "/images/admin/admin-1.jpg",
       "alt": "Final application screenshot",
       "width": 1000,
       "height": 495,
-      "caption": "<strong>Advanced Customization:</strong> One of the main challenges to the development process was nailing down the requirements of each step in the workflow. To ensure a robust and extensible application, I had to avoid forcing an overly prescriptive data model. Each step needed to be designed so that it could be configured with unique sets of required information. Rather than building individual editing experiences for each type of step, I crafted custom a wizard tool that allowed powerful and complex configuration and is infinitely extensible (shown in the screenshot)."
+      "caption": "<strong>Advanced Customization:</strong> The final application. One of the trickier design problems was avoiding an overly prescriptive data model — each workflow step needed its own configurable set of required fields. I built a wizard tool so any step type could be configured without building a separate editing experience for each one."
     }
   ]
 }

@@ -2,7 +2,7 @@
   "id": "usb",
   "title": "US Bancorp",
   "category": "Enterprise Design",
-  "content": "<p class=\"text-container\">Design system architecture, themed wireframes, user flow mapping, and prototyping across multiple products at US Bancorp. The work centered on building a scalable design system in Figma using collections for multi-brand theming, then applying it across 500+ frames and approximately 10 project files. Flow mapping and prototyping supported cross-functional alignment on error handling, onboarding, and feature implementation.</p>",
+  "content": "<p class=\"text-container\">Design system architecture, themed wireframes, user flow mapping, and prototyping across multiple products at US Bancorp. The work centered on building a design system in Figma using collections for multi-brand theming, then applying it across 500+ frames and approximately 10 project files. Flow mapping and prototyping kept the broader team aligned on error handling, onboarding, and feature implementation.</p>",
   "media": [
     {
       "type": "image",
@@ -11,7 +11,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Brand Style Map Configuration:</strong> A comprehensive design token management interface displaying multiple brand variants with detailed color mapping configurations. This includes heading colors, logo color maps, upper and lower header settings, and interactive states across different brand identities."
+      "caption": "<strong>Brand Style Map Configuration:</strong> The token management layer showing multiple brand variants — heading colors, logo color maps, header settings, and interactive states across different brand identities."
     },
     {
       "type": "image",
@@ -20,7 +20,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Color System Architecture:</strong> Complete color system documentation showcasing universal colors including neutral grayscale, support and status colors, and interactive button states. Brand-specific palettes for multiple brands with lightened, standard, and darkened variants."
+      "caption": "<strong>Color System Architecture:</strong> Full color system documentation covering neutral grayscale, support and status colors, and interactive button states. Brand-specific palettes for multiple brands with lightened, standard, and darkened variants."
     },
     {
       "type": "image",
@@ -38,7 +38,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Notification Component Variations:</strong> Component library showcasing four distinct notification types (Info, Success, Error, and Warning), each with consistent structure including status icon, message content, and close button. Standard and margin-spaced layout variants."
+      "caption": "<strong>Notification Component Variations:</strong> The four notification types (Info, Success, Error, and Warning), each with consistent structure including status icon, message content, and close button. Standard and margin-spaced layout variants."
     },
     {
       "type": "image",
@@ -65,7 +65,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Link Card Component Library:</strong> Comprehensive grid of Link Card variations showing different content scenarios: varying text lengths, optional metric badges, date stamps, and superscript annotations."
+      "caption": "<strong>Link Card Component Library:</strong> Grid of Link Card variations showing different content scenarios: varying text lengths, optional metric badges, date stamps, and superscript annotations."
     },
     {
       "type": "image",
@@ -102,7 +102,7 @@
       "width": 1000,
       "height": 678,
       "group": "Themed Wireframes",
-      "caption": "<strong>Enterprise-Scale Application:</strong> Comprehensive view of the Figma collection showing 4 major projects that leverage the design system: 500+ frames across approximately 10 project files."
+      "caption": "<strong>Full Figma Collection:</strong> The full Figma collection — 4 major projects, 500+ frames across approximately 10 project files, all pulling from the same design system."
     },
     {
       "type": "image",
@@ -156,7 +156,7 @@
       "width": 1000,
       "height": 620,
       "group": "Flow Mapping",
-      "caption": "<strong>Detailed User Flows:</strong> Scenario-based design documenting default flows, input error handling, maximum user capacity, and deletion workflows. Annotations and navigation paths guide developers and stakeholders."
+      "caption": "<strong>Detailed User Flows:</strong> Scenario-based design documenting default flows, input error handling, maximum user capacity, and deletion workflows. Annotations and navigation paths included for developer handoff."
     }
   ]
 }
