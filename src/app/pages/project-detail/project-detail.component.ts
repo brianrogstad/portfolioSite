@@ -7,7 +7,6 @@ import {
 } from '@angular/core';
 
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { Title } from '@angular/platform-browser';
 import { ProjectsService } from '../../services/projects.service';
 import { SeoService } from '../../services/seo.service';
 import { ProjectDetail } from '../../models/project.model';
@@ -37,7 +36,6 @@ interface ProjectNeighbor {
 export class ProjectDetailComponent implements OnInit {
   private route = inject(ActivatedRoute);
   private projectsService = inject(ProjectsService);
-  private titleService = inject(Title);
   private seo = inject(SeoService);
   private cdr = inject(ChangeDetectorRef);
 
@@ -63,7 +61,6 @@ export class ProjectDetailComponent implements OnInit {
           this.project = data;
           if (data) {
             const title = `${data.title} — Brian Rogstad`;
-            this.titleService.setTitle(title);
             const leadImage =
               data.media?.find((m) => m.type === 'image')?.src ?? data.images?.[0]?.src;
             this.seo.update({
