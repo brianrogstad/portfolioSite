@@ -20,10 +20,10 @@
   .breadcrumbs {
     width: 40%;
     margin: 150px auto 0;
-    font-size: 0.75rem;
-    letter-spacing: 0.04em;
+    font-size: 0.875rem;
+    letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--stone);
+    color: var(--text-secondary, var(--stone));
 
     @media (width <= 768px) {
       width: 90%;
@@ -84,8 +84,8 @@
   }
 
   .project-pager__label {
-    font-size: 0.7rem;
-    letter-spacing: 0.08em;
+    font-size: 0.875rem;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
     color: var(--stone);
   }
