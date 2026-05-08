@@ -30,12 +30,21 @@
             </li>
           }
           @if (item.children) {
-            <li class="dropdown" (mouseleave)="closeDropdown()">
+            <!-- eslint-disable-next-line @angular-eslint/template/interactive-supports-focus -->
+            <li
+              class="dropdown"
+              [class.force-closed]="forceClosedDropdown === item.label"
+              (mouseenter)="openDropdown(item.label)"
+              (mouseleave)="closeDropdown()"
+              (focusin)="openDropdown(item.label)"
+              (focusout)="onDropdownFocusOut($event)"
+              (keydown)="onDropdownKeydown($event, item.label)"
+            >
               <button
                 type="button"
                 class="dropdown-toggle"
                 aria-haspopup="true"
-                aria-expanded="false"
+                [attr.aria-expanded]="openDropdownLabel === item.label"
               >
                 {{ item.label }}
               </button>

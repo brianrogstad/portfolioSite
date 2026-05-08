@@ -147,4 +147,9 @@
   .dropdown:focus-within > .dropdown-menu {
     display: block;
   }
+
+  // Override :focus-within when Escape closed the menu (focus returns to toggle)
+  .dropdown.force-closed > .dropdown-menu {
+    display: none;
+  }
 }

@@ -27,6 +27,8 @@ export class AppComponent {
 
   title = 'portfolioSite';
   mobileMenuOpen = false;
+  openDropdownLabel: string | null = null;
+  forceClosedDropdown: string | null = null;
   startYear = 2009;
   currentYear = new Date().getFullYear();
   private readonly DESKTOP_BREAKPOINT = 1620;
@@ -87,9 +89,35 @@ export class AppComponent {
     this.mobileMenuOpen = false;
   }
 
+  openDropdown(label: string) {
+    this.openDropdownLabel = label;
+    this.forceClosedDropdown = null;
+  }
+
   closeDropdown() {
+    this.openDropdownLabel = null;
     if (document.activeElement instanceof HTMLElement) {
       document.activeElement.blur();
+    }
+  }
+
+  onDropdownFocusOut(event: FocusEvent) {
+    const dropdown = event.currentTarget as HTMLElement;
+    const related = event.relatedTarget as HTMLElement | null;
+    if (!related || !dropdown.contains(related)) {
+      this.openDropdownLabel = null;
+    }
+  }
+
+  onDropdownKeydown(event: KeyboardEvent, label: string) {
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      this.openDropdownLabel = null;
+      this.forceClosedDropdown = label;
+      const target = event.target as HTMLElement;
+      const dropdown = target.closest('.dropdown');
+      const toggle = dropdown?.querySelector('.dropdown-toggle') as HTMLElement;
+      toggle?.focus();
     }
   }
 }
