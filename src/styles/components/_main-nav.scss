@@ -12,7 +12,7 @@
   }
 
   .open-menu {
-    color: $charcoal;
+    color: var(--text-body);
     display: none;
 
     @media (width <= 1439px) {
@@ -21,7 +21,7 @@
   }
 
   .close-menu {
-    color: $charcoal;
+    color: var(--text-body);
     display: none;
   }
 
@@ -31,7 +31,7 @@
 
     background: none;
     border: none;
-    color: $slate;
+    color: var(--text-secondary);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -45,12 +45,12 @@
     transition: color 0.2s ease;
 
     &.active {
-      color: $ink;
+      color: var(--text-heading);
       font-weight: 500;
     }
 
     &:hover {
-      color: $ink;
+      color: var(--text-heading);
     }
   }
 
@@ -109,8 +109,8 @@
     top: calc(100% + 8px);
     left: 0;
     min-width: 200px;
-    background: $white;
-    border: 1px solid $cloud;
+    background: var(--surface-overlay);
+    border: 1px solid var(--border);
     border-radius: 12px;
     box-shadow: 0 16px 48px rgba(20, 20, 25, 0.1);
     padding: 8px 0;
@@ -118,7 +118,7 @@
     a {
       @include font-size(13);
 
-      color: $slate;
+      color: var(--text-secondary);
       font-family: $grotesk;
       font-weight: 400;
       padding: 8px 20px;
@@ -131,14 +131,14 @@
         color 0.15s ease;
 
       &:hover {
-        background: $fog;
-        color: $ink;
+        background: var(--surface-raised);
+        color: var(--text-heading);
       }
 
       &.active,
       &:active {
-        background: $accent-subtle;
-        color: $accent;
+        background: var(--accent-subtle);
+        color: var(--accent);
       }
     }
   }

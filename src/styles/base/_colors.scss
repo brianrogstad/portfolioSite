@@ -1,9 +1,7 @@
 // Colors
 // =============================================================
 
-@use 'sass:map';
-
-// Primary palette — warmed
+// Primary palette — warmed (SCSS source values, used as token defaults)
 $ink: #141419;
 $charcoal: #2a2a32;
 $slate: #5c5c6e;
@@ -34,58 +32,92 @@ $mine-shaft: $charcoal;
 $tundora: $slate;
 $grey: $stone;
 
-// Theme definitions
-$themes: (
-  light: (
-    bg: $snow,
-    text: $charcoal,
-    primary: $accent,
-    secondary: $stone,
-  ),
-  dark: (
-    bg: #0d0d12,
-    text: #e8e8ed,
-    primary: #6b8cad,
-    secondary: #9e9eb0,
-  ),
-);
+// ---------------------------------------------------------------
+// Design tokens — semantic CSS custom properties
+// Light theme on :root, dark theme via prefers-color-scheme
+// ---------------------------------------------------------------
 
-// Convert SASS map to CSS variables
-@mixin generate-theme-vars($theme) {
-  @each $key, $value in $theme {
-    --#{$key}: #{$value};
+:root {
+  // Surfaces
+  --surface-page: #{$snow};
+  --surface-raised: #{$fog};
+  --surface-overlay: #{$white};
+  --surface-inverse: #{$ink};
+
+  // Text — on light surfaces
+  --text-heading: #{$ink};
+  --text-body: #{$charcoal};
+  --text-secondary: #{$slate};
+  --text-muted: #{$stone};
+  --text-faint: #{$mist};
+
+  // Text — on dark/inverse surfaces (stable across themes)
+  --text-on-dark: #{$stone};
+  --text-on-dark-medium: #{$mist};
+  --text-on-dark-bright: #{$white};
+
+  // Borders
+  --border: #{$cloud};
+  --border-strong: #{$mist};
+
+  // Accent
+  --accent: #{$accent};
+  --accent-hover: #{$accent-hover};
+  --accent-subtle: #{$accent-subtle};
+
+  // Chrome
+  --header-bg: rgba(248, 247, 245, 0.88);
+  --header-border: rgba(226, 226, 232, 0.6);
+  --scrollbar-track: #{$snow};
+  --scrollbar-thumb: #{$cloud};
+  --scrollbar-thumb-hover: #{$mist};
+  --selection-bg: rgba(61, 90, 128, 0.15);
+  --selection-text: #{$ink};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-page: #0d0d12;
+    --surface-raised: #1a1a22;
+    --surface-overlay: #1e1e28;
+    --surface-inverse: #0a0a0f;
+    --text-heading: #e8e8ed;
+    --text-body: #c8c8d0;
+    --text-secondary: #9a9aaa;
+    --text-muted: #7a7a8a;
+    --text-faint: #3a3a46;
+    --text-on-dark: #8a8a9a;
+    --text-on-dark-medium: #b0b0bc;
+    --text-on-dark-bright: #e8e8ed;
+    --border: #2a2a34;
+    --border-strong: #3a3a46;
+    --accent: #6b8cad;
+    --accent-hover: #8aa8c4;
+    --accent-subtle: rgba(107, 140, 173, 0.12);
+    --header-bg: rgba(13, 13, 18, 0.88);
+    --header-border: rgba(42, 42, 52, 0.6);
+    --scrollbar-track: #0d0d12;
+    --scrollbar-thumb: #2a2a34;
+    --scrollbar-thumb-hover: #3a3a46;
+    --selection-bg: rgba(107, 140, 173, 0.25);
+    --selection-text: #e8e8ed;
   }
 }
 
-// Apply theme
-@mixin apply-theme($theme-name) {
-  $theme: map.get($themes, $theme-name);
-  @include generate-theme-vars($theme);
-}
-
-// Theme classes
-.theme-light {
-  @include apply-theme(light);
-}
-
-.theme-dark {
-  @include apply-theme(dark);
-}
-
-// Base styles using CSS variables
+// Body base — token-driven
 body {
-  background-color: var(--bg);
-  color: var(--text);
+  background-color: var(--surface-page);
+  color: var(--text-body);
   transition:
     background-color 0.3s,
     color 0.3s;
 
   .primary {
-    color: var(--primary);
+    color: var(--accent);
   }
 
   .btn-primary {
-    background-color: var(--primary);
-    color: var(--bg);
+    background-color: var(--accent);
+    color: var(--surface-page);
   }
 }

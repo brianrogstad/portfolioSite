@@ -10,7 +10,7 @@
 }
 
 .main-column {
-  background: $snow;
+  background: var(--surface-page);
   min-height: 100vh;
   padding: 0 0 100px;
   position: relative;
@@ -34,7 +34,7 @@
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: $stone;
+  color: var(--text-muted);
   margin-bottom: 24px;
   display: block;
 }
@@ -45,7 +45,7 @@
   font-family: $editorial;
   font-weight: 400;
   font-style: italic;
-  color: $ink;
+  color: var(--text-heading);
   line-height: 1.08;
   margin: 0 0 24px;
   letter-spacing: -0.02em;
@@ -64,7 +64,7 @@
 
   font-family: $grotesk;
   font-weight: 300;
-  color: $slate;
+  color: var(--text-secondary);
   line-height: 1.6;
   max-width: 640px;
   margin: 0;
@@ -79,7 +79,7 @@
 
   font-family: $montserrat;
   font-weight: 400;
-  color: $stone;
+  color: var(--text-muted);
   margin-top: 32px;
   letter-spacing: 0.02em;
 
@@ -107,7 +107,7 @@
   p {
     @include font-size(16);
 
-    color: $slate;
+    color: var(--text-secondary);
     line-height: 1.75;
     margin-bottom: 16px;
   }
@@ -129,7 +129,7 @@
   }
 
   img {
-    border: 1px solid $cloud;
+    border: 1px solid var(--border);
     border-radius: 12px;
     width: 100%;
     height: auto;
@@ -155,7 +155,7 @@
 }
 
 .brands-container {
-  background: $snow;
+  background: var(--surface-page);
 }
 
 .subsection-container {
@@ -164,7 +164,7 @@
 
   // Connect section needs a dark background for the sprite icons
   &:has(.social-nav) {
-    background: $ink;
+    background: var(--surface-inverse);
   }
 }
 
@@ -216,7 +216,7 @@
   // at the same (0,1,1) specificity as `.clients a` / `.hero-intro__meta a`
   // so source order can stay ascending for no-descending-specificity.
   a {
-    color: $accent;
+    color: var(--accent);
     display: block;
     margin: 0 auto;
     padding: 0 0 55px;
@@ -279,7 +279,7 @@
 // =============================================================
 
 .parallax-container {
-  background: url('/images/parallax-bg.jpg') $fog center center no-repeat;
+  background: url('/images/parallax-bg.jpg') var(--surface-raised) center center no-repeat;
   background-attachment: fixed;
   background-size: cover;
   padding: 200px 0;
@@ -334,12 +334,12 @@
 // Placed here so bare `a` selectors in earlier blocks (.social-nav, .clients,
 // .project-description) don't sit below a higher-specificity `a:hover`.
 .hero-intro__meta a {
-  color: $stone;
+  color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:hover {
-    color: $accent;
+    color: var(--accent);
   }
 }
 
@@ -354,7 +354,7 @@
 // the hovers without thinking about the cascade.
 
 .section-dark {
-  background: $ink;
+  background: var(--surface-inverse);
   padding: 16px 5% 80px;
   position: relative;
 
@@ -405,7 +405,7 @@
   // Hover states grouped after all bare `a` rules above.
   .description a:hover,
   .project-card__links a:hover {
-    color: $white;
+    color: var(--text-on-dark-bright);
   }
 
   .badge.badge-pill.badge-secondary,

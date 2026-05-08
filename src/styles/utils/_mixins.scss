@@ -1,12 +1,6 @@
 // Mixins
 // =============================================================
 
-// Theme Mixin
-@mixin set-theme($theme) {
-  // Placeholder mixin for theme support
-  // Can be expanded later with theme-specific styles
-}
-
 // Font Size Mixin to convert value given to Rems
 @mixin font-size($size-value: 1.6) {
   font-size: $size-value + px;

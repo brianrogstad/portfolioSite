@@ -2,7 +2,7 @@
 // =============================================================
 
 .project-nav {
-  background: $ink;
+  background: var(--surface-inverse);
   box-shadow: inset 10px 0 15px -5px rgba(0, 0, 0, 0.3);
   display: none;
   height: 100%;
@@ -33,7 +33,7 @@
   p {
     @include font-size(10);
 
-    color: $stone;
+    color: var(--text-on-dark);
     font-family: $grotesk;
     font-weight: 500;
     letter-spacing: 0.14em;
@@ -47,7 +47,7 @@
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     border-top: none;
-    color: $mist;
+    color: var(--text-on-dark-medium);
     display: block;
     float: none;
     font-family: $grotesk;
@@ -62,16 +62,16 @@
 
     &:link,
     &:visited {
-      color: $mist;
+      color: var(--text-on-dark-medium);
     }
 
     &.active {
-      color: $white;
+      color: var(--text-on-dark-bright);
     }
 
     &:hover {
       background: rgba(255, 255, 255, 0.05);
-      color: $white;
+      color: var(--text-on-dark-bright);
     }
 
     &:last-child {

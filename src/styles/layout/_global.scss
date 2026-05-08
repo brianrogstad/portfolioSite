@@ -1,6 +1,5 @@
 // Global Styles
 // =============================================================
-@include set-theme(light);
 
 * {
   box-sizing: border-box;
@@ -15,8 +14,8 @@ html {
 body {
   @include font-size(16);
 
-  background: $snow;
-  color: $charcoal;
+  background: var(--surface-page);
+  color: var(--text-body);
   font-family: $primary-font;
   line-height: 1.65;
   margin: 0;
@@ -78,17 +77,17 @@ button {
 }
 
 a {
-  color: $accent;
+  color: var(--accent);
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:hover {
-    color: $accent-hover;
+    color: var(--accent-hover);
     cursor: pointer;
   }
 
   &:active {
-    color: $accent-hover;
+    color: var(--accent-hover);
   }
 }
 
@@ -97,7 +96,7 @@ a {
 a:focus-visible,
 img:focus-visible,
 button:focus-visible {
-  outline: 2px solid $accent;
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -136,32 +135,32 @@ strong {
 }
 
 .inverse-title {
-  color: $mist;
+  color: var(--text-faint);
 }
 
 // Scrollbar — subtle
 ::-webkit-scrollbar {
-  background: $snow;
+  background: var(--scrollbar-track);
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: $snow;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $cloud;
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 
   &:hover {
-    background: $mist;
+    background: var(--scrollbar-thumb-hover);
   }
 }
 
 // Selection
 ::selection {
-  background: rgba($accent, 0.15);
-  color: $ink;
+  background: var(--selection-bg);
+  color: var(--selection-text);
 }
 
 // Skip link — visible only on focus (keyboard nav)
@@ -171,8 +170,8 @@ strong {
   left: 16px;
   z-index: 10000;
   padding: 8px 16px;
-  background: $ink;
-  color: $snow;
+  background: var(--surface-inverse);
+  color: var(--text-on-dark-bright);
   font-family: $grotesk;
   font-size: 14px;
   font-weight: 500;
@@ -181,7 +180,7 @@ strong {
 
   &:focus {
     top: 0;
-    color: $snow;
+    color: var(--text-on-dark-bright);
   }
 }
 
