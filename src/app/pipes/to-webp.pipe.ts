@@ -19,9 +19,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ToWebpPipe implements PipeTransform {
   transform(src: string | null | undefined): string {
-    if (!src) {
-      return src ?? '';
-    }
+    if (!src) return '';
     return src.replace(/\.(jpe?g|png)(\?.*)?$/i, '.webp$2');
   }
 }
