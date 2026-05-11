@@ -16,7 +16,7 @@
       </p>
     </div>
 
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Primary">
       <ul class="desktop-nav">
         @for (item of navItems; track item.label) {
           @if (!item.children) {
@@ -137,7 +137,7 @@
     </nav>
   </header>
 
-  <nav id="mobile-menu" class="project-nav">
+  <nav id="mobile-menu" class="project-nav" aria-label="Mobile">
     <ul>
       <li>
         <a

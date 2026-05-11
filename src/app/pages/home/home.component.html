@@ -44,7 +44,7 @@
   }
 </ng-template>
 
-<main class="main-column">
+<div class="main-column">
   @for (section of lightSections; track section.heading) {
     <h2 class="section-heading">{{ section.heading }}</h2>
     <div class="grid-container--featured">
@@ -104,7 +104,7 @@
       }
     </div>
   }
-</main>
+</div>
 
 @for (section of darkSections; track section.heading) {
   <section class="section-dark">

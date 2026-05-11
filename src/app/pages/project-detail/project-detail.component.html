@@ -1,9 +1,9 @@
 @if (loading) {
-  <main class="main-column" aria-busy="true" aria-live="polite">
+  <div class="main-column" aria-busy="true" aria-live="polite">
     <p class="project-loading">Loading…</p>
-  </main>
+  </div>
 } @else if (project) {
-  <main class="main-column">
+  <div class="main-column">
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <ol>
         <li><a routerLink="/">Home</a></li>
@@ -146,13 +146,13 @@
         }
       </nav>
     }
-  </main>
+  </div>
 } @else {
-  <main class="main-column">
+  <div class="main-column">
     <h1>Project Not Found</h1>
     <p>The project you're looking for doesn't exist.</p>
     <a routerLink="/">Return Home</a>
-  </main>
+  </div>
 }
 
 <app-connect-section sectionId="scrollspyconnect" headingId="connect" />
