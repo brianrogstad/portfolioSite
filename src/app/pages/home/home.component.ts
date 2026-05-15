@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   private projectsService = inject(ProjectsService);
   private seo = inject(SeoService);
 
-  sections: HomeCardSection[] = this.projectsService.getHomeCardSections();
+  private sections: HomeCardSection[] = this.projectsService.getHomeCardSections();
   lightSections: HomeCardSection[] = this.sections.filter((s) => s.tone !== 'dark');
   darkSections: HomeCardSection[] = this.sections.filter((s) => s.tone === 'dark');
 
