@@ -30,11 +30,15 @@ export class SeoService {
 
   update(config: SeoConfig): void {
     const url = this.origin + (config.path.startsWith('/') ? config.path : `/${config.path}`);
-    const image = config.image
-      ? config.image.startsWith('http')
-        ? config.image
-        : `${this.origin}${config.image.startsWith('/') ? '' : '/'}${config.image}`
-      : this.defaultImage;
+    let image: string;
+    if (!config.image) {
+      image = this.defaultImage;
+    } else if (config.image.startsWith('http')) {
+      image = config.image;
+    } else {
+      const separator = config.image.startsWith('/') ? '' : '/';
+      image = `${this.origin}${separator}${config.image}`;
+    }
     const type = config.type ?? 'website';
 
     this.titleService.setTitle(config.title);
