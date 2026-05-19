@@ -55,6 +55,14 @@
     <link rel="apple-touch-icon" href="/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Preload the LCP image so it fetches in parallel with JS bootstrap -->
+    <link
+      rel="preload"
+      as="image"
+      href="/images/display-images/versionseven2.webp"
+      type="image/webp"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
       rel="stylesheet"
