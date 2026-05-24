@@ -25,7 +25,6 @@ export interface NavItem {
 export class AppComponent {
   private platformId = inject<object>(PLATFORM_ID);
 
-  title = 'portfolioSite';
   mobileMenuOpen = false;
   openDropdownLabel: string | null = null;
   forceClosedDropdown: string | null = null;
