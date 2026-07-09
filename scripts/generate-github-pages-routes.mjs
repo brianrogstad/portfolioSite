@@ -1,4 +1,4 @@
-import { cp, mkdir } from 'node:fs/promises';
+import { cp, mkdir, access } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -14,8 +14,14 @@ await cp(indexHtmlPath, spaFallbackPath);
 
 for (const route of staticRoutes) {
   const routeDir = path.join(browserDistDir, route);
+  const routeIndexPath = path.join(routeDir, 'index.html');
   await mkdir(routeDir, { recursive: true });
-  await cp(indexHtmlPath, path.join(routeDir, 'index.html'));
+
+  try {
+    await access(routeIndexPath);
+  } catch {
+    await cp(indexHtmlPath, routeIndexPath);
+  }
 }
 
 console.log(`Generated GitHub Pages route entry points for: ${staticRoutes.join(', ')}`);
