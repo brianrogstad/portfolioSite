@@ -2,9 +2,11 @@ import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
   Component,
+  DestroyRef,
   OnInit,
   inject,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { ProjectsService } from '../../services/projects.service';
@@ -38,6 +40,7 @@ export class ProjectDetailComponent implements OnInit {
   private projectsService = inject(ProjectsService);
   private seo = inject(SeoService);
   private cdr = inject(ChangeDetectorRef);
+  private destroyRef = inject(DestroyRef);
 
   project?: ProjectDetail;
   projectId = '';
@@ -47,7 +50,7 @@ export class ProjectDetailComponent implements OnInit {
   sectionLabel?: string;
 
   ngOnInit() {
-    this.route.params.subscribe((params) => {
+    this.route.params.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((params) => {
       this.projectId = params['id'];
       this.project = undefined;
       this.loading = true;
