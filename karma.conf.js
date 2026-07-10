@@ -28,6 +28,7 @@ module.exports = function (config) {
         { type: 'text-summary' },
         { type: 'text' },
         { type: 'lcovonly' },
+        { type: 'json-summary' },
       ],
     },
     reporters: ['dots', 'kjhtml', 'coverage'],
