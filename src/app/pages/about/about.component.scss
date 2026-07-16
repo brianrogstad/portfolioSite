@@ -8,4 +8,13 @@
       width: 90%;
     }
   }
+
+  // "Designer, Developer, Builder" is a subsection heading (h2 for correct
+  // heading order) but keeps its original subtitle rendering — the global
+  // h1/h2 style is sized for page/section titles, which is too large here.
+  .about-container .description h2 {
+    font-size: 2.6rem;
+    line-height: 1.25;
+    margin: 0 0 16px;
+  }
 }
