@@ -411,6 +411,9 @@
   .badge.badge-pill.badge-secondary,
   .tag {
     border-color: rgba(255, 255, 255, 0.12);
-    color: rgba(255, 255, 255, 0.35);
+
+    // 0.5 (not 0.35) so tag text clears WCAG AA 4.5:1 on the inverse
+    // surface (was 3.21:1); matches the dark-section body-text opacity.
+    color: rgba(255, 255, 255, 0.5);
   }
 }

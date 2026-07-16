@@ -135,7 +135,11 @@ strong {
 }
 
 .inverse-title {
-  color: var(--text-faint);
+  // Always sits on a dark/inverse surface, so use an on-dark token. In light
+  // theme this resolves to the same value as the previous --text-faint
+  // (#bfbfc8) — no visual change — but stays legible in dark theme, where
+  // --text-faint collapsed to 1.76:1 against the near-black inverse surface.
+  color: var(--text-on-dark-medium);
 }
 
 // Scrollbar — subtle
