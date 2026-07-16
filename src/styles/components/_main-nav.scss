@@ -15,7 +15,11 @@
     color: var(--text-body);
     display: none;
 
-    @media (width <= 1439px) {
+    // Show the hamburger only below the desktop breakpoint. Uses the shared
+    // `laptop` token (max-width 1279px) rather than a boundary at the 1440px
+    // test width — WebKit subtracts the classic scrollbar from the media
+    // width, so a 1439px cutoff evaluated ~1425px and wrongly matched at 1440.
+    @include breakpoint(laptop) {
       display: block;
     }
   }
@@ -58,7 +62,7 @@
     display: flex;
     align-items: center;
 
-    @media (width <= 1439px) {
+    @include breakpoint(laptop) {
       display: none;
     }
 
@@ -70,7 +74,7 @@
   .mobile-nav {
     display: none;
 
-    @media (width <= 1439px) {
+    @include breakpoint(laptop) {
       display: block;
     }
 

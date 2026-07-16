@@ -30,7 +30,10 @@ export class AppComponent {
   forceClosedDropdown: string | null = null;
   startYear = 2009;
   currentYear = new Date().getFullYear();
-  private readonly DESKTOP_BREAKPOINT = 1620;
+  // Matches the CSS `laptop` breakpoint (max-width 1279px) where the nav
+  // switches between the hamburger and the desktop nav — above this width the
+  // mobile menu is closed since its toggle/close buttons are no longer shown.
+  private readonly DESKTOP_BREAKPOINT = 1279;
 
   @HostListener('window:resize')
   onResize() {
