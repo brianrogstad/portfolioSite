@@ -68,33 +68,61 @@
       rel="stylesheet"
     />
 
-    <!-- JSON-LD Person schema -->
+    <!-- JSON-LD Person + ProfessionalService schema -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Brian Rogstad",
-        "url": "https://brianrogstad.com/",
-        "image": "https://brianrogstad.com/images/ProfileImg.png",
-        "jobTitle": "Designer and Frontend Engineer",
-        "description": "Designer and frontend engineer building UI, design systems, and applications in Angular and TypeScript. 15 years of enterprise product design plus AI character systems.",
-        "knowsAbout": [
-          "UI Design",
-          "UX Design",
-          "Design Systems",
-          "Frontend Development",
-          "Angular",
-          "TypeScript",
-          "SCSS",
-          "Node.js",
-          "PostgreSQL",
-          "AI Systems"
-        ],
-        "sameAs": [
-          "https://www.linkedin.com/in/brian-rogstad-06130b24",
-          "https://github.com/brianrogstad",
-          "https://x.com/B_Rogstad",
-          "https://codepen.io/brogstad"
+        "@graph": [
+          {
+            "@type": "Person",
+            "@id": "https://brianrogstad.com/#person",
+            "name": "Brian Rogstad",
+            "url": "https://brianrogstad.com/",
+            "image": "https://brianrogstad.com/images/ProfileImg.png",
+            "jobTitle": "Designer and Frontend Engineer",
+            "description": "Designer and frontend engineer building UI, design systems, and applications in Angular and TypeScript. 15 years of enterprise product design plus AI character systems.",
+            "knowsAbout": [
+              "UI Design",
+              "UX Design",
+              "Design Systems",
+              "Frontend Development",
+              "Angular",
+              "TypeScript",
+              "SCSS",
+              "Node.js",
+              "PostgreSQL",
+              "AI Systems"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/brian-rogstad-06130b24",
+              "https://github.com/brianrogstad",
+              "https://x.com/B_Rogstad",
+              "https://codepen.io/brogstad"
+            ]
+          },
+          {
+            "@type": "ProfessionalService",
+            "@id": "https://brianrogstad.com/#service",
+            "name": "Brian Rogstad — Design & Frontend Engineering",
+            "url": "https://brianrogstad.com/",
+            "image": "https://brianrogstad.com/images/ProfileImg.png",
+            "description": "Design and frontend engineering services: UI and UX design, design systems, and application development in Angular and TypeScript.",
+            "provider": { "@id": "https://brianrogstad.com/#person" },
+            "founder": { "@id": "https://brianrogstad.com/#person" },
+            "areaServed": "Worldwide",
+            "serviceType": [
+              "UI Design",
+              "UX Design",
+              "Design Systems",
+              "Frontend Development",
+              "Angular Development",
+              "Prototyping"
+            ],
+            "sameAs": [
+              "https://www.linkedin.com/in/brian-rogstad-06130b24",
+              "https://github.com/brianrogstad"
+            ]
+          }
         ]
       }
     </script>
