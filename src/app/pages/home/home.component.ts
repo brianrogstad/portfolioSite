@@ -29,4 +29,18 @@ export class HomeComponent implements OnInit {
       path: '/',
     });
   }
+
+  /**
+   * Builds a descriptive accessible name for a project CTA so screen-reader
+   * users navigating by links list can tell which project each "View
+   * Screenshots"/"View Site" link belongs to (WCAG 2.4.4).
+   * e.g. ("View Screenshots", "Version Seven") -> "View Version Seven screenshots"
+   */
+  ctaAriaLabel(label: string, title: string): string {
+    const action = label
+      .toLowerCase()
+      .replace(/^view\s*/, '')
+      .trim();
+    return `View ${title} ${action}`;
+  }
 }
