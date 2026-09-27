@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.seo.update({
-      title: 'Brian Rogstad — Designer and Frontend Engineer',
+      title: 'Brian Rogstad | Designer and Frontend Engineer',
       description:
         'Designer and frontend engineer building UI, design systems, and applications in Angular and TypeScript. 15 years of enterprise product design for Thomson Reuters, Citi, Amtrak, and US Bank, plus AI character systems with mood and memory engines.',
       path: '/',
