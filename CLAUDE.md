@@ -18,6 +18,10 @@ Design and development portfolio at brianrogstad.com.
 - **Hosting:** GitHub Pages via GitHub Actions
 - **Status:** Live, stable — monitor analytics only
 
+## Key Conventions
+
+- Subscriptions: any long-lived `subscribe()` in a component (route `params`/`queryParams`/`paramMap`) pipes `takeUntilDestroyed(this.destroyRef)` with `destroyRef = inject(DestroyRef)`. Same convention as collected.
+
 ## L2.5 Review Context
 
 When reviewing PRs for this project, query QMD for reference material:
