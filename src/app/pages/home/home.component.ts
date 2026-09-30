@@ -34,13 +34,15 @@ export class HomeComponent implements OnInit {
    * Builds a descriptive accessible name for a project CTA so screen-reader
    * users navigating by links list can tell which project each "View
    * Screenshots"/"View Site" link belongs to (WCAG 2.4.4).
-   * e.g. ("View Screenshots", "Version Seven") -> "View Version Seven screenshots"
+   *
+   * The visible label leads, so the accessible name contains it verbatim
+   * (WCAG 2.5.3 Label in Name): speech-input users saying "click View
+   * Screenshots" still match. An earlier version inserted the project name
+   * mid-string ("View Version Seven screenshots"), which satisfied 2.4.4 and
+   * broke 2.5.3.
+   * e.g. ("View Screenshots", "Version Seven") -> "View Screenshots: Version Seven"
    */
   ctaAriaLabel(label: string, title: string): string {
-    const action = label
-      .toLowerCase()
-      .replace(/^view\s*/, '')
-      .trim();
-    return `View ${title} ${action}`;
+    return `${label}: ${title}`;
   }
 }
