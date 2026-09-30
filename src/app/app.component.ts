@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { RouteFocusService } from './services/route-focus.service';
 
 export interface NavItem {
   label: string;
@@ -24,6 +25,12 @@ export interface NavItem {
 })
 export class AppComponent {
   private platformId = inject<object>(PLATFORM_ID);
+
+  constructor() {
+    // A route change swaps the whole main view; without this, focus stays on
+    // the nav link that was activated.
+    inject(RouteFocusService).start();
+  }
 
   mobileMenuOpen = false;
   openDropdownLabel: string | null = null;

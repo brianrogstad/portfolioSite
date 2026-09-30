@@ -201,3 +201,10 @@ strong {
   }
 }
 /* stylelint-enable declaration-no-important */
+
+// Route-change focus targets (see RouteFocusService). They are focusable only
+// programmatically, so suppress the ring for that case while leaving real
+// keyboard focus rings alone.
+[tabindex='-1']:focus:not(:focus-visible) {
+  outline: none;
+}
