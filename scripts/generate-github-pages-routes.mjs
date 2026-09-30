@@ -8,9 +8,12 @@ const __dirname = path.dirname(__filename);
 const browserDistDir = path.resolve(__dirname, '..', 'dist', 'portfolio-site', 'browser');
 const indexHtmlPath = path.join(browserDistDir, 'index.html');
 const spaFallbackPath = path.join(browserDistDir, '404.html');
+// Unknown paths get the client-render shell, not the prerendered homepage,
+// so the router renders the not-found view without hydrating homepage markup.
+const csrShellPath = path.join(browserDistDir, 'index.csr.html');
 const staticRoutes = ['about', 'privacy'];
 
-await cp(indexHtmlPath, spaFallbackPath);
+await cp(csrShellPath, spaFallbackPath);
 
 for (const route of staticRoutes) {
   const routeDir = path.join(browserDistDir, route);

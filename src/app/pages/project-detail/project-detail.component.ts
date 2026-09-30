@@ -84,8 +84,20 @@ export class ProjectDetailComponent implements OnInit {
   }
 
   private loadProject() {
-    this.project = undefined;
     this.loadFailed = false;
+
+    // Prerendered pages carry their project data; using it synchronously keeps
+    // hydration on the server-rendered DOM instead of tearing it down to a
+    // loading state and repainting.
+    const ready = this.projectsService.peek(this.projectId);
+    if (ready) {
+      this.applyProject(ready);
+      this.loading = false;
+      this.cdr.markForCheck();
+      return;
+    }
+
+    this.project = undefined;
     this.loading = true;
     // OnPush: entering the loading state is a field write with no event
     // behind it, so without this the loading copy never paints when the
@@ -94,28 +106,7 @@ export class ProjectDetailComponent implements OnInit {
 
     this.projectsService
       .getProject(this.projectId)
-      .then((data) => {
-        this.project = data;
-        if (data) {
-          const title = `${data.title} — Brian Rogstad`;
-          const leadImage =
-            data.media?.find((m) => m.type === 'image')?.src ?? data.images?.[0]?.src;
-          this.seo.update({
-            title,
-            description:
-              data.description ?? fallbackDescription(data.title, data.category),
-            path: `/projects/${this.projectId}/`,
-            image: leadImage,
-            type: 'article',
-          });
-        } else {
-          this.seo.update({
-            title: 'Project Not Found — Brian Rogstad',
-            description: "The project you're looking for doesn't exist.",
-            path: `/projects/${this.projectId}/`,
-          });
-        }
-      })
+      .then((data) => this.applyProject(data))
       .catch(() => {
         this.loadFailed = true;
         this.seo.update({
@@ -128,5 +119,26 @@ export class ProjectDetailComponent implements OnInit {
         this.loading = false;
         this.cdr.markForCheck();
       });
+  }
+
+  private applyProject(data: ProjectDetail | undefined) {
+    this.project = data;
+    if (data) {
+      const title = `${data.title} — Brian Rogstad`;
+      const leadImage = data.media?.find((m) => m.type === 'image')?.src ?? data.images?.[0]?.src;
+      this.seo.update({
+        title,
+        description: data.description ?? fallbackDescription(data.title, data.category),
+        path: `/projects/${this.projectId}/`,
+        image: leadImage,
+        type: 'article',
+      });
+    } else {
+      this.seo.update({
+        title: 'Project Not Found — Brian Rogstad',
+        description: "The project you're looking for doesn't exist.",
+        path: `/projects/${this.projectId}/`,
+      });
+    }
   }
 }
