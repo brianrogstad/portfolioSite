@@ -1,8 +1,14 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [ master ]
+  # Gated on CI: deploy runs only after the CI workflow finishes successfully
+  # on master. Previously this was a plain push trigger running in parallel
+  # with CI, so a commit that built cleanly but failed lint or tests still
+  # shipped to production.
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -17,9 +23,17 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # workflow_dispatch has no workflow_run payload, so allow it through.
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Build the exact commit CI passed on, not whatever master points at
+          # by the time this runs.
+          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
