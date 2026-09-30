@@ -21,4 +21,11 @@ describe('AboutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('lays the About card out at the specified 900px width', () => {
+    // Had drifted to 1030px.
+    const container = fixture.nativeElement.querySelector('.about-container') as HTMLElement;
+    expect(container).toBeTruthy();
+    expect(getComputedStyle(container).maxWidth).toBe('900px');
+  });
 });
