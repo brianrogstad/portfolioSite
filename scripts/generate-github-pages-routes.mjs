@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const browserDistDir = path.resolve(__dirname, '..', 'dist', 'portfolio-site', 'browser');
 const indexHtmlPath = path.join(browserDistDir, 'index.html');
 const spaFallbackPath = path.join(browserDistDir, '404.html');
-const staticRoutes = ['about'];
+const staticRoutes = ['about', 'privacy'];
 
 await cp(indexHtmlPath, spaFallbackPath);
 
