@@ -20,7 +20,7 @@ export class AboutComponent implements OnInit {
       title: 'About — Brian Rogstad',
       description:
         'Brian Rogstad is a designer and frontend engineer with 15 years of enterprise product design for Thomson Reuters, Citi, Amtrak, and US Bank. Currently building AI characters with mood systems, memory engines, and life simulations.',
-      path: '/about',
+      path: '/about/',
       type: 'profile',
     });
   }
