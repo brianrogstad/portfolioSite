@@ -72,7 +72,7 @@ export class ProjectDetailComponent implements OnInit {
             this.seo.update({
               title,
               description: data.description ?? fallbackDescription(data.title, data.category),
-              path: `/projects/${this.projectId}`,
+              path: `/projects/${this.projectId}/`,
               image: leadImage,
               type: 'article',
             });
@@ -80,7 +80,7 @@ export class ProjectDetailComponent implements OnInit {
             this.seo.update({
               title: 'Project Not Found — Brian Rogstad',
               description: "The project you're looking for doesn't exist.",
-              path: `/projects/${this.projectId}`,
+              path: `/projects/${this.projectId}/`,
             });
           }
         })

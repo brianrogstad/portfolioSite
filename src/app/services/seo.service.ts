@@ -1,5 +1,4 @@
-import { Injectable, inject, PLATFORM_ID, DOCUMENT } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Injectable, inject, DOCUMENT } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 
 export interface SeoConfig {
@@ -23,7 +22,6 @@ export class SeoService {
   private readonly meta = inject(Meta);
   private readonly titleService = inject(Title);
   private readonly document = inject(DOCUMENT);
-  private readonly platformId = inject<object>(PLATFORM_ID);
 
   private readonly origin = 'https://brianrogstad.com';
   private readonly defaultImage = `${this.origin}/images/ProfileImg.png`;
@@ -58,8 +56,11 @@ export class SeoService {
     this.setCanonical(url);
   }
 
+  /**
+   * Runs on the server as well as in the browser: a prerendered page that
+   * keeps index.html's static canonical points crawlers at the homepage.
+   */
   private setCanonical(url: string): void {
-    if (!isPlatformBrowser(this.platformId)) return;
     let link = this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!link) {
       link = this.document.createElement('link');
