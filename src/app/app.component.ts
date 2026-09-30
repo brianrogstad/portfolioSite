@@ -8,6 +8,7 @@ import {
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { AnalyticsService } from './services/analytics.service';
+import { RouteFocusService } from './services/route-focus.service';
 
 export interface NavItem {
   label: string;
@@ -30,6 +31,9 @@ export class AppComponent {
     // GA4 only sees the initial document load on its own; this reports the
     // in-app route changes, which is every project detail page.
     inject(AnalyticsService).start();
+    // A route change swaps the whole main view; without this, focus stays on
+    // the nav link that was activated.
+    inject(RouteFocusService).start();
   }
 
   mobileMenuOpen = false;
