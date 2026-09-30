@@ -43,10 +43,7 @@ out never depends on scrolling back to the hero:
    (`app-contact-cta`)
 3. The site footer, present on every route
 
-**Résumé/CV:** deliberately not linked. `/resume` does not exist and is not
-referenced anywhere. Employers who want one can ask by email, which also tells
-Brian who is asking; a public PDF gets scraped and goes stale. Revisit if
-inbound volume makes the extra round trip a bottleneck.
+**Résumé/CV:** undecided. Not linked today; whether one ships is Brian's call.
 
 ## Design & Development Principles
 
