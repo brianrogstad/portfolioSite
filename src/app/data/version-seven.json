@@ -2,6 +2,7 @@
   "id": "version-seven",
   "title": "Version Seven",
   "category": "My Projects",
+  "description": "The operations platform behind everything I build — scheduling, mood systems, memory engines, and cron orchestration — named for a Word file that crashed six times.",
   "content": "<p class=\"text-container\">The name comes from a Word document. Years ago I tracked my finances in a single massive .doc file. Over time, Word would crash and save a recovery copy as a new version. It happened six times. By the time I decided to build it into an actual app, I was on version seven of that document. The name stuck.</p>",
   "media": [
     {

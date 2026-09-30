@@ -1,6 +1,24 @@
 @if (loading) {
   <div class="main-column" aria-busy="true" aria-live="polite">
-    <p class="project-loading">Loading…</p>
+    <p class="project-loading">
+      @if (knownTitle) {
+        Loading the {{ knownTitle }} case study…
+      } @else {
+        Loading this project…
+      }
+    </p>
+  </div>
+} @else if (loadFailed) {
+  <div class="main-column project-error" role="alert">
+    <h1>This project didn't load</h1>
+    <p>
+      Something went wrong fetching it, which usually means a dropped connection rather than a
+      missing page. Try again, or head back and pick it from the list.
+    </p>
+    <div class="project-error__actions">
+      <button type="button" class="project-error__retry" (click)="retry()">Try again</button>
+      <a routerLink="/">Return Home</a>
+    </div>
   </div>
 } @else if (project) {
   <div class="main-column">
@@ -154,6 +172,10 @@
     <a routerLink="/">Return Home</a>
   </div>
 }
+
+<app-contact-cta
+  lead="If this is the kind of work you need, the fastest way to start is an email."
+/>
 
 <app-connect-section sectionId="scrollspyconnect" headingId="connect" />
 

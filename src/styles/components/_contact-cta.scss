@@ -1,0 +1,86 @@
+// Contact CTA
+// =============================================================
+// The site's primary conversion affordance, placed at the end of pages.
+// Deliberately heavier than body and footnote type — the bug this fixes was
+// a 12px gray mailto being the only contact path on the whole site.
+// `.email-cta` is shared with the homepage hero, which promotes the same
+// action out of the 12px gray meta row.
+// Class selectors only, no bare-element descendants, so this block can sit
+// anywhere in the cascade without tripping no-descending-specificity.
+
+.contact-cta {
+  background: var(--surface-raised);
+  border-top: 1px solid var(--border);
+  padding: 72px 5%;
+  text-align: left;
+
+  @include breakpoint(tablet) {
+    padding: 56px 5%;
+  }
+}
+
+.contact-cta__heading {
+  color: var(--text-heading);
+  margin: 0 0 12px;
+}
+
+.contact-cta__lead {
+  @include font-size(18);
+
+  color: var(--text-secondary);
+  font-family: $grotesk;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0 0 28px;
+  max-width: 560px;
+
+  @include breakpoint(tablet) {
+    @include font-size(16);
+  }
+}
+
+.email-cta {
+  align-items: baseline;
+  background: var(--accent);
+  border-radius: 2px;
+  color: var(--text-on-dark-bright);
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0 12px;
+
+  // Comfortably clears the WCAG 2.2 24x24 target minimum.
+  min-height: 48px;
+  padding: 14px 24px;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.email-cta__label {
+  @include font-size(16);
+
+  font-family: $montserrat;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.email-cta__address {
+  @include font-size(14);
+
+  font-family: $grotesk;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.email-cta:hover,
+.email-cta:focus-visible {
+  background: var(--accent-hover);
+  color: var(--text-on-dark-bright);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .email-cta:hover {
+    transform: translateY(-1px);
+  }
+}

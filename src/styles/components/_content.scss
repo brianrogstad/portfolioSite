@@ -74,6 +74,14 @@
   }
 }
 
+.hero-intro__actions {
+  margin-top: 36px;
+
+  @include breakpoint(tablet) {
+    margin-top: 28px;
+  }
+}
+
 .hero-intro__meta {
   @include font-size(12);
 
@@ -83,6 +91,8 @@
   margin-top: 32px;
   letter-spacing: 0.02em;
 
+  // Email moved out of this row into `.hero-intro__actions` — this row is
+  // now secondary profile links only.
   // NOTE: the nested `a { &:hover {} }` block that used to live here
   // was extracted to the bottom of this file to satisfy
   // no-descending-specificity. See `.hero-intro__meta a` near EOF.
@@ -279,7 +289,15 @@
 // =============================================================
 
 .parallax-container {
+  // The shorthand keeps the JPEG as the fallback for browsers without
+  // image-set(); the override below hands everything else the WebP sibling.
+  // Inline media goes through <picture>, which does not reach a CSS
+  // background, so this selection has to be made here.
   background: url('/images/parallax-bg.jpg') var(--surface-raised) center center no-repeat;
+  background-image: image-set(
+    url('/images/parallax-bg.webp') type('image/webp'),
+    url('/images/parallax-bg.jpg') type('image/jpeg')
+  );
   background-attachment: fixed;
   background-size: cover;
   padding: 200px 0;

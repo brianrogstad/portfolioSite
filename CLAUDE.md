@@ -13,7 +13,7 @@ Design and development portfolio at brianrogstad.com.
 
 ## Tech Stack
 
-- **Frontend:** Angular 18, TypeScript, SCSS, RxJS
+- **Frontend:** Angular 22, TypeScript, SCSS, RxJS
 - **SSR:** Express + Angular Universal
 - **Hosting:** GitHub Pages via GitHub Actions
 - **Status:** Live, stable — monitor analytics only

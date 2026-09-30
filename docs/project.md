@@ -1,7 +1,11 @@
+> **ARCHIVED** — Historical record, not a living document. The canonical
+> project docs live in `~/Developer/unwritten-ops/projects/portfolio/`, and
+> current work is tracked in the portfolio lane there.
+
 # Portfolio Site — Project Vision
 
 **Live at:** [brianrogstad.com](https://brianrogstad.com)
-**Live since:** ~2010 (16 years), rebuilt Feb 2025 with Angular 18
+**Live since:** ~2010 (16 years), rebuilt Feb 2025 (Angular 22 today)
 **Purpose:** Personal statement of my design and development expertise
 
 ---
@@ -11,7 +15,7 @@
 This portfolio is **not** a marketing website designed to maximize conversions. It's a **reflection of who you are as a designer and developer** — a showcase of work you're proud of, built with the same care and attention to detail you bring to everything you make.
 
 The portfolio proves three things:
-1. **You can build** — Modern Angular 18 stack, SSR, semantic HTML, responsive design
+1. **You can build** — Modern Angular 22 stack, SSR, semantic HTML, responsive design
 2. **You care about quality** — Hand-crafted CSS, accessibility-first approach, meticulous SEO
 3. **You understand the craft** — Every decision (tech stack, CSS strategy, a11y approach) reflects intentional choices
 
@@ -27,6 +31,19 @@ The portfolio proves three things:
 5. Leave impressed → confident in your capabilities
 
 **Success:** They understand you're thoughtful, skilled, and care about doing things *right*.
+
+### Contact Surface
+
+The site's only contact mechanism is a `mailto:` link — there is no form, and
+no data is collected from visitors. It appears in three places so that reaching
+out never depends on scrolling back to the hero:
+
+1. The homepage hero, as a primary action (`.email-cta`)
+2. The end of every page — home, About, and each `/projects/*` case study
+   (`app-contact-cta`)
+3. The site footer, present on every route
+
+**Résumé/CV:** undecided. Not linked today; whether one ships is Brian's call.
 
 ## Design & Development Principles
 
@@ -45,7 +62,7 @@ The portfolio proves three things:
 ### Performance & Efficiency
 - Server-side rendering (SSR) for fast initial load
 - Lazy-loaded components and images
-- Modern web standards (Angular 18, no legacy cruft)
+- Modern web standards (Angular 22, no legacy cruft)
 - Semantic HTML reduces JavaScript bloat
 
 ### Visual Craft

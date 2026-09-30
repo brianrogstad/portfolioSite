@@ -2,6 +2,7 @@
   "id": "tremor-system",
   "title": "Tremor Design System Samples",
   "category": "UI Design",
+  "description": "A Figma design system for Tremor's products covering color, typography, font guidelines, layout variations, and elevation styles.",
   "content": "<p class=\"text-container\">I built a design system for Tremor's digital products covering color, typography, font guidelines, layout variations, and elevation styles. Everything was documented in Figma so designers and developers were working from the same source. <i>These are only a few samples of the whole project.</i></p>",
   "images": [
     {

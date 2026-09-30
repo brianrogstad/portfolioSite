@@ -2,6 +2,7 @@
   "id": "tremor-maps",
   "title": "Authentication Flow",
   "category": "Information Architecture",
+  "description": "Authentication flow and navigation architecture mapped for Tremor's platform: account creation, login, credential recovery, retry logic, and the full page hierarchy.",
   "content": "<p class=\"text-container\">I mapped out two core UX structures for Tremor's platform: the user authentication flow and the application navigation architecture. The auth flow covers account creation, login, credential recovery, and retry logic. The sitemap defines the full page hierarchy — from top-level sections down to modals, print views, and sub-pages within the Placements area.</p>",
   "images": [
     {

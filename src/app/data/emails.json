@@ -2,6 +2,7 @@
   "id": "emails",
   "title": "Amtrak Email Campaigns",
   "category": "Email Design & Development",
+  "description": "HTML email campaigns designed and coded for Amtrak at Olson, built on table layouts and inline styles and Litmus-tested across every major client.",
   "content": "<p class=\"text-container\">These HTML email campaigns were created for Amtrak while I was working as a freelancer at Olson, a Minneapolis-based advertising agency. Each design represents a unique email campaign that I developed from concept to production-ready HTML. The emails were built to render consistently across all major email clients and tested thoroughly using Litmus before deployment.<br><br>Working within the constraints of email HTML (table-based layouts, inline styles, and varying client support) required creative problem-solving to achieve the desired visual design while maintaining cross-client compatibility. Each campaign was tailored to specific marketing objectives and aligned with Amtrak's brand guidelines.</p>",
   "images": [
     {

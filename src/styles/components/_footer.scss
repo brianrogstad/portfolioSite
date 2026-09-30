@@ -30,3 +30,39 @@
     text-align: center;
   }
 }
+
+// Contact and site-information links. The email keeps reaching Brian from
+// depending on the homepage hero. Sits opposite the copyright on wide
+// screens and stacks under it on laptop and below.
+.site-footer__links {
+  display: flex;
+  flex: 0 1 50%;
+  flex-wrap: wrap;
+  gap: 4px 20px;
+  justify-content: flex-end;
+
+  @include breakpoint(laptop) {
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-top: 12px;
+  }
+}
+
+.site-footer__links a {
+  @include font-size(13);
+
+  align-items: center;
+  color: var(--text-on-dark-bright);
+  display: inline-flex;
+
+  // Clears the WCAG 2.2 24x24 target minimum.
+  min-height: 24px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.site-footer__links a:hover,
+.site-footer__links a:focus-visible {
+  color: var(--text-on-dark-medium);
+}

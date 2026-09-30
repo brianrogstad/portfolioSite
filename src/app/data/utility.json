@@ -2,6 +2,7 @@
   "id": "utility",
   "title": "Tremor Admin UI Design",
   "category": "UI Design",
+  "description": "Admin interface design for Tremor's platform: account management, user onboarding, auction setup, and settings built around clear form structure.",
   "content": "<p class=\"text-container\">I designed the admin interface for Tremor's platform — account management, user onboarding, auction setup, and account settings. The focus was on clear form structure, consistent visual feedback, and navigation that doesn't get in the way of repetitive admin work. <i>Note that these are only a few samples of the whole project.</i></p>",
   "images": [
     {

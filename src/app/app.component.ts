@@ -7,6 +7,8 @@ import {
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { AnalyticsService } from './services/analytics.service';
+import { RouteFocusService } from './services/route-focus.service';
 
 export interface NavItem {
   label: string;
@@ -24,6 +26,15 @@ export interface NavItem {
 })
 export class AppComponent {
   private platformId = inject<object>(PLATFORM_ID);
+
+  constructor() {
+    // GA4 only sees the initial document load on its own; this reports the
+    // in-app route changes, which is every project detail page.
+    inject(AnalyticsService).start();
+    // A route change swaps the whole main view; without this, focus stays on
+    // the nav link that was activated.
+    inject(RouteFocusService).start();
+  }
 
   mobileMenuOpen = false;
   openDropdownLabel: string | null = null;
@@ -109,6 +120,18 @@ export class AppComponent {
     if (!related || !dropdown.contains(related)) {
       this.openDropdownLabel = null;
     }
+  }
+
+  /**
+   * Stable id linking a dropdown toggle to the list it expands.
+   * e.g. "Client & Agency Work" -> "nav-dropdown-client-agency-work"
+   */
+  dropdownId(label: string): string {
+    const slug = label
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+    return `nav-dropdown-${slug}`;
   }
 
   onDropdownKeydown(event: KeyboardEvent, label: string) {

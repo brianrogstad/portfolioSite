@@ -43,17 +43,16 @@
               <button
                 type="button"
                 class="dropdown-toggle"
-                aria-haspopup="true"
+                [attr.aria-controls]="dropdownId(item.label)"
                 [attr.aria-expanded]="openDropdownLabel === item.label"
               >
                 {{ item.label }}
               </button>
-              <ul class="dropdown-menu" role="menu">
+              <ul class="dropdown-menu" [id]="dropdownId(item.label)">
                 @for (child of item.children; track child.label) {
-                  <li role="none">
+                  <li>
                     @if (child.external) {
                       <a
-                        role="menuitem"
                         [href]="child.route"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -73,7 +72,7 @@
                         </svg>
                       </a>
                     } @else {
-                      <a role="menuitem" [routerLink]="child.route" (click)="closeDropdown()">
+                      <a [routerLink]="child.route" (click)="closeDropdown()">
                         {{ child.label }}
                       </a>
                     }
@@ -193,6 +192,10 @@
 
     <footer class="site-footer">
       <p class="disclaimer">&#169; Brian Rogstad {{ yearRange }}. All rights reserved.</p>
+      <nav class="site-footer__links" aria-label="Contact and site information">
+        <a href="mailto:brianrogstad@gmail.com">brianrogstad&#64;gmail.com</a>
+        <a routerLink="/privacy">Privacy</a>
+      </nav>
     </footer>
   </main>
 </div>

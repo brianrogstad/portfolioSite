@@ -2,6 +2,7 @@
   "id": "contact",
   "title": "Contacts Application",
   "category": "Development",
+  "description": "A contacts management app built in Angular on Firebase, with card-based browsing, search, and a persistent sidebar form for quick entry.",
   "content": "<p class=\"text-container\">A contacts management app I built in Angular. It handles adding, editing, deleting, and searching contacts, with a card-based layout and a persistent sidebar form for quick entry. The data layer runs on Firebase.</p>",
   "images": [
     {

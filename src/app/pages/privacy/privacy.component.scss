@@ -1,0 +1,33 @@
+:host {
+  .main-column header h1 {
+    width: 40%;
+    margin: 150px auto 48px;
+
+    @media (width <= 768px) {
+      width: 90%;
+    }
+  }
+
+  .privacy h2 {
+    font-size: 2.2rem;
+    line-height: 1.25;
+    margin: 40px 0 12px;
+  }
+
+  .privacy p,
+  .privacy li {
+    font-size: 1.6rem;
+    line-height: 1.75;
+    margin-bottom: 14px;
+  }
+
+  .privacy ul {
+    margin: 0 0 14px;
+    padding-left: 20px;
+  }
+
+  .privacy__updated {
+    color: var(--text-muted);
+    font-size: 1.3rem;
+  }
+}

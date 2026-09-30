@@ -2,10 +2,10 @@
 
 Project-specific constraints that differ from or extend global standards.
 
-**Note:** Work tracking has moved to Linear (workspace: Unwritten, https://linear.app/unwritten).
+**Note:** Work is tracked in `~/Developer/unwritten-ops/projects/` (portfolio lane). Linear was decommissioned 2026-05-26.
 
 ## Stack Specifics
-- **Build tool:** Vite (via Angular CLI 18+)
+- **Build tool:** Vite (via Angular CLI 22)
 - **Styling:** Hand-crafted SCSS only — NO CSS frameworks (Bootstrap, Tailwind, etc.)
 - **SSR:** Express + Angular Universal
 - **Hosting:** GitHub Pages via GitHub Actions (push to main auto-deploys)

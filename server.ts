@@ -1,5 +1,5 @@
 import { APP_BASE_HREF } from '@angular/common';
-import { CommonEngine } from '@angular/ssr/node';
+import { CommonEngine, isMainModule } from '@angular/ssr/node';
 import express from 'express';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
@@ -57,4 +57,9 @@ function run(): void {
   });
 }
 
-run();
+// Only listen when this file is executed directly (npm run serve:ssr:portfolioSite).
+// The prerenderer imports this module during `ng build`; without the guard each
+// prerendered route tried to bind port 4000 and threw EADDRINUSE.
+if (isMainModule(import.meta.url)) {
+  run();
+}

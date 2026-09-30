@@ -2,6 +2,7 @@
   "id": "usb-system",
   "title": "USB Design System Samples",
   "category": "UI Design",
+  "description": "A multi-brand design system built in Figma for US Bancorp, where a single variable swap pushes color, type, and component changes across every downstream file.",
   "content": "<p class=\"text-container\">I built a multi-brand design system in Figma for US Bancorp using collections and variables for theming. The system covers color tokens, typography, and a component library — structured so a single variable swap pushes brand changes across everything downstream. <i>Note that these are only a few samples of the whole project.</i></p>",
   "images": [
     {

@@ -2,6 +2,7 @@
   "id": "usb-wireframes",
   "title": "USB Themed Wireframes",
   "category": "UI Design",
+  "description": "Themed wireframes built on the US Bancorp design system, switching brand identity across roughly 500 Figma frames from one collections dropdown.",
   "content": "<p class=\"text-container\">Wireframes I built on top of the USB Design System to show how the variable architecture works in practice. Switching brands in Figma's collections dropdown updates colors, logos, and brand-specific styling across all screens at once — the system doing what it was set up to do. These ran across 4 projects and roughly 500 Figma frames.</p>",
   "media": [
     {

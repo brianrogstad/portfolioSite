@@ -1,8 +1,8 @@
-> **ARCHIVED** — Historical record, not a living document. Current work tracked in [Linear](https://linear.app/unwritten).
+> **ARCHIVED** — Historical record, not a living document. Current work is tracked in `~/Developer/unwritten-ops/projects/` (portfolio lane).
 
 # Roadmap
 
-**Work tracking has moved to Linear** (workspace: Unwritten). Milestones and issues are managed there.
+**Work tracking lives in `~/Developer/unwritten-ops/projects/`** (portfolio lane). Milestones and issues are managed there.
 
 **Current Phase:** v1 (Stable) — Live and monitoring
 **Overall Timeline:** No formal deadline (organic updates as you add projects)
@@ -14,7 +14,7 @@
 | Phase | Status | Timeline | Purpose |
 |-------|--------|----------|---------|
 | **v0.x** | ✅ Complete | 2010-2024 | Multiple iterations over 16 years |
-| **v1 (Current)** | 🚀 Live | Feb 2025 - TBD | Angular 18 rebuild, stable production |
+| **v1 (Current)** | 🚀 Live | Feb 2025 - TBD | Angular 22 rebuild, stable production |
 | **v1.1** | 📋 Planned | 6-12 months out | Design refresh (optional) |
 | **v2** | 💭 Future | TBD | Content expansion (blog, guides, etc.) |
 
@@ -27,10 +27,10 @@
 **Duration:** Ongoing (stable site, organic updates)
 
 ### What's Included (Delivered)
-- ✅ Angular 18 rebuild with modern patterns
+- ✅ Angular 22 rebuild with modern patterns
 - ✅ Server-side rendering (SSR) for fast loads
 - ✅ Responsive design (mobile, tablet, desktop)
-- ✅ WCAG 2.1 AA accessibility compliance
+- 🎯 WCAG 2.1 AA accessibility — the target, not a verified state (open contrast work)
 - ✅ SEO optimization (semantic HTML, meta tags, sitemap)
 - ✅ Analytics integration (Google Analytics)
 - ✅ Dark theme support (respects system preference)
@@ -78,7 +78,7 @@
 - No structural changes to HTML/components
 - No new features
 - No breaking changes to project data structure
-- No framework changes (Angular 18 stays)
+- No framework changes (Angular 22 stays)
 
 ---
 
@@ -108,7 +108,7 @@
 
 ## Backlog & Ideas
 
-Unscheduled work is tracked in Linear (workspace: Unwritten), including:
+Unscheduled work is tracked in `~/Developer/unwritten-ops/projects/`, including:
 - New features (not planned for v1)
 - Technical debt (non-critical improvements)
 - Nice-to-haves (low priority)
@@ -118,12 +118,18 @@ Unscheduled work is tracked in Linear (workspace: Unwritten), including:
 
 ## Metrics & Health
 
-**Current Health:** ✅ Excellent
+**Current Health:** Good, with known open items
 - Live and stable
-- No critical bugs
-- Performance excellent
-- Accessibility compliant
+- Accessibility: AA is the target, not a verified state. A HIGH-severity
+  color-contrast failure is open, so this section must not claim compliance.
+- Performance: under target. The 2026-09-03 Lighthouse run measured 84/100
+  with a 4.4s LCP against a 95+ score and 2.5s LCP bar.
+- Security headers: production sets none. GitHub Pages cannot set custom
+  response headers, and the platform question is still open.
 - SEO working well
+
+Health is read from the open bug list in the portfolio lane rather than
+asserted here, so this section does not drift ahead of it again.
 
 **Monitored Quarterly:**
 - Lighthouse audits (target 95+)

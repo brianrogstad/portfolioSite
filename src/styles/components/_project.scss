@@ -25,7 +25,9 @@
   grid-template-columns: 1fr 1fr;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1030px;
+
+  // The About card layout is specified at 900px; it had drifted to 1030px.
+  max-width: 900px;
 
   @include breakpoint(largescreen) {
     grid-gap: 48px 3%;
@@ -288,9 +290,16 @@
     a {
       @include font-size(13);
 
+      // WCAG 2.2 SC 2.5.8 Target Size (Minimum): these CTAs measured 114x21
+      // at 375px. Height comes from the box, not the font size, so the label
+      // keeps its visual weight.
+      align-items: center;
+      display: inline-flex;
       font-family: $grotesk;
       font-weight: 500;
+      gap: 4px;
       letter-spacing: 0.01em;
+      min-height: 24px;
       transition:
         color 0.2s ease,
         transform 0.2s ease;
