@@ -289,7 +289,15 @@
 // =============================================================
 
 .parallax-container {
+  // The shorthand keeps the JPEG as the fallback for browsers without
+  // image-set(); the override below hands everything else the WebP sibling.
+  // Inline media goes through <picture>, which does not reach a CSS
+  // background, so this selection has to be made here.
   background: url('/images/parallax-bg.jpg') var(--surface-raised) center center no-repeat;
+  background-image: image-set(
+    url('/images/parallax-bg.webp') type('image/webp'),
+    url('/images/parallax-bg.jpg') type('image/jpeg')
+  );
   background-attachment: fixed;
   background-size: cover;
   padding: 200px 0;
