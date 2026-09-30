@@ -4,6 +4,7 @@ import { PROJECT_IDS } from './services/projects.service';
 export const serverRoutes: ServerRoute[] = [
   { path: '', renderMode: RenderMode.Prerender },
   { path: 'about', renderMode: RenderMode.Prerender },
+  { path: 'privacy', renderMode: RenderMode.Prerender },
   {
     // Without these params the parameterised route fell through to the
     // client-render catch-all, so GitHub Pages had no file to serve for any

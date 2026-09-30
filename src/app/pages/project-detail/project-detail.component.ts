@@ -48,6 +48,14 @@ export class ProjectDetailComponent implements OnInit {
   project?: ProjectDetail;
   projectId = '';
   loading = true;
+  /**
+   * True when the project's data failed to load (a rejected import: offline,
+   * a dropped chunk, a bad deploy). Distinct from `project === undefined`
+   * after a successful load, which means the id is genuinely unknown. Without
+   * this the template told visitors the project doesn't exist, which is the
+   * wrong diagnosis and offers no way forward.
+   */
+  loadFailed = false;
   prevProject?: ProjectNeighbor;
   nextProject?: ProjectNeighbor;
   sectionLabel?: string;
@@ -55,39 +63,59 @@ export class ProjectDetailComponent implements OnInit {
   ngOnInit() {
     this.route.params.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((params) => {
       this.projectId = params['id'];
-      this.project = undefined;
-      this.loading = true;
       const nav = this.projectsService.getProjectNav(this.projectId);
       this.prevProject = nav.prev;
       this.nextProject = nav.next;
       this.sectionLabel = nav.section;
-      this.projectsService
-        .getProject(this.projectId)
-        .then((data) => {
-          this.project = data;
-          if (data) {
-            const title = `${data.title} — Brian Rogstad`;
-            const leadImage =
-              data.media?.find((m) => m.type === 'image')?.src ?? data.images?.[0]?.src;
-            this.seo.update({
-              title,
-              description: data.description ?? fallbackDescription(data.title, data.category),
-              path: `/projects/${this.projectId}/`,
-              image: leadImage,
-              type: 'article',
-            });
-          } else {
-            this.seo.update({
-              title: 'Project Not Found — Brian Rogstad',
-              description: "The project you're looking for doesn't exist.",
-              path: `/projects/${this.projectId}/`,
-            });
-          }
-        })
-        .finally(() => {
-          this.loading = false;
-          this.cdr.markForCheck();
-        });
+      this.loadProject();
     });
+  }
+
+  /** Re-runs the data load for the current route. Bound to the retry action. */
+  retry() {
+    this.loadProject();
+  }
+
+  private loadProject() {
+    this.project = undefined;
+    this.loadFailed = false;
+    this.loading = true;
+
+    this.projectsService
+      .getProject(this.projectId)
+      .then((data) => {
+        this.project = data;
+        if (data) {
+          const title = `${data.title} — Brian Rogstad`;
+          const leadImage =
+            data.media?.find((m) => m.type === 'image')?.src ?? data.images?.[0]?.src;
+          this.seo.update({
+            title,
+            description:
+              data.description ?? fallbackDescription(data.title, data.category),
+            path: `/projects/${this.projectId}/`,
+            image: leadImage,
+            type: 'article',
+          });
+        } else {
+          this.seo.update({
+            title: 'Project Not Found — Brian Rogstad',
+            description: "The project you're looking for doesn't exist.",
+            path: `/projects/${this.projectId}/`,
+          });
+        }
+      })
+      .catch(() => {
+        this.loadFailed = true;
+        this.seo.update({
+          title: 'Project Unavailable — Brian Rogstad',
+          description: 'This project could not be loaded. Try again in a moment.',
+          path: `/projects/${this.projectId}/`,
+        });
+      })
+      .finally(() => {
+        this.loading = false;
+        this.cdr.markForCheck();
+      });
   }
 }

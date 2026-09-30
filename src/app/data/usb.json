@@ -12,7 +12,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Brand Style Map Configuration:</strong> The token management layer showing multiple brand variants — heading colors, logo color maps, header settings, and interactive states across different brand identities."
+      "caption": "<strong>Brand Style Map Configuration:</strong> I set up the token layer here so a brand swap happens in one place: heading colors, logo color maps, header settings, and interactive states, one map per brand."
     },
     {
       "type": "image",
@@ -21,7 +21,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Color System Architecture:</strong> Full color system documentation covering neutral grayscale, support and status colors, and interactive button states. Brand-specific palettes for multiple brands with lightened, standard, and darkened variants."
+      "caption": "<strong>Color System Architecture:</strong> I documented the color system: neutral grays, support and status colors, and the interactive button states. Each brand carries its own palette with lightened, standard, and darkened variants."
     },
     {
       "type": "image",
@@ -30,7 +30,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Multi-Brand Logo Asset Management:</strong> Centralized brand asset library displaying various logo treatments and brand applications within the design system, organized for consistent implementation across different contexts and platforms."
+      "caption": "<strong>Multi-Brand Logo Assets:</strong> I pulled the logo treatments into one library instead of leaving them spread across project files, organized by brand and by where each one gets used."
     },
     {
       "type": "image",
@@ -39,7 +39,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Notification Component Variations:</strong> The four notification types (Info, Success, Error, and Warning), each with consistent structure including status icon, message content, and close button. Standard and margin-spaced layout variants."
+      "caption": "<strong>Notification Components:</strong> Four notification types (Info, Success, Error, Warning) I built on one structure: status icon, message, close button. I kept a margin-spaced variant for tighter layouts."
     },
     {
       "type": "image",
@@ -48,7 +48,7 @@
       "width": 1000,
       "height": 510,
       "group": "Design System",
-      "caption": "<strong>Footer Component System:</strong> Four footer variations with consistent structural elements including disclosures, navigation links, security indicators, and copyright information. Variations demonstrate different spacing, layout, and conditional element inclusion."
+      "caption": "<strong>Footer Components:</strong> Four footer variations I built from the same parts: disclosures, navigation links, security indicators, copyright. What changes between them is spacing and which elements are conditional."
     },
     {
       "type": "image",
@@ -57,7 +57,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Typography Hierarchy:</strong> Complete typographic scale across multiple variations in a 3x2 grid. 72 variants accommodating different contexts, brand applications, and content needs."
+      "caption": "<strong>Typography Hierarchy:</strong> The type scale I built out, 72 variants in a 3x2 grid, covering the contexts and brand applications the products needed."
     },
     {
       "type": "image",
@@ -66,7 +66,7 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Link Card Component Library:</strong> Grid of Link Card variations showing different content scenarios: varying text lengths, optional metric badges, date stamps, and superscript annotations."
+      "caption": "<strong>Link Card Components:</strong> Link Card variations I worked through: different text lengths, optional metric badges, date stamps, and superscript annotations, so the component holds up against real content."
     },
     {
       "type": "image",
@@ -75,14 +75,14 @@
       "width": 1000,
       "height": 678,
       "group": "Design System",
-      "caption": "<strong>Global Header Architecture:</strong> Complete header system across multiple brand variations with full navigation structures, responsive mobile states, and component breakdowns of Upper and Lower Header sections."
+      "caption": "<strong>Global Header:</strong> The header system I built across brands, with the navigation structures, responsive mobile states, and a breakdown of the Upper and Lower Header sections."
     },
     {
       "type": "video",
       "src": "/images/usb-wireframes/usbwires.mp4",
       "alt": "Brand Switching Demonstration",
       "group": "Themed Wireframes",
-      "caption": "<strong>Dynamic Brand Theming in Action:</strong> By selecting different brands from Figma's collections dropdown, wireframes instantly transform between Acme, Fidelity, and Elan brand themes, updating colors, logos, and brand-specific styling while maintaining consistent structure.",
+      "caption": "<strong>Dynamic Brand Theming in Action:</strong> Switching brand in Figma's collections dropdown rethemes the wireframes between Acme, Fidelity, and Elan. Colors, logos, and brand styling update while the structure stays put. That swap is what the collections setup was for.",
       "autoplay": false,
       "loop": true,
       "muted": true
@@ -94,7 +94,7 @@
       "width": 1000,
       "height": 678,
       "group": "Themed Wireframes",
-      "caption": "<strong>Themed Wireframe Detail:</strong> Close-up view of a branded wireframe showing the component structure, spacing, typography hierarchy, and how design system tokens are applied throughout the interface."
+      "caption": "<strong>Themed Wireframe Detail:</strong> A closer look at one branded wireframe: component structure, spacing, type hierarchy, and where the tokens I set up land in the interface."
     },
     {
       "type": "image",
@@ -103,7 +103,7 @@
       "width": 1000,
       "height": 678,
       "group": "Themed Wireframes",
-      "caption": "<strong>Full Figma Collection:</strong> The full Figma collection — 4 major projects, 500+ frames across approximately 10 project files, all pulling from the same design system."
+      "caption": "<strong>Full Figma Collection:</strong> The whole collection, 4 major projects and 500+ frames across roughly 10 project files, all pulling from the same design system."
     },
     {
       "type": "image",
@@ -112,7 +112,7 @@
       "width": 1000,
       "height": 678,
       "group": "Sketches to Production",
-      "caption": "<strong>Conceptual Design Exploration:</strong> Hand-drawn sketches exploring header and navigation design concepts before moving into digital wireframes."
+      "caption": "<strong>Conceptual Design Exploration:</strong> Sketches I did before going digital, working out header and navigation concepts on paper first."
     },
     {
       "type": "image",
@@ -121,7 +121,7 @@
       "width": 1000,
       "height": 678,
       "group": "Sketches to Production",
-      "caption": "<strong>From Concept to Production:</strong> The refined header and navigation design built from exploration sketches, alongside a screenshot from the <a href='https://www.usbank.com/online-mobile-banking.html' target='_blank' rel='noopener noreferrer'>US Bank online mobile banking page</a> showing how these concepts influenced the final production implementation."
+      "caption": "<strong>From Concept to Production:</strong> The refined header and navigation I built from those sketches, next to a screenshot from the <a href='https://www.usbank.com/online-mobile-banking.html' target='_blank' rel='noopener noreferrer'>US Bank online mobile banking page</a> showing where the concepts ended up in production."
     },
     {
       "type": "image",
@@ -130,7 +130,7 @@
       "width": 1000,
       "height": 678,
       "group": "Flow Mapping",
-      "caption": "<strong>Error Handling Flow:</strong> Systematic approach to user-facing error responses for both client-side (4xx) and server-side (5xx) errors. Color-coded decisions (red for errors, green for successful outcomes, yellow for warnings) with UI examples providing tailored error messages and corrective actions."
+      "caption": "<strong>Error Handling Flow:</strong> How I mapped user-facing error responses for client-side (4xx) and server-side (5xx) failures. Decisions are color coded, red for errors, green for success, yellow for warnings, with UI examples for the message and the way out."
     },
     {
       "type": "image",
@@ -139,7 +139,7 @@
       "width": 1000,
       "height": 458,
       "group": "Flow Mapping",
-      "caption": "<strong>Design System Planning Flow:</strong> Step-by-step diagrams guiding system integration and component creation. Calendar and grid components demonstrate design flexibility, while style mapping guarantees uniformity across complex flows."
+      "caption": "<strong>Design System Planning Flow:</strong> Step-by-step diagrams for integrating the system and building components. The calendar and grid components cover the flexible cases, and the style mapping keeps things consistent across the longer flows."
     },
     {
       "type": "image",
@@ -148,7 +148,7 @@
       "width": 1000,
       "height": 617,
       "group": "Flow Mapping",
-      "caption": "<strong>Workflow Mapping:</strong> User journey mapping for the 'New to Digital' setup process alongside onboarding flows. Includes intermediate actions like Autopay and extended features like adding authorized users, with dedicated sections for error and failure management."
+      "caption": "<strong>Workflow Mapping:</strong> I mapped the 'New to Digital' setup alongside the onboarding flows, including intermediate actions like Autopay and extras like adding authorized users, with the error and failure paths called out."
     },
     {
       "type": "image",
@@ -157,7 +157,7 @@
       "width": 1000,
       "height": 620,
       "group": "Flow Mapping",
-      "caption": "<strong>Detailed User Flows:</strong> Scenario-based design documenting default flows, input error handling, maximum user capacity, and deletion workflows. Annotations and navigation paths included for developer handoff."
+      "caption": "<strong>Detailed User Flows:</strong> Scenario-based flows I documented for handoff: default paths, input errors, maximum user capacity, and deletion, annotated with navigation paths so developers were not guessing."
     }
   ]
 }
