@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
+import { AnalyticsService } from './services/analytics.service';
 
 export interface NavItem {
   label: string;
@@ -24,6 +25,12 @@ export interface NavItem {
 })
 export class AppComponent {
   private platformId = inject<object>(PLATFORM_ID);
+
+  constructor() {
+    // GA4 only sees the initial document load on its own; this reports the
+    // in-app route changes, which is every project detail page.
+    inject(AnalyticsService).start();
+  }
 
   mobileMenuOpen = false;
   openDropdownLabel: string | null = null;
