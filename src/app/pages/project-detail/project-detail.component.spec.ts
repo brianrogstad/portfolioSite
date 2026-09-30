@@ -48,6 +48,55 @@ describe('ProjectDetailComponent', () => {
     expect(params$.observed).toBeTrue();
   });
 
+  describe('when the project data fails to load', () => {
+    // A rejected import is an operational failure, not a missing project.
+    // Reporting it as "doesn't exist" gives the wrong diagnosis and no way out.
+    beforeEach(async () => {
+      getProjectSpy.and.rejectWith(new Error('chunk load failed'));
+      component.retry();
+      await fixture.whenStable();
+      fixture.detectChanges();
+    });
+
+    it('reports a load failure rather than a missing project', () => {
+      const text = fixture.nativeElement.textContent as string;
+
+      expect(component.loadFailed).toBeTrue();
+      expect(text).toContain("didn't load");
+      expect(text).not.toContain("doesn't exist");
+    });
+
+    it('announces the failure and offers a retry', () => {
+      expect(fixture.nativeElement.querySelector('[role="alert"]')).toBeTruthy();
+      expect(fixture.nativeElement.querySelector('.project-error__retry')).toBeTruthy();
+    });
+
+    it('recovers when the retry succeeds', async () => {
+      getProjectSpy.and.resolveTo({
+        id: 'test',
+        title: 'Test Project',
+        category: 'UI Design',
+      });
+
+      (fixture.nativeElement.querySelector('.project-error__retry') as HTMLButtonElement).click();
+      await fixture.whenStable();
+      fixture.detectChanges();
+
+      expect(component.loadFailed).toBeFalse();
+      expect(fixture.nativeElement.textContent).toContain('Test Project');
+    });
+  });
+
+  it('still reports an unknown project id as not found', async () => {
+    getProjectSpy.and.resolveTo(undefined);
+    component.retry();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(component.loadFailed).toBeFalse();
+    expect(fixture.nativeElement.textContent).toContain("doesn't exist");
+  });
+
   it('tears down the route param subscription on destroy', () => {
     fixture.destroy();
 
