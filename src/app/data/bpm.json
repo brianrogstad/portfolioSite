@@ -2,6 +2,7 @@
   "id": "bpm",
   "title": "FindLaw Workspace",
   "category": "Information Architecture",
+  "description": "Information architecture and UX for FindLaw's internal task and project management platform, from wireframes through usability testing to engineering handoff.",
   "content": "<p class=\"text-container\">A task and project management platform I designed for FindLaw's internal teams. I handled the information architecture and UX — dashboard layout, task tracking, search, and the data visualization layer. The work went from wireframes through usability testing to a final spec handed off to engineering.</p>",
   "images": [
     {

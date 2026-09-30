@@ -2,6 +2,7 @@
   "id": "admin",
   "title": "Workflow Admin Application",
   "category": "Information Architecture",
+  "description": "A workflow administration tool for FindLaw organization admins: build linear approval workflows, configuring the required data and review logic at each step.",
   "content": "<p class=\"text-container\">A workflow administration tool I designed for organization administrators at FindLaw. It lets admins build custom linear workflows for processing member submissions — configuring each step with its own required data and review logic, from submission through to completion.</p>",
   "images": [
     {

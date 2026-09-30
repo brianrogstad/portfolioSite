@@ -2,6 +2,7 @@
   "id": "findlaw",
   "title": "FindLaw (Thomson Reuters)",
   "category": "Enterprise Design",
+  "description": "UX architecture and Angular frontend work at FindLaw, leading the redesign of a million-dollar enterprise product from usability testing to shipped build.",
   "content": "<p class=\"text-container\">UX architecture and frontend development at FindLaw, a Thomson Reuters company. Led the redesign of FindLaw Workspace, a million-dollar enterprise product, from usability testing through wireframes, prototypes, and the Angular frontend build. Also designed and built an admin application for workflow management, learning Angular Material on the job.</p>",
   "media": [
     {

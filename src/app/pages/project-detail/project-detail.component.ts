@@ -16,6 +16,7 @@ import { ConnectSectionComponent } from '../../components/connect-section/connec
 import { ClientsSectionComponent } from '../../components/clients-section/clients-section.component';
 import { ParallaxComponent } from '../../components/parallax/parallax.component';
 import { ToWebpPipe } from '../../pipes/to-webp.pipe';
+import { fallbackDescription } from './project-description';
 
 interface ProjectNeighbor {
   id: string;
@@ -68,9 +69,7 @@ export class ProjectDetailComponent implements OnInit {
               data.media?.find((m) => m.type === 'image')?.src ?? data.images?.[0]?.src;
             this.seo.update({
               title,
-              description:
-                data.description ??
-                `${data.title} — a ${data.category.toLowerCase()} project by Brian Rogstad.`,
+              description: data.description ?? fallbackDescription(data.title, data.category),
               path: `/projects/${this.projectId}`,
               image: leadImage,
               type: 'article',

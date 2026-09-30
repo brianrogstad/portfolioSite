@@ -2,6 +2,7 @@
   "id": "usb-maps",
   "title": "USB Flow Samples",
   "category": "Information Architecture",
+  "description": "UX documentation for US Bancorp: error handling maps for client-side and server-side failures, onboarding flows, and design system planning diagrams.",
   "content": "<p class=\"text-container\">A set of UX documentation and flow maps I put together for US Bancorp. The work covered error handling — mapping out client-side and server-side failure states, the UI responses for each, and how users get unblocked. I also mapped onboarding flows and design system planning diagrams to keep the broader team aligned on structure and decisions.</p>",
   "images": [
     {

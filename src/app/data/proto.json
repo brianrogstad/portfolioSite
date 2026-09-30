@@ -2,6 +2,7 @@
   "id": "proto",
   "title": "Prototype Samples",
   "category": "Information Architecture",
+  "description": "High-fidelity interactive prototypes, user flow documentation, and edge case mapping for data-heavy admin tools and user management systems.",
   "content": "<p class=\"text-container\">A selection of prototype work from FindLaw and other projects. <i>These are only a few samples.</i> The work covers high-fidelity interactive prototypes, detailed user flow documentation, and edge case mapping for data-intensive admin tools and user management systems.</p>",
   "images": [
     {

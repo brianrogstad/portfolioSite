@@ -2,6 +2,7 @@
   "id": "usb",
   "title": "US Bancorp",
   "category": "Enterprise Design",
+  "description": "Design system architecture, multi-brand theming, flow mapping, and prototyping across 500+ Figma frames and about ten project files at US Bancorp.",
   "content": "<p class=\"text-container\">Design system architecture, themed wireframes, user flow mapping, and prototyping across multiple products at US Bancorp. The work centered on building a design system in Figma using collections for multi-brand theming, then applying it across 500+ frames and approximately 10 project files. Flow mapping and prototyping kept the broader team aligned on error handling, onboarding, and feature implementation.</p>",
   "media": [
     {
