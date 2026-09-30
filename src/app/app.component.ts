@@ -111,6 +111,18 @@ export class AppComponent {
     }
   }
 
+  /**
+   * Stable id linking a dropdown toggle to the list it expands.
+   * e.g. "Client & Agency Work" -> "nav-dropdown-client-agency-work"
+   */
+  dropdownId(label: string): string {
+    const slug = label
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-+|-+$/g, '');
+    return `nav-dropdown-${slug}`;
+  }
+
   onDropdownKeydown(event: KeyboardEvent, label: string) {
     if (event.key === 'Escape') {
       event.preventDefault();
