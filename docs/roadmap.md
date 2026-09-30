@@ -1,8 +1,8 @@
-> **ARCHIVED** — Historical record, not a living document. Current work tracked in [Linear](https://linear.app/unwritten).
+> **ARCHIVED** — Historical record, not a living document. Current work is tracked in `~/Developer/unwritten-ops/projects/` (portfolio lane).
 
 # Roadmap
 
-**Work tracking has moved to Linear** (workspace: Unwritten). Milestones and issues are managed there.
+**Work tracking lives in `~/Developer/unwritten-ops/projects/`** (portfolio lane). Milestones and issues are managed there.
 
 **Current Phase:** v1 (Stable) — Live and monitoring
 **Overall Timeline:** No formal deadline (organic updates as you add projects)
@@ -108,7 +108,7 @@
 
 ## Backlog & Ideas
 
-Unscheduled work is tracked in Linear (workspace: Unwritten), including:
+Unscheduled work is tracked in `~/Developer/unwritten-ops/projects/`, including:
 - New features (not planned for v1)
 - Technical debt (non-critical improvements)
 - Nice-to-haves (low priority)

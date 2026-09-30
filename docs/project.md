@@ -1,3 +1,7 @@
+> **ARCHIVED** — Historical record, not a living document. The canonical
+> project docs live in `~/Developer/unwritten-ops/projects/portfolio/`, and
+> current work is tracked in the portfolio lane there.
+
 # Portfolio Site — Project Vision
 
 **Live at:** [brianrogstad.com](https://brianrogstad.com)
