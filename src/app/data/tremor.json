@@ -11,7 +11,7 @@
       "width": 1000,
       "height": 1423,
       "group": "Design System",
-      "caption": "<strong>Color System:</strong> Structured palette of support colors and grayscale range. Each swatch includes names, hex codes, and RGB values, organized to accommodate brand identity and accessibility standards."
+      "caption": "<strong>Color System:</strong> The palette I put together, support colors and the grayscale range, each swatch with its name, hex, and RGB, organized around the brand and accessibility needs."
     },
     {
       "type": "image",
@@ -20,7 +20,7 @@
       "width": 1000,
       "height": 1423,
       "group": "Design System",
-      "caption": "<strong>Typography Styles:</strong> Type style guide establishing consistent text styles for headings, subheadings, body text, quotes, and links with variations in size, weight, decoration, and casing."
+      "caption": "<strong>Typography Styles:</strong> The type styles I set for headings, subheadings, body, quotes, and links, with the size, weight, decoration, and casing for each."
     },
     {
       "type": "image",
@@ -29,7 +29,7 @@
       "width": 1000,
       "height": 1423,
       "group": "Design System",
-      "caption": "<strong>Font Family Guide:</strong> Open Sans and Open Sans Condensed. Weights, styles, and application examples for branding consistency."
+      "caption": "<strong>Font Family Guide:</strong> Open Sans and Open Sans Condensed. I documented the weights, styles, and where each one gets used."
     },
     {
       "type": "image",
@@ -38,7 +38,7 @@
       "width": 1000,
       "height": 1423,
       "group": "Design System",
-      "caption": "<strong>Typographic and Layout Variations:</strong> Full-width and multi-column layout explorations optimizing readability, alignment, and spacing across different use cases."
+      "caption": "<strong>Typographic and Layout Variations:</strong> Layout explorations I ran, full width and multi column, working out readability, alignment, and spacing for the different cases."
     },
     {
       "type": "image",
@@ -47,7 +47,7 @@
       "width": 1000,
       "height": 313,
       "group": "Design System",
-      "caption": "<strong>Elevation Styles:</strong> Six elevation levels ($elevation-1 through $elevation-6) standardized for consistent shadow and depth across interactive and static components."
+      "caption": "<strong>Elevation Styles:</strong> I standardized six elevation levels ($elevation-1 through $elevation-6) so shadow and depth stay consistent between interactive and static components."
     },
     {
       "type": "image",
@@ -56,7 +56,7 @@
       "width": 1000,
       "height": 313,
       "group": "Design System",
-      "caption": "<strong>Design System Overview:</strong> Complete Tremor Design System in Figma: modals, chips, tables, elevations, typography, colors, buttons, form elements, navigation patterns, and other UI components organized for designer and developer collaboration."
+      "caption": "<strong>Design System Overview:</strong> The system I built in Figma: modals, chips, tables, elevation, typography, colors, buttons, form elements, and navigation patterns, organized so designers and developers work from the same file."
     },
     {
       "type": "image",
@@ -65,7 +65,7 @@
       "width": 1000,
       "height": 778,
       "group": "Admin Redesign",
-      "caption": "<strong>Add Account Form:</strong> Well-structured form with real-time validation (green for valid entries, red for errors), toggle switches, and a clean sidebar with logically grouped menu items."
+      "caption": "<strong>Add Account Form:</strong> The account creation form I redesigned. Validation feedback is inline, green for valid and red for errors, with toggle switches and a sidebar that groups the menu items by task."
     },
     {
       "type": "image",
@@ -74,7 +74,7 @@
       "width": 1000,
       "height": 903,
       "group": "Admin Redesign",
-      "caption": "<strong>Account Settings:</strong> Profile overview, authorization (password, 2FA, deactivation), platform preferences (language, time zone, delimiters), and notification toggles. Color-coded actions: green for save, red for deactivate."
+      "caption": "<strong>Account Settings:</strong> I grouped settings into profile, authorization (password, 2FA, deactivation), platform preferences (language, time zone, delimiters), and notification toggles. Save is green, deactivate is red."
     },
     {
       "type": "image",
@@ -83,7 +83,7 @@
       "width": 1000,
       "height": 510,
       "group": "Admin Redesign",
-      "caption": "<strong>Get Started Screen:</strong> Introduction to the Auction Setup Tool with instructional text and prominent start action. Sidebar navigation to related features."
+      "caption": "<strong>Get Started Screen:</strong> The entry screen I designed for the Auction Setup Tool, with the instructions and the start action up front and sidebar navigation to the related features."
     },
     {
       "type": "image",
@@ -92,7 +92,7 @@
       "width": 1000,
       "height": 687,
       "group": "Admin Redesign",
-      "caption": "<strong>Add User Form:</strong> User onboarding form with profile and contact sections, dropdown menus, toggle switches, and clear action buttons."
+      "caption": "<strong>Add User Form:</strong> The onboarding form I built out: profile and contact sections, dropdowns, toggle switches, and the action buttons."
     },
     {
       "type": "image",
@@ -101,7 +101,7 @@
       "width": 1000,
       "height": 612,
       "group": "Flow Mapping",
-      "caption": "<strong>Authentication Flow:</strong> Login, account creation, and credential recovery through guided pathways. Step-by-step validation with retry loops. Visual cues (green for success, red for failure) highlighting decision points and feedback loops."
+      "caption": "<strong>Authentication Flow:</strong> The auth flow I mapped: login, account creation, and credential recovery, with validation at each step and retry loops. Green marks success, red marks failure."
     },
     {
       "type": "image",
@@ -110,7 +110,7 @@
       "width": 1000,
       "height": 612,
       "group": "Flow Mapping",
-      "caption": "<strong>Navigation Structure:</strong> Hierarchical sitemap connecting core functionalities: login, dashboard, analytics, notifications, settings, admin tools. Sub-pages for listings, results, audit logs, and preferences."
+      "caption": "<strong>Navigation Structure:</strong> The sitemap I laid out: login, dashboard, analytics, notifications, settings, and admin tools, down to sub-pages for listings, results, audit logs, and preferences."
     },
     {
       "type": "image",
@@ -119,7 +119,7 @@
       "width": 1000,
       "height": 620,
       "group": "Prototyping",
-      "caption": "<strong>High-Level Prototype:</strong> Dark theme data-driven application organized into logical modules: Results, Preferences, Listing Detail, and Audit Log. Defined user flows and navigation paths detail the connections between screens, charts, data tables, and settings panels."
+      "caption": "<strong>High-Level Prototype:</strong> A dark-theme prototype I organized into modules: Results, Preferences, Listing Detail, and Audit Log, with the flows and navigation paths between the screens, charts, tables, and settings panels."
     },
     {
       "type": "image",
@@ -128,7 +128,7 @@
       "width": 1000,
       "height": 620,
       "group": "Prototyping",
-      "caption": "<strong>Administrative Tool:</strong> Structured workflow for Settings, Placements, and Admin/Manage Accounts. Extensive user flows for adding, editing, and managing accounts with complex decision paths."
+      "caption": "<strong>Administrative Tool:</strong> The admin side I worked through: Settings, Placements, and Admin/Manage Accounts, with the flows for adding, editing, and managing accounts, including the branchier decision paths."
     }
   ]
 }
