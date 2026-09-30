@@ -14,6 +14,7 @@ import { SeoService } from '../../services/seo.service';
 import { ProjectDetail } from '../../models/project.model';
 import { ConnectSectionComponent } from '../../components/connect-section/connect-section.component';
 import { ClientsSectionComponent } from '../../components/clients-section/clients-section.component';
+import { ContactCtaComponent } from '../../components/contact-cta/contact-cta.component';
 import { ParallaxComponent } from '../../components/parallax/parallax.component';
 import { ToWebpPipe } from '../../pipes/to-webp.pipe';
 import { fallbackDescription } from './project-description';
@@ -29,6 +30,7 @@ interface ProjectNeighbor {
     RouterLink,
     ConnectSectionComponent,
     ClientsSectionComponent,
+    ContactCtaComponent,
     ParallaxComponent,
     ToWebpPipe,
   ],

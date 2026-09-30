@@ -30,3 +30,36 @@
     text-align: center;
   }
 }
+
+// Site-wide contact path. Every page gets one, so reaching Brian never
+// depends on scrolling back to the homepage hero.
+.site-footer__contact {
+  flex: 0 1 50%;
+  margin: 0;
+  text-align: right;
+
+  @include breakpoint(laptop) {
+    flex: 1 1 100%;
+    margin-top: 12px;
+    text-align: center;
+  }
+}
+
+.site-footer__contact-link {
+  @include font-size(13);
+
+  align-items: center;
+  color: var(--text-on-dark-bright);
+  display: inline-flex;
+
+  // Clears the WCAG 2.2 24x24 target minimum.
+  min-height: 24px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.site-footer__contact-link:hover,
+.site-footer__contact-link:focus-visible {
+  color: var(--text-on-dark-medium);
+}

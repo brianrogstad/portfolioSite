@@ -28,6 +28,22 @@ The portfolio proves three things:
 
 **Success:** They understand you're thoughtful, skilled, and care about doing things *right*.
 
+### Contact Surface
+
+The site's only contact mechanism is a `mailto:` link — there is no form, and
+no data is collected from visitors. It appears in three places so that reaching
+out never depends on scrolling back to the hero:
+
+1. The homepage hero, as a primary action (`.email-cta`)
+2. The end of every page — home, About, and each `/projects/*` case study
+   (`app-contact-cta`)
+3. The site footer, present on every route
+
+**Résumé/CV:** deliberately not linked. `/resume` does not exist and is not
+referenced anywhere. Employers who want one can ask by email, which also tells
+Brian who is asking; a public PDF gets scraped and goes stale. Revisit if
+inbound volume makes the extra round trip a bottleneck.
+
 ## Design & Development Principles
 
 ### Authenticity Over Perfection
