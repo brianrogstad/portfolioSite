@@ -30,7 +30,7 @@
 - ✅ Angular 18 rebuild with modern patterns
 - ✅ Server-side rendering (SSR) for fast loads
 - ✅ Responsive design (mobile, tablet, desktop)
-- ✅ WCAG 2.1 AA accessibility compliance
+- 🎯 WCAG 2.1 AA accessibility — the target, not a verified state (open contrast work)
 - ✅ SEO optimization (semantic HTML, meta tags, sitemap)
 - ✅ Analytics integration (Google Analytics)
 - ✅ Dark theme support (respects system preference)
@@ -118,12 +118,18 @@ Unscheduled work is tracked in Linear (workspace: Unwritten), including:
 
 ## Metrics & Health
 
-**Current Health:** ✅ Excellent
+**Current Health:** Good, with known open items
 - Live and stable
-- No critical bugs
-- Performance excellent
-- Accessibility compliant
+- Accessibility: AA is the target, not a verified state. A HIGH-severity
+  color-contrast failure is open, so this section must not claim compliance.
+- Performance: under target. The 2026-09-03 Lighthouse run measured 84/100
+  with a 4.4s LCP against a 95+ score and 2.5s LCP bar.
+- Security headers: production sets none. GitHub Pages cannot set custom
+  response headers, and the platform question is still open.
 - SEO working well
+
+Health is read from the open bug list in the portfolio lane rather than
+asserted here, so this section does not drift ahead of it again.
 
 **Monitored Quarterly:**
 - Lighthouse audits (target 95+)
