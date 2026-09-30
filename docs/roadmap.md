@@ -14,7 +14,7 @@
 | Phase | Status | Timeline | Purpose |
 |-------|--------|----------|---------|
 | **v0.x** | ✅ Complete | 2010-2024 | Multiple iterations over 16 years |
-| **v1 (Current)** | 🚀 Live | Feb 2025 - TBD | Angular 18 rebuild, stable production |
+| **v1 (Current)** | 🚀 Live | Feb 2025 - TBD | Angular 22 rebuild, stable production |
 | **v1.1** | 📋 Planned | 6-12 months out | Design refresh (optional) |
 | **v2** | 💭 Future | TBD | Content expansion (blog, guides, etc.) |
 
@@ -27,7 +27,7 @@
 **Duration:** Ongoing (stable site, organic updates)
 
 ### What's Included (Delivered)
-- ✅ Angular 18 rebuild with modern patterns
+- ✅ Angular 22 rebuild with modern patterns
 - ✅ Server-side rendering (SSR) for fast loads
 - ✅ Responsive design (mobile, tablet, desktop)
 - ✅ WCAG 2.1 AA accessibility compliance
@@ -78,7 +78,7 @@
 - No structural changes to HTML/components
 - No new features
 - No breaking changes to project data structure
-- No framework changes (Angular 18 stays)
+- No framework changes (Angular 22 stays)
 
 ---
 
