@@ -97,9 +97,13 @@ describe('HomeComponent', () => {
     expect(icons.length).toBeGreaterThan(0);
 
     for (const icon of icons) {
-      expect(getComputedStyle(icon).display)
-        .withContext('a block-level arrow breaks onto its own line')
-        .not.toBe('block');
+      // Inside a flex CTA the icon is blockified but still sits on the label's
+      // line, so the check is layout: the arrow shares a row with the label.
+      const parentDisplay = getComputedStyle(icon.parentElement as HTMLElement).display;
+      const inFlexRow = parentDisplay.includes('flex');
+      expect(inFlexRow || getComputedStyle(icon).display !== 'block')
+        .withContext('a block-level arrow outside a flex row breaks onto its own line')
+        .toBeTrue();
     }
   });
 });
