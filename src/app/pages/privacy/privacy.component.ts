@@ -10,10 +10,10 @@ import { SeoService } from '../../services/seo.service';
 export class PrivacyComponent {
   constructor() {
     inject(SeoService).update({
-      title: 'Privacy - Brian Rogstad',
+      title: 'Privacy — Brian Rogstad',
       description:
         'What this site collects: Google Analytics measurement only, no forms, no account, no advertising or retargeting trackers.',
-      path: '/privacy',
+      path: '/privacy/',
     });
   }
 }
