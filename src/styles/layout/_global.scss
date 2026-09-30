@@ -123,6 +123,11 @@ button:focus-visible {
   vertical-align: middle;
   @include font-size(12);
 
+  // The reset sets `svg { display: block }`, which put this arrow on its own
+  // line under the label and made vertical-align a no-op. Inline-block keeps
+  // the label and its arrow on one line as a single action.
+  display: inline-block;
+  flex-shrink: 0;
   opacity: 0.6;
 }
 
