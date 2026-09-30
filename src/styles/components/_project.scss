@@ -25,7 +25,9 @@
   grid-template-columns: 1fr 1fr;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1030px;
+
+  // The About card layout is specified at 900px; it had drifted to 1030px.
+  max-width: 900px;
 
   @include breakpoint(largescreen) {
     grid-gap: 48px 3%;

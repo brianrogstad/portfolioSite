@@ -37,6 +37,33 @@ describe('ProjectDetailComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  describe('loading microcopy', () => {
+    // Driven through the route params, the way a real navigation does it, so
+    // the OnPush view is marked dirty by the event binding rather than by hand.
+    it('names the project it is fetching when the title is known', () => {
+      params$.next({ id: 'version-seven' });
+      fixture.detectChanges();
+
+      const text = (
+        fixture.nativeElement.querySelector('.project-loading') as HTMLElement
+      )?.textContent?.replace(/\s+/g, ' ');
+      expect(component.knownTitle).toBe('Version Seven');
+      expect(text).toContain('Version Seven');
+      expect(text?.trim()).not.toBe('Loading…');
+    });
+
+    it('still says something specific when the title is not known', () => {
+      params$.next({ id: 'not-in-the-manifest' });
+      fixture.detectChanges();
+
+      const text = (
+        fixture.nativeElement.querySelector('.project-loading') as HTMLElement
+      )?.textContent?.replace(/\s+/g, ' ');
+      expect(text).toContain('project');
+      expect(text?.trim()).not.toBe('Loading…');
+    });
+  });
+
   it('keeps one route param subscription across same-outlet self-navigation', () => {
     expect(getProjectSpy).toHaveBeenCalledTimes(1);
 

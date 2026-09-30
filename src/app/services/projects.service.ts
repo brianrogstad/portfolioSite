@@ -85,6 +85,7 @@ export class ProjectsService {
     prev?: { id: string; title: string };
     next?: { id: string; title: string };
     section?: string;
+    title?: string;
   } {
     const routed: { id: string; title: string; section: string }[] = [];
     for (const section of this.homeCards.sections) {
@@ -103,6 +104,7 @@ export class ProjectsService {
           ? { id: routed[idx + 1].id, title: routed[idx + 1].title }
           : undefined,
       section: routed[idx].section,
+      title: routed[idx].title,
     };
   }
 }

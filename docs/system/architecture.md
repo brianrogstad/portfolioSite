@@ -17,7 +17,7 @@ Technical reference for how the portfolio site is built and how components inter
     │ Browser │          │ Express │
     │ (Client)│          │ Server  │
     └────┬────┘          └────┬────┘
-         │   Angular 18       │
+         │   Angular 22       │
          │  Standalone        │
          │  Components        │
          │                    │
@@ -38,7 +38,7 @@ Technical reference for how the portfolio site is built and how components inter
 ## Technology Stack
 
 ### Frontend
-- **Framework:** Angular 18 (latest stable)
+- **Framework:** Angular 22 (latest stable)
 - **Module System:** Standalone components (no NgModules)
 - **Control Flow:** New syntax (@if, @for, @switch)
 - **Change Detection:** OnPush (performance optimized)

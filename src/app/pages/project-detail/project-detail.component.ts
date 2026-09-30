@@ -59,6 +59,12 @@ export class ProjectDetailComponent implements OnInit {
   prevProject?: ProjectNeighbor;
   nextProject?: ProjectNeighbor;
   sectionLabel?: string;
+  /**
+   * Title from the home-cards manifest, known before the project's own data
+   * arrives, so the loading state can say what it is fetching instead of a
+   * bare "Loading…".
+   */
+  knownTitle?: string;
 
   ngOnInit() {
     this.route.params.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((params) => {
@@ -67,6 +73,7 @@ export class ProjectDetailComponent implements OnInit {
       this.prevProject = nav.prev;
       this.nextProject = nav.next;
       this.sectionLabel = nav.section;
+      this.knownTitle = nav.title;
       this.loadProject();
     });
   }
@@ -80,6 +87,10 @@ export class ProjectDetailComponent implements OnInit {
     this.project = undefined;
     this.loadFailed = false;
     this.loading = true;
+    // OnPush: entering the loading state is a field write with no event
+    // behind it, so without this the loading copy never paints when the
+    // route params change on an already-mounted component.
+    this.cdr.markForCheck();
 
     this.projectsService
       .getProject(this.projectId)
