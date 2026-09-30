@@ -1,6 +1,12 @@
 @if (loading) {
   <div class="main-column" aria-busy="true" aria-live="polite">
-    <p class="project-loading">Loading…</p>
+    <p class="project-loading">
+      @if (knownTitle) {
+        Loading the {{ knownTitle }} case study…
+      } @else {
+        Loading this project…
+      }
+    </p>
   </div>
 } @else if (project) {
   <div class="main-column">
