@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject, PLATFORM_ID, TransferState, makeStateKey } from '@angular/core';
+import { isPlatformServer } from '@angular/common';
 import { ProjectDetail, HomeCardSection, HomeCardsManifest } from '../models/project.model';
 
 // Home cards stay statically imported — small file, needed on first paint
@@ -50,6 +51,8 @@ const PROJECT_LOADERS: Record<string, () => Promise<ProjectDetail>> = {
  */
 export const PROJECT_IDS: readonly string[] = Object.freeze(Object.keys(PROJECT_LOADERS).sort());
 
+const projectKey = (id: string) => makeStateKey<ProjectDetail>(`project:${id}`);
+
 @Injectable({
   providedIn: 'root',
 })
@@ -61,14 +64,34 @@ export class ProjectsService {
 
   private homeCards: HomeCardsManifest = homeCardsData as HomeCardsManifest;
 
+  private transferState = inject(TransferState);
+  private isServer = isPlatformServer(inject(PLATFORM_ID));
+
   async getProject(id: string): Promise<ProjectDetail | undefined> {
-    const cached = this.cache.get(id);
+    const cached = this.peek(id);
     if (cached) return cached;
     const loader = this.loaders[id];
     if (!loader) return undefined;
     const data = await loader();
     this.cache.set(id, data);
+    // Ship the data inside the prerendered page, so the browser can hydrate
+    // the project synchronously instead of clearing the server-rendered DOM
+    // and repainting it after its own import() resolves (which is what made
+    // the lead image the late LCP on every project page).
+    if (this.isServer) this.transferState.set(projectKey(id), data);
     return data;
+  }
+
+  /** Project data available right now (memory cache or transferred from the server), if any. */
+  peek(id: string): ProjectDetail | undefined {
+    const cached = this.cache.get(id);
+    if (cached) return cached;
+    const transferred = this.transferState.get(projectKey(id), undefined);
+    if (transferred) {
+      this.cache.set(id, transferred);
+      return transferred;
+    }
+    return undefined;
   }
 
   getHomeCardSections(): HomeCardSection[] {
