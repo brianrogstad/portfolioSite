@@ -57,8 +57,9 @@ export class SeoService {
   }
 
   /**
-   * Runs on the server as well as in the browser: a prerendered page that
-   * keeps index.html's static canonical points crawlers at the homepage.
+   * Runs during server rendering too. When this was browser-only, every
+   * prerendered page shipped index.html's static canonical, so the About page
+   * told crawlers it was a duplicate of the homepage.
    */
   private setCanonical(url: string): void {
     let link = this.document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
