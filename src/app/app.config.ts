@@ -1,4 +1,4 @@
-import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { routes } from './app.routes';
@@ -6,7 +6,11 @@ import { provideClientHydration, withNoIncrementalHydration } from '@angular/pla
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideZoneChangeDetection({ eventCoalescing: true }),
+    // Zoneless: every component is OnPush and marks itself for check, so
+    // zone.js was only adding weight (its polyfill chunk plus the zone-aware
+    // scheduler in main). Async work SSR must wait for goes through
+    // PendingTasks (see ProjectsService.getProject).
+    provideZonelessChangeDetection(),
     provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'top' })),
     provideClientHydration(withNoIncrementalHydration()),
   ],

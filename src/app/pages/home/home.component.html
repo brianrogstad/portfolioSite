@@ -24,6 +24,33 @@
   </div>
 </section>
 
+<!-- Card images are left out of the prerendered HTML. On a phone the hero text
+     is the LCP, and native lazy loading still pulled about 190KB of card
+     images during first paint, which is what held the LCP back. They mount
+     once the page is idle, inside a box that already has their aspect ratio,
+     so nothing shifts. -->
+<ng-template #cardImage let-image="image">
+  @defer (on idle) {
+    <picture>
+      <source type="image/webp" [srcset]="image.src | toWebp" />
+      <img
+        [width]="image.width || 538"
+        [height]="image.height || 368"
+        [src]="image.src"
+        [alt]="image.alt"
+        [attr.loading]="image.priority ? 'eager' : 'lazy'"
+        [attr.fetchpriority]="image.priority ? 'high' : null"
+        [attr.decoding]="image.priority ? 'auto' : 'async'"
+      />
+    </picture>
+  } @placeholder {
+    <div
+      class="card-image-placeholder"
+      [style.aspect-ratio]="(image.width || 538) + ' / ' + (image.height || 368)"
+    ></div>
+  }
+</ng-template>
+
 <ng-template #cardLinks let-links="links" let-title="title">
   @for (link of links; track link.target) {
     @if (link.type === 'external') {
@@ -68,18 +95,9 @@
               class="project-card__image"
               [attr.aria-label]="'View ' + card.title + ' project'"
             >
-              <picture>
-                <source type="image/webp" [srcset]="card.image.src | toWebp" />
-                <img
-                  [width]="card.image.width || 538"
-                  [height]="card.image.height || 368"
-                  [src]="card.image.src"
-                  [alt]="card.image.alt"
-                  [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
-                  [attr.fetchpriority]="card.image.priority ? 'high' : null"
-                  [attr.decoding]="card.image.priority ? 'auto' : 'async'"
-                />
-              </picture>
+              <ng-container
+                *ngTemplateOutlet="cardImage; context: { image: card.image }"
+              ></ng-container>
             </a>
           } @else {
             <a
@@ -87,18 +105,9 @@
               class="project-card__image"
               [attr.aria-label]="'View ' + card.title + ' project'"
             >
-              <picture>
-                <source type="image/webp" [srcset]="card.image.src | toWebp" />
-                <img
-                  [width]="card.image.width || 538"
-                  [height]="card.image.height || 368"
-                  [src]="card.image.src"
-                  [alt]="card.image.alt"
-                  [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
-                  [attr.fetchpriority]="card.image.priority ? 'high' : null"
-                  [attr.decoding]="card.image.priority ? 'auto' : 'async'"
-                />
-              </picture>
+              <ng-container
+                *ngTemplateOutlet="cardImage; context: { image: card.image }"
+              ></ng-container>
             </a>
           }
           <div class="project-card__body">
@@ -135,18 +144,9 @@
               class="project-card__image"
               [attr.aria-label]="'View ' + card.title + ' project'"
             >
-              <picture>
-                <source type="image/webp" [srcset]="card.image.src | toWebp" />
-                <img
-                  [width]="card.image.width || 538"
-                  [height]="card.image.height || 368"
-                  [src]="card.image.src"
-                  [alt]="card.image.alt"
-                  [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
-                  [attr.fetchpriority]="card.image.priority ? 'high' : null"
-                  [attr.decoding]="card.image.priority ? 'auto' : 'async'"
-                />
-              </picture>
+              <ng-container
+                *ngTemplateOutlet="cardImage; context: { image: card.image }"
+              ></ng-container>
             </a>
           } @else {
             <a
@@ -154,18 +154,9 @@
               class="project-card__image"
               [attr.aria-label]="'View ' + card.title + ' project'"
             >
-              <picture>
-                <source type="image/webp" [srcset]="card.image.src | toWebp" />
-                <img
-                  [width]="card.image.width || 538"
-                  [height]="card.image.height || 368"
-                  [src]="card.image.src"
-                  [alt]="card.image.alt"
-                  [attr.loading]="card.image.priority ? 'eager' : 'lazy'"
-                  [attr.fetchpriority]="card.image.priority ? 'high' : null"
-                  [attr.decoding]="card.image.priority ? 'auto' : 'async'"
-                />
-              </picture>
+              <ng-container
+                *ngTemplateOutlet="cardImage; context: { image: card.image }"
+              ></ng-container>
             </a>
           }
           <div class="project-card__body">

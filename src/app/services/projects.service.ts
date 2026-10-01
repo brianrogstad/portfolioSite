@@ -1,4 +1,11 @@
-import { Injectable, inject, PLATFORM_ID, TransferState, makeStateKey } from '@angular/core';
+import {
+  Injectable,
+  inject,
+  PendingTasks,
+  PLATFORM_ID,
+  TransferState,
+  makeStateKey,
+} from '@angular/core';
 import { isPlatformServer } from '@angular/common';
 import { ProjectDetail, HomeCardSection, HomeCardsManifest } from '../models/project.model';
 
@@ -65,6 +72,7 @@ export class ProjectsService {
   private homeCards: HomeCardsManifest = homeCardsData as HomeCardsManifest;
 
   private transferState = inject(TransferState);
+  private pendingTasks = inject(PendingTasks);
   private isServer = isPlatformServer(inject(PLATFORM_ID));
 
   async getProject(id: string): Promise<ProjectDetail | undefined> {
@@ -72,7 +80,16 @@ export class ProjectsService {
     if (cached) return cached;
     const loader = this.loaders[id];
     if (!loader) return undefined;
-    const data = await loader();
+    // The app is zoneless, so nothing else tells server rendering to wait
+    // for this import; without the pending task the page would serialize
+    // in its loading state.
+    const done = this.pendingTasks.add();
+    let data: ProjectDetail;
+    try {
+      data = await loader();
+    } finally {
+      done();
+    }
     this.cache.set(id, data);
     // Ship the data inside the prerendered page, so the browser can hydrate
     // the project synchronously instead of clearing the server-rendered DOM
