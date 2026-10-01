@@ -64,6 +64,38 @@ describe('ProjectDetailComponent', () => {
     });
   });
 
+  describe('loading state heading', () => {
+    // Holds the lazy project-data import pending, the way an uncached client
+    // navigation does, and checks the document still has an h1 while waiting.
+    it('exposes an h1 while the project data is pending', () => {
+      getProjectSpy.and.returnValue(new Promise(() => undefined));
+      params$.next({ id: 'version-seven' });
+      fixture.detectChanges();
+
+      expect(component.loading).toBeTrue();
+      const h1 = fixture.nativeElement.querySelector('h1') as HTMLElement;
+      expect(h1).toBeTruthy();
+      expect(h1.textContent?.trim()).toBe('Version Seven');
+
+      const live = fixture.nativeElement.querySelector('[aria-live="polite"]') as HTMLElement;
+      expect(live).toBeTruthy();
+      expect(live.getAttribute('aria-busy')).toBe('true');
+      expect(live.querySelector('.project-loading')?.textContent).toContain(
+        'Loading the Version Seven case study',
+      );
+      expect(live.contains(h1)).toBeFalse();
+    });
+
+    it('falls back to a generic h1 when the title is not known', () => {
+      getProjectSpy.and.returnValue(new Promise(() => undefined));
+      params$.next({ id: 'not-in-the-manifest' });
+      fixture.detectChanges();
+
+      const h1 = fixture.nativeElement.querySelector('h1') as HTMLElement;
+      expect(h1?.textContent?.trim()).toBe('Project');
+    });
+  });
+
   it('keeps one route param subscription across same-outlet self-navigation', () => {
     expect(getProjectSpy).toHaveBeenCalledTimes(1);
 

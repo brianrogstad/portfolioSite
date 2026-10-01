@@ -1,12 +1,18 @@
 @if (loading) {
-  <div class="main-column" aria-busy="true" aria-live="polite">
-    <p class="project-loading">
-      @if (knownTitle) {
-        Loading the {{ knownTitle }} case study…
-      } @else {
-        Loading this project…
-      }
-    </p>
+  <div class="main-column">
+    <!-- The app header is not an h1 on detail pages, so the page must supply
+         one even while its data import is still pending. Kept outside the
+         live region so the loading announcement is unchanged. -->
+    <h1 class="sr-only">{{ knownTitle || 'Project' }}</h1>
+    <div aria-busy="true" aria-live="polite">
+      <p class="project-loading">
+        @if (knownTitle) {
+          Loading the {{ knownTitle }} case study…
+        } @else {
+          Loading this project…
+        }
+      </p>
+    </div>
   </div>
 } @else if (loadFailed) {
   <div class="main-column project-error" role="alert">
