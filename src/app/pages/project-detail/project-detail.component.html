@@ -55,19 +55,44 @@
         <div class="image-section">
           <div class="image-container">
             @if (item.type === 'image') {
-              <picture>
-                <source type="image/webp" [srcset]="item.src | toWebp" />
-                <img
-                  [src]="item.src"
-                  [alt]="item.alt"
-                  [width]="item.width || 1000"
-                  [height]="item.height || 495"
-                  [attr.loading]="i === 0 ? 'eager' : 'lazy'"
-                  [attr.fetchpriority]="i === 0 ? 'high' : null"
-                  [attr.decoding]="i === 0 ? 'auto' : 'async'"
-                  class="subsection-display"
-                />
-              </picture>
+              @if (i === 0) {
+                <picture>
+                  <source type="image/webp" [srcset]="item.src | toWebp" />
+                  <img
+                    [src]="item.src"
+                    [alt]="item.alt"
+                    [width]="item.width || 1000"
+                    [height]="item.height || 495"
+                    loading="eager"
+                    fetchpriority="high"
+                    class="subsection-display"
+                  />
+                </picture>
+              } @else {
+                <!-- Gallery images after the first are not in the prerendered
+                     HTML: native lazy loading still fetched the next ~1MB of
+                     them during first paint, competing with the LCP image.
+                     They mount once the page is idle and then lazy-load. -->
+                @defer (on idle) {
+                  <picture>
+                    <source type="image/webp" [srcset]="item.src | toWebp" />
+                    <img
+                      [src]="item.src"
+                      [alt]="item.alt"
+                      [width]="item.width || 1000"
+                      [height]="item.height || 495"
+                      loading="lazy"
+                      decoding="async"
+                      class="subsection-display"
+                    />
+                  </picture>
+                } @placeholder {
+                  <div
+                    class="subsection-placeholder"
+                    [style.aspect-ratio]="(item.width || 1000) + ' / ' + (item.height || 495)"
+                  ></div>
+                }
+              }
             }
             @if (item.type === 'video') {
               <video
@@ -98,19 +123,41 @@
       @for (image of project.images; track image.src; let i = $index) {
         <div class="image-section">
           <div class="image-container">
-            <picture>
-              <source type="image/webp" [srcset]="image.src | toWebp" />
-              <img
-                [src]="image.src"
-                [alt]="image.alt"
-                [width]="image.width || 1000"
-                [height]="image.height || 495"
-                [attr.loading]="i === 0 ? 'eager' : 'lazy'"
-                [attr.fetchpriority]="i === 0 ? 'high' : null"
-                [attr.decoding]="i === 0 ? 'auto' : 'async'"
-                class="subsection-display"
-              />
-            </picture>
+            @if (i === 0) {
+              <picture>
+                <source type="image/webp" [srcset]="image.src | toWebp" />
+                <img
+                  [src]="image.src"
+                  [alt]="image.alt"
+                  [width]="image.width || 1000"
+                  [height]="image.height || 495"
+                  loading="eager"
+                  fetchpriority="high"
+                  class="subsection-display"
+                />
+              </picture>
+            } @else {
+              <!-- Deferred for the same reason as the media gallery above. -->
+              @defer (on idle) {
+                <picture>
+                  <source type="image/webp" [srcset]="image.src | toWebp" />
+                  <img
+                    [src]="image.src"
+                    [alt]="image.alt"
+                    [width]="image.width || 1000"
+                    [height]="image.height || 495"
+                    loading="lazy"
+                    decoding="async"
+                    class="subsection-display"
+                  />
+                </picture>
+              } @placeholder {
+                <div
+                  class="subsection-placeholder"
+                  [style.aspect-ratio]="(image.width || 1000) + ' / ' + (image.height || 495)"
+                ></div>
+              }
+            }
           </div>
           @if (image.caption) {
             <p [innerHTML]="image.caption" class="text-container"></p>
