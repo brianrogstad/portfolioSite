@@ -104,13 +104,28 @@
           },
           {
             "@type": "ProfessionalService",
-            "@id": "https://brianrogstad.com/#service",
+            "@id": "https://brianrogstad.com/#business",
             "name": "Brian Rogstad — Design & Frontend Engineering",
             "url": "https://brianrogstad.com/",
             "image": "https://brianrogstad.com/images/ProfileImg.png",
             "description": "Design and frontend engineering services: UI and UX design, design systems, and application development in Angular and TypeScript.",
-            "provider": { "@id": "https://brianrogstad.com/#person" },
             "founder": { "@id": "https://brianrogstad.com/#person" },
+            "areaServed": "Worldwide",
+            "makesOffer": {
+              "@type": "Offer",
+              "itemOffered": { "@id": "https://brianrogstad.com/#service" }
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/brian-rogstad-06130b24",
+              "https://github.com/brianrogstad"
+            ]
+          },
+          {
+            "@type": "Service",
+            "@id": "https://brianrogstad.com/#service",
+            "name": "Design & Frontend Engineering",
+            "description": "UI and UX design, design systems, prototyping, and application development in Angular and TypeScript.",
+            "provider": { "@id": "https://brianrogstad.com/#person" },
             "areaServed": "Worldwide",
             "serviceType": [
               "UI Design",
@@ -119,10 +134,6 @@
               "Frontend Development",
               "Angular Development",
               "Prototyping"
-            ],
-            "sameAs": [
-              "https://www.linkedin.com/in/brian-rogstad-06130b24",
-              "https://github.com/brianrogstad"
             ]
           }
         ]
