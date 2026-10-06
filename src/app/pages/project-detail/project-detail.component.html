@@ -32,6 +32,11 @@
       <ol>
         <li><a routerLink="/">Home</a></li>
         <li aria-hidden="true" class="breadcrumbs__sep">/</li>
+        <!-- Sections have no route of their own, so the section is plain text. -->
+        @if (sectionLabel) {
+          <li class="breadcrumbs__section">{{ sectionLabel }}</li>
+          <li aria-hidden="true" class="breadcrumbs__sep">/</li>
+        }
         <li aria-current="page">{{ project.title }}</li>
       </ol>
     </nav>
