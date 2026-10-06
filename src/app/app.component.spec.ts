@@ -26,6 +26,33 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.site-name')?.textContent).toContain('Brian Rogstad');
   });
 
+  describe('footer copyright yearRange', () => {
+    function renderFooter(startYear: number, currentYear: number): string {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.componentInstance.startYear = startYear;
+      fixture.componentInstance.currentYear = currentYear;
+      fixture.detectChanges();
+      const compiled = fixture.nativeElement as HTMLElement;
+      return compiled.querySelector('.disclaimer')?.textContent ?? '';
+    }
+
+    it('renders a single year when start and current years are equal', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.componentInstance.startYear = 2026;
+      fixture.componentInstance.currentYear = 2026;
+      expect(fixture.componentInstance.yearRange).toBe('2026');
+      expect(renderFooter(2026, 2026)).toContain('Brian Rogstad 2026.');
+    });
+
+    it('renders the start-current range when the years differ', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.componentInstance.startYear = 2009;
+      fixture.componentInstance.currentYear = 2026;
+      expect(fixture.componentInstance.yearRange).toBe('2009-2026');
+      expect(renderFooter(2009, 2026)).toContain('Brian Rogstad 2009-2026.');
+    });
+  });
+
   describe('primary navigation semantics', () => {
     // The nav declared role="menu"/"menuitem" but implemented only Escape,
     // promising an application-menu keyboard model it never had (WCAG 2.1.1,
