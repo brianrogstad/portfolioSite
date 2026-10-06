@@ -43,7 +43,7 @@
   align-items: baseline;
   background: var(--accent);
   border-radius: 2px;
-  color: var(--text-on-dark-bright);
+  color: var(--text-on-accent);
   display: inline-flex;
   flex-wrap: wrap;
   gap: 0 12px;
@@ -70,13 +70,16 @@
 
   font-family: $grotesk;
   font-weight: 300;
-  opacity: 0.8;
+
+  // 0.9 keeps the composited address >= 4.5:1 on accent and accent-hover
+  // in both themes (dark: 4.96:1 on #6b8cad; light: 6.08:1 on #3d5a80).
+  opacity: 0.9;
 }
 
 .email-cta:hover,
 .email-cta:focus-visible {
   background: var(--accent-hover);
-  color: var(--text-on-dark-bright);
+  color: var(--text-on-accent);
 }
 
 @media (prefers-reduced-motion: no-preference) {

@@ -65,6 +65,9 @@ $grey: $stone;
   --accent-hover: #{$accent-hover};
   --accent-subtle: #{$accent-subtle};
 
+  // Text on a solid --accent / --accent-hover fill (>= 4.5:1 on both)
+  --text-on-accent: #{$white};
+
   // Chrome
   --header-bg: rgba(248, 247, 245, 0.88);
   --header-border: rgba(226, 226, 232, 0.6);
@@ -94,6 +97,7 @@ $grey: $stone;
     --accent: #6b8cad;
     --accent-hover: #8aa8c4;
     --accent-subtle: rgba(107, 140, 173, 0.12);
+    --text-on-accent: #0d0d12;
     --header-bg: rgba(13, 13, 18, 0.88);
     --header-border: rgba(42, 42, 52, 0.6);
     --scrollbar-track: #0d0d12;
