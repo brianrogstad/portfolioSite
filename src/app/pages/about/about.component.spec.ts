@@ -39,6 +39,15 @@ describe('AboutComponent', () => {
     expect(width / height).toBeCloseTo(896 / 1200, 2);
   });
 
+  it('keeps the LCP profile image eager and high priority with async decoding', () => {
+    // Commit 3638126 switched the image to eager + fetchpriority=high for LCP
+    // and dropped the decoding="async" hint shipped in c08de21 (UNW-1327).
+    const img = fixture.nativeElement.querySelector('img.project-img') as HTMLImageElement;
+    expect(img.getAttribute('loading')).toBe('eager');
+    expect(img.getAttribute('fetchpriority')).toBe('high');
+    expect(img.getAttribute('decoding')).toBe('async');
+  });
+
   it('points at each destination once', () => {
     // "Connect On LinkedIn" in the bio and "Connect with me on LinkedIn" in
     // the Connect list resolved to the same profile under two labels, so a
