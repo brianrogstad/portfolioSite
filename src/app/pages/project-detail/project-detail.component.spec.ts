@@ -146,6 +146,40 @@ describe('ProjectDetailComponent', () => {
     });
   });
 
+  describe('breadcrumb', () => {
+    const crumbs = () =>
+      Array.from(
+        fixture.nativeElement.querySelectorAll('.breadcrumbs li:not([aria-hidden])'),
+      ) as HTMLElement[];
+
+    it('shows Home / Section / Project for a project in a home-card section', async () => {
+      getProjectSpy.and.resolveTo({ id: 'version-seven', title: 'Version Seven', category: 'x' });
+      params$.next({ id: 'version-seven' });
+      await fixture.whenStable();
+      fixture.detectChanges();
+
+      expect(component.sectionLabel).toBeTruthy();
+      const items = crumbs();
+      expect(items.map((li) => li.textContent?.trim())).toEqual([
+        'Home',
+        component.sectionLabel!,
+        'Version Seven',
+      ]);
+      expect(items[0].querySelector('a')?.getAttribute('href')).toBe('/');
+      expect(items[1].querySelector('a')).toBeNull();
+      expect(items[2].getAttribute('aria-current')).toBe('page');
+    });
+
+    it('shows Home / Project when the project has no section', async () => {
+      getProjectSpy.and.resolveTo({ id: 'loose', title: 'Loose Project', category: 'x' });
+      params$.next({ id: 'loose' });
+      await fixture.whenStable();
+      fixture.detectChanges();
+
+      expect(crumbs().map((li) => li.textContent?.trim())).toEqual(['Home', 'Loose Project']);
+    });
+  });
+
   it('still reports an unknown project id as not found', async () => {
     getProjectSpy.and.resolveTo(undefined);
     component.retry();
