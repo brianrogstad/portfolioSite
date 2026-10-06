@@ -26,6 +26,18 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.site-name')?.textContent).toContain('Brian Rogstad');
   });
 
+  it('offers the header logo WebP sibling with the PNG fallback and accessible name', () => {
+    const fixture = TestBed.createComponent(AppComponent);
+    fixture.detectChanges();
+    const logo = (fixture.nativeElement as HTMLElement).querySelector('[data-testid="site-logo"]');
+    const source = logo?.querySelector('picture > source[type="image/webp"]');
+    const img = logo?.querySelector('picture > img');
+    expect(source?.getAttribute('srcset')).toBe('/images/brianrogstad-logo-inverse.webp');
+    expect(img?.getAttribute('src')).toBe('/images/brianrogstad-logo-inverse.png');
+    expect(img?.getAttribute('alt')).toBe('BrianRogstad.com');
+    expect(logo?.getAttribute('aria-label')).toBe('BrianRogstad.com — Home');
+  });
+
   describe('footer copyright yearRange', () => {
     function renderFooter(startYear: number, currentYear: number): string {
       const fixture = TestBed.createComponent(AppComponent);
