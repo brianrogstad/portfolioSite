@@ -29,6 +29,16 @@ describe('AboutComponent', () => {
     expect(getComputedStyle(container).maxWidth).toBe('900px');
   });
 
+  it('reserves the profile image at its real portrait aspect ratio', () => {
+    // Declared 538x368 (landscape) for a 3:4 portrait file, so the
+    // description shifted down once the image decoded (CLS 0.112).
+    const img = fixture.nativeElement.querySelector('img.project-img') as HTMLImageElement;
+    const width = Number(img.getAttribute('width'));
+    const height = Number(img.getAttribute('height'));
+    expect(height).toBeGreaterThan(width);
+    expect(width / height).toBeCloseTo(896 / 1200, 2);
+  });
+
   it('points at each destination once', () => {
     // "Connect On LinkedIn" in the bio and "Connect with me on LinkedIn" in
     // the Connect list resolved to the same profile under two labels, so a
