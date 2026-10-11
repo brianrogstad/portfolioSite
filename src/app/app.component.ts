@@ -139,8 +139,7 @@ export class AppComponent {
       event.preventDefault();
       this.openDropdownLabel = null;
       this.forceClosedDropdown = label;
-      const target = event.target as HTMLElement;
-      const dropdown = target.closest('.dropdown');
+      const dropdown = (event.target as HTMLElement).closest('.dropdown');
       const toggle = dropdown?.querySelector('.dropdown-toggle') as HTMLElement;
       toggle?.focus();
     }
