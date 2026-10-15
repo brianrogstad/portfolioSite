@@ -18,6 +18,13 @@ async function openAbout(page: Page): Promise<void> {
 }
 
 test('evaluator journey: home, case study, about, not found', async ({ page }) => {
+  // Any console error or uncaught page error along the happy path fails the run.
+  const consoleErrors: string[] = [];
+  page.on('console', (msg) => {
+    if (msg.type() === 'error') consoleErrors.push(msg.text());
+  });
+  page.on('pageerror', (err) => consoleErrors.push(err.message));
+
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1, name: 'Brian Rogstad' })).toBeVisible();
 
@@ -35,6 +42,16 @@ test('evaluator journey: home, case study, about, not found', async ({ page }) =
   await openAbout(page);
   await expect(page).toHaveURL(/\/about$/);
   await expect(page.getByRole('heading', { level: 1, name: 'About Me' })).toBeVisible();
+
+  // Connect: the evaluator's way to reach out from About.
+  const connect = page.getByRole('complementary', { name: 'Get in touch' });
+  await expect(connect).toBeVisible();
+  await expect(connect.getByRole('link', { name: 'Connect with me on LinkedIn' })).toHaveAttribute(
+    'href',
+    /linkedin\.com\/in\//,
+  );
+
+  expect(consoleErrors, 'console errors on the happy path').toEqual([]);
 
   await page.goto('/this-route-does-not-exist');
   await expect(page.getByRole('heading', { level: 1, name: 'Page Not Found' })).toBeVisible();
