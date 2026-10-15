@@ -1,28 +1,10 @@
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
 import { expect, test } from '@playwright/test';
+import { projectIds, projectTitle } from './support/site-data';
 
 // GitHub Pages serves the static browser artifact, never the Express SSR
 // server. Known routes must have their own prerendered file (HTTP 200 with
 // content in the raw HTML); unknown routes fall to 404.html, the client
 // shell, which renders NotFoundComponent once Angular boots.
-
-const appDir = path.resolve(__dirname, '..', 'src', 'app');
-
-// The ids app.routes.server.ts prerenders: the keys of PROJECT_LOADERS.
-function projectIds(): string[] {
-  const source = readFileSync(path.join(appDir, 'services', 'projects.service.ts'), 'utf8');
-  const block = source.slice(
-    source.indexOf('const PROJECT_LOADERS'),
-    source.indexOf('export const PROJECT_IDS'),
-  );
-  return [...block.matchAll(/^\s+'?([\w-]+)'?:\s*\(\)\s*=>/gm)].map((m) => m[1]).sort();
-}
-
-function projectTitle(id: string): string {
-  const file = path.join(appDir, 'data', `${id}.json`);
-  return (JSON.parse(readFileSync(file, 'utf8')) as { title: string }).title;
-}
 
 function h1Text(html: string): string[] {
   return [...html.matchAll(/<h1[^>]*>([^<]*)</g)].map((m) => m[1].trim());

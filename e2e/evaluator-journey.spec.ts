@@ -1,19 +1,9 @@
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
 import { expect, test, type Page } from '@playwright/test';
+import { projectTitle } from './support/site-data';
 
 // The evaluator path: home -> a project card -> the case study -> about ->
 // an unmatched route. Each hop asserts content a routing or data-binding
 // regression would silently drop.
-
-const dataDir = path.resolve(__dirname, '..', 'src', 'app', 'data');
-
-function projectTitle(id: string): string {
-  const data = JSON.parse(readFileSync(path.join(dataDir, `${id}.json`), 'utf8')) as {
-    title: string;
-  };
-  return data.title;
-}
 
 async function openAbout(page: Page): Promise<void> {
   const desktopAbout = page
