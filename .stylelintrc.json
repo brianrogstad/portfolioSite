@@ -7,7 +7,7 @@
       "files": [
         "src/styles/_color-system.scss",
         "src/styles/_pagination.scss",
-        "src/styles/base/_colors.scss"
+        "src/styles/base/_tokens.scss"
       ],
       "rules": {
         "color-no-hex": null

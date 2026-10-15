@@ -1,27 +1,7 @@
 // Colors
 // =============================================================
 
-// Primary palette — warmed (SCSS source values, used as token defaults)
-$ink: #141419;
-$charcoal: #2a2a32;
-$slate: #5c5c6e;
-$stone: #8a8a9a;
-$mist: #bfbfc8;
-$cloud: #e2e2e8;
-$fog: #f0f0f3;
-$snow: #f8f7f5;
-$white: #fff;
-$black: #000;
-
-// Accent — shifted from pure blue to a warm slate-blue
-$accent: #3d5a80;
-$accent-hover: #2c4a6e;
-$accent-subtle: rgba(61, 90, 128, 0.08);
-
-// Warm accent for highlights
-$warm: #c4703e;
-$warm-hover: #b36030;
-$warm-subtle: rgba(196, 112, 62, 0.08);
+// Primitive values live in _tokens.scss; this file is the semantic tier.
 
 // Legacy aliases (keep for components that still reference them)
 $danube: $accent;
@@ -48,7 +28,7 @@ $grey: $stone;
   --text-heading: #{$ink};
   --text-body: #{$charcoal};
   --text-secondary: #{$slate};
-  --text-muted: #6e6e7e;
+  --text-muted: #{$pewter};
   --text-faint: #{$mist};
 
   // Text — on dark/inverse surfaces (stable across themes)
@@ -69,42 +49,42 @@ $grey: $stone;
   --text-on-accent: #{$white};
 
   // Chrome
-  --header-bg: rgba(248, 247, 245, 0.88);
-  --header-border: rgba(226, 226, 232, 0.6);
+  --header-bg: #{rgba($snow, 0.88)};
+  --header-border: #{rgba($cloud, 0.6)};
   --scrollbar-track: #{$snow};
   --scrollbar-thumb: #{$cloud};
   --scrollbar-thumb-hover: #{$mist};
-  --selection-bg: rgba(61, 90, 128, 0.15);
+  --selection-bg: #{rgba($accent, 0.15)};
   --selection-text: #{$ink};
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --surface-page: #0d0d12;
-    --surface-raised: #1a1a22;
-    --surface-overlay: #1e1e28;
-    --surface-inverse: #0a0a0f;
-    --text-heading: #e8e8ed;
-    --text-body: #c8c8d0;
-    --text-secondary: #9a9aaa;
-    --text-muted: #7a7a8a;
-    --text-faint: #3a3a46;
-    --text-on-dark: #8a8a9a;
-    --text-on-dark-medium: #b0b0bc;
-    --text-on-dark-bright: #e8e8ed;
-    --border: #2a2a34;
-    --border-strong: #3a3a46;
-    --accent: #6b8cad;
-    --accent-hover: #8aa8c4;
-    --accent-subtle: rgba(107, 140, 173, 0.12);
-    --text-on-accent: #0d0d12;
-    --header-bg: rgba(13, 13, 18, 0.88);
-    --header-border: rgba(42, 42, 52, 0.6);
-    --scrollbar-track: #0d0d12;
-    --scrollbar-thumb: #2a2a34;
-    --scrollbar-thumb-hover: #3a3a46;
-    --selection-bg: rgba(107, 140, 173, 0.25);
-    --selection-text: #e8e8ed;
+    --surface-page: #{$night};
+    --surface-raised: #{$night-raised};
+    --surface-overlay: #{$night-overlay};
+    --surface-inverse: #{$abyss};
+    --text-heading: #{$frost};
+    --text-body: #{$moon};
+    --text-secondary: #{$haze};
+    --text-muted: #{$dusk};
+    --text-faint: #{$night-line-strong};
+    --text-on-dark: #{$stone};
+    --text-on-dark-medium: #{$pale};
+    --text-on-dark-bright: #{$frost};
+    --border: #{$night-line};
+    --border-strong: #{$night-line-strong};
+    --accent: #{$accent-dark};
+    --accent-hover: #{$accent-dark-hover};
+    --accent-subtle: #{rgba($accent-dark, 0.12)};
+    --text-on-accent: #{$night};
+    --header-bg: #{rgba($night, 0.88)};
+    --header-border: #{rgba($night-line, 0.6)};
+    --scrollbar-track: #{$night};
+    --scrollbar-thumb: #{$night-line};
+    --scrollbar-thumb-hover: #{$night-line-strong};
+    --selection-bg: #{rgba($accent-dark, 0.25)};
+    --selection-text: #{$frost};
   }
 }
 

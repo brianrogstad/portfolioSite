@@ -1,0 +1,59 @@
+// Primitive tokens
+// =============================================================
+// Tier 1 of the token hierarchy (primitive -> semantic -> component).
+// Every raw color value and the spacing scale live here and only here.
+// Components never read these directly: _colors.scss maps them onto
+// semantic custom properties (--surface-*, --text-*, --border*, --accent*).
+
+// Light palette — warmed neutrals
+$ink: #141419;
+$charcoal: #2a2a32;
+$slate: #5c5c6e;
+$pewter: #6e6e7e;
+$stone: #8a8a9a;
+$mist: #bfbfc8;
+$cloud: #e2e2e8;
+$fog: #f0f0f3;
+$snow: #f8f7f5;
+$white: #fff;
+$black: #000;
+
+// Dark palette — a parallel set, not an inversion of the light one
+$abyss: #0a0a0f;
+$night: #0d0d12;
+$night-raised: #1a1a22;
+$night-overlay: #1e1e28;
+$night-line: #2a2a34;
+$night-line-strong: #3a3a46;
+$dusk: #7a7a8a;
+$haze: #9a9aaa;
+$pale: #b0b0bc;
+$moon: #c8c8d0;
+$frost: #e8e8ed;
+
+// Accent — warm slate-blue, with its lifted dark-theme pair
+$accent: #3d5a80;
+$accent-hover: #2c4a6e;
+$accent-subtle: rgba($accent, 0.08);
+$accent-dark: #6b8cad;
+$accent-dark-hover: #8aa8c4;
+
+// Warm accent for highlights
+$warm: #c4703e;
+$warm-hover: #b36030;
+$warm-subtle: rgba($warm, 0.08);
+
+// Spacing — 4px baseline (.claude/rules/project.md "Design Tokens")
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+
+:root {
+  --space-xs: #{$spacing-xs};
+  --space-sm: #{$spacing-sm};
+  --space-md: #{$spacing-md};
+  --space-lg: #{$spacing-lg};
+  --space-xl: #{$spacing-xl};
+}
