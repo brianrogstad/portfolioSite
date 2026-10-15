@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, DeferBlockState, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, Params } from '@angular/router';
 import { BehaviorSubject } from 'rxjs';
 
@@ -181,6 +181,40 @@ describe('ProjectDetailComponent', () => {
 
       expect(crumbs().map((li) => li.textContent?.trim())).toEqual(['Home', 'Loose Project']);
     });
+  });
+
+  it('renders a populated case study once the route param resolves', async () => {
+    getProjectSpy.and.resolveTo({
+      id: 'case-study',
+      title: 'Case Study Title',
+      category: 'web',
+      content: '<p>What the project set out to do.</p>',
+      media: [
+        { type: 'image', src: '/images/case-study/lead.jpg', alt: 'Lead screen' },
+        { type: 'image', src: '/images/case-study/detail.jpg', alt: 'Detail screen' },
+      ],
+    } satisfies ProjectDetail);
+    params$.next({ id: 'case-study' });
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    // Gallery images after the lead mount on idle; render them now.
+    for (const block of await fixture.getDeferBlocks()) {
+      await block.render(DeferBlockState.Complete);
+    }
+
+    const el: HTMLElement = fixture.nativeElement;
+    expect(component.loading).toBeFalse();
+    expect(el.querySelector('header h1')?.textContent?.trim()).toBe('Case Study Title');
+    expect(el.querySelector('.project-description')?.textContent).toContain(
+      'What the project set out to do.',
+    );
+    const alts = Array.from(el.querySelectorAll('.image-container img')).map((i) =>
+      i.getAttribute('alt'),
+    );
+    expect(alts).toEqual(['Lead screen', 'Detail screen']);
+    expect(el.textContent).not.toContain('Project Not Found');
+    expect(el.textContent).not.toContain("didn't load");
   });
 
   it('still reports an unknown project id as not found', async () => {

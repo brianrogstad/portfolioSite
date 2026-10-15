@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 
 import { HomeComponent } from './home.component';
+import { ProjectsService } from '../../services/projects.service';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -20,6 +21,23 @@ describe('HomeComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('renders the catalog: every section heading and one titled card per catalog entry', () => {
+    const sections = TestBed.inject(ProjectsService).getHomeCardSections();
+    const el: HTMLElement = fixture.nativeElement;
+
+    const headings = Array.from(el.querySelectorAll('h2.section-heading')).map((h) =>
+      h.textContent?.trim(),
+    );
+    expect(headings).toEqual(jasmine.arrayWithExactContents(sections.map((s) => s.heading)));
+
+    const cardTitles = Array.from(el.querySelectorAll('.project-card h3')).map((h) =>
+      h.textContent?.trim(),
+    );
+    const expected = sections.flatMap((s) => s.cards.map((c) => c.title));
+    expect(expected.length).toBeGreaterThan(0);
+    expect(cardTitles).toEqual(jasmine.arrayWithExactContents(expected));
   });
 
   it('gives the hero its visible identity line as the page h1', () => {
