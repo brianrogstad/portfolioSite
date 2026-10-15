@@ -3,7 +3,11 @@
   <head>
     <!-- Google tag (gtag.js). The queue is live from the first byte, so every
          gtag() call is kept; the 170KB library itself loads after the page's
-         load event so it never competes with first paint or the app bundle. -->
+         load event so it never competes with first paint or the app bundle.
+         In-app route changes are counted by GA4 enhanced measurement
+         ("page changes based on browser history events"), so the app sends
+         no page_view of its own: a Router bridge double-counted every
+         navigation (measured live 2026-10-15). -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
