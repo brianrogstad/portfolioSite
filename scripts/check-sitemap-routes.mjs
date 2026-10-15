@@ -101,6 +101,31 @@ for (const pathname of projectPaths) {
   }
 }
 
+// Every internal page link in the prerendered HTML must point straight at a
+// final URL. GitHub Pages 301s `/about` to `/about/`, so a slashless href
+// costs crawlers and visitors a redirect hop before the canonical page.
+const sitemapPaths = new Set(locs.map((loc) => new URL(loc).pathname));
+for (const pathname of sitemapPaths) {
+  const html = await readFile(path.join(browserDistDir, distFileFor(pathname)), 'utf8').catch(
+    () => '',
+  );
+  const hrefs = new Set(
+    [...html.matchAll(/<a\b[^>]*\shref="(\/[^"#?]*)/gi)].map((m) => m[1]),
+  );
+  for (const href of hrefs) {
+    if (href.startsWith('//') || /\.[a-z0-9]+$/i.test(href)) continue;
+    if (!href.endsWith('/')) {
+      errors.push(`${pathname} links to ${href}, which redirects to ${href}/ (use the final URL)`);
+      continue;
+    }
+    try {
+      await access(path.join(browserDistDir, distFileFor(href)));
+    } catch {
+      errors.push(`${pathname} links to ${href}, which has no prerendered page`);
+    }
+  }
+}
+
 function decodeEntities(value) {
   return value
     .replace(/&quot;/g, '"')

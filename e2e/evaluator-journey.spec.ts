@@ -30,17 +30,17 @@ test('evaluator journey: home, case study, about, not found', async ({ page }) =
 
   const card = page.locator('a.project-card__image[href^="/projects/"]').first();
   const href = await card.getAttribute('href');
-  expect(href).toMatch(/^\/projects\/[\w-]+$/);
-  const id = href!.split('/').pop()!;
+  expect(href).toMatch(/^\/projects\/[\w-]+\/$/);
+  const id = href!.split('/').filter(Boolean).pop()!;
   const title = projectTitle(id);
 
   await card.click();
-  await expect(page).toHaveURL(new RegExp(`/projects/${id}$`));
+  await expect(page).toHaveURL(new RegExp(`/projects/${id}/$`));
   await expect(page.getByRole('heading', { level: 1, name: title, exact: true })).toBeVisible();
   await expect(page.getByRole('heading', { name: 'Project Not Found' })).toHaveCount(0);
 
   await openAbout(page);
-  await expect(page).toHaveURL(/\/about$/);
+  await expect(page).toHaveURL(/\/about\/$/);
   await expect(page.getByRole('heading', { level: 1, name: 'About Me' })).toBeVisible();
 
   // Connect: the evaluator's way to reach out from About.
