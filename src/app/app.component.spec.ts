@@ -65,6 +65,17 @@ describe('AppComponent', () => {
     });
   });
 
+  describe('footer analytics disclosure', () => {
+    it('discloses Google Analytics and links the disclosure to the privacy notice', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+      const compiled = fixture.nativeElement as HTMLElement;
+      const note = compiled.querySelector('.site-footer [data-testid="analytics-disclosure"]');
+      expect(note?.textContent).toContain('This site uses Google Analytics');
+      expect(note?.querySelector('a')?.getAttribute('href')).toBe('/privacy');
+    });
+  });
+
   describe('primary navigation semantics', () => {
     // The nav declared role="menu"/"menuitem" but implemented only Escape,
     // promising an application-menu keyboard model it never had (WCAG 2.1.1,
