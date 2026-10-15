@@ -30,6 +30,19 @@ module.exports = function (config) {
         { type: 'lcovonly' },
         { type: 'json-summary' },
       ],
+      // Launch gate (unwritten-ops projects/portfolio/specs/test-infrastructure-spec.md):
+      // the T1 (data + routing) and T2 (components + non-SEO services) set must
+      // clear the >85% user-facing floor. T3 purely presentational units ride the
+      // boy-scout rule, so they are left out of the denominator, not hidden in it.
+      check: {
+        global: {
+          statements: 85,
+          branches: 85,
+          functions: 85,
+          lines: 85,
+          excludes: ['src/app/components/parallax/**'],
+        },
+      },
     },
     reporters: ['dots', 'kjhtml', 'coverage'],
     port: 9876,
