@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
+import { TransferState, makeStateKey } from '@angular/core';
 
-import { ProjectsService } from './projects.service';
+import { PROJECT_IDS, ProjectsService } from './projects.service';
 import { HomeCard, HomeCardsManifest, ProjectDetail } from '../models/project.model';
 
 /** Test seam: the manifest and loader map are private fields. */
@@ -113,6 +114,32 @@ describe('ProjectsService', () => {
       expect(second).toBe(first!);
       expect(loader).toHaveBeenCalledTimes(1);
       expect(service.peek('known')).toBe(first!);
+    });
+  });
+
+  describe('peek', () => {
+    it('hydrates from server-transferred state and caches it', () => {
+      const transferred: ProjectDetail = { id: 'shipped', title: 'Shipped', category: 'UI Design' };
+      TestBed.inject(TransferState).set(
+        makeStateKey<ProjectDetail>('project:shipped'),
+        transferred,
+      );
+
+      expect(service.peek('shipped')).toEqual(transferred);
+      expect(service.peek('missing')).toBeUndefined();
+    });
+  });
+
+  describe('routed project loaders', () => {
+    // A loader pointed at the wrong JSON would render the wrong case study
+    // under a valid URL, with nothing else to catch it.
+    it('loads a project whose id matches its route id, for every PROJECT_IDS entry', async () => {
+      expect(PROJECT_IDS.length).toBeGreaterThan(0);
+      for (const id of PROJECT_IDS) {
+        const project = await service.getProject(id);
+        expect(project?.id).withContext(id).toBe(id);
+        expect(project?.title).withContext(id).toBeTruthy();
+      }
     });
   });
 });
