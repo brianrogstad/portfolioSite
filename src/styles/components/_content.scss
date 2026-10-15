@@ -339,15 +339,27 @@
 }
 
 // Dark mode: several logos are dark ink on transparent (The Limited,
-// Luxottica) and vanish on the dark surface. Each logo sits on a light tile.
+// Luxottica) and vanish on the dark surface. Each grid cell becomes a light
+// tile that fills the cell, with the logo centered inside it.
 @media (prefers-color-scheme: dark) {
-  .clients img {
+  .clients ul {
+    gap: $spacing-lg;
+  }
+
+  .clients a {
+    align-items: center;
     background: $snow;
-    border-radius: 6px;
+    border-radius: 8px;
     box-sizing: border-box;
-    display: block;
-    margin: 0 auto;
-    padding: 6px 10px;
+    display: flex;
+    justify-content: center;
+    padding: $spacing-md;
+
+    // Sources are 187px wide; cap there so big tiles don't upscale them.
+    img {
+      max-width: 187px;
+      width: 80%;
+    }
   }
 }
 
