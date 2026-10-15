@@ -130,6 +130,34 @@ describe('ProjectsService', () => {
     });
   });
 
+  describe('getHomeCardSections (the home catalog)', () => {
+    it('serves the shipped catalog: named sections, each with cards', () => {
+      const sections = service.getHomeCardSections();
+      expect(sections.length).toBeGreaterThan(0);
+      for (const section of sections) {
+        expect(section.heading).withContext('section heading').toBeTruthy();
+        expect(section.cards.length).withContext(section.heading).toBeGreaterThan(0);
+      }
+    });
+
+    it('points every routed card at a project the service can resolve by slug', async () => {
+      const routed = service
+        .getHomeCardSections()
+        .flatMap((s) => s.cards)
+        .filter((c) => c.primaryLink.type === 'route');
+      expect(routed.length).toBeGreaterThan(0);
+      for (const c of routed) {
+        expect(c.primaryLink.target).withContext(c.id).toBe(`/projects/${c.id}`);
+        const project = await service.getProject(c.id);
+        expect(project?.title).withContext(c.id).toBeTruthy();
+      }
+    });
+
+    it('resolves a slug that no card or loader knows to undefined (the not-found path)', async () => {
+      expect(await service.getProject('no-such-project-slug')).toBeUndefined();
+    });
+  });
+
   describe('routed project loaders', () => {
     // A loader pointed at the wrong JSON would render the wrong case study
     // under a valid URL, with nothing else to catch it.
