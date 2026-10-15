@@ -9,6 +9,16 @@
     }
   }
 
+  // Phone/tablet: the grid collapses to one full-width column. The portrait
+  // stays full bleed, but the reading column (heading, chips, copy) takes the
+  // same 90% gutter as the page header above it.
+  .about-container .description {
+    @media (width <= 768px) {
+      width: 90%;
+      margin-inline: auto;
+    }
+  }
+
   // "Designer, Developer, Builder" is a subsection heading (h2 for correct
   // heading order) but keeps its original subtitle rendering — the global
   // h1/h2 style is sized for page/section titles, which is too large here.
