@@ -18,7 +18,9 @@
     "lint": "ng lint",
     "prepare": "test -d .git/hooks && cp .hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit || true",
     "e2e": "npm run build && playwright test",
-    "e2e:run": "playwright test"
+    "e2e:run": "playwright test",
+    "e2e:smoke:live": "E2E_BASE_URL=https://brianrogstad.com playwright test --grep @smoke",
+    "qa": "npm run lint && npm run lint:styles && npm run test && npm run e2e"
   },
   "private": true,
   "dependencies": {
