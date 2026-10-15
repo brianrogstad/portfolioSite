@@ -8,7 +8,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const root = path.resolve(__dirname, '..', 'dist', 'portfolio-site', 'browser');
+// E2E_DIST_DIR points at a copied artifact when another build may rewrite dist/.
+const root = path.resolve(
+  process.env['E2E_DIST_DIR'] || path.join(__dirname, '..', 'dist', 'portfolio-site', 'browser'),
+);
 const port = Number(process.env['PORT'] || 4300);
 
 const types = {
@@ -50,14 +53,20 @@ async function resolveFile(urlPath) {
 }
 
 createServer(async (req, res) => {
-  const urlPath = new URL(req.url ?? '/', 'http://localhost').pathname;
-  const file = await resolveFile(urlPath);
-  const status = file ? 200 : 404;
-  const body = await readFile(file ?? path.join(root, '404.html'));
-  res.writeHead(status, {
-    'content-type': types[path.extname(file ?? '.html')] ?? 'application/octet-stream',
-  });
-  res.end(body);
+  try {
+    const urlPath = new URL(req.url ?? '/', 'http://localhost').pathname;
+    const file = await resolveFile(urlPath);
+    const status = file ? 200 : 404;
+    const served = file ?? path.join(root, '404.html');
+    const body = await readFile(served);
+    res.writeHead(status, {
+      'content-type': types[path.extname(served)] ?? 'application/octet-stream',
+    });
+    res.end(body);
+  } catch (err) {
+    res.writeHead(500, { 'content-type': 'text/plain; charset=utf-8' });
+    res.end(`serve-pages-static: ${err instanceof Error ? err.message : String(err)}`);
+  }
 }).listen(port, () => {
   console.log(`GitHub Pages static mirror on http://localhost:${port} (${root})`);
 });
