@@ -30,10 +30,22 @@ describe('AnalyticsService', () => {
     (window as unknown as Record<string, unknown>)['gtag'] = originalGtag;
   });
 
-  it('reports a page_view for each completed navigation', () => {
+  /** The bootstrap navigation, whose page_view gtag('config') in index.html already sent. */
+  const initialLoad = () => events$.next(new NavigationEnd(1, '/', '/'));
+
+  it('does not double-count the initial document load', () => {
     TestBed.inject(AnalyticsService).start();
 
-    events$.next(new NavigationEnd(1, '/projects/usb', '/projects/usb'));
+    initialLoad();
+
+    expect(calls.length).toBe(0);
+  });
+
+  it('reports a page_view for each completed in-app navigation', () => {
+    TestBed.inject(AnalyticsService).start();
+
+    initialLoad();
+    events$.next(new NavigationEnd(2, '/projects/usb', '/projects/usb'));
 
     expect(calls.length).toBe(1);
     const [command, eventName, params] = calls[0];
@@ -46,21 +58,23 @@ describe('AnalyticsService', () => {
   it('reports project detail routes as distinct pageviews', () => {
     TestBed.inject(AnalyticsService).start();
 
-    events$.next(new NavigationEnd(1, '/', '/'));
+    initialLoad();
     events$.next(new NavigationEnd(2, '/projects/usb', '/projects/usb'));
     events$.next(new NavigationEnd(3, '/projects/tremor', '/projects/tremor'));
+    events$.next(new NavigationEnd(4, '/', '/'));
 
     expect(calls.map((call) => call[2]?.['page_path'])).toEqual([
-      '/',
       '/projects/usb',
       '/projects/tremor',
+      '/',
     ]);
   });
 
   it('uses the post-redirect url', () => {
     TestBed.inject(AnalyticsService).start();
 
-    events$.next(new NavigationEnd(1, '/projects/usb', '/projects/usb/'));
+    initialLoad();
+    events$.next(new NavigationEnd(2, '/projects/usb', '/projects/usb/'));
 
     expect(calls[0][2]?.['page_path']).toBe('/projects/usb/');
   });
@@ -78,7 +92,8 @@ describe('AnalyticsService', () => {
     service.start();
     service.start();
 
-    events$.next(new NavigationEnd(1, '/about', '/about'));
+    initialLoad();
+    events$.next(new NavigationEnd(2, '/about', '/about'));
 
     expect(calls.length).toBe(1);
   });
@@ -87,6 +102,7 @@ describe('AnalyticsService', () => {
     delete (window as unknown as Record<string, unknown>)['gtag'];
     TestBed.inject(AnalyticsService).start();
 
-    expect(() => events$.next(new NavigationEnd(1, '/about', '/about'))).not.toThrow();
+    initialLoad();
+    expect(() => events$.next(new NavigationEnd(2, '/about', '/about'))).not.toThrow();
   });
 });

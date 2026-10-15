@@ -3,7 +3,7 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { isPlatformBrowser } from '@angular/common';
 import { Title } from '@angular/platform-browser';
 import { NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
+import { filter, skip } from 'rxjs/operators';
 
 /** The subset of gtag.js this app calls. Installed by the snippet in index.html. */
 type GtagFn = (command: 'event', eventName: string, params?: Record<string, unknown>) => void;
@@ -20,6 +20,11 @@ type GtagWindow = Window & { gtag?: GtagFn };
  * collected data, and it failed quietly, showing as low engagement rather
  * than as missing instrumentation.
  *
+ * The first completed navigation is the bootstrap of the document load that
+ * `gtag('config')` already reported, so it is skipped: one pageview per
+ * visited URL, not two for the landing page (measured live 2026-10-15: a hard
+ * load of `/` sent two `page_view` hits before this skip).
+ *
  * Lives in a service rather than inline in AppComponent so the behavior can
  * be tested against a stubbed Router.
  */
@@ -33,7 +38,8 @@ export class AnalyticsService {
   private started = false;
 
   /**
-   * Starts reporting a `page_view` per completed navigation. Safe to call
+   * Starts reporting a `page_view` per completed in-app navigation. Called
+   * from AppComponent's constructor, before the initial navigation ends. Safe to call
    * more than once; only the first call subscribes. No-op during server
    * rendering, where there is no gtag and no browsing session.
    */
@@ -44,6 +50,7 @@ export class AnalyticsService {
     this.router.events
       .pipe(
         filter((event): event is NavigationEnd => event instanceof NavigationEnd),
+        skip(1),
         takeUntilDestroyed(this.destroyRef),
       )
       .subscribe((event) => this.trackPageView(event.urlAfterRedirects));
