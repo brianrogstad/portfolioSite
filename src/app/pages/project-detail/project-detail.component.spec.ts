@@ -4,6 +4,9 @@ import { BehaviorSubject } from 'rxjs';
 
 import { ProjectDetailComponent } from './project-detail.component';
 import { ProjectsService } from '../../services/projects.service';
+import { SeoService } from '../../services/seo.service';
+import { ProjectDetail } from '../../models/project.model';
+import { fallbackDescription } from './project-description';
 
 describe('ProjectDetailComponent', () => {
   let component: ProjectDetailComponent;
@@ -196,5 +199,97 @@ describe('ProjectDetailComponent', () => {
     expect(params$.observed).toBeFalse();
     params$.next({ id: 'after-destroy' });
     expect(getProjectSpy).toHaveBeenCalledTimes(1);
+  });
+
+  describe('SEO payload from applyProject', () => {
+    let seoSpy: jasmine.Spy;
+
+    const load = async (data: ProjectDetail | undefined, id = 'payload') => {
+      getProjectSpy.and.resolveTo(data);
+      params$.next({ id });
+      await fixture.whenStable();
+      return seoSpy.calls.mostRecent().args[0];
+    };
+
+    beforeEach(() => {
+      seoSpy = spyOn(TestBed.inject(SeoService), 'update');
+    });
+
+    it('uses the first media image as the lead image, skipping videos', async () => {
+      const payload = await load({
+        id: 'payload',
+        title: 'Payload',
+        category: 'UI Design',
+        description: 'Custom.',
+        media: [
+          { type: 'video', src: '/videos/intro.mp4', alt: 'v' },
+          { type: 'image', src: '/images/media-lead.jpg', alt: 'a' },
+          { type: 'image', src: '/images/media-second.jpg', alt: 'b' },
+        ],
+        images: [{ src: '/images/legacy.jpg', alt: 'c' }],
+      });
+
+      expect(payload).toEqual({
+        title: 'Payload — Brian Rogstad',
+        description: 'Custom.',
+        path: '/projects/payload/',
+        image: '/images/media-lead.jpg',
+        type: 'article',
+      });
+    });
+
+    it('falls back to images[0] when media is absent', async () => {
+      const payload = await load({
+        id: 'payload',
+        title: 'Payload',
+        category: 'UI Design',
+        images: [
+          { src: '/images/legacy-first.jpg', alt: 'a' },
+          { src: '/images/legacy-second.jpg', alt: 'b' },
+        ],
+      });
+
+      expect(payload.image).toBe('/images/legacy-first.jpg');
+    });
+
+    it('sends no image (site default) when the project has none', async () => {
+      const payload = await load({ id: 'payload', title: 'Payload', category: 'UI Design' });
+      expect(payload.image).toBeUndefined();
+    });
+
+    it('uses fallbackDescription(title, category) when the description is missing', async () => {
+      const payload = await load({ id: 'payload', title: 'Payload', category: 'Illustration' });
+
+      expect(payload.description).toBe(fallbackDescription('Payload', 'Illustration'));
+      expect(payload.description).toMatch(/^Payload — an? .+ in Brian Rogstad's portfolio\.$/);
+    });
+
+    it('drives the not-found SEO update for an unknown project', async () => {
+      const payload = await load(undefined, 'ghost');
+
+      expect(payload).toEqual({
+        title: 'Project Not Found — Brian Rogstad',
+        description: "The project you're looking for doesn't exist.",
+        path: '/projects/ghost/',
+      });
+    });
+
+    it('applies prerendered data synchronously via peek without calling getProject', () => {
+      const projects = TestBed.inject(ProjectsService);
+      spyOn(projects, 'peek').and.returnValue({
+        id: 'ready',
+        title: 'Ready',
+        category: 'UI Design',
+        media: [{ type: 'image', src: '/images/ready.jpg', alt: 'r' }],
+      });
+      getProjectSpy.calls.reset();
+
+      params$.next({ id: 'ready' });
+
+      expect(getProjectSpy).not.toHaveBeenCalled();
+      expect(component.loading).toBeFalse();
+      expect(seoSpy.calls.mostRecent().args[0].image).toBe('/images/ready.jpg');
+      expect(seoSpy.calls.mostRecent().args[0].type).toBe('article');
+    });
   });
 });
