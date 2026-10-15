@@ -5,11 +5,10 @@ import { ProjectsService } from '../../services/projects.service';
 import { SeoService } from '../../services/seo.service';
 import { HomeCardSection } from '../../models/project.model';
 import { ToWebpPipe } from '../../pipes/to-webp.pipe';
-import { ContactCtaComponent } from '../../components/contact-cta/contact-cta.component';
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink, NgTemplateOutlet, ToWebpPipe, ContactCtaComponent],
+  imports: [RouterLink, NgTemplateOutlet, ToWebpPipe],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

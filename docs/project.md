@@ -35,13 +35,10 @@ The portfolio proves three things:
 ### Contact Surface
 
 The site's only contact mechanism is a `mailto:` link — there is no form, and
-no data is collected from visitors. It appears in three places so that reaching
-out never depends on scrolling back to the hero:
-
-1. The homepage hero, as a primary action (`.email-cta`)
-2. The end of every page — home, About, and each `/projects/*` case study
-   (`app-contact-cta`)
-3. The site footer, present on every route
+no data is collected from visitors. It is a plain text link in the homepage
+hero's meta row (LinkedIn / GitHub / Email) and in the site footer. No
+button-weight email CTA (Brian, 2026-10-15: "i never approved that. its so
+ugly." — removed).
 
 **Résumé/CV:** undecided. Not linked today; whether one ships is Brian's call.
 
