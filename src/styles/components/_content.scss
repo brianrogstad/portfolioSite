@@ -338,6 +338,19 @@
   }
 }
 
+// Dark mode: several logos are dark ink on transparent (The Limited,
+// Luxottica) and vanish on the dark surface. Each logo sits on a light tile.
+@media (prefers-color-scheme: dark) {
+  .clients img {
+    background: $snow;
+    border-radius: 6px;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    padding: 6px 10px;
+  }
+}
+
 // Extracted from `.hero-intro__meta` (see note in that block).
 // Placed here so bare `a` selectors in earlier blocks (.social-nav, .clients,
 // .project-description) don't sit below a higher-specificity `a:hover`.
