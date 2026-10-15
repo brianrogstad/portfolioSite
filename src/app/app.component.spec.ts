@@ -139,4 +139,123 @@ describe('AppComponent', () => {
       expect(toggle.getAttribute('aria-expanded')).toBe('true');
     });
   });
+
+  describe('mobile menu', () => {
+    it('opens and closes from its toggle buttons, mirrored in aria-expanded', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+      const compiled = fixture.nativeElement as HTMLElement;
+      const open = compiled.querySelector('button.open-menu') as HTMLButtonElement;
+      const close = compiled.querySelector('button.close-menu') as HTMLButtonElement;
+
+      open.click();
+      fixture.detectChanges();
+      expect(fixture.componentInstance.mobileMenuOpen).toBeTrue();
+      expect(open.getAttribute('aria-expanded')).toBe('true');
+
+      close.click();
+      fixture.detectChanges();
+      expect(fixture.componentInstance.mobileMenuOpen).toBeFalse();
+      expect(close.getAttribute('aria-expanded')).toBe('false');
+    });
+
+    it('closes when one of its links is followed', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+      fixture.componentInstance.mobileMenuOpen = true;
+      const link = (fixture.nativeElement as HTMLElement).querySelector(
+        '#mobile-menu a',
+      ) as HTMLAnchorElement;
+      link.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+      expect(fixture.componentInstance.mobileMenuOpen).toBeFalse();
+    });
+
+    it('closes on resize past the desktop breakpoint, and stays open below it', () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      const app = fixture.componentInstance;
+      const width = spyOnProperty(window, 'innerWidth');
+
+      app.mobileMenuOpen = true;
+      width.and.returnValue(800);
+      window.dispatchEvent(new Event('resize'));
+      expect(app.mobileMenuOpen).toBeTrue();
+
+      width.and.returnValue(1400);
+      window.dispatchEvent(new Event('resize'));
+      expect(app.mobileMenuOpen).toBeFalse();
+    });
+  });
+
+  describe('desktop dropdowns', () => {
+    const setup = () => {
+      const fixture = TestBed.createComponent(AppComponent);
+      fixture.detectChanges();
+      const compiled = fixture.nativeElement as HTMLElement;
+      const dropdown = compiled.querySelector('.dropdown') as HTMLElement;
+      const toggle = dropdown.querySelector('.dropdown-toggle') as HTMLButtonElement;
+      return { fixture, app: fixture.componentInstance, compiled, dropdown, toggle };
+    };
+
+    it('slugs each label into a stable id', () => {
+      const { app } = setup();
+      expect(app.dropdownId('Client & Agency Work')).toBe('nav-dropdown-client-agency-work');
+      expect(app.dropdownId('  My Projects! ')).toBe('nav-dropdown-my-projects');
+    });
+
+    it('opens on hover and closes on mouseleave', () => {
+      const { app, dropdown } = setup();
+      dropdown.dispatchEvent(new MouseEvent('mouseenter'));
+      expect(app.openDropdownLabel).toBe(app.navItems.find((i) => i.children)!.label);
+      dropdown.dispatchEvent(new MouseEvent('mouseleave'));
+      expect(app.openDropdownLabel).toBeNull();
+    });
+
+    it('stays open while focus moves inside it and closes when focus leaves', () => {
+      const { app, dropdown, compiled } = setup();
+      dropdown.dispatchEvent(new FocusEvent('focusin', { bubbles: true }));
+      const inner = dropdown.querySelector('.dropdown-menu a') as HTMLElement;
+
+      dropdown.dispatchEvent(new FocusEvent('focusout', { relatedTarget: inner }));
+      expect(app.openDropdownLabel).not.toBeNull();
+
+      const outside = compiled.querySelector('.site-name') as HTMLElement;
+      dropdown.dispatchEvent(new FocusEvent('focusout', { relatedTarget: outside }));
+      expect(app.openDropdownLabel).toBeNull();
+
+      app.openDropdownLabel = 'x';
+      dropdown.dispatchEvent(new FocusEvent('focusout', { relatedTarget: null }));
+      expect(app.openDropdownLabel).toBeNull();
+    });
+
+    it('closes on Escape, returns focus to its toggle, and ignores other keys', () => {
+      const { app, dropdown, toggle } = setup();
+      const label = app.navItems.find((i) => i.children)!.label;
+      app.openDropdown(label);
+      const inner = dropdown.querySelector('.dropdown-menu a') as HTMLElement;
+      // The desktop nav may be display:none at the runner's viewport, so spy
+      // on focus() rather than reading document.activeElement.
+      const focus = spyOn(toggle, 'focus');
+
+      inner.dispatchEvent(new KeyboardEvent('keydown', { key: 'Tab', bubbles: true }));
+      expect(app.openDropdownLabel).toBe(label);
+
+      inner.dispatchEvent(
+        new KeyboardEvent('keydown', { key: 'Escape', bubbles: true, cancelable: true }),
+      );
+      expect(app.openDropdownLabel).toBeNull();
+      expect(app.forceClosedDropdown).toBe(label);
+      expect(focus).toHaveBeenCalled();
+    });
+
+    it('closes and blurs the focused element when a dropdown link is followed', () => {
+      const { app, dropdown } = setup();
+      app.openDropdown('x');
+      const inner = dropdown.querySelector('.dropdown-menu a') as HTMLAnchorElement;
+      const active = document.activeElement as HTMLElement;
+      const blur = spyOn(active, 'blur');
+      inner.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true }));
+      expect(app.openDropdownLabel).toBeNull();
+      expect(blur).toHaveBeenCalled();
+    });
+  });
 });
