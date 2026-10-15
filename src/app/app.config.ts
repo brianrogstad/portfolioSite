@@ -1,7 +1,8 @@
-import { ApplicationConfig, provideZonelessChangeDetection } from '@angular/core';
+import { ApplicationConfig, ErrorHandler, provideZonelessChangeDetection } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
 
 import { routes } from './app.routes';
+import { ClientErrorHandler } from './services/client-error-handler';
 import { provideClientHydration, withNoIncrementalHydration } from '@angular/platform-browser';
 
 export const appConfig: ApplicationConfig = {
@@ -13,5 +14,6 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes, withInMemoryScrolling({ scrollPositionRestoration: 'top' })),
     provideClientHydration(withNoIncrementalHydration()),
+    { provide: ErrorHandler, useClass: ClientErrorHandler },
   ],
 };
