@@ -193,14 +193,15 @@
     <router-outlet />
 
     <footer class="site-footer">
-      <p class="disclaimer">&#169; Brian Rogstad {{ yearRange }}. All rights reserved.</p>
-      <nav class="site-footer__links" aria-label="Contact and site information">
-        <a href="mailto:brianrogstad@gmail.com">brianrogstad&#64;gmail.com</a>
-        <a routerLink="/privacy">Privacy</a>
-      </nav>
-      <p class="site-footer__note" data-testid="analytics-disclosure">
-        This site uses Google Analytics. See the <a routerLink="/privacy">privacy notice</a>.
+      <p class="disclaimer">
+        &#169; Brian Rogstad {{ yearRange }}. All rights reserved.
+        <span data-testid="analytics-disclosure"
+          >This site uses Google Analytics (<a routerLink="/privacy">privacy</a>).</span
+        >
       </p>
+      <nav class="site-footer__links" aria-label="Contact">
+        <a href="mailto:brianrogstad@gmail.com">brianrogstad&#64;gmail.com</a>
+      </nav>
     </footer>
   </main>
 </div>

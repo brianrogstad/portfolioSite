@@ -22,7 +22,7 @@
 }
 
 .disclaimer {
-  flex: 0 1 50%;
+  flex: 1 1 auto;
   margin: 0;
   text-align: left;
 
@@ -32,12 +32,11 @@
   }
 }
 
-// Contact and site-information links. The email keeps reaching Brian from
-// depending on the homepage hero. Sits opposite the copyright on wide
-// screens and stacks under it on laptop and below.
+// Footer email. Same size and color as the copyright line; sits opposite it
+// on wide screens and stacks under it on laptop and below.
 .site-footer__links {
   display: flex;
-  flex: 0 1 50%;
+  flex: 0 0 auto;
   flex-wrap: wrap;
   gap: 4px 20px;
   justify-content: flex-end;
@@ -49,11 +48,10 @@
   }
 }
 
+.disclaimer a,
 .site-footer__links a {
-  @include font-size(13);
-
   align-items: center;
-  color: var(--text-on-dark-bright);
+  color: inherit;
   display: inline-flex;
 
   // Clears the WCAG 2.2 24x24 target minimum.
@@ -63,20 +61,9 @@
   transition: color 0.2s ease;
 }
 
+.disclaimer a:hover,
+.disclaimer a:focus-visible,
 .site-footer__links a:hover,
 .site-footer__links a:focus-visible {
-  color: var(--text-on-dark-medium);
-}
-
-// Analytics disclosure: its own full-width row under copyright and links,
-// so it never jams into the link row.
-.site-footer__note {
-  color: var(--text-on-dark-medium);
-  flex: 1 1 100%;
-  margin: 12px 0 0;
-  text-align: left;
-
-  @include breakpoint(laptop) {
-    text-align: center;
-  }
+  color: var(--text-on-dark-bright);
 }
