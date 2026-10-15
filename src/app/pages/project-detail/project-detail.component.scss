@@ -113,13 +113,13 @@
     width: 40%;
     margin: 10rem auto 1.5rem;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--secondary);
+    border-bottom: 1px solid var(--border);
 
     span {
       font-size: 1.5rem;
       font-weight: 600;
       letter-spacing: 0.02em;
-      color: var(--text);
+      color: var(--text-heading);
     }
 
     @media (width <= 768px) {
