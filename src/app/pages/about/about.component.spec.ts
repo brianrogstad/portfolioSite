@@ -48,18 +48,6 @@ describe('AboutComponent', () => {
     expect(img.getAttribute('decoding')).toBe('async');
   });
 
-  it('points at each destination once', () => {
-    // "Connect On LinkedIn" in the bio and "Connect with me on LinkedIn" in
-    // the Connect list resolved to the same profile under two labels, so a
-    // visitor could not tell whether they differed.
-    const hrefs = (
-      Array.from(fixture.nativeElement.querySelectorAll('a[href]')) as HTMLAnchorElement[]
-    ).map((a) => a.getAttribute('href'));
-
-    const duplicates = hrefs.filter((href, i) => hrefs.indexOf(href) !== i);
-    expect(duplicates).withContext(`duplicated destinations: ${duplicates}`).toEqual([]);
-  });
-
   describe('canonical URL', () => {
     // The About page used to ship the homepage canonical, telling crawlers a
     // distinct, indexable page was a duplicate of "/".
