@@ -40,6 +40,21 @@ describe('HomeComponent', () => {
     expect(cardTitles).toEqual(jasmine.arrayWithExactContents(expected));
   });
 
+  it('renders the priority card image on first render, outside the idle defer (mobile LCP)', () => {
+    const priority = TestBed.inject(ProjectsService)
+      .getHomeCardSections()
+      .flatMap((s) => s.cards)
+      .filter((c) => c.image.priority);
+    expect(priority.length).toBe(1);
+
+    const img = fixture.nativeElement.querySelector(
+      '.project-card img[fetchpriority="high"]',
+    ) as HTMLImageElement | null;
+    expect(img).not.toBeNull();
+    expect(img!.getAttribute('loading')).toBe('eager');
+    expect(img!.getAttribute('src')).toBe(priority[0].image.src);
+  });
+
   it('gives the hero its visible identity line as the page h1', () => {
     const heading = fixture.nativeElement.querySelector('h1') as HTMLElement;
 
