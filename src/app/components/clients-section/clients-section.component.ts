@@ -10,7 +10,6 @@ interface Client {
 @Component({
   selector: 'app-clients-section',
   standalone: true,
-  imports: [],
   templateUrl: './clients-section.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
