@@ -18,8 +18,14 @@ export class HomeComponent implements OnInit {
   private seo = inject(SeoService);
 
   private sections: HomeCardSection[] = this.projectsService.getHomeCardSections();
-  lightSections: HomeCardSection[] = this.sections.filter((s) => s.tone !== 'dark');
-  darkSections: HomeCardSection[] = this.sections.filter((s) => s.tone === 'dark');
+  lightSections: HomeCardSection[] = [];
+  darkSections: HomeCardSection[] = [];
+
+  constructor() {
+    for (const section of this.sections) {
+      (section.tone === 'dark' ? this.darkSections : this.lightSections).push(section);
+    }
+  }
 
   ngOnInit() {
     this.seo.update({
