@@ -17,12 +17,11 @@ export class HomeComponent implements OnInit {
   private projectsService = inject(ProjectsService);
   private seo = inject(SeoService);
 
-  private sections: HomeCardSection[] = this.projectsService.getHomeCardSections();
   lightSections: HomeCardSection[] = [];
   darkSections: HomeCardSection[] = [];
 
   constructor() {
-    for (const section of this.sections) {
+    for (const section of this.projectsService.getHomeCardSections()) {
       (section.tone === 'dark' ? this.darkSections : this.lightSections).push(section);
     }
   }
