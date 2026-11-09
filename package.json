@@ -42,7 +42,7 @@
     "@angular/cli": "^22.2.4",
     "@angular/compiler-cli": "^22.2.3",
     "@axe-core/playwright": "^4.13.0",
-    "@playwright/test": "^1.64.1",
+    "@playwright/test": "^1.65.0",
     "@stylistic/stylelint-plugin": "^4.0.1",
     "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
