@@ -46,12 +46,7 @@ export class RouteFocusService {
       });
   }
 
-  /**
-   * Focuses the destination heading or main landmark. Exposed so the caller
-   * can drive it directly in tests and so a future in-page navigation can
-   * reuse it.
-   */
-  focusDestination(): void {
+  private focusDestination(): void {
     const main = this.document.querySelector<HTMLElement>('#main-content');
     const target = main?.querySelector<HTMLElement>('h1') ?? main;
     if (!target) return;
